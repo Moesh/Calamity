@@ -9,10 +9,10 @@ execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function
 
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] add Resetting
 scoreboard players operation @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] counter = ResettingTime gameRules
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] ~ ~ ~ say STUFF WAS GIVEN YA DOINK
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] ~ ~ ~ say Resources given
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] remove Reset
 
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove Resetting
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove Running
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] ~ ~ ~ say PAD RESET
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] ~ ~ ~ say Point reset
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove ReadyToStart
