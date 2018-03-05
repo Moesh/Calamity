@@ -78,10 +78,10 @@ kill @e[type=area_effect_cloud,name=Main]
 #stats entity @e[type=area_effect_cloud,name=Main] set AffectedItems @s AffectedItems
 #stats entity @e[type=area_effect_cloud,name=Main] set QueryResult @s QueryResult
 
-kill @e[type=area_effect_cloud,name=TestingPad]
-summon minecraft:area_effect_cloud 57 6 -73 {CustomName:TestingPad, CustomNameVisible:1b, Duration:2147483647}
-stats entity @e[type=area_effect_cloud,name=TestingPad] set SuccessCount @s SuccessCount
-scoreboard players add @e[type=area_effect_cloud,name=TestingPad] SuccessCount 0
+kill @e[type=area_effect_cloud,name=ResourcePoint]
+summon minecraft:area_effect_cloud 57 6 -73 {CustomName:ResourcePoint, CustomNameVisible:1b, Duration:2147483647}
+stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
+scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
 
 
 function calamity:setup_moesh_for_testing
