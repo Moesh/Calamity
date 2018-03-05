@@ -6,3 +6,25 @@ realms_persistence\.json
 usercache\.json
 
 options\.txt
+
+saves/calamity/data/villages\.dat
+
+saves/calamity/data/villages_end\.dat
+
+saves/calamity/data/villages_nether\.dat
+
+saves/calamity/level\.dat_old
+
+saves/calamity/playerdata/
+
+saves/calamity/region/r\.-1\.-1\.mca
+
+saves/calamity/region/r\.-1\.0\.mca
+
+saves/calamity/region/r\.0\.-1\.mca
+
+saves/calamity/session\.lock
+
+saves/calamity/stats/
+
+saves/calamity/advancements/
