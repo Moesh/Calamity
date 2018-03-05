@@ -3,7 +3,7 @@
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckedStatus] ~ ~ ~ testfor @a[dx=0,dy=1,dz=0]
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckedStatus,score_SuccessCount=0] ~ ~ ~ scoreboard players tag @s remove CheckedStatus
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=!CheckedStatus,score_SuccessCount_min=1] ~ ~ ~ setblock ~ ~-1 ~ minecraft:end_portal_frame 7
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=!CheckedStatus,score_SuccessCount_min=1] ~ ~ ~ playsound minecraft:block.metal_pressureplate.click_on block @a ~ ~-1 ~ 1 ..75
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=!CheckedStatus,score_SuccessCount_min=1] ~ ~ ~ playsound minecraft:block.metal_pressureplate.click_on block @a ~ ~-1 ~ 1 0.75
 
 # Player steps on pressure plate, if blue team, CheckStatus
 execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ testfor @a[dx=0,dy=1,dz=0]

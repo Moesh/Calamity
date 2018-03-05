@@ -5,6 +5,8 @@ scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,score_counter=0] add ReadyToStart
 
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/update_lights_running if @s[tag=!Resetting]
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/update_sign_running if @s[tag=!Resetting]
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/playsound_every_second if @s[tag=!Resetting]
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/update_lights_resetting if @s[tag=Resetting]
 
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Reset] add Resetting

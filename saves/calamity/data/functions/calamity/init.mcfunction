@@ -15,6 +15,8 @@ scoreboard objectives remove spectate
 
 scoreboard objectives remove counter
 scoreboard objectives remove progressLights
+scoreboard objectives remove progressSecond
+scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
@@ -37,6 +39,8 @@ scoreboard objectives add spectate trigger
 
 scoreboard objectives add counter dummy
 scoreboard objectives add progressLights dummy
+scoreboard objectives add progressSecond dummy
+scoreboard objectives add displaySecond dummy
 
 # Remove Scoreboard Teams
 scoreboard teams remove lobby
@@ -79,7 +83,8 @@ kill @e[type=area_effect_cloud,name=Main]
 #stats entity @e[type=area_effect_cloud,name=Main] set QueryResult @s QueryResult
 
 kill @e[type=area_effect_cloud,name=ResourcePoint]
-summon minecraft:area_effect_cloud 57 6 -73 {CustomName:ResourcePoint, CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 136 6 57 {CustomName:ResourcePoint, CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 136 6 47 {CustomName:ResourcePoint, CustomNameVisible:1b, Duration:2147483647}
 stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
 scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
 
