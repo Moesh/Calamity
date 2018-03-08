@@ -12,4 +12,4 @@ execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ execute 
 
 
 execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/output if @s[tag=Output]
-execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ execute @s[tag=FacingWest] ~ ~ ~ function calamity:resource_point/ready_to_start if @s[tag=ReadyToStart]
+execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ execute @s[tag=FacingWest] ~ ~ ~ function calamity:resource_point/reset if @s[tag=ReadyToStart]
