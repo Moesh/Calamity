@@ -16,12 +16,14 @@ scoreboard objectives remove spectate
 scoreboard objectives remove counter
 scoreboard objectives remove progressLights
 scoreboard objectives remove progressSecond
+scoreboard objectives remove progressSound
 scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
 scoreboard players set TWENTY CONST 20
 scoreboard players set EIGHTY CONST 80
+scoreboard players set HUNDRED CONST 100
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
@@ -40,6 +42,7 @@ scoreboard objectives add spectate trigger
 scoreboard objectives add counter dummy
 scoreboard objectives add progressLights dummy
 scoreboard objectives add progressSecond dummy
+scoreboard objectives add progressSound dummy
 scoreboard objectives add displaySecond dummy
 
 # Remove Scoreboard Teams
@@ -77,7 +80,7 @@ scoreboard players tag @a remove Spectating
 scoreboard players tag @a remove Playing
 
 
-kill @e[type=area_effect_cloud,name=Main]
+#kill @e[type=area_effect_cloud,name=Main]
 #summon minecraft:area_effect_cloud 80 96 3152 {CustomName:Main, CustomNameVisible:1b, Duration:2147483647}
 #stats entity @e[type=area_effect_cloud,name=Main] set AffectedItems @s AffectedItems
 #stats entity @e[type=area_effect_cloud,name=Main] set QueryResult @s QueryResult
@@ -85,8 +88,8 @@ kill @e[type=area_effect_cloud,name=Main]
 kill @e[type=area_effect_cloud,name=ResourcePoint]
 summon minecraft:area_effect_cloud 136 6 57 {CustomName:ResourcePoint,Tags:["FacingWest"],CustomNameVisible:1b, Duration:2147483647}
 summon minecraft:area_effect_cloud 136 6 47 {CustomName:ResourcePoint,Tags:["FacingWest"],CustomNameVisible:1b, Duration:2147483647}
-stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
-scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
+	stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
+	scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
 
 
 function calamity:setup_moesh_for_testing

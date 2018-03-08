@@ -1,8 +1,8 @@
 scoreboard players operation @s progressLights = @s counter
-scoreboard players operation @s progressLights /= EIGHTY CONST
+#scoreboard players operation @s progressLights /= HUNDRED CONST
 
-execute @s[score_progressLights_min=4,score_progressLights=4] ~-4 ~-1 ~2 setblock ~ ~ ~ minecraft:sea_lantern
-execute @s[score_progressLights_min=3,score_progressLights=3] ~-4 ~-1 ~1 setblock ~ ~ ~ minecraft:sea_lantern
-execute @s[score_progressLights_min=2,score_progressLights=2] ~-4 ~-1 ~0 setblock ~ ~ ~ minecraft:sea_lantern
-execute @s[score_progressLights_min=1,score_progressLights=1] ~-4 ~-1 ~-1 setblock ~ ~ ~ minecraft:sea_lantern
+execute @s[score_progressLights_min=399,score_progressLights=400] ~-4 ~-1 ~2 setblock ~ ~ ~ minecraft:sea_lantern
+execute @s[score_progressLights_min=300,score_progressLights=300] ~-4 ~-1 ~1 setblock ~ ~ ~ minecraft:sea_lantern
+execute @s[score_progressLights_min=200,score_progressLights=200] ~-4 ~-1 ~0 setblock ~ ~ ~ minecraft:sea_lantern
+execute @s[score_progressLights_min=100,score_progressLights=100] ~-4 ~-1 ~-1 setblock ~ ~ ~ minecraft:sea_lantern
 execute @s[score_progressLights_min=0,score_progressLights=0] ~-4 ~-1 ~-2 setblock ~ ~ ~ minecraft:sea_lantern
