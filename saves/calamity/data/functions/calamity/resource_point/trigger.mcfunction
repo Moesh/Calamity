@@ -14,11 +14,8 @@ execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,score_Succe
 # Has status been checked already?
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckedStatus] remove CheckStatus
 
-# Is the machine running?
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] ~ ~ ~ execute @s[tag=Running] ~ ~ ~ execute @s[tag=Resetting] ~ ~ ~ say Resetting status!
-# Is the machine resetting?
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] ~ ~ ~ execute @s[tag=Running] ~ ~ ~ execute @s[tag=!Resetting] ~ ~ ~ say Running status!
-
+# Is the machine running? If so, give status message
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] ~ ~ ~ execute @s[tag=Running] ~ ~ ~ function calamity:resource_point/status_message
 # If not running, start running
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] ~ ~ ~ execute @s[tag=!Running] ~ ~ ~ scoreboard players tag @s[tag=!Start] add Start
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] ~ ~ ~ function calamity:resource_point/start if @s[tag=Start]

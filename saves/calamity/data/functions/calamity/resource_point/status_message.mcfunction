@@ -1,0 +1,4 @@
+execute @s[tag=!Resetting] ~-1 ~ ~ title @a[r=3] actionbar {"translate":"Progress: %s seconds left","color":"green","with":[{"score":{"name":"@s","objective":"displaySecond"},"color":"white"}]}
+execute @s[tag=!Resetting,score_displaySecond_min=1,score_displaySecond=1] ~-1 ~ ~ title @a[r=3] actionbar {"translate":"Progress: %s second left","color":"green","with":[{"score":{"name":"@s","objective":"displaySecond"},"color":"white"}]}
+execute @s[tag=Resetting] ~-1 ~ ~ title @a[r=3] actionbar {"translate":"Resetting: %s seconds left","color":"green","with":[{"score":{"name":"@s","objective":"displaySecond"},"color":"white"}]}
+execute @s[tag=Resetting,score_displaySecond_min=1,score_displaySecond=1] ~-1 ~ ~ title @a[r=3] actionbar {"translate":"Resetting: %s second left","color":"green","with":[{"score":{"name":"@s","objective":"displaySecond"},"color":"white"}]}
