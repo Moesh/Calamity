@@ -8,7 +8,7 @@ execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ execute 
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ execute @s[tag=FacingWest] ~ ~ ~ function calamity:resource_point/update_lights_resetting if @s[tag=Resetting]
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ execute @s[tag=FacingWest] ~ ~ ~ function calamity:resource_point/update_sign
 
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ execute @s[tag=FacingWest] ~ ~ ~ function calamity:resource_point/playsound_every_second if @s[tag=!Resetting]
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/playsound_every_second if @s[tag=!Resetting]
 
 
 execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/output if @s[tag=Output]
