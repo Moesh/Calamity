@@ -1,3 +1,5 @@
+function calamity:resource_point/trigger
+
 scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,score_counter_min=1] counter 1
 scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,score_counter=0] add ReadyToStart
 
