@@ -1,6 +1,6 @@
-scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove Resetting
-scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove Running
-execute @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] ~ ~ ~ say Point reset
+scoreboard players tag @s remove Resetting
+scoreboard players tag @s remove Running
+execute @a[r=4] ~ ~ ~ detect ~ ~-2 ~ minecraft:bedrock 0 title @s actionbar {"translate":"Ready","color":"green"}
 execute @s[tag=FacingWest] ~ ~ ~ blockdata ~-3 ~ ~ {Text2:"{\"translate\":\"Ready\"}"}
 execute @s[tag=FacingEast] ~ ~ ~ blockdata ~3 ~ ~ {Text2:"{\"translate\":\"Ready\"}"}
-scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,tag=ReadyToStart] remove ReadyToStart
+scoreboard players tag @s remove ReadyToStart
