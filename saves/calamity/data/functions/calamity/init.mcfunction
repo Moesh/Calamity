@@ -87,11 +87,10 @@ scoreboard players tag @a remove Playing
 
 kill @e[type=area_effect_cloud,name=ResourcePoint]
 summon minecraft:area_effect_cloud 135 6 57 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 135 6 47 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue"],CustomNameVisible:1b, Duration:2147483647}
 summon minecraft:area_effect_cloud 121 6 57 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed"],CustomNameVisible:1b, Duration:2147483647}
 	stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
 	scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
 
 
 function calamity:setup_moesh_for_testing
-#gamerule gameLoopFunction calamity:main
+gamerule gameLoopFunction calamity:main

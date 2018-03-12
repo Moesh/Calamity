@@ -1,5 +1,3 @@
 scoreboard teams join blue Moesh
-execute Moesh ~ ~ ~ say Joined Blue
-scoreboard objectives setdisplay sidebar progressLights
-gamerule gameLoopFunction calamity:main
-
+tellraw @a {"translate":"Moesh join the %s team.","color":"green","with":[{"translate":"Blue","color":"blue"}]}
+scoreboard objectives setdisplay sidebar
