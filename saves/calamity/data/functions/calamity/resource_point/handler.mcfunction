@@ -13,5 +13,5 @@ execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function
 execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Running] ~ ~ ~ function calamity:resource_point/playsound_every_second if @s[tag=!Resetting]
 
 
-execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/output if @s[tag=Output]
+execute @e[type=area_effect_cloud,name=ResourcePoint,tag=Output] ~ ~ ~ function calamity:resource_point/output
 execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/reset if @s[tag=ReadyToStart]
