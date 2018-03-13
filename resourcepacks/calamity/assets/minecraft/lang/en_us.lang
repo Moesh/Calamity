@@ -1,1 +1,3 @@
 resourcePoint.sign.ready=Ready
+resourcePoint.sign.perPlayer=%s per player
+resourcePoint.sign.perTeam=%s sec. for team
