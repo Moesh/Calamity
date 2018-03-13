@@ -14,7 +14,6 @@ execute @s[tag=TNT] ~ ~ ~ give @a[r=4,tag=GiveResources] minecraft:tnt 8
 execute @s[tag=Regeneration] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:regeneration 45
 execute @s[tag=Resistance] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:resistence 45 1
 execute @s[tag=Strength] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:strength 45
-execute @s[tag=Strength] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:weakness 45 4
 execute @s[tag=Speed] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:speed 45
 execute @s[tag=Haste] ~ ~ ~ effect @a[r=4,tag=GiveResources] minecraft:haste 45 1
 
