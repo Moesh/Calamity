@@ -21,9 +21,9 @@ scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
-scoreboard players set TWENTY CONST 20
-scoreboard players set EIGHTY CONST 80
-scoreboard players set HUNDRED CONST 100
+	scoreboard players set TWENTY CONST 20
+	scoreboard players set EIGHTY CONST 80
+	scoreboard players set HUNDRED CONST 100
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
@@ -47,27 +47,26 @@ scoreboard objectives add displaySecond dummy
 
 # Remove Scoreboard Teams
 scoreboard teams remove lobby
-scoreboard teams add spectator
+scoreboard teams remove spectator
 scoreboard teams remove blue
 scoreboard teams remove red
 
 # Add And Configure Scoreboard Teams
 scoreboard teams add lobby Lobby
 scoreboard teams add spectator Spectator
-
+	scoreboard teams option green color green
 scoreboard teams add blue Blue
-scoreboard teams option blue collisionRule pushOtherTeams
-scoreboard teams option blue color blue
-scoreboard teams option blue deathMessageVisibility always
-scoreboard teams option blue friendlyfire false
-scoreboard teams option blue nametagVisibility always
-
+	scoreboard teams option blue collisionRule pushOtherTeams
+	scoreboard teams option blue color blue
+	scoreboard teams option blue deathMessageVisibility always
+	scoreboard teams option blue friendlyfire false
+	scoreboard teams option blue nametagVisibility always
 scoreboard teams add red Red
-scoreboard teams option red collisionRule pushOtherTeams
-scoreboard teams option red color red
-scoreboard teams option red deathMessageVisibility always
-scoreboard teams option red friendlyfire false
-scoreboard teams option red nametagVisibility always
+	scoreboard teams option red collisionRule pushOtherTeams
+	scoreboard teams option red color red
+	scoreboard teams option red deathMessageVisibility always
+	scoreboard teams option red friendlyfire false
+	scoreboard teams option red nametagVisibility always
 
 # AddFakePlayersToTeam
 scoreboard teams join blue Blue
@@ -109,11 +108,9 @@ summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["F
 summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Resistance"],CustomNameVisible:1b, Duration:2147483647}
 summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Strength","Weakness"],CustomNameVisible:1b, Duration:2147483647}
 summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Speed","Haste"],CustomNameVisible:1b, Duration:2147483647}
-	
-
 	stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
 	scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
-
+	execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/setup_signs
 
 function calamity:setup_moesh_for_testing
 gamerule gameLoopFunction calamity:main
