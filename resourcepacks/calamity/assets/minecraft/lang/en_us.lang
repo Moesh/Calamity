@@ -1,3 +1,6 @@
 resourcePoint.sign.ready=Ready
 resourcePoint.sign.perPlayer=%s per player
 resourcePoint.sign.perTeam=%s sec. for team
+
+resourcePoint.output.item=Given [%s] * %s
+resourcePoint.output.effect=Given [%s] for %s seconds
