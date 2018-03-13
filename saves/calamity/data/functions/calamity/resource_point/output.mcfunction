@@ -48,6 +48,6 @@ execute @s[tag=Strength] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"transla
 execute @s[tag=Speed] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.moveSpeed"},{"text":"45"}]}
 execute @s[tag=Haste] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.digSpeed"},{"text":"45"}]}
 scoreboard players tag @a[tag=GiveMessage] remove GiveMessage
-execute @s[tag=FacingWest] ~ ~ ~ blockdata ~-3 ~ ~ {Text2:"{\"translate\":\"Activated!\"}"}
-execute @s[tag=FacingEast] ~ ~ ~ blockdata ~3 ~ ~ {Text2:"{\"translate\":\"Activated!\"}"}
+execute @s[tag=FacingWest] ~ ~ ~ blockdata ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}
+execute @s[tag=FacingEast] ~ ~ ~ blockdata ~3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}
 scoreboard players tag @s remove Output
