@@ -23,11 +23,20 @@ execute @s[tag=Strength] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:strength 45
 execute @s[tag=Speed] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:speed 45
 execute @s[tag=Haste] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:haste 45 1
 
+# Play success sounds
+execute @a[tag=GiveEffects] ~ ~ ~ playsound minecraft:entity.generic.drink player @s
+
+execute @a[team=blue,tag=GiveResources] ~ ~ ~ scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,r=4,c=1,tag=TeamBlue] add PlaySuccessSound
+execute @a[team=red,tag=GiveResources] ~ ~ ~ scoreboard players tag @e[type=area_effect_cloud,name=ResourcePoint,r=4,c=1,tag=TeamRed] add PlaySuccessSound
+execute @s[tag=PlaySuccessSound] ~ ~ ~ execute @s[tag=TeamBlue] ~ ~ ~ playsound minecraft:entity.player.levelup master @a[team=blue] ~ ~ ~ 0.5 0.5
+execute @s[tag=PlaySuccessSound] ~ ~ ~ execute @s[tag=TeamRed] ~ ~ ~ playsound minecraft:entity.player.levelup master @a[team=red] ~ ~ ~ 0.5 0.5
+scoreboard players tag @s[tag=PlaySuccessSound] remove PlaySuccessSound
+
+# Give title message and reset
 scoreboard players tag @a[tag=GiveResources] add GiveMessage
 scoreboard players tag @a[tag=GiveEffects] add GiveMessage
 scoreboard players tag @a[tag=GiveResources] remove GiveResources
 scoreboard players tag @a[tag=GiveEffects] remove GiveEffects
-
 execute @s[tag=Log] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.log.birch.name"},{"text":"16"}]}
 execute @s[tag=GoldIngot] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.ingotGold.name"},{"text":"24"}]}
 execute @s[tag=Cobblestone] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.stonebrick.name"},{"text":"9"}]}
@@ -39,8 +48,6 @@ execute @s[tag=Strength] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"transla
 execute @s[tag=Speed] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.moveSpeed"},{"text":"45"}]}
 execute @s[tag=Haste] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.digSpeed"},{"text":"45"}]}
 scoreboard players tag @a[tag=GiveMessage] remove GiveMessage
-
-
 execute @s[tag=FacingWest] ~ ~ ~ blockdata ~-3 ~ ~ {Text2:"{\"translate\":\"Activated!\"}"}
 execute @s[tag=FacingEast] ~ ~ ~ blockdata ~3 ~ ~ {Text2:"{\"translate\":\"Activated!\"}"}
 scoreboard players tag @s remove Output
