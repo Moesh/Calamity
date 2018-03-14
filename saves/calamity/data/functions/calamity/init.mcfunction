@@ -17,6 +17,7 @@ scoreboard objectives remove counter
 scoreboard objectives remove progressLights
 scoreboard objectives remove progressSecond
 scoreboard objectives remove progressSound
+scoreboard objectives remove displayPercent
 scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
@@ -24,6 +25,7 @@ scoreboard objectives add CONST dummy
 scoreboard players set 20 CONST 20
 scoreboard players set 80 CONST 80
 scoreboard players set 100 CONST 100
+scoreboard players set -100 CONST -100
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
@@ -44,6 +46,7 @@ scoreboard objectives add progressLights dummy
 scoreboard objectives add progressSecond dummy
 scoreboard objectives add progressSound dummy
 scoreboard objectives add displaySecond dummy
+scoreboard objectives add displayPercent dummy
 
 # Remove Scoreboard Teams
 scoreboard teams remove lobby
