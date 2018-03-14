@@ -22,10 +22,16 @@ scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
+<<<<<<< HEAD
 scoreboard players set 20 CONST 20
 scoreboard players set 80 CONST 80
 scoreboard players set 100 CONST 100
 scoreboard players set -100 CONST -100
+=======
+	scoreboard players set TWENTY CONST 20
+	scoreboard players set EIGHTY CONST 80
+	scoreboard players set HUNDRED CONST 100
+>>>>>>> upstream/master
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
@@ -50,27 +56,26 @@ scoreboard objectives add displayPercent dummy
 
 # Remove Scoreboard Teams
 scoreboard teams remove lobby
-scoreboard teams add spectator
+scoreboard teams remove spectator
 scoreboard teams remove blue
 scoreboard teams remove red
 
 # Add And Configure Scoreboard Teams
 scoreboard teams add lobby Lobby
 scoreboard teams add spectator Spectator
-
+	scoreboard teams option green color green
 scoreboard teams add blue Blue
-scoreboard teams option blue collisionRule pushOtherTeams
-scoreboard teams option blue color blue
-scoreboard teams option blue deathMessageVisibility always
-scoreboard teams option blue friendlyfire false
-scoreboard teams option blue nametagVisibility always
-
+	scoreboard teams option blue collisionRule pushOtherTeams
+	scoreboard teams option blue color blue
+	scoreboard teams option blue deathMessageVisibility always
+	scoreboard teams option blue friendlyfire false
+	scoreboard teams option blue nametagVisibility always
 scoreboard teams add red Red
-scoreboard teams option red collisionRule pushOtherTeams
-scoreboard teams option red color red
-scoreboard teams option red deathMessageVisibility always
-scoreboard teams option red friendlyfire false
-scoreboard teams option red nametagVisibility always
+	scoreboard teams option red collisionRule pushOtherTeams
+	scoreboard teams option red color red
+	scoreboard teams option red deathMessageVisibility always
+	scoreboard teams option red friendlyfire false
+	scoreboard teams option red nametagVisibility always
 
 # AddFakePlayersToTeam
 scoreboard teams join blue Blue
@@ -93,30 +98,28 @@ kill @e[type=area_effect_cloud,name=ResourcePoint]
 #summon minecraft:area_effect_cloud 121 6 57 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed"],CustomNameVisible:1b, Duration:2147483647}
 
 # Blue
-summon minecraft:area_effect_cloud 169 42 118 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Log"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 164 43 142 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Cobblestone"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 150 40 136 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","GoldIngot"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 151 56 154 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Arrow"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 55 173 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","TNT"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 50 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Regeneration"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 102 41 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Resistance"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 122 32 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Strength","Weakness"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Speed","Haste"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 169 42 118 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Log"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 164 43 142 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Cobblestone"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 150 40 136 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","GoldIngot"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 151 56 154 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","Arrow"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 55 173 {CustomName:ResourcePoint,Tags:["FacingWest","TeamBlue","TNT"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 50 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 102 41 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 122 32 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Speed","Haste"],CustomNameVisible:0b, Duration:2147483647}
 # Red
-summon minecraft:area_effect_cloud 103 42 118 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Log"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 108 43 142 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Cobblestone"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 122 40 136 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","GoldIngot"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 121 56 154 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Arrow"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 55 173 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","TNT"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Regeneration"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Resistance"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Strength","Weakness"],CustomNameVisible:1b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Speed","Haste"],CustomNameVisible:1b, Duration:2147483647}
-	
-
+summon minecraft:area_effect_cloud 103 42 118 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Log"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 108 43 142 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Cobblestone"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 122 40 136 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","GoldIngot"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 121 56 154 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Arrow"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 55 173 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","TNT"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Speed","Haste"],CustomNameVisible:0b, Duration:2147483647}
 	stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
 	scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
-
+	execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/setup_signs
 
 function calamity:setup_moesh_for_testing
 gamerule gameLoopFunction calamity:main
