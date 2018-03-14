@@ -21,9 +21,9 @@ scoreboard objectives remove displaySecond
 
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
-scoreboard players set TWENTY CONST 20
-scoreboard players set EIGHTY CONST 80
-scoreboard players set HUNDRED CONST 100
+scoreboard players set 20 CONST 20
+scoreboard players set 80 CONST 80
+scoreboard players set 100 CONST 100
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
