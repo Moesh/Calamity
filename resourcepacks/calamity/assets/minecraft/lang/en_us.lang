@@ -2,13 +2,13 @@ resourcePoint.sign.ready=Ready
 resourcePoint.sign.perPlayer=%s per player
 resourcePoint.sign.perTeam=%s sec. for team
 resourcePoint.sign.activated=Activated!
-resourcePoint.sign.progress=Progress: %s
-resourcePoint.sign.resetting=Resetting: %s
+resourcePoint.sign.progress=Progress: %s%s
+resourcePoint.sign.resetting=Resetting: %s%s
 
 resourcePoint.output.item=Given [%s] * %s
 resourcePoint.output.effect=Given [%s] for %s seconds
 
-resourcePoint.statusMessage.progressSeconds=Progress: %s%
-resourcePoint.statusMessage.progressSecond=Progress: %s%
-resourcePoint.statusMessage.resettingSeconds=Resetting: %s%
-resourcePoint.statusMessage.resettingSecond=Resetting: %s%
+resourcePoint.statusMessage.progressSeconds=Progress: %s seconds left
+resourcePoint.statusMessage.progressSecond=Progress: %s second left
+resourcePoint.statusMessage.resettingSeconds=Resetting: %s seconds left
+resourcePoint.statusMessage.resettingSecond=Resetting: %s seconds left
