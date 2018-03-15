@@ -23,3 +23,6 @@ execute @s[tag=FacingEast] ~ ~ ~ execute @s[tag=Resistance] ~ ~ ~ blockdata ~3 ~
 execute @s[tag=FacingEast] ~ ~ ~ execute @s[tag=Strength] ~ ~ ~ blockdata ~3 ~ ~ {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.damageBoost\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
 execute @s[tag=FacingEast] ~ ~ ~ execute @s[tag=Speed] ~ ~ ~ blockdata ~3 ~ ~ {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.moveSpeed\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
 execute @s[tag=FacingEast] ~ ~ ~ execute @s[tag=Haste] ~ ~ ~ blockdata ~3 ~ ~ {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.digSpeed\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+
+execute @s[tag=FacingNorth] ~ ~ ~ setblock ~ ~ ~-6 minecraft:standing_sign 0
+execute @s[tag=FacingNorth] ~ ~ ~ blockdata ~ ~ ~-6 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
