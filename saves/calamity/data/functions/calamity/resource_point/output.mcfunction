@@ -20,7 +20,7 @@ execute @s[tag=TNT] ~ ~ ~ give @a[r=4,tag=GiveResources] minecraft:tnt 8
 execute @s[tag=Regeneration] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:regeneration 45
 execute @s[tag=Resistance] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:resistance 45 1
 execute @s[tag=Strength] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:strength 45
-execute @s[tag=Speed] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:speed 45
+execute @s[tag=Speed] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:speed 45 1
 execute @s[tag=Haste] ~ ~ ~ effect @a[tag=GiveEffects] minecraft:haste 45 1
 
 # Play success sounds
@@ -43,10 +43,10 @@ execute @s[tag=Cobblestone] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"tran
 execute @s[tag=Arrow] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.arrow.name"},{"text":"32"}]}
 execute @s[tag=TNT] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.tnt.name"},{"text":"8"}]}
 execute @s[tag=Regeneration] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.regeneration"},{"text":"45"}]}
-execute @s[tag=Resistance] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.resistance"},{"text":"45"}]}
+execute @s[tag=Resistance] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 execute @s[tag=Strength] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.damageBoost"},{"text":"45"}]}
-execute @s[tag=Speed] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.moveSpeed"},{"text":"45"}]}
-execute @s[tag=Haste] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.digSpeed"},{"text":"45"}]}
+execute @s[tag=Speed] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.moveSpeed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute @s[tag=Haste] ~ ~ ~ title @a[r=4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.digSpeed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 scoreboard players tag @a[tag=GiveMessage] remove GiveMessage
 execute @s[tag=FacingWest] ~ ~ ~ blockdata ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}
 execute @s[tag=FacingEast] ~ ~ ~ blockdata ~3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}
