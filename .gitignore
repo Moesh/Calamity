@@ -1,43 +1,15 @@
+*
 
-logs/
+!saves/calamity/data/functions/
 
-realms_persistence\.json
+!saves/calamity/region/r.0.0.mca
 
-usercache\.json
+!saves/calamity/structures
 
-options\.txt
+!saves/calamity/icon.png
 
-saves/calamity/data/villages\.dat
+!saves/calamity/level.dat
 
-saves/calamity/data/villages_end\.dat
+!resourcepacks/calamity/
 
-saves/calamity/data/villages_nether\.dat
-
-saves/calamity/level\.dat_old
-
-saves/calamity/playerdata/
-
-saves/calamity/region/r\.-1\.-1\.mca
-
-saves/calamity/region/r\.-1\.0\.mca
-
-saves/calamity/region/r\.0\.-1\.mca
-
-saves/calamity/session\.lock
-
-saves/calamity/stats/
-
-saves/calamity/advancements/
-
-saves/calamity/data/scoreboard\.dat
-
-saves/calamity/mcedit_waypoints\.dat
-
-hs_err_pid16116\.log
-
-resourcepacks/assets/
-
-saves/calamity_old/
-resourcepacks/f81517ca516363c381528480bb4c5189-New Default Betapack V2\.zip
-
-saves/calamity/textures\.pdn
+!README.md
