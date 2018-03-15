@@ -6,6 +6,9 @@ resourcePoint.sign.progress=Progress: %s%%
 resourcePoint.sign.resetting=Resetting: %s%%
 resourcePoint.sign.type=[%s%s]
 
+majorPoint.sign.ironIngot=Iron Ingots
+majorPoint.sign.experienceBottle=Exp. Bottles
+
 resourcePoint.output.item=Given [%s] * %s
 resourcePoint.output.effect=Given [%s%3$s] for %s seconds
 resourcePoint.output.effect.level2= II
@@ -14,3 +17,4 @@ resourcePoint.statusMessage.progressSeconds=Progress: %s seconds left
 resourcePoint.statusMessage.progressSecond=Progress: %s second left
 resourcePoint.statusMessage.resettingSeconds=Resetting: %s seconds left
 resourcePoint.statusMessage.resettingSecond=Resetting: %s second left
+

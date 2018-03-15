@@ -26,3 +26,5 @@ execute @s[tag=FacingEast] ~ ~ ~ execute @s[tag=Haste] ~ ~ ~ blockdata ~3 ~ ~ {T
 
 execute @s[tag=FacingNorth] ~ ~ ~ setblock ~ ~ ~-6 minecraft:standing_sign 0
 execute @s[tag=FacingNorth] ~ ~ ~ blockdata ~ ~ ~-6 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
+execute @s[tag=FacingNorth] ~ ~ ~ execute @s[tag=IronIngot] ~ ~ ~ blockdata ~ ~ ~-6 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"majorPoint.sign.ironIngot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"6\"}]}"}
+execute @s[tag=FacingNorth] ~ ~ ~ execute @s[tag=ExperienceBottle] ~ ~ ~ blockdata ~ ~ ~-6 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"majorPoint.sign.experienceBottle\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"12\"}]}"}
