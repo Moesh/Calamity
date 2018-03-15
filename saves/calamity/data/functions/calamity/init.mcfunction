@@ -100,7 +100,7 @@ summon minecraft:area_effect_cloud 157 55 173 {CustomName:ResourcePoint,Tags:["F
 summon minecraft:area_effect_cloud 115 50 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
 summon minecraft:area_effect_cloud 102 41 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
 summon minecraft:area_effect_cloud 122 32 162 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Speed","Haste"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["FacingEast","TeamBlue","Effect","Speed"],CustomNameVisible:0b, Duration:2147483647}
 # Red
 summon minecraft:area_effect_cloud 103 42 118 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Log"],CustomNameVisible:0b, Duration:2147483647}
 summon minecraft:area_effect_cloud 108 43 142 {CustomName:ResourcePoint,Tags:["FacingEast","TeamRed","Cobblestone"],CustomNameVisible:0b, Duration:2147483647}
@@ -110,7 +110,7 @@ summon minecraft:area_effect_cloud 115 55 173 {CustomName:ResourcePoint,Tags:["F
 summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
 summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
 summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Speed","Haste"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:0b, Duration:2147483647}
 	stats entity @e[type=area_effect_cloud,name=ResourcePoint] set SuccessCount @s SuccessCount
 	scoreboard players add @e[type=area_effect_cloud,name=ResourcePoint] SuccessCount 0
 	execute @e[type=area_effect_cloud,name=ResourcePoint] ~ ~ ~ function calamity:resource_point/setup_signs
