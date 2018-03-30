@@ -22,9 +22,9 @@ execute @s[tag=ExperienceBottle] ~ ~ ~ scoreboard players operation BlueTeam out
 execute @s[tag=ExperienceBottle] ~ ~ ~ scoreboard players operation RedTeam outputMajor *= 6 CONST
 
 execute @s[tag=IronIngot,score_outputMajor_min=1] ~ ~ ~ execute @a[team=blue,tag=CountForOutput] ~ ~ ~ summon minecraft:item 154 44 118 {Item:{id:"minecraft:iron_ingot",Count:12b}}
-execute @s[tag=IronIngot,score_outputMajor=-1] ~ ~ ~ execute @a[team=red,tag=CountForOutput] ~ ~ ~ summon minecraft:item 154 44 118 {Item:{id:"minecraft:iron_ingot",Count:12b}}
+execute @s[tag=IronIngot,score_outputMajor=-1] ~ ~ ~ execute @a[team=red,tag=CountForOutput] ~ ~ ~ summon minecraft:item 118 44 118 {Item:{id:"minecraft:iron_ingot",Count:12b}}
 
-execute @s[tag=ExperienceBottle,score_outputMajor_min=1] ~ ~ ~ execute @a[team=blue,tag=CountForOutput] ~ ~ ~ summon minecraft:item 118 44 118 {Item:{id:"minecraft:experience_bottle",Count:6b}}
+execute @s[tag=ExperienceBottle,score_outputMajor_min=1] ~ ~ ~ execute @a[team=blue,tag=CountForOutput] ~ ~ ~ summon minecraft:item 154 44 118 {Item:{id:"minecraft:experience_bottle",Count:6b}}
 execute @s[tag=ExperienceBottle,score_outputMajor=-1] ~ ~ ~ execute @a[team=red,tag=CountForOutput] ~ ~ ~ summon minecraft:item 118 44 118 {Item:{id:"minecraft:experience_bottle",Count:6b}}
 
 execute @s[tag=IronIngot,score_outputMajor_min=1] ~ ~ ~ tellraw @a {"translate":"majorPoint.output","color":"light_purple","with":[{"translate":"team.blue","color":"blue"},{"translate":"item.ingotIron.name","color":"green"},{"score":{"name":"BlueTeam","objective":"outputMajor"},"color":"white"}]}
