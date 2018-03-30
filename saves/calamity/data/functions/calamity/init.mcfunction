@@ -20,8 +20,12 @@ scoreboard objectives remove progressSound
 scoreboard objectives remove displayPercent
 scoreboard objectives remove displaySecond
 
+scoreboard objectives remove outputMajor
+
 # Add Scoreboard Objectives
 scoreboard objectives add CONST dummy
+scoreboard players set 6 CONST 6
+scoreboard players set 12 CONST 12
 scoreboard players set 20 CONST 20
 scoreboard players set 80 CONST 80
 scoreboard players set 100 CONST 100
@@ -49,6 +53,8 @@ scoreboard objectives add progressSecond dummy
 scoreboard objectives add progressSound dummy
 scoreboard objectives add displaySecond dummy
 scoreboard objectives add displayPercent dummy
+
+scoreboard objectives add outputMajor dummy
 
 # Remove Scoreboard Teams
 scoreboard teams remove lobby
