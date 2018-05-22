@@ -6,7 +6,7 @@ execute @e[type=area_effect_cloud,name=MajorPoint,tag=ResetPoint] ~ ~ ~ setblock
 execute @e[type=area_effect_cloud,name=MajorPoint,tag=ResetPoint] ~ ~ ~ execute @s ~ ~ ~ playsound minecraft:block.piston.contract block @a ~ ~-1 ~ 1 1.5
 scoreboard players tag @e[type=area_effect_cloud,name=MajorPoint,tag=ResetPoint] remove ResetPoint
 
-# Player steps on pressure plate, if blue team, CheckStatus
+# Player steps on pressure plate, CheckStatus
 execute @e[type=area_effect_cloud,name=MajorPoint] ~ ~ ~ testfor @a[dx=0,dy=1,dz=0]
 execute @e[type=area_effect_cloud,name=MajorPoint,score_SuccessCount_min=1] ~ ~ ~ scoreboard players tag @s add CheckStatus
 execute @e[type=area_effect_cloud,name=MajorPoint,tag=CheckStatus,score_SuccessCount_min=1] ~ ~ ~ setblock ~ ~-1 ~ minecraft:end_portal_frame 6
