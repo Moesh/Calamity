@@ -100,28 +100,32 @@ scoreboard players tag @a remove Playing
 
 kill @e[type=area_effect_cloud,tag=Point]
 # Blue
-summon minecraft:area_effect_cloud 169 42 118 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Log"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 164 43 142 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Cobblestone"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 150 40 136 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","GoldIngot"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 151 56 154 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Arrow"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 55 173 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","TNT"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 50 189 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 102 41 162 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 122 32 162 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Speed"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 169 42 118 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Log"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 164 43 142 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Cobblestone"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 150 40 136 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","GoldIngot"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 151 56 154 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","Arrow"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 55 173 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamBlue","TNT"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 50 189 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 102 41 162 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 122 32 162 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 18 189 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamBlue","Effect","Speed"],CustomNameVisible:1b, Duration:2147483647}
 # Red
-summon minecraft:area_effect_cloud 103 42 118 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Log"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 108 43 142 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Cobblestone"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 122 40 136 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","GoldIngot"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 121 56 154 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Arrow"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 115 55 173 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","TNT"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 103 42 118 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Log"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 108 43 142 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Cobblestone"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 122 40 136 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","GoldIngot"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 121 56 154 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","Arrow"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 115 55 173 {CustomName:ResourcePoint,Tags:["Point","FacingEast","TeamRed","TNT"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 50 189 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 170 41 162 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 150 32 162 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 157 18 189 {CustomName:ResourcePoint,Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:1b, Duration:2147483647}
 # Major Points
-summon minecraft:area_effect_cloud 136 55 188 {CustomName:MajorPoint,Tags:["Point","FacingNorth","ExperienceBottle"],CustomNameVisible:0b, Duration:2147483647}
-summon minecraft:area_effect_cloud 136 23 188 {CustomName:MajorPoint,Tags:["Point","FacingNorth","IronIngot"],CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 136 55 188 {CustomName:MajorPoint,Tags:["Point","FacingNorth","ExperienceBottle"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 136 23 188 {CustomName:MajorPoint,Tags:["Point","FacingNorth","IronIngot"],CustomNameVisible:1b, Duration:2147483647}
+# Objective
+summon minecraft:area_effect_cloud 159 43 100 {CustomName:Objective,Tags:["Point","FacingNorth","TeamBlue"],CustomNameVisible:1b, Duration:2147483647}
+summon minecraft:area_effect_cloud 113 43 100 {CustomName:Objective,Tags:["Point","FacingNorth","TeamRed"],CustomNameVisible:1b, Duration:2147483647}
+
 # Set-up all points to record SuccessCount stats
 stats entity @e[type=area_effect_cloud,tag=Point] set SuccessCount @s SuccessCount
 scoreboard players add @e[type=area_effect_cloud,tag=Point] SuccessCount 0
