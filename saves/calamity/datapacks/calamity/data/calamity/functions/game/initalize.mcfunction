@@ -40,7 +40,7 @@ scoreboard objectives add gameRules dummy
 scoreboard objectives add health health
 scoreboard objectives add QueryResult dummy
 scoreboard objectives add SuccessCount dummy
-scoreboard objectives add loggedOff stat.leaveGame
+scoreboard objectives add loggedOff minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add teamSelected trigger
 scoreboard objectives add classSelected trigger
@@ -57,37 +57,37 @@ scoreboard objectives add displayPercent dummy
 scoreboard objectives add outputMajor dummy
 
 # Remove Scoreboard Teams
-scoreboard teams remove lobby
-scoreboard teams remove spectator
-scoreboard teams remove blue
-scoreboard teams remove red
+team remove lobby
+team remove spectator
+team remove blue
+team remove red
 
 # Add And Configure Scoreboard Teams
-scoreboard teams add lobby Lobby
-scoreboard teams add spectator Spectator
-	scoreboard teams option green color green
-scoreboard teams add blue Blue
-	scoreboard teams option blue collisionRule pushOtherTeams
-	scoreboard teams option blue color blue
-	scoreboard teams option blue deathMessageVisibility always
-	scoreboard teams option blue friendlyfire false
-	scoreboard teams option blue nametagVisibility always
-scoreboard teams add red Red
-	scoreboard teams option red collisionRule pushOtherTeams
-	scoreboard teams option red color red
-	scoreboard teams option red deathMessageVisibility always
-	scoreboard teams option red friendlyfire false
-	scoreboard teams option red nametagVisibility always
+team add lobby {"translate":"calamity.team.name.lobby"}
+team add spectator {"translate":"calamity.team.name.spectator"}
+	team modify green color green
+team add blue {"translate":"calamity.team.name.blue"}
+	team modify blue collisionRule pushOtherTeams
+	team modify blue color blue
+	team modify blue deathMessageVisibility always
+	team modify blue friendlyFire false
+	team modify blue nametagVisibility always
+team add red {"translate":"calamity.team.name.red"}
+	team modify red collisionRule pushOtherTeams
+	team modify red color red
+	team modify red deathMessageVisibility always
+	team modify red friendlyFire false
+	team modify red nametagVisibility always
 
 # AddFakePlayersToTeam
-scoreboard teams join blue Blue
-scoreboard teams join red Red
+team join blue Blue
+team join red Red
 
 # RemoveScoreboardTags
-scoreboard players tag @a remove Registered
-scoreboard players tag @a remove Winner
-scoreboard players tag @a remove Spectating
-scoreboard players tag @a remove Playing
+tag @a remove Registered
+tag @a remove Winner
+tag @a remove Spectating
+tag @a remove Playing
 
 
 #kill @e[type=area_effect_cloud,name=Main]
@@ -129,7 +129,5 @@ summon minecraft:area_effect_cloud 113 43 100 {CustomName:Objective,Tags:["Point
 # Set-up all points to record SuccessCount stats
 stats entity @e[type=area_effect_cloud,tag=Point] set SuccessCount @s SuccessCount
 scoreboard players add @e[type=area_effect_cloud,tag=Point] SuccessCount 0
-execute @e[type=area_effect_cloud,tag=Point] ~ ~ ~ function calamity:setup_signs
+execute as @e[type=area_effect_cloud,tag=Point] run function calamity:setup_signs
 
-function calamity:setup_moesh_for_testing
-gamerule gameLoopFunction calamity:main
