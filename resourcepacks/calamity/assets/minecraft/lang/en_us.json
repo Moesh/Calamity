@@ -22,5 +22,8 @@
 	"resourcePoint.statusMessage.progressSeconds": "Progress: %s seconds left",
 	"resourcePoint.statusMessage.progressSecond": "Progress: %s second left",
 	"resourcePoint.statusMessage.resettingSeconds": "Resetting: %s seconds left",
-	"resourcePoint.statusMessage.resettingSecond": "Resetting: %s second left"
+	"resourcePoint.statusMessage.resettingSecond": "Resetting: %s second left",
+
+	"team.name.blue": "Blue",
+	"team.name.red": "Red"
 }
