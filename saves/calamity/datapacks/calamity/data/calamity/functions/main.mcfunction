@@ -1,4 +1,4 @@
-#function calamity:resource_point/handler
+function calamity:resource_point/handler
 #function calamity:major_point/handler
 
 # Convert end_stone item to cobblestone item.

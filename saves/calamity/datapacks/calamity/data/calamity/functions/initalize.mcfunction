@@ -63,16 +63,16 @@ team remove blue
 team remove red
 
 # Add And Configure Scoreboard Teams
-team add lobby {"translate":"calamity.team.name.lobby"}
-team add spectator {"translate":"calamity.team.name.spectator"}
+team add lobby {"translate":"team.name.lobby"}
+team add spectator {"translate":"team.name.spectator"}
 	team modify green color green
-team add blue {"translate":"calamity.team.name.blue"}
+team add blue {"translate":"team.name.blue"}
 	team modify blue collisionRule pushOtherTeams
 	team modify blue color blue
 	team modify blue deathMessageVisibility always
 	team modify blue friendlyFire false
 	team modify blue nametagVisibility always
-team add red {"translate":"calamity.team.name.red"}
+team add red {"translate":"team.name.red"}
 	team modify red collisionRule pushOtherTeams
 	team modify red color red
 	team modify red deathMessageVisibility always
@@ -119,5 +119,5 @@ summon minecraft:area_effect_cloud 159 43 100 {CustomName:"{\"text\":\"Objective
 summon minecraft:area_effect_cloud 113 43 100 {CustomName:"{\"text\":\"Objective\"}",Tags:["Point","FacingNorth","TeamRed"],CustomNameVisible:1b,Duration:2147483647,Rotation:[180.0f,-0.0f]}
 
 # Configure resource points
-execute at @e[type=area_effect_cloud,tag=Point] run function calamity:game/setup_signs
+function calamity:setup_signs
 
