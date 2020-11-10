@@ -1,6 +1,9 @@
 {
 	"values": [
-		"calamity:initalize",
-		"calamity:setup_moesh_for_testing"
+		"calamity:load/setup_objectives",
+		"calamity:load/setup_teams",
+		"calamity:load/setup_resource_points",
+		"calamity:load/setup_signs",
+		"calamity:load/setup_moesh_for_testing"
 	]
 }
