@@ -1,46 +1,39 @@
-
-saves/calamity/advancements/
+crash-reports/
 
 logs/
 
+options\.txt
+
 realms_persistence\.json
 
-options\.txt
+saves/calamity/advancements/
 
 saves/calamity/data/
 
-saves/calamity/region/r\.-1\.-1\.mca
-
-saves/calamity/region/r\.-1\.0\.mca
-
-saves/calamity/region/r\.-1\.1\.mca
-
-saves/calamity/region/r\.0\.-1\.mca
-
-saves/calamity/region/r\.0\.1\.mca
-
-saves/calamity/region/r\.1\.-1\.mca
-
-saves/calamity/region/r\.1\.0\.mca
-
-usercache\.json
-
-saves/calamity/stats/
-
-saves/calamity/session\.lock
-
-saves/calamity/playerdata/
-
-saves/calamity/level\.dat_old
+saves/calamity/DIM-1/
+saves/calamity/DIM1/
 
 saves/calamity/icon\.png
 
-crash-reports/
+saves/calamity/level\.dat_old
+
+saves/calamity/playerdata/
 
 saves/calamity/poi/
 
+saves/calamity/region/r.1.1.mca
+saves/calamity/region/r\.-1\.-1\.mca
+saves/calamity/region/r\.-1\.0\.mca
+saves/calamity/region/r\.-1\.1\.mca
+saves/calamity/region/r\.0\.-1\.mca
+saves/calamity/region/r\.0\.1\.mca
+saves/calamity/region/r\.1\.-1\.mca
+saves/calamity/region/r\.1\.0\.mca
+
+saves/calamity/session\.lock
+
+saves/calamity/stats/
+
 screenshots/
 
-saves/calamity/DIM-1/
-
-saves/calamity/DIM1/
+usercache\.json
