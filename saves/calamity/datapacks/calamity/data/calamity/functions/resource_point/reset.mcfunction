@@ -1,5 +1,5 @@
 tag @s remove Resetting
-tag @s remove Running
+tag @s remove Charging
 
 execute as @a[distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveMessage
 execute as @a[distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveMessage
