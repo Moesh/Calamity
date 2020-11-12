@@ -1,23 +1,24 @@
-scoreboard players operation @e[type=area_effect_cloud] progressSecond = @s PointTimer
-scoreboard players operation @e[type=area_effect_cloud] progressSecond %= 20 CONST
+# Called from: calamity:resource_point/handler
 
+#---------------------------------------------------------------------------------------------------
+# Purpose: Update sign on all resource and effect points
+#---------------------------------------------------------------------------------------------------
+# Only update signs every second
+scoreboard players operation @s progressSecond = @s PointTimer
+scoreboard players operation @s progressSecond %= 20 CONST
+
+# Take PointTimer and convert it to seconds and a percentage, for some dumb reason.
 scoreboard players operation @s[scores={progressSecond=0}] displaySecond = @s PointTimer
-scoreboard players operation @s[scores={SuccessCount=1..}] displaySecond /= 20 CONST
-scoreboard players operation @s[scores={SuccessCount=1..}] displayPercent = @s PointTimer
-scoreboard players operation @s[scores={SuccessCount=1..}] displayPercent *= -100 CONST
+scoreboard players operation @s[scores={progressSecond=0}] displaySecond /= 20 CONST
 
-
-scoreboard players operation @s[scores={progressSecond=0},tag=!Resetting] displayPercent /= PointChargeTime gameRules
-scoreboard players operation @s[scores={SuccessCount=1..},tag=!Resetting] displayPercent += 100 CONST
-execute as @s[scores={SuccessCount=1..},tag=!Resetting] run tag @s add UpdateSign
-execute as @s[tag=UpdateSign,tag=FacingWest] run data merge block ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.progress\",\"with\":[{\"score\":{\"name\":\"@e[c=1,r=5,type=area_effect_cloud,name=ResourcePoint]\",\"objective\":\"displayPercent\"}}]}"}
-execute as @s[tag=UpdateSign,tag=FacingEast] run data merge block ~3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.progress\",\"with\":[{\"score\":{\"name\":\"@e[c=1,r=5,type=area_effect_cloud,name=ResourcePoint]\",\"objective\":\"displayPercent\"}}]}"}
-tag @s[tag=UpdateSign] remove UpdateSign
-
-
-scoreboard players operation @s[scores={progressSecond=0},tag=Resetting] displayPercent /= PointResetTime gameRules
-scoreboard players operation @s[scores={SuccessCount=1..},tag=Resetting] displayPercent += 100 CONST
-execute as @s[scores={SuccessCount=1..},tag=Resetting] run tag @s add UpdateSign
-execute as @s[tag=UpdateSign,tag=FacingWest] run data merge block ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.resetting\",\"with\":[{\"score\":{\"name\":\"@e[c=1,r=5,type=area_effect_cloud,name=ResourcePoint]\",\"objective\":\"displayPercent\"}}]}"}
-execute as @s[tag=UpdateSign,tag=FacingEast] run data merge block ~3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.resetting\",\"with\":[{\"score\":{\"name\":\"@e[c=1,r=5,type=area_effect_cloud,name=ResourcePoint]\",\"objective\":\"displayPercent\"}}]}"}
-tag @s[tag=UpdateSign] remove UpdateSign
+# Calculate percentage to be totally obtuse and awesome.
+scoreboard players operation @s displayPercent = @s PointTimer
+scoreboard players operation @s displayPercent *= -100 CONST
+scoreboard players operation @s displayPercent /= PointChargeTime gameRules
+scoreboard players operation @s displayPercent += 100 CONST
+# Update sign with charging percentage
+execute at @s[tag=FacingWest,tag=Charging] at @s run data merge block ~-3 ~ ~ {Text2:'{"translate":"resourcePoint.sign.progress","with":[{"score":{"name":"@e[limit=1,distance=..4,type=area_effect_cloud]","objective":"displayPercent"}}]}'}
+execute at @s[tag=FacingEast,tag=Charging] at @s run data merge block ~3 ~ ~ {Text2:'{"translate":"resourcePoint.sign.progress","with":[{"score":{"name":"@e[limit=1,distance=..4,type=area_effect_cloud]","objective":"displayPercent"}}]}'}
+# Update sign with resetting percentage
+execute at @s[tag=FacingWest,tag=Resetting] at @s run data merge block ~-3 ~ ~ {Text2:'{"translate":"resourcePoint.sign.resetting","with":[{"score":{"name":"@e[limit=1,distance=..4,type=area_effect_cloud]","objective":"displayPercent"}}]}'}
+execute at @s[tag=FacingEast,tag=Resetting] at @s run data merge block ~3 ~ ~ {Text2:'{"translate":"resourcePoint.sign.resetting","with":[{"score":{"name":"@e[limit=1,distance=..4,type=area_effect_cloud]","objective":"displayPercent"}}]}'}
