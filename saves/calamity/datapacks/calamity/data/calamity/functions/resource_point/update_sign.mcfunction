@@ -1,9 +1,9 @@
-scoreboard players operation @e[type=area_effect_cloud] progressSecond = @s PointCounter
+scoreboard players operation @e[type=area_effect_cloud] progressSecond = @s PointTimer
 scoreboard players operation @e[type=area_effect_cloud] progressSecond %= 20 CONST
 
-scoreboard players operation @s[scores={progressSecond=0}] displaySecond = @s PointCounter
+scoreboard players operation @s[scores={progressSecond=0}] displaySecond = @s PointTimer
 scoreboard players operation @s[scores={SuccessCount=1..}] displaySecond /= 20 CONST
-scoreboard players operation @s[scores={SuccessCount=1..}] displayPercent = @s PointCounter
+scoreboard players operation @s[scores={SuccessCount=1..}] displayPercent = @s PointTimer
 scoreboard players operation @s[scores={SuccessCount=1..}] displayPercent *= -100 CONST
 
 

@@ -1,4 +1,4 @@
-scoreboard players operation @s progressLights = @s PointCounter
+scoreboard players operation @s progressLights = @s PointTimer
 #scoreboard players operation @s progressLights /= HUNDRED CONST
 
 execute as @s[tag=FacingWest,scores={progressLights=399..400}] run setblock ~-3 ~-1 ~2 minecraft:sea_lantern

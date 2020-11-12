@@ -13,7 +13,7 @@ scoreboard objectives remove classSelected
 scoreboard objectives remove startRound
 scoreboard objectives remove spectate
 
-scoreboard objectives remove PointCounter
+scoreboard objectives remove PointTimer
 scoreboard objectives remove progressLights
 scoreboard objectives remove progressSecond
 scoreboard objectives remove progressSound
@@ -47,7 +47,7 @@ scoreboard objectives add classSelected trigger
 scoreboard objectives add startRound trigger
 scoreboard objectives add spectate trigger
 
-scoreboard objectives add PointCounter dummy
+scoreboard objectives add PointTimer dummy
 scoreboard objectives add progressLights dummy
 scoreboard objectives add progressSecond dummy
 scoreboard objectives add progressSound dummy

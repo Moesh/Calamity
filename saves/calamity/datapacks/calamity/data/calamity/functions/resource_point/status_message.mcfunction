@@ -1,5 +1,6 @@
 # Progressing
 
+
 # More than one second left
 execute at @s[tag=Running,scores={displaySecond=2..}] if entity @a[distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveMessage
 execute at @s[tag=Running,scores={displaySecond=2..}] if entity @a[distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveMessage

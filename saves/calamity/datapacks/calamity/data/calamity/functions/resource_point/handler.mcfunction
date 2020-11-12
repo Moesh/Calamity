@@ -5,12 +5,12 @@
 #---------------------------------------------------------------------------------------------------
 
 # If a point is running, tick it down and set it to Output if finished
-scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Running,scores={PointCounter=1..}] PointCounter 1
-tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Running,scores={PointCounter=0}] add Output
+scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Running,scores={PointTimer=1..}] PointTimer 1
+tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Running,scores={PointTimer=0}] add Output
 
 # If a point is resetting tick it down and set it to ReadyToStart if finished
-scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,scores={PointCounter=1..}] PointCounter 1
-tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,scores={PointCounter=0}] add ReadyToStart
+scoreboard players remove @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,scores={PointTimer=1..}] PointTimer 1
+tag @e[type=area_effect_cloud,name=ResourcePoint,tag=Resetting,scores={PointTimer=0}] add ReadyToStart
 
 # Check if a player is standing on the custom "pressure plate" every tick.
 function calamity:resource_point/pressure_plate/trigger

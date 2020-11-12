@@ -1,6 +1,6 @@
 tag @s add Resetting
 tag @s remove Running
-scoreboard players operation @s PointCounter = PointResetTime gameRules
+scoreboard players operation @s PointTimer = PointResetTime gameRules
 
 # Determine if nearby players are standing on bedrock (2 blocks down is y-3)
 execute as @s[tag=!Effect,tag=TeamBlue] run tag @a[distance=..4,team=blue] add CheckIfStandingOnPoint
