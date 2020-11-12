@@ -1,4 +1,4 @@
-scoreboard players operation @s progressLights = @s counter
+scoreboard players operation @s progressLights = @s PointCounter
 #scoreboard players operation @s progressLights /= HUNDRED CONST
 
 execute if entity @s[tag=FacingWest,scores={progressLights=380}] run setblock ~-3 ~-1 ~-2 minecraft:redstone_lamp

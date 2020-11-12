@@ -13,7 +13,7 @@ scoreboard objectives remove classSelected
 scoreboard objectives remove startRound
 scoreboard objectives remove spectate
 
-scoreboard objectives remove counter
+scoreboard objectives remove PointCounter
 scoreboard objectives remove progressLights
 scoreboard objectives remove progressSecond
 scoreboard objectives remove progressSound
@@ -33,10 +33,10 @@ scoreboard players set -100 CONST -100
 
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives add gameRules dummy
-	scoreboard players set RunningTime gameRules 400
-	scoreboard players set ResettingTime gameRules 400
-	scoreboard players set MajorRunningTime gameRules 1200
-	scoreboard players set MajorResettingTime gameRules 1200
+	scoreboard players set PointChargeTime gameRules 400
+	scoreboard players set PointResetTime gameRules 400
+	scoreboard players set MajorChargeTime gameRules 1200
+	scoreboard players set MajorResetTime gameRules 1200
 scoreboard objectives add health health
 scoreboard objectives add QueryResult dummy
 scoreboard objectives add SuccessCount dummy
@@ -47,7 +47,7 @@ scoreboard objectives add classSelected trigger
 scoreboard objectives add startRound trigger
 scoreboard objectives add spectate trigger
 
-scoreboard objectives add counter dummy
+scoreboard objectives add PointCounter dummy
 scoreboard objectives add progressLights dummy
 scoreboard objectives add progressSecond dummy
 scoreboard objectives add progressSound dummy
