@@ -37,17 +37,17 @@ tag @a[tag=GiveEffects] add GiveMessage
 tag @a[tag=GiveResources] remove GiveResources
 tag @a[tag=GiveEffects] remove GiveEffects
 # Resources
-execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.log.birch.name"},{"text":"16"}]}
-execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.ingotGold.name"},{"text":"24"}]}
-execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.stonebrick.name"},{"text":"9"}]}
-execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.arrow.name"},{"text":"32"}]}
-execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"tile.tnt.name"},{"text":"8"}]}
+execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
+execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
+execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
+execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"32"}]}
+execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"8"}]}
 # Effects
-execute as @s[tag=Regeneration] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.regeneration"},{"text":"45"}]}
-execute as @s[tag=Resistance] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Strength] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.damageBoost"},{"text":"45"}]}
-execute as @s[tag=Speed] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.moveSpeed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Haste] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.digSpeed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Regeneration] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
+execute as @s[tag=Resistance] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Strength] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=Speed] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Haste] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 tag @a[tag=GiveMessage] remove GiveMessage
 
 
