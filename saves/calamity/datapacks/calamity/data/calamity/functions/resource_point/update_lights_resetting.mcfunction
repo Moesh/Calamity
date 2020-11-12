@@ -1,14 +1,20 @@
-scoreboard players operation @s progressLights = @s PointTimer
-#scoreboard players operation @s progressLights /= HUNDRED CONST
+# Called from: calamity:resource_point/handler
 
-execute if entity @s[tag=FacingWest,scores={progressLights=380}] run setblock ~-3 ~-1 ~-2 minecraft:redstone_lamp
-execute if entity @s[tag=FacingWest,scores={progressLights=300}] run setblock ~-3 ~-1 ~-1 minecraft:redstone_lamp
-execute if entity @s[tag=FacingWest,scores={progressLights=200}] run setblock ~-3 ~-1 ~0 minecraft:redstone_lamp
-execute if entity @s[tag=FacingWest,scores={progressLights=100}] run setblock ~-3 ~-1 ~1 minecraft:redstone_lamp
-execute if entity @s[tag=FacingWest,scores={progressLights=0}] run setblock ~-3 ~-1 ~2 minecraft:redstone_lamp
+#---------------------------------------------------------------------------------------------------
+# Purpose: Update lights for when a resource point is charging
+#---------------------------------------------------------------------------------------------------
+# Lights turn off right to left.
 
-execute if entity @s[tag=FacingEast,scores={progressLights=380}] run setblock ~3 ~-1 ~2 minecraft:redstone_lamp
-execute if entity @s[tag=FacingEast,scores={progressLights=300}] run setblock ~3 ~-1 ~1 minecraft:redstone_lamp
-execute if entity @s[tag=FacingEast,scores={progressLights=200}] run setblock ~3 ~-1 ~0 minecraft:redstone_lamp
-execute if entity @s[tag=FacingEast,scores={progressLights=100}] run setblock ~3 ~-1 ~-1 minecraft:redstone_lamp
-execute if entity @s[tag=FacingEast,scores={progressLights=0}] run setblock ~3 ~-1 ~-2 minecraft:redstone_lamp
+# West
+execute if entity @s[tag=FacingWest,scores={progressLights=..20}] run setblock ~-3 ~-1 ~-2 minecraft:redstone_lamp
+execute if entity @s[tag=FacingWest,scores={progressLights=40}] run setblock ~-3 ~-1 ~-1 minecraft:redstone_lamp
+execute if entity @s[tag=FacingWest,scores={progressLights=60}] run setblock ~-3 ~-1 ~0 minecraft:redstone_lamp
+execute if entity @s[tag=FacingWest,scores={progressLights=80}] run setblock ~-3 ~-1 ~1 minecraft:redstone_lamp
+execute if entity @s[tag=FacingWest,scores={progressLights=99..100}] run setblock ~-3 ~-1 ~2 minecraft:redstone_lamp
+
+# East
+execute if entity @s[tag=FacingEast,scores={progressLights=..20}] run setblock ~3 ~-1 ~2 minecraft:redstone_lamp
+execute if entity @s[tag=FacingEast,scores={progressLights=40}] run setblock ~3 ~-1 ~1 minecraft:redstone_lamp
+execute if entity @s[tag=FacingEast,scores={progressLights=60}] run setblock ~3 ~-1 ~0 minecraft:redstone_lamp
+execute if entity @s[tag=FacingEast,scores={progressLights=80}] run setblock ~3 ~-1 ~-1 minecraft:redstone_lamp
+execute if entity @s[tag=FacingEast,scores={progressLights=99..100}] run setblock ~3 ~-1 ~-2 minecraft:redstone_lamp
