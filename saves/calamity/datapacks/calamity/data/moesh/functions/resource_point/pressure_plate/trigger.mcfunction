@@ -1,4 +1,4 @@
-# Called from: calamity:resource_point/handler
+# Called from: moesh:resource_point/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Handler for triggering the custom pressure plate
@@ -9,7 +9,7 @@
 
 # Unless a player is standing on the ender_eye block, reset the ender_eye block
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=PlayerAlreadyChecked] at @s positioned ~-0.5 ~ ~-0.5 unless entity @a[dx=0,dy=1,dz=0] run tag @s add ResetPoint
-execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=ResetPoint] at @s run function calamity:resource_point/pressure_plate/reset_plate
+execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=ResetPoint] at @s run function moesh:resource_point/pressure_plate/reset_plate
 
 # Player steps on pressure plate
     # Check if correct team (does tag TeamBlue )
@@ -25,11 +25,11 @@ execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Team
  
 # Has status been checked already?
 # Is the point charging or resetting? Send a message.
-execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Charging] at @s run function calamity:resource_point/status_message
-execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Resetting] at @s run function calamity:resource_point/status_message
+execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Charging] at @s run function moesh:resource_point/status_message
+execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Resetting] at @s run function moesh:resource_point/status_message
 
 # Is the point idle? Start charging.
-execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=!Charging,tag=!Resetting] run function calamity:resource_point/start
+execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=!Charging,tag=!Resetting] run function moesh:resource_point/start
  
 
 # If a player has already stepped here in the last tick, make it so the pressure plate is not triggered again until they leave.

@@ -1,4 +1,4 @@
-# Called from: calamity:resource_point/handler
+# Called from: moesh:resource_point/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Convert PointTimer into a percentage in preparation for updating lights

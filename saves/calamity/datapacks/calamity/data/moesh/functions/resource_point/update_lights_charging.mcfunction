@@ -1,4 +1,4 @@
-# Called from: calamity:resource_point/handler
+# Called from: moesh:resource_point/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update lights for when a resource point is charging
