@@ -1,9 +1,10 @@
 {
 	"values": [
-		"moesh:load/setup_objectives",
+		"moesh:load/setup_scoreboards",
 		"moesh:load/setup_teams",
-		"moesh:load/setup_resource_points",
-		"moesh:load/setup_signs",
+		"moesh:load/setup_tags",
+		"moesh:set_game_rules",
+		"moesh:load/map_calamity",
 		"moesh:load/setup_moesh_for_testing"
 	]
 }
