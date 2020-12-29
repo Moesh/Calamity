@@ -18,7 +18,7 @@ execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=ResetPoint] at @s ru
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamBlue,tag=!PlayerAlreadyChecked] at @s positioned ~-0.5 ~ ~-0.5 if entity @a[dx=0,dy=1,dz=0,team=blue] run tag @s add CheckStatus
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=TeamBlue] at @s run setblock ~ ~-1 ~ minecraft:end_portal_frame[eye=true,facing=west]
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=TeamBlue] at @s run playsound minecraft:block.piston.extend block @a[team=blue] ~ ~-1 ~ 1 1.5
-# If red eam...
+# If red team...
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamRed,tag=!PlayerAlreadyChecked] at @s positioned ~-0.5 ~ ~-0.5 if entity @a[dx=0,dy=1,dz=0,team=red] positioned ~-0.5 ~ ~-0.5 run tag @s add CheckStatus
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=TeamRed] at @s run setblock ~ ~-1 ~ minecraft:end_portal_frame[eye=true,facing=west]
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=TeamRed] at @s run playsound minecraft:block.piston.extend block @a[team=red] ~ ~-1 ~ 1 1.5
