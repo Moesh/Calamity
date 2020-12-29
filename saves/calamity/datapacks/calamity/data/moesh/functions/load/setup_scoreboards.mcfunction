@@ -23,6 +23,8 @@ scoreboard objectives add CONST dummy
 # Game rules are editable options, so they exist in the main directory, next to [moesh:tick] and
 #	are called directly from moesh:load
 
+# This section removes and recreates read-only scoreboards. You can assume the game will never
+# call these.
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
@@ -33,15 +35,6 @@ scoreboard objectives remove SuccessCount
 scoreboard objectives add SuccessCount dummy
 scoreboard objectives remove loggedOff
 scoreboard objectives add loggedOff minecraft.custom:minecraft.leave_game
-
-scoreboard objectives remove teamSelected
-scoreboard objectives remove classSelected
-scoreboard objectives remove startRound
-scoreboard objectives remove spectate
-scoreboard objectives add teamSelected trigger
-scoreboard objectives add classSelected trigger
-scoreboard objectives add startRound trigger
-scoreboard objectives add spectate trigger
 
 scoreboard objectives remove PointTimer
 scoreboard objectives add PointTimer dummy
@@ -59,3 +52,68 @@ scoreboard objectives add displayPercent dummy
 
 scoreboard objectives remove outputMajor
 scoreboard objectives add outputMajor dummy
+
+# Players may disconnect and reconnect during matches, let's ensure they're in the right match.
+scoreboard objectives remove SessionID
+scoreboard objectives add SessionID dummy
+# Minecraft will tick this up when a player disconnects from the game.
+scoreboard objectives remove leaveGame
+scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
+
+# UUID = Universally Unique Identifier. Entities have these for...identification.
+# Check out https://www.uuidgenerator.net/version4 for more information. Use UUID4.
+scoreboard objectives remove UUID
+scoreboard objectives add UUID dummy
+
+# Player triggers
+# These are ALWAYS reset when they are enabled. Players have no score by default.
+# Enabled during the match. Players are moved to spectator if they want to gg out early.
+scoreboard objectives remove gg
+scoreboard objectives add gg trigger
+# Players can use this to reset the level after a match has concluded.
+scoreboard objectives remove reset
+scoreboard objectives add reset trigger
+# Objectives which can only be triggered during the lobby stage.
+	# Start match
+	scoreboard objectives remove startMatch
+	scoreboard objectives add startMatch trigger
+	# Cancel start 
+	scoreboard objectives remove cancelStart
+	scoreboard objectives add cancelStart trigger
+	# Select a team
+	scoreboard objectives add teamSelected trigger
+	scoreboard objectives remove teamSelected
+	# Spectate
+	scoreboard objectives add spectate trigger
+	scoreboard objectives remove spectate
+	# Reset after match is complete
+	scoreboard objectives remove reset
+	scoreboard objectives add reset trigger
+
+#---------------------------------------------------------------------------------------------------
+# Purpose: Set-up scoreboard for customizable game variables.
+#---------------------------------------------------------------------------------------------------
+# Many more gameVariables are set from custom-level:set_game_variables
+
+# SET GAME VARIABLES
+# This objective is removed and reset after each round to ensure no hanky panky has occurred. 
+scoreboard objectives remove gameVariable
+scoreboard objectives add gameVariable dummy
+	scoreboard players set TimeToStartMatch gameVariable 300
+
+# Index:
+# 0 = Lobby
+# 1 = In-progress
+# 2 = Post game
+
+# Game starts in lobby mode by default.
+scoreboard players set GameState gameVariable 0
+
+# Used to determine whether or not the game has started.
+# This variable is accessed from moesh:tick, moesh:game_state/start_match,
+# moesh:game_state/trigger_cancel_start, and moesh:game_state/trigger_start_match
+scoreboard players set StartingMatch gameVariable 0
+
+
+# Let's alert the devs.
+tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Teams and objectives removed and reset","color":"light_purple"}]}

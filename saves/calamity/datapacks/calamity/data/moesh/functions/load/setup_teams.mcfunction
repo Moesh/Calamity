@@ -1,3 +1,9 @@
+# Called from: #moesh:load
+
+#---------------------------------------------------------------------------------------------------
+# Purpose: Add teams.
+#---------------------------------------------------------------------------------------------------
+
 # Remove Scoreboard Teams
 team remove lobby
 team remove spectator
@@ -24,3 +30,11 @@ team add red {"translate":"team.name.red"}
 # AddFakePlayersToTeam
 team join blue Blue
 team join red Red
+
+team remove spectators
+team add spectators {"text":"Spectators"}
+# If you're on this team, you are always in the spectator game mode.
+	team modify spectators collisionRule pushOtherTeams
+	team modify spectators deathMessageVisibility never
+	team modify spectators seeFriendlyInvisibles false
+	team modify spectators color gray
