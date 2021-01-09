@@ -8,5 +8,6 @@
 		"moesh:load/map_calamity",
 		"moesh:load/map_calamity_rules",
 		"moesh:load/setup_moesh_for_testing"
+		"moesh:dev/setup_moesh_for_testing"
 	]
 }
