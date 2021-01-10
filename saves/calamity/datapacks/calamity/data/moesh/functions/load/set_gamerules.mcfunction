@@ -45,8 +45,3 @@ tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"tr
 # Submitted for the approval of the Midnight Society...
 time set midnight
 tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Time set to midnight","color":"light_purple"}]}
-
-# The vanilla datapack has only a few required items to make the game work, like fluids.
-# We'll replace this in our datapack.
-datapack disable vanilla
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Vanilla datapack disabled","color":"light_purple"}]}
