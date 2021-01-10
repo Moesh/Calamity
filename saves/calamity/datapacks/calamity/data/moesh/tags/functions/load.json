@@ -5,8 +5,8 @@
 		"moesh:load/setup_tags",
 		"moesh:load/set_gamerules",
 		"moesh:load/kill_entities",
-		"moesh:load/map_calamity",
 		"moesh:load/map_calamity_rules",
+		"moesh:load/map_calamity",
 		"moesh:development/setup_moesh_for_testing"
 	]
 }
