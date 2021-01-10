@@ -6,16 +6,13 @@
 	"resourcePoint.sign.progress": "Charging: %s%%",
 	"resourcePoint.sign.resetting": "Resetting: %s%%",
 	"resourcePoint.sign.type": "[%s%s]",
-
-	"majorPoint.sign.ironIngot": "Iron Ingots",
-	"majorPoint.sign.experienceBottle": "Exp. Bottles",
+	"sign.moesh.stealPoints": "Steal Points",
+	"resourcePoint.sign.stealPoints": "Up to %s points",
 
 	"resourcePoint.output.item": "Given [%s] * %s",
 	"resourcePoint.output.effect": "Given [%s%3$s] for %s seconds",
 	"resourcePoint.output.effect.level2": " II",
 
-	"majorPoint.output": "%s won [%s] * %s.",
-	"majorPoint.output.draw": "%s point resulted in a draw, nothing awarded!",
 	"team.blue": "Blue",
 	"team.red": "Red",
 
