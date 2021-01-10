@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "saves\\calamity\\datapacks\\calamity"
+		},
+		{
+			"path": "resourcepacks\\Calamity"
 		}
 	]
 }
