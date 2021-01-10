@@ -32,6 +32,12 @@ execute if score GameState gameVariable matches 1 run scoreboard players set @a[
 execute if score GameState gameVariable matches 1 run scoreboard players enable @a[scores={gg=0}] gg
 execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s if score GameState gameVariable matches 1 run function moesh:game_state/trigger_gg
 
+# Check for winner
+execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= RequiredToWin mapRules run tellraw @a {"translate":"%s Blue wins!","color":"blue","with":[{"text":">>>","color":"white"}]}
+execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= RequiredToWin mapRules run function moesh:game_state/end_match
+execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= RequiredToWin mapRules run tellraw @a {"translate":"%s Red wins!","color":"red","with":[{"text":">>>","color":"white"}]}
+execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= RequiredToWin mapRules run function moesh:game_state/end_match
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the post-game
 #---------------------------------------------------------------------------------------------------

@@ -2,10 +2,10 @@
 # TODO: Remove this from map loading state on release.
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: When a scoreboard objective is removed, all of its data is wiped clean. Since we use the
-#	scoreboard primarily for storing data, this becomes an efficient way to hard reset the project
-#	to its "factory state". If this projet were to ever need some kind of persistent data between
-#	sessions, another solution should be designed.
+# Purpose: When a objective is removed, all of its data is wiped clean. Since we use the scoreboard
+#	primarily for storing data, this becomes an efficient way to hard reset the project to its
+#	"factory state". If this projet were to ever need some kind of persistent data between sessions,
+#	another solution should be designed.
 #---------------------------------------------------------------------------------------------------
 
 # Remove Scoreboard Objectives
@@ -13,12 +13,15 @@
 #	primarily numbers which are used in math operations.
 scoreboard objectives remove CONST
 scoreboard objectives add CONST dummy
+	scoreboard players set -100 CONST -100
+	scoreboard players set 2 CONST 2
+	scoreboard players set 3 CONST 3
+	scoreboard players set 4 CONST 4
 	scoreboard players set 6 CONST 6
 	scoreboard players set 12 CONST 12
 	scoreboard players set 20 CONST 20
 	scoreboard players set 80 CONST 80
 	scoreboard players set 100 CONST 100
-	scoreboard players set -100 CONST -100
 
 # Game rules are editable options, so they exist in the main directory, next to [moesh:tick] and
 #	are called directly from moesh:load
@@ -45,13 +48,21 @@ scoreboard objectives add progressSecond dummy
 scoreboard objectives remove progressSound
 scoreboard objectives add progressSound dummy
 
+# Display scoreboards
 scoreboard objectives remove displayPercent
 scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displaySecond
 scoreboard objectives add displayPercent dummy
+scoreboard objectives remove displayPoints
+scoreboard objectives add displayPoints dummy {"translate":"Score"}
 
-scoreboard objectives remove outputMajor
-scoreboard objectives add outputMajor dummy
+# Objectives for determining score
+scoreboard objectives remove prepScore
+scoreboard objectives add prepScore dummy
+scoreboard objectives remove craftedScore
+scoreboard objectives add craftedScore dummy
+scoreboard objectives remove killScore
+scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
 
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
 scoreboard objectives remove SessionID
@@ -59,11 +70,6 @@ scoreboard objectives add SessionID dummy
 # Minecraft will tick this up when a player disconnects from the game.
 scoreboard objectives remove leaveGame
 scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
-
-# UUID = Universally Unique Identifier. Entities have these for...identification.
-# Check out https://www.uuidgenerator.net/version4 for more information. Use UUID4.
-scoreboard objectives remove UUID
-scoreboard objectives add UUID dummy
 
 # Player triggers
 # These are ALWAYS reset when they are enabled. Players have no score by default.
@@ -100,6 +106,11 @@ scoreboard objectives add reset trigger
 scoreboard objectives remove gameVariable
 scoreboard objectives add gameVariable dummy
 	scoreboard players set TimeToStartMatch gameVariable 300
+	scoreboard players set BluePoints gameVariable 0
+	scoreboard players set RedPoints gameVariable 0
+	# oreLeft is polled from moesh:points/update_mines
+	scoreboard players set OreLeft gameVariable 0
+
 
 # Index:
 # 0 = Lobby

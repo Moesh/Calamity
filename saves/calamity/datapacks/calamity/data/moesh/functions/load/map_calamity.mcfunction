@@ -50,7 +50,7 @@ setblock 96 1 108 minecraft:redstone_block
 setblock 131 3 179 minecraft:redstone_block
 setblock 131 4 179 minecraft:redstone_block
 
-# Clean-up blocks
+# Clean-up dev blocks
 # Left side
 setblock 142 0 110 minecraft:air
 setblock 142 1 110 minecraft:air
@@ -92,6 +92,11 @@ setblock 131 3 179 minecraft:air
 setblock 131 4 179 minecraft:air
 setblock 131 3 180 minecraft:air
 setblock 131 4 180 minecraft:air
+# Crosslane mirroring blocks
+setblock 137 0 180 minecraft:air
+setblock 137 1 180 minecraft:air
+setblock 135 0 180 minecraft:air
+setblock 135 1 180 minecraft:air
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load resource points

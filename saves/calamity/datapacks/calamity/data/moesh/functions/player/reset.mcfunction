@@ -9,6 +9,8 @@ effect clear @s
 xp set @s 0 levels
 xp set @s 0 points
 
+scoreboard players set @s kills 0
+
 # Register the player on the health scoreboard
 effect give @s minecraft:absorption 3 4 false
 # Refill stats
