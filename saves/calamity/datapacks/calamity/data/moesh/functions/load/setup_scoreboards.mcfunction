@@ -31,7 +31,9 @@ scoreboard objectives add CONST dummy
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
-scoreboard objectives add health health
+scoreboard objectives add health health {"text":"❤","color":"purple"}
+	scoreboard objectives setdisplay belowName health
+	scoreboard objectives modify health rendertype hearts
 scoreboard objectives remove QueryResult
 scoreboard objectives add QueryResult dummy
 scoreboard objectives remove SuccessCount
