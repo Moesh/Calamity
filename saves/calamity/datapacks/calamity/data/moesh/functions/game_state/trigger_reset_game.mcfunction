@@ -2,6 +2,7 @@
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: If the player has requested to return to the lobby and reset the game, let them.
+#   This will reset the map to the lobby state, reset the level and ready the game to be ran again.
 #---------------------------------------------------------------------------------------------------
 # Reset the trigger
 scoreboard players set GameState gameVariable 0
