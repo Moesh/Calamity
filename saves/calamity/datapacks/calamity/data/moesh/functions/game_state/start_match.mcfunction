@@ -7,10 +7,8 @@
 difficulty normal
 gamerule doInsomnia false
 gamerule showDeathMessages true
-gamerule announceAdvancements true
+gamerule announceAdvancements false
 gamerule doFireTick true
-gamerule doMobSpawning true
-gamerule mobGriefing true
 
 # Set map rules and clean-up
 # Kill all non-player, non-villager entities
