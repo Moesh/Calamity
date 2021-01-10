@@ -8,7 +8,7 @@
 # Update resource point state
 tag @s add Resetting
 tag @s remove Charging
-scoreboard players operation @s PointTimer = PointResetTime gameRules
+scoreboard players operation @s PointTimer = PointResetTime mapRules
 
 # Determine if nearby players are standing on bedrock (2 blocks down is y-3)
 execute as @s[tag=!Effect,tag=TeamBlue] run tag @a[distance=..4,team=blue] add CheckIfStandingOnPoint

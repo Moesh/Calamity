@@ -14,7 +14,7 @@ scoreboard players operation @s[scores={progressSecond=0}] displaySecond /= 20 C
 # Calculate percentage to be totally obtuse and awesome.
 scoreboard players operation @s displayPercent = @s PointTimer
 scoreboard players operation @s displayPercent *= -100 CONST
-scoreboard players operation @s displayPercent /= PointChargeTime gameRules
+scoreboard players operation @s displayPercent /= PointChargeTime mapRules
 scoreboard players operation @s displayPercent += 100 CONST
 # Update sign with charging percentage
 execute at @s[tag=FacingWest,tag=Charging] at @s run data merge block ~-3 ~ ~ {Text2:'{"translate":"resourcePoint.sign.progress","with":[{"score":{"name":"@e[limit=1,distance=..4,type=area_effect_cloud]","objective":"displayPercent"}}]}'}

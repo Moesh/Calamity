@@ -8,6 +8,6 @@
 
 scoreboard players operation @s progressLights = @s PointTimer
 scoreboard players operation @s progressLights *= -100 CONST
-scoreboard players operation @s[tag=Charging] progressLights /= PointChargeTime gameRules
-scoreboard players operation @s[tag=Resetting] progressLights /= PointResetTime gameRules
+scoreboard players operation @s[tag=Charging] progressLights /= PointChargeTime mapRules
+scoreboard players operation @s[tag=Resetting] progressLights /= PointResetTime mapRules
 scoreboard players operation @s progressLights += 100 CONST
