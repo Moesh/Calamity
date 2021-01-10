@@ -5,4 +5,4 @@
 #---------------------------------------------------------------------------------------------------
 team join blue @a
 tag Moesh remove Registered
-scoreboard objectives setdisplay sidebar PointTimer
+scoreboard objectives setdisplay sidebar gameVariable
