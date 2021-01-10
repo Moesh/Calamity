@@ -34,8 +34,6 @@ function moesh:points/setup_bossbar
 tag @a[team=blue] add Playing
 tag @a[team=red] add Playing
 
-# 
-
 # Clear the player's items and effects, give them items, refill their health and hunger
 execute as @a[tag=Playing] run function moesh:player/refill_items_and_health
 gamemode survival @a[tag=Playing]
@@ -48,7 +46,14 @@ scoreboard objectives setdisplay sidebar displayPoints
 
 # Update player triggers
 scoreboard players reset * cancelStart
+scoreboard players reset * teamSelected
 scoreboard players enable @a[tag=Playing] gg
+
+# Teleport players to starting location
+tp @a[team=blue] 192 41 118
+spawnpoint @a[team=blue] 192 41 118
+tp @a[team=red] 80 41 118
+spawnpoint @a[team=red] 80 41 118
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"%s Go cause a calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
