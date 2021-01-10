@@ -97,6 +97,9 @@ scoreboard objectives add reset trigger
 	# Reset after match is complete
 	scoreboard objectives remove reset
 	scoreboard objectives add reset trigger
+	# Used in [lobby/team_selected]
+	scoreboard objectives remove teamSelected
+	scoreboard objectives add teamSelected trigger
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Set-up scoreboard for customizable game variables.

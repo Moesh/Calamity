@@ -19,6 +19,9 @@ tag @a[tag=!Registered] add Registered
 # Determine game state, if necessary
 function moesh:game_state/handler
 
+# What if a player selects a team using a trigger?
+execute if score GameState gameVariable matches 0 run function moesh:player/trigger_join_team
+
 # Run the functions listed in #moesh:tick_match if a match is running
 execute if score GameState gameVariable matches 1 run function #moesh:tick_match
 
