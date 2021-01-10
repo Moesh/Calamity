@@ -11,6 +11,9 @@ xp set @s 0 points
 
 scoreboard players set @s kills 0
 
+# Register player in the food scoreboard
+effect give @a minecraft:hunger 1 100 true
+
 # Register the player on the health scoreboard
 effect give @s minecraft:absorption 3 4 false
 # Refill stats
