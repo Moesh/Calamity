@@ -3,6 +3,10 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Reset all parts of the map which do not affect the current game state.
 #---------------------------------------------------------------------------------------------------
+
+# Tags
+tag @s remove Playing
+
 # Clear player of their blessings.
 clear @s
 effect clear @s
