@@ -46,3 +46,17 @@ servers.dat_old
 usercache\.json
 
 saves/Undecided/
+
+saves/banned-ips.json
+
+saves/banned-players.json
+
+saves/eula.txt
+
+saves/ops.json
+
+saves/server.jar
+
+saves/server.properties
+
+saves/whitelist.json
