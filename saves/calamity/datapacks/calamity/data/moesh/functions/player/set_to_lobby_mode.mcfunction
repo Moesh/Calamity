@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------------------------------
 
 # Players who are in adventure or survival must be on players team
-gamemode adventure @s
+gamemode spectator @s
 team join players @s
 
 # Players often spawn in the ground when they come out of spectator mode. Let's teleport to the
