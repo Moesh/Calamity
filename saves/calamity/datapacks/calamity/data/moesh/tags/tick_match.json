@@ -1,0 +1,6 @@
+{
+	"values": [
+        "moesh:resource_point/handler",
+        "moesh:check_mines_and_set_phase"
+	]
+}
