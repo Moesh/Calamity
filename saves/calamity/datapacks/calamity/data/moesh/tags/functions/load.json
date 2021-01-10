@@ -1,12 +1,12 @@
 {
 	"values": [
+		"moesh:load/cleanup",
 		"moesh:load/setup_scoreboards",
 		"moesh:load/setup_teams",
 		"moesh:load/setup_tags",
 		"moesh:load/set_gamerules",
 		"moesh:load/kill_entities",
 		"moesh:load/map_calamity_rules",
-		"moesh:load/map_calamity",
-		"moesh:development/setup_moesh_for_testing"
+		"moesh:load/map_calamity"
 	]
 }
