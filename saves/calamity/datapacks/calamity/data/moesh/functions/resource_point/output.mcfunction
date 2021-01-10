@@ -28,6 +28,7 @@ execute at @s[tag=Effect,tag=TeamRed] if entity @a[distance=..4,team=red] if blo
 
 # Check for resource point type and give resources/effects
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveResources] minecraft:oak_log 16
+execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveResources] minecraft:scaffolding 16
 execute as @s[tag=GoldIngot] run give @a[distance=..4,tag=GiveResources] minecraft:gold_ingot 24
 execute as @s[tag=Cobblestone] run give @a[distance=..4,tag=GiveResources] minecraft:cobblestone 9
 execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveResources] minecraft:arrow 32

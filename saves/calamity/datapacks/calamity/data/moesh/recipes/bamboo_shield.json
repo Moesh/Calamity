@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WoW",
+    "WWW",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:scaffolding"
+    },
+    "o": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "minecraft:shield"
+  }
+}

@@ -105,30 +105,35 @@ setblock 135 1 180 minecraft:air
 #   points and reset them.
 kill @e[type=area_effect_cloud,tag=Point]
 # Blue team resource points only appear on the blue lane
-summon minecraft:area_effect_cloud 169 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Log"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 164 43 142 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Cobblestone"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 150 40 136 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","GoldIngot"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 151 56 154 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Arrow"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 157 55 173 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","TNT"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+#summon minecraft:area_effect_cloud 169 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Log"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 169 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Scaffolding"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 164 43 142 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Cobblestone"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 150 40 136 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","GoldIngot"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 151 56 154 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Arrow"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 157 55 173 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","TNT"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
 # Blue team effect points only appear on the red lane
-summon minecraft:area_effect_cloud 115 50 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 102 41 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 122 32 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 115 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Speed"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 115 50 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Regeneration"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 102 41 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Resistance"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 122 32 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Strength"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 115 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Effect","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+
 # Red team resource points only appear on the red lane
-summon minecraft:area_effect_cloud 103 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Log"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 108 43 142 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Cobblestone"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 122 40 136 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","GoldIngot"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 121 56 154 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Arrow"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 115 55 173 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","TNT"],CustomNameVisible:1b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+#summon minecraft:area_effect_cloud 103 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Log"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 103 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Scaffolding"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 108 43 142 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Cobblestone"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 122 40 136 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","GoldIngot"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 121 56 154 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","Arrow"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 115 55 173 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamRed","Resource","TNT"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 # Red team effect points only appear on the blue lane
-summon minecraft:area_effect_cloud 157 50 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 170 41 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 150 32 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 157 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 157 50 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Regeneration"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 170 41 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Resistance"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 150 32 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 157 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+
 # Steal point objectives only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 159 25 126 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","StealPoints"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 113 25 126 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","StealPoints"],CustomNameVisible:1b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 159 25 126 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 113 25 126 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+
 
 # Place resource points
 execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:-3,mode:"LOAD",posY:-2,sizeX:7,posZ:-3,integrity:1.0f,showair:1b,name:"moesh:blue_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
@@ -144,6 +149,7 @@ execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=FacingWest] run setb
 # Update signs
 execute at @e[type=area_effect_cloud,name=ResourcePoint] run data merge block ^ ^ ^3 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,tag=Log] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,tag=Scaffolding] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
 execute at @e[type=area_effect_cloud,tag=GoldIngot] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
 execute at @e[type=area_effect_cloud,tag=Cobblestone] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
 execute at @e[type=area_effect_cloud,tag=Arrow] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"32\"}]}"}
