@@ -17,7 +17,7 @@ execute as @a[tag=Playing] run function moesh:points/check_if_crafted_items
 
 # Kills are worth as much as using 1 Iron Ingot to craft something.
 execute as @a[tag=Playing] run scoreboard players operation @s prepScore += @s killScore
-scoreboard players set * killScore 0
+scoreboard players set @a killScore 0
 
 # Apply the phase multiplier determined in moesh:load/map_calamity_rules
 execute if score Phase gameVariable matches 1 as @a[tag=Playing] run scoreboard players operation @s prepScore *= Phase1Multiplier mapRules
@@ -34,7 +34,3 @@ execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"%
 # Update the display scoreboard
 scoreboard players operation Blue displayPoints = BluePoints gameVariable
 scoreboard players operation Red displayPoints = RedPoints gameVariable
-
-# Wipe any player record on this objective. If an player went offline at the exact same time they
-#   earned points, they will be lost as a result of losing connection.
-scoreboard players reset * prepScore
