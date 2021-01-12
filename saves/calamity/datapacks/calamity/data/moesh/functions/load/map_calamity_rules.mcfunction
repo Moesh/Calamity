@@ -49,40 +49,77 @@ scoreboard objectives add mapRules dummy
 # Diamond can be found on the map, I am not counting these for points.
 scoreboard objectives remove itemValues
 scoreboard objectives add itemValues dummy
+# Some recipes gives more items than 1. This scoreboard tracks how many items the recipe gives.
+# This is needed since minecraft.crafted:minecraft.* goes up by the amount of items the recipe gives.
+# (We don't want rails to give 6*16=96 points)
+scoreboard objectives remove itemCounts
+scoreboard objectives add itemCounts dummy
     # The number of lines in this list must exactly match the number of created objectives we
     #   create below.
     scoreboard players set activator_rail itemValues 6
+    scoreboard players set activator_rail itemCounts 6
     scoreboard players set anvil itemValues 31
+    scoreboard players set anvil itemCounts 1
     scoreboard players set blast_furnace itemValues 5
+    scoreboard players set blast_furnace itemCounts 1
     scoreboard players set bucket itemValues 3
-    scoreboard players set cauldron itemValues 07
+    scoreboard players set bucket itemCounts 1
+    scoreboard players set cauldron itemValues 7
+    scoreboard players set cauldron itemCounts 1
     scoreboard players set chain itemValues 1
+    scoreboard players set chain itemCounts 1
     scoreboard players set compass itemValues 4
+    scoreboard players set compass itemCounts 1
     scoreboard players set crossbow itemValues 1
+    scoreboard players set crossbow itemCounts 1
     scoreboard players set detector_rail itemValues 6
+    scoreboard players set detector_rail itemCounts 6
     scoreboard players set flint_and_steel itemValues 1
+    scoreboard players set flint_and_steel itemCounts 1
     scoreboard players set heavy_weighted_pressure_plate itemValues 2
+    scoreboard players set heavy_weighted_pressure_plate itemCounts 1
     scoreboard players set hopper itemValues 5
+    scoreboard players set hopper itemCounts 1
     scoreboard players set iron_trapdoor itemValues 4
+    scoreboard players set iron_trapdoor itemCounts 1
     scoreboard players set iron_axe itemValues 3
+    scoreboard players set iron_axe itemCounts 1
     scoreboard players set iron_bars itemValues 6
+    scoreboard players set iron_bars itemCounts 16
     scoreboard players set iron_boots itemValues 4
+    scoreboard players set iron_boots itemCounts 1
     scoreboard players set iron_chestplate itemValues 8
+    scoreboard players set iron_chestplate itemCounts 1
     scoreboard players set iron_door itemValues 6
+    scoreboard players set iron_door itemCounts 3
     scoreboard players set iron_helmet itemValues 5
-    scoreboard players set iron_hoe itemValues 0
+    scoreboard players set iron_helmet itemCounts 1
+    scoreboard players set iron_hoe itemValues 2
+    scoreboard players set iron_hoe itemCounts 1
     scoreboard players set iron_leggings itemValues 7
+    scoreboard players set iron_leggings itemCounts 1
     scoreboard players set iron_pickaxe itemValues 3
+    scoreboard players set iron_pickaxe itemCounts 1
     scoreboard players set iron_shovel itemValues 1
-    scoreboard players set iron_shovel itemValues 2
+    scoreboard players set iron_shovel itemCounts 1
+    scoreboard players set iron_sword itemValues 2
+    scoreboard players set iron_sword itemCounts 1
     scoreboard players set minecart itemValues 5
+    scoreboard players set minecart itemCounts 1
     scoreboard players set piston itemValues 1
+    scoreboard players set piston itemCounts 1
     scoreboard players set rail itemValues 6
+    scoreboard players set rail itemCounts 16
     scoreboard players set shears itemValues 2
+    scoreboard players set shears itemCounts 1
     scoreboard players set shield itemValues 1
+    scoreboard players set shield itemCounts 1
     scoreboard players set smithing_table itemValues 2
+    scoreboard players set smithing_table itemCounts 1
     scoreboard players set stonecutter itemValues 1
+    scoreboard players set stonecutter itemCounts 1
     scoreboard players set tripwire_hook itemValues 1
+    scoreboard players set tripwire_hook itemCounts 2
 
 # This list MUST exactly be double the amount of lines found in the list above.
 scoreboard objectives remove craftedObjItem01
