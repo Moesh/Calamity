@@ -22,6 +22,10 @@ execute if entity @s[tag=StealPoints] as @a[tag=CheckIfStandingOnPoint,distance=
 execute if entity @s[tag=StealPoints] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GivePoints
 tag @a remove CheckIfStandingOnPoint
 
+# A player successfully captured an important resource point, let's reward them for it!
+scoreboard players set @a[tag=GiveEffects] captureScore 1
+scoreboard players set @a[tag=GiveResources] captureScore 1
+
 # Check for resource point type and give resources/effects
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveResources] minecraft:oak_log 16
 execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveResources] minecraft:scaffolding 16

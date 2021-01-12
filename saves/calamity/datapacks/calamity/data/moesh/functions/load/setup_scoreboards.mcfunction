@@ -63,6 +63,8 @@ scoreboard objectives remove prepScore
 scoreboard objectives add prepScore dummy
 scoreboard objectives remove craftedScore
 scoreboard objectives add craftedScore dummy
+scoreboard objectives remove captureScore
+scoreboard objectives add captureScore dummy
 scoreboard objectives remove killScore
 scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
 
