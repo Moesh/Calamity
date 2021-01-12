@@ -103,6 +103,7 @@ setblock 135 1 180 minecraft:air
 #---------------------------------------------------------------------------------------------------
 # The players are decidely always in the play space. We can assume it's safe to remove all resource
 #   points and reset them.
+function moesh:load/kill_entities
 kill @e[type=area_effect_cloud,tag=Point]
 # Blue team resource points only appear on the blue lane
 #summon minecraft:area_effect_cloud 169 42 118 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamBlue","Resource","Log"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
