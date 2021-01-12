@@ -15,11 +15,11 @@ scoreboard objectives add mapRules dummy
 	scoreboard players set PointChargeTime mapRules 400
 	scoreboard players set PointResetTime mapRules 400
 
-    scoreboard players set StealPointsBase mapRules 50
+    scoreboard players set StealPointsBase mapRules 30
         scoreboard players operation PointsToSteal gameVariable = StealPointsBase mapRules
 
     # Points required to win the game
-    scoreboard players set RequiredToWin mapRules 750
+    scoreboard players set RequiredToWin mapRules 500
 
     # Phases (in percentages). Phases happen
     # Phase1 is 76-100% of ore present in the mines. The less ore in the mines, the more points
@@ -27,22 +27,22 @@ scoreboard objectives add mapRules dummy
     # Multiplier 
     execute store result score OreLeft gameVariable run clone 142 68 182 130 0 194 130 0 182 filtered minecraft:iron_ore move
     scoreboard players operation Phase1 mapRules = OreLeft gameVariable
-    scoreboard players set Phase1Multiplier mapRules 1
+    scoreboard players set Phase1Multiplier mapRules 2
     # Give me 75% of the mine ore count
     scoreboard players operation Phase2 mapRules = Phase1 mapRules
     scoreboard players operation Phase2 mapRules *= 3 CONST
     scoreboard players operation Phase2 mapRules /= 4 CONST
-    scoreboard players set Phase2Multiplier mapRules 2
+    scoreboard players set Phase2Multiplier mapRules 3
     # Give me 50% of the mine ore count
     scoreboard players operation Phase3 mapRules = Phase1 mapRules
     scoreboard players operation Phase3 mapRules /= 2 CONST
-    scoreboard players set Phase3Multiplier mapRules 3
+    scoreboard players set Phase3Multiplier mapRules 4
     # Give me 25% of the mine ore count
     scoreboard players operation Phase4 mapRules = Phase1 mapRules
     scoreboard players operation Phase4 mapRules /= 4 CONST
     # We set the multiplayer to 5x because we want the final phase to allow for massive swings
     #   in both directions.
-    scoreboard players set Phase4Multiplier mapRules 5
+    scoreboard players set Phase4Multiplier mapRules 6
     
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
