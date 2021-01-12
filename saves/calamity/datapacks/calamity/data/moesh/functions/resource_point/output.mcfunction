@@ -35,6 +35,7 @@ execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resi
 execute as @s[tag=Strength] run effect give @a[tag=GiveEffects] minecraft:strength 45
 execute as @s[tag=Speed] run effect give @a[tag=GiveEffects] minecraft:speed 45 1
 execute as @s[tag=Haste] run effect give @a[tag=GiveEffects] minecraft:haste 45 1
+# Steal Points resource point has a special function, so it must be handled separately.
 execute as @a[tag=GivePoints,limit=1] run function moesh:points/steal_points
 
 # Play success sounds
