@@ -25,7 +25,7 @@ scoreboard objectives add mapRules dummy
     # Phase1 is 76-100% of ore present in the mines. The less ore in the mines, the more points
     #   crafted items are worth. This is a straight multiplier in their percentages.
     # Multiplier 
-    execute store result score OreLeft gameVariable run clone 142 68 182 130 0 194 130 0 182 filtered minecraft:iron_ore move
+    function moesh:load/count_iron_ore
     scoreboard players operation Phase1 mapRules = OreLeft gameVariable
     scoreboard players set Phase1Multiplier mapRules 2
     # Give me 75% of the mine ore count

@@ -6,6 +6,7 @@
 
 # Create Mines boss bar
 bossbar add moesh:iron_ore {"translate":"Ore Left (%s)","with":[{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
+    function moesh:load/count_iron_ore
     execute store result bossbar moesh:iron_ore max run scoreboard players get Phase1 mapRules
     bossbar set moesh:iron_ore style notched_10
     bossbar set moesh:iron_ore visible true
