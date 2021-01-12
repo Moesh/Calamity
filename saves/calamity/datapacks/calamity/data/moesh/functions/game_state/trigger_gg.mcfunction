@@ -9,7 +9,7 @@ execute if entity @a[team=blue,gamemode=!spectator] run tellraw @a {"translate":
 execute if entity @a[team=blue,gamemode=!spectator] run tellraw @a {"translate":"%s Red wins!","color":"red","with":[{"text":">>>","color":"white"}]}
 execute if entity @a[team=red,gamemode=!spectator] run tellraw @a {"translate":">>> %s forfeited for Red!","with":[{"selector":"@s"}]}
 execute if entity @a[team=red,gamemode=!spectator] run tellraw @a {"translate":"%s Blue wins!","color":"blue","with":[{"text":">>>","color":"white"}]}
-execute as @s at @s run function moesh:player/spectate
+execute as @a at @s run function moesh:player/spectate
 
 # Reset gg trigger
 scoreboard players reset @a[scores={gg=1..}] gg

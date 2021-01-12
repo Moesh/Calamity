@@ -28,7 +28,7 @@ effect give @s minecraft:saturation 5 10 true
 
 # Set players game mode
 # Game is in lobby mode and make them join the right team
-execute if score GameState gameVariable matches 0 as @s at @s run function moesh:player/set_to_lobby_mode
+execute if score GameState gameVariable matches 0 run function moesh:player/set_to_lobby_mode
 
 # Game is in-progress or post-match
-execute if score GameState gameVariable matches 1..2 as @s at @s run function moesh:player/spectate
+execute if score GameState gameVariable matches 1..2 as @a run function moesh:player/spectate
