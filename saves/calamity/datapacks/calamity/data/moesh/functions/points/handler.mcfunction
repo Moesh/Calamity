@@ -29,7 +29,7 @@ execute if score Phase gameVariable matches 4 as @a[tag=Playing] run scoreboard 
 scoreboard players operation BluePoints gameVariable += @a[tag=Playing,team=blue] prepScore
 scoreboard players operation RedPoints gameVariable += @a[tag=Playing,team=red] prepScore
 
-execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"%s %s +%s points","color":"light_gray","with":[{"text":">>>","color":"gray"},{"score": {"name":"@s","objective":"prepScore"},"color":"white"}]}
+execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"%s %s: +%s points","color":"light_gray","with":[{"text":">>>","color":"gray"},{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"},"color":"white"}]}
 
 # Update the display scoreboard
 scoreboard players operation Blue displayPoints = BluePoints gameVariable
