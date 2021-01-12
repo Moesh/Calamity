@@ -7,12 +7,11 @@
 # Any function here usually has it's own handling for lobby time and match time.
 
 # Let's first check to see if any online player has left the game
+# If a player fails the initial check in this function, they are no longer registered.
 execute as @a[scores={leaveGame=1..}] at @s run function moesh:player/left_game
 
 # The functions below will handle players, no matter what state the game is in.
-execute as @a[tag=!Registered] at @s run function moesh:player/reset
-execute as @a[tag=!Registered] at @s run function moesh:player/enable_triggers
-execute as @a[tag=!Registered] at @s run function moesh:player/refill_items_and_health
+execute as @a[tag=!Registered] at @s run function #moesh:register_player
 execute as @a[tag=!Registered] run tellraw @s {"translate":"%s Calamity by Moesh","color":"light_purple","with":[{"text":">>>","color":"white"}]}
 tag @a[tag=!Registered] add Registered
 

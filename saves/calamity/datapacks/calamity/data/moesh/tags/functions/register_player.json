@@ -1,0 +1,10 @@
+{
+    "values": [
+        "moesh:player/reset_data",
+        "moesh:player/enable_triggers",
+        "moesh:player/refill_items_and_health",
+        "moesh:player/spectate",
+        "moesh:player/teleport_to_spawn",
+        "moesh:player/spectate"
+    ]
+}

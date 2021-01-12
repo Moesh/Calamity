@@ -10,6 +10,3 @@ effect give @s minecraft:instant_health 5 30 false
 clear @s
 # Add them to spectator after healing them
 gamemode spectator @s
-
-# Specator's must always be on the spectator team, because I said so!
-team join spectators @s

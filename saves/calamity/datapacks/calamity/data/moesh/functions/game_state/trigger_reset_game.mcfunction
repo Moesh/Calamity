@@ -9,11 +9,11 @@ scoreboard players set GameState gameVariable 0
 
 tellraw @a {"translate":">>> Returning to lobby mode"}
 function moesh:load/map_calamity
-execute as @a run function moesh:player/spectate
-execute at @a run function moesh:player/reset
-execute at @a run function moesh:player/refill_items_and_health
-execute at @a run function moesh:player/set_to_lobby_mode
+execute at @a run function moesh:player/reset_data
 execute at @a run function moesh:player/enable_triggers
+execute at @a run function moesh:player/refill_items_and_health
+execute as @a run function moesh:player/spectate
+execute at @a run function moesh:player/teleport_to_spawn
 
 # Reset the ores bossbar.
 bossbar set moesh:iron_ore visible false
