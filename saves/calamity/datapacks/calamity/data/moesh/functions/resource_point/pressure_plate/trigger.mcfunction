@@ -31,7 +31,6 @@ execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=Rese
 # Is the point idle? Start charging.
 execute as @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus,tag=!Charging,tag=!Resetting] run function moesh:resource_point/start
  
-
 # If a player has already stepped here in the last tick, make it so the pressure plate is not triggered again until they leave.
 tag @e[type=area_effect_cloud,name=ResourcePoint,tag=CheckStatus] add PlayerAlreadyChecked
 # We checked the status, remove the status tag.
