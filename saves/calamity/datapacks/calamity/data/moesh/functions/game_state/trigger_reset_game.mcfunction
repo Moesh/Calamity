@@ -22,5 +22,4 @@ bossbar remove moesh:iron_ore
 scoreboard players set BluePoints gameVariable 0
 scoreboard players set RedPoints gameVariable 0
 
-
 scoreboard players reset @a[scores={reset=1..}] reset
