@@ -55,7 +55,7 @@ scoreboard objectives add itemValues dummy
     scoreboard players set anvil itemValues 31
     scoreboard players set blast_furnace itemValues 5
     scoreboard players set bucket itemValues 3
-    scoreboard players set cauldron itemValues 07
+    scoreboard players set cauldron itemValues 7
     scoreboard players set chain itemValues 1
     scoreboard players set compass itemValues 4
     scoreboard players set crossbow itemValues 1
@@ -70,11 +70,11 @@ scoreboard objectives add itemValues dummy
     scoreboard players set iron_chestplate itemValues 8
     scoreboard players set iron_door itemValues 6
     scoreboard players set iron_helmet itemValues 5
-    scoreboard players set iron_hoe itemValues 0
+    scoreboard players set iron_hoe itemValues 2
     scoreboard players set iron_leggings itemValues 7
     scoreboard players set iron_pickaxe itemValues 3
     scoreboard players set iron_shovel itemValues 1
-    scoreboard players set iron_shovel itemValues 2
+    scoreboard players set iron_sword itemValues 2
     scoreboard players set minecart itemValues 5
     scoreboard players set piston itemValues 1
     scoreboard players set rail itemValues 6
