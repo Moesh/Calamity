@@ -5,7 +5,6 @@
 		"moesh:load/setup_teams",
 		"moesh:load/setup_tags",
 		"moesh:load/set_gamerules",
-		"moesh:load/kill_entities",
 		"moesh:load/map_calamity_rules",
 		"moesh:load/map_calamity"
 	]
