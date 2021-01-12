@@ -28,7 +28,7 @@ execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveResources] minec
 execute as @s[tag=GoldIngot] run give @a[distance=..4,tag=GiveResources] minecraft:gold_ingot 24
 execute as @s[tag=Chain] run give @a[distance=..4,tag=GiveResources] minecraft:chain 24
 execute as @s[tag=Cobblestone] run give @a[distance=..4,tag=GiveResources] minecraft:cobblestone 9
-execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveResources] minecraft:arrow 32
+execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveResources] minecraft:arrow 16
 execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveResources] minecraft:tnt 8
 execute as @s[tag=Regeneration] run effect give @a[tag=GiveEffects] minecraft:regeneration 45
 execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resistance 45 1
