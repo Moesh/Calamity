@@ -16,19 +16,20 @@ execute as @a[tag=!Registered] at @s run function moesh:player/refill_items_and_
 execute as @a[tag=!Registered] run tellraw @s {"translate":"%s Calamity by Moesh","color":"light_purple","with":[{"text":">>>","color":"white"}]}
 tag @a[tag=!Registered] add Registered
 
+# Convert or kill items as needed
+execute as @e[type=item,nbt={Item:{id:"minecraft:end_stone"}}] run data merge entity @s {Item:{id:"minecraft:cobblestone"}}
+execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ore"}}] run data merge entity @s {Item:{id:"minecraft:iron_ingot"}}
+kill @e[type=item,nbt={Item:{id:"minecraft:redstone_lamp"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}}]
+
 # Feed hungry players, this game isn't about fighting hunger.
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
 # Determine game state, if necessary
 function moesh:game_state/handler
-
 # What if a player selects a team using a trigger?
 execute if score GameState gameVariable matches 0 run function moesh:player/trigger_join_team
 
 # Run the functions listed in #moesh:tick_match if a match is running
 execute if score GameState gameVariable matches 1 run function #moesh:tick_match
-
-# Convert end_stone item to cobblestone item.
-execute as @e[type=item,nbt={Item:{id:"minecraft:end_stone"}}] run data merge entity @s {Item:{id:"minecraft:cobblestone"}}
-
