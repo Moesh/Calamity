@@ -17,7 +17,7 @@ tag @a[tag=!Registered] add Registered
 
 # Convert or kill items as needed
 execute as @e[type=item,nbt={Item:{id:"minecraft:end_stone"}}] run data merge entity @s {Item:{id:"minecraft:cobblestone"}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ore"}}] run data merge entity @s {Item:{id:"minecraft:iron_ingot"}}
+#execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ore"}}] run data merge entity @s {Item:{id:"minecraft:iron_ingot"}}
 kill @e[type=item,nbt={Item:{id:"minecraft:redstone_lamp"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}}]
 
