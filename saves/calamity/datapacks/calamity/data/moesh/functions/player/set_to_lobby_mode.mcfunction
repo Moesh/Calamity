@@ -9,5 +9,5 @@ team join players @s
 
 # Players often spawn in the ground when they come out of spectator mode. Let's teleport to the
 # spawn location instead, and set their spawnpoint.
-tp @s 136 3 132
-spawnpoint @s 136 3 132
+teleport @s 136 50 75 0 0
+spawnpoint @s 136 50 75
