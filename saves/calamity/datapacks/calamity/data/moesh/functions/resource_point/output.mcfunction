@@ -26,6 +26,9 @@ tag @a remove CheckIfStandingOnPoint
 scoreboard players set @a[tag=GiveEffects] captureScore 1
 scoreboard players set @a[tag=GiveResources] captureScore 1
 
+execute as @a[team=blue,tag=GiveEffects,limit=1] run tag @a[team=blue] add GiveEffects
+execute as @a[team=red,tag=GiveEffects,limit=1] run tag @a[team=red] add GiveEffects
+
 # Check for resource point type and give resources/effects
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveResources] minecraft:oak_log 16
 execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveResources] minecraft:scaffolding 16
