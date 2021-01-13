@@ -22,6 +22,9 @@ scoreboard players reset @a gg
 scoreboard players reset @a reset
 scoreboard players enable @a reset
 
+# Remove forfiet tag
+tag @a remove VotedForfeit
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update game state
 #---------------------------------------------------------------------------------------------------
