@@ -14,6 +14,14 @@ execute if score GameState gameVariable matches 0 run scoreboard players enable 
 # Enable if the match is in progress
 execute if score GameState gameVariable matches 1 run scoreboard players reset @s gg
 execute if score GameState gameVariable matches 1 run scoreboard players enable @s gg
+# We recheck the forfeit vote to make sure it doesn't end up in an invalid state
+#
+# An invalid state could have been hit by:
+# Everyone but one players vote for forfeit.
+# The player who didn't vote leaves and another player joins in the same tick.
+# The player left check in moesh:game_state/handler would miss a player has left.
+# The forfeit vote would end up in an invalid state where everyone has voted for forfeit but the game didn't end.
+execute if score GameState gameVariable matches 1 run function moesh:game_state/trigger_gg
 
 # Enable if post-game
 execute if score GameState gameVariable matches 2 run scoreboard players reset @s reset
