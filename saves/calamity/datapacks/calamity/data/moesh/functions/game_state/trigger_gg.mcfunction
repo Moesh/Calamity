@@ -4,7 +4,7 @@
 # Purpose: Let a player quit the game early.
 #---------------------------------------------------------------------------------------------------
 
-# Mark players who has run the gg trigger
+# Mark players who have run the gg trigger
 tag @a[team=blue,gamemode=!spectator,scores={gg=1..}] add ForfeitTriggered
 tag @a[team=red,gamemode=!spectator,scores={gg=1..}] add ForfeitTriggered
 scoreboard players set @a[scores={gg=1..}] gg 0
@@ -22,17 +22,19 @@ tag @a[tag=ForfeitTriggered,tag=StopForfeit] remove StopForfeit
 # Count the amount of players on blue team
 # And count the players who has voted for forfeit
 execute store result score #tempPlayerCount gameVariable run execute if entity @a[team=blue]
+scoreboard players operation #tempPlayerCount gameVariable *= PercentPlayersToForfeit mapRules
+scoreboard players operation #tempPlayerCount gameVariable /= 100 CONST
 execute store result score #tempForfeitCount gameVariable run execute if entity @a[team=blue,tag=VotedForfeit]
 
 # Tell players on the team someone wants to forfeit
-execute if entity @a[team=blue,tag=ForfeitTriggered,tag=VotedForfeit] unless score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run tellraw @a[team=blue] {"translate":">>> %s has voted to forfeit the game. %s out of %s players have voted to forfeit. Use [%s] to vote.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}},{"text":"/trigger gg","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger gg"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
+execute if entity @a[team=blue,tag=ForfeitTriggered,tag=VotedForfeit] if score #tempPlayerCount gameVariable > #tempForfeitCount gameVariable run tellraw @a[team=blue] {"translate":">>> %s has voted to forfeit the game. %s out of the needed %s players have voted to forfeit. Use [%s] to vote.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}},{"text":"/trigger gg","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger gg"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
 execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 0 run tellraw @a[team=blue] {"translate":">>> %s has retracted their forfeit vote. Voting stopped.","with":[{"selector":"@s"}]}
-execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 1.. run tellraw @a[team=blue] {"translate":">>> %s has retracted their forfeit vote. %s out of %s players on the team have voted to forfeit the game.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}}]}
+execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 1.. run tellraw @a[team=blue] {"translate":">>> %s has retracted their forfeit vote. %s out of the needed %s players on the team have voted to forfeit the game.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}}]}
 
 # Check if the whole blue team has forfeited
 scoreboard players set #tempBlueForfeit gameVariable 0
-execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Blue has forfeited!"}
-execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run scoreboard players set #tempBlueForfeit gameVariable 1
+execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Blue has forfeited!"}
+execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempBlueForfeit gameVariable 1
 
 
 #-----------------
@@ -41,17 +43,20 @@ execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameV
 
 # Count the amount of players on red team
 execute store result score #tempPlayerCount gameVariable run execute if entity @a[team=red]
+scoreboard players operation #tempPlayerCount gameVariable *= PercentPlayersToForfeit mapRules
+scoreboard players operation #tempPlayerCount gameVariable /= 100 CONST
+
 execute store result score #tempForfeitCount gameVariable run execute if entity @a[team=red,tag=VotedForfeit]
 
 # Tell players on the team someone wants to forfeit
-execute if entity @a[team=red,tag=ForfeitTriggered,tag=VotedForfeit] unless score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run tellraw @a[team=red] {"translate":">>> %s has voted to forfeit the game. %s out of %s players have voted to forfeit. Use [%s] to vote.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}},{"text":"/trigger gg","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger gg"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
+execute if entity @a[team=red,tag=ForfeitTriggered,tag=VotedForfeit] if score #tempPlayerCount gameVariable > #tempForfeitCount gameVariable run tellraw @a[team=red] {"translate":">>> %s has voted to forfeit the game. %s out of the needed %s players have voted to forfeit. Use [%s] to vote.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}},{"text":"/trigger gg","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger gg"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
 execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 0 run tellraw @a[team=red] {"translate":">>> %s has retracted their forfeit vote. Voting stopped.","with":[{"selector":"@s"}]}
-execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 1.. run tellraw @a[team=red] {"translate":">>> %s has retracted their forfeit vote. %s out of %s players on the team have voted to forfeit the game.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}}]}
+execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #tempForfeitCount gameVariable matches 1.. run tellraw @a[team=red] {"translate":">>> %s has retracted their forfeit vote. %s out of the needed %s players on the team have voted to forfeit the game.","with":[{"selector":"@s"},{"score":{"name": "#tempForfeitCount","objective": "gameVariable"}},{"score":{"name": "#tempPlayerCount","objective": "gameVariable"}}]}
 
 # Check if the whole red team has forfeited
 scoreboard players set #tempRedForfeit gameVariable 0
-execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Red has forfeited!"}
-execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable = #tempForfeitCount gameVariable run scoreboard players set #tempRedForfeit gameVariable 1
+execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Red has forfeited!"}
+execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempRedForfeit gameVariable 1
 
 
 #---------------------
