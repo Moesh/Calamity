@@ -7,6 +7,7 @@
 
 # Tags
 tag @s remove Playing
+tag @s remove VotedForfeit
 
 # Clear player of their blessings.
 clear @s
