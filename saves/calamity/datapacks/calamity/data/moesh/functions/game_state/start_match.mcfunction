@@ -48,10 +48,10 @@ scoreboard players reset * teamSelected
 scoreboard players enable @a[tag=Playing] gg
 
 # Teleport players to starting location
-tp @a[team=blue] 192 41 118
-spawnpoint @a[team=blue] 192 41 118
-tp @a[team=red] 80 41 118
-spawnpoint @a[team=red] 80 41 118
+tp @a[team=blue] 159 45 90
+spawnpoint @a[team=blue] 159 45 90
+tp @a[team=red] 113 45 90
+spawnpoint @a[team=red] 113 45 90
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"%s Go cause a calamity!","color":"green","with":[{"text":">>>","color":"white"}]}

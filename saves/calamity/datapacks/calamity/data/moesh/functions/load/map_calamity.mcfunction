@@ -92,6 +92,21 @@ setblock 135 1 180 minecraft:air
 #   needs to be updated each time we edit this shape.
 fill 97 69 88 129 69 98 minecraft:red_stained_glass
 
+# Setup banners to be red
+setblock 113 47 101 minecraft:red_wall_banner[facing=south]
+setblock 99 45 109 minecraft:red_wall_banner[facing=south]
+setblock 102 45 109 minecraft:red_wall_banner[facing=south]
+setblock 105 45 109 minecraft:red_wall_banner[facing=south]
+setblock 108 45 109 minecraft:red_wall_banner[facing=south]
+setblock 121 45 109 minecraft:red_wall_banner[facing=south]
+setblock 124 45 109 minecraft:red_wall_banner[facing=south]
+setblock 127 45 109 minecraft:red_wall_banner[facing=south]
+setblock 113 47 101 minecraft:red_wall_banner[facing=south]
+setblock 118 45 109 minecraft:red_wall_banner[facing=south]
+setblock 113 47 98 minecraft:red_wall_banner[facing=north]
+setblock 115 47 94 minecraft:red_wall_banner[facing=north]
+setblock 111 47 94 minecraft:red_wall_banner[facing=north]
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load resource points
 #---------------------------------------------------------------------------------------------------
@@ -129,7 +144,7 @@ summon minecraft:area_effect_cloud 157 18 189 {CustomName:'{"text":"ResourcePoin
 
 # Steal point objectives only appear on opposing lanes for each team
 summon minecraft:area_effect_cloud 159 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 113 25 126 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 
 
 # Place resource points
