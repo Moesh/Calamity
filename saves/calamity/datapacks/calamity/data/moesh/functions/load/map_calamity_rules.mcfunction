@@ -43,6 +43,10 @@ scoreboard objectives add mapRules dummy
     # We set the multiplayer to 5x because we want the final phase to allow for massive swings
     #   in both directions.
     scoreboard players set Phase4Multiplier mapRules 6
+
+# The percentage of players who has to trigger the gg trigger before the team will forfeit
+# Number has to be between 0(%) and 100(%).
+scoreboard players set PercentPlayersToForfeit mapRules 75
     
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.

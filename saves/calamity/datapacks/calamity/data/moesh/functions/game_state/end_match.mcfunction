@@ -8,7 +8,7 @@ tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is o
 playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
 
 # Make all players spectators!
-execute at @a run function moesh:player/spectate
+execute as @a run function moesh:player/spectate
 
 # The match has ended, let's updated the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime
@@ -21,6 +21,9 @@ tellraw @a {"translate":"Thanks for playing! Use [%s] to play again.","color":"g
 scoreboard players reset @a gg
 scoreboard players reset @a reset
 scoreboard players enable @a reset
+
+# Remove forfeit tag
+tag @a remove VotedForfeit
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update game state
