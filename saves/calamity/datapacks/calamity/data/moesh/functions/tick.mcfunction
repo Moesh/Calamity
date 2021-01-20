@@ -15,6 +15,16 @@ execute as @a[tag=!Registered] at @s run function #moesh:register_player
 execute as @a[tag=!Registered] run tellraw @s {"translate":"%s Calamity by Moesh","color":"light_purple","with":[{"text":">>>","color":"white"}]}
 tag @a[tag=!Registered] add Registered
 
+
+tag @a[nbt={Health:0.0f}] add Dead 
+tag @a[tag=Dead] add RefillItems
+tag @a[tag=RefillItems,tag=Dead] remove Dead
+
+
+give @a[tag=RefillItems] minecraft:iron_axe{Damage:240,repairCost:"99999",Enchantments:[{id:"minecraft:vanishing_curse",lvl:1}]} 1
+tag @a remove RefillItems
+
+
 # Convert or kill items as needed
 execute as @e[type=item,nbt={Item:{id:"minecraft:end_stone"}}] run data merge entity @s {Item:{id:"minecraft:cobblestone"}}
 #execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ore"}}] run data merge entity @s {Item:{id:"minecraft:iron_ingot"}}
@@ -25,12 +35,12 @@ kill @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}}]
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
-# Kill players who are in the void
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:slowness 1 7
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:weakness 1 7
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:mining_fatigue 1 7
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s subtitle {"translate": "Out of bounds!","color":"red"} 
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s title {"translate": ""} 
+## Kill players who are in the void
+#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:slowness 1 7
+#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:weakness 1 7
+#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:mining_fatigue 1 7
+#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s subtitle {"translate": "Out of bounds!","color":"red"} 
+#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s title {"translate": ""} 
 
 # Determine game state, if necessary
 function moesh:game_state/handler
