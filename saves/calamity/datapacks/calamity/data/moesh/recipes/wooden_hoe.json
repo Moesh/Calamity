@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "@@",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "@":{
+    		"item":"minecraft:scaffolding"
+    	}
+    },
+    "result": {
+        "item": "minecraft:wooden_hoe",
+        "count": 1
+    }
+}
