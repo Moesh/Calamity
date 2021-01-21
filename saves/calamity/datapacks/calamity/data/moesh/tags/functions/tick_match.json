@@ -1,7 +1,0 @@
-{
-        "values": [
-                "moesh:resource_point/handler",
-                "moesh:points/handler",
-                "moesh:build_protection/handler"
-	]
-}

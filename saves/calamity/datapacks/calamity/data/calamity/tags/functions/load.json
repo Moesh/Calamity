@@ -1,0 +1,11 @@
+{
+	"values": [
+		"calamity:load/cleanup",
+		"calamity:load/setup_scoreboards",
+		"calamity:load/setup_teams",
+		"calamity:load/setup_tags",
+		"calamity:load/set_gamerules",
+		"calamity:load/map_calamity_rules",
+		"calamity:load/map_calamity"
+	]
+}
