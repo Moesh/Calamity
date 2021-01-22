@@ -1,0 +1,22 @@
+{
+    "parent": "calamity:spawn_items/hidden_root",
+    "rewards": {
+        "function": "calamity:player/spawn_items/used_item/used_item_4"
+    },
+    "criteria": {
+        "used_item": {
+        	"trigger": "minecraft:item_durability_changed",
+        	"conditions": {
+            	"item": {
+                    "tag": "calamity:spawn_item",
+                    "nbt": "{Calamity:{SpawnItem:1b,SpawnSelectionItem:1b,SpawnItemId:104b}}"
+                }
+        	}
+    	}
+  	},
+  	"requirements": [
+    	[
+      		"used_item"
+    	]
+  	]
+}

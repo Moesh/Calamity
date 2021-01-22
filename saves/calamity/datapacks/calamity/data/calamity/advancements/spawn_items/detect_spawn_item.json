@@ -1,0 +1,32 @@
+{
+    "comment1": "Advancement used for detecting if a player has one of the starting items",
+    "comment2": "advancement_lock is used for locking/unlocking the advancement so the player only can get it sometimes",
+    "parent": "calamity:spawn_items/hidden_root",
+    "rewards": {
+        "function": "calamity:player/spawn_items/clear_spawn_items"
+    },
+    "criteria": {
+        "spawn_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "calamity:spawn_item",
+                        "nbt": "{Calamity:{SpawnSelectionItem:1b}}"
+                    }
+                ]
+            }
+        },
+        "advancement_lock": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "spawn_item"
+        ],
+        [
+            "advancement_lock"
+        ]
+    ]
+}

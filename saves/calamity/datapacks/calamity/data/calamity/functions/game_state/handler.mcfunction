@@ -25,6 +25,10 @@ execute if score GameState gameVariable matches 0 if score StartingMatch gameVar
 # Prevent players from leaving the play area
 # TODO: execute as @a at @s unless entity @s[gamemode=spectator] if score GameState gameVariable matches 1 run function calamity:game_state/out_of_bounds
 
+# Handle the spawn items
+execute if score GameState gameVariable matches 1 as @a[tag=Playing] run function calamity:player/spawn_items/handler
+kill @e[type=item,nbt={Item:{tag:{Calamity:{SpawnItem:1b}}}}]
+
 # Count the players and check if someone left. If they did recheck forfeit state
 #
 # The forfeit check normally only happens when someone triggers the gg trigger

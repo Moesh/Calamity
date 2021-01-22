@@ -1,0 +1,94 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "selectedItem": 100
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "calamity:spawn_items/item0"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "selectedItem": 101
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "calamity:spawn_items/item1"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "selectedItem": 102
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "calamity:spawn_items/item2"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "selectedItem": 103
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "calamity:spawn_items/item3"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "selectedItem": 104
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "calamity:spawn_items/item4"
+                }
+            ]
+        }
+    ]
+}

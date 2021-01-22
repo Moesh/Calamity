@@ -53,6 +53,9 @@ spawnpoint @a[team=blue] 159 45 90
 tp @a[team=red] 113 45 90
 spawnpoint @a[team=red] 113 45 90
 
+# Give players the starting item selection
+scoreboard players set @a[tag=Playing] giveSpawnItems 1
+
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"%s Go cause a calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
 tellraw @a {"translate":"%s Phase %s begins! %sx points multiplier.","color":"green","with":[{"text":">>>","color":"white"},{"translate":"1","color":"white"},{"score":{"name":"PhaseMultiplier","objective":"gameVariable"},"color":"white"}]}

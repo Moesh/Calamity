@@ -1,0 +1,49 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "weight": 1,
+                    "type": "item",
+                    "name": "minecraft:iron_pickaxe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{Calamity:{SpawnItem:1b,SpawnItemId:102b},CustomModelData:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:10s}]}"
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        "selectedItem": -1
+                                    }
+                                }
+                            ],
+                            "function": "set_nbt",
+                            "tag": "{Calamity:{SpawnSelectionItem:1b},Damage:240}"
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        "selectedItem": {
+                                            "min": 0,
+                                            "max": 2147483647
+                                        }
+                                    }
+                                }
+                            ],
+                            "function": "set_nbt",
+                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

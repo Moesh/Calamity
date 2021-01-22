@@ -1,0 +1,25 @@
+{
+    "comment": "Advancement used for detecting if a player has used one of their starting items in a grindstone/anvil to repair an item",
+    "parent": "calamity:spawn_items/hidden_root",
+    "rewards": {
+        "function": "calamity:player/spawn_items/clear_repaired_items"
+    },
+    "criteria": {
+        "repaired_item": {
+        	"trigger": "minecraft:inventory_changed",
+        	"conditions": {
+            	"items": [
+                	{
+                    	"tag": "calamity:spawn_item",
+                    	"nbt": "{Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:10s}],RepairCost:1}"
+                	}
+            	]
+        	}
+		}
+  	},
+  	"requirements": [
+    	[
+			"repaired_item"
+    	]
+  	]
+}
