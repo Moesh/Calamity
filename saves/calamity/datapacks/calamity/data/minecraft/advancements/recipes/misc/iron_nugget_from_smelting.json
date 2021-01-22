@@ -1,0 +1,14 @@
+{
+  "comment": "This file exists to override the old advancement which gave the player the iron nugget smelting recipe",
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ]
+  ]
+}
