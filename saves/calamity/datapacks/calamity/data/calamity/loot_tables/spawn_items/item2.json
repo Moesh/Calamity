@@ -10,20 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnItem:1b,SpawnItemId:102b},CustomModelData:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:10s}]}"
-                        },
-                        {
-                            "conditions": [
-                                {
-                                    "condition": "entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "selectedItem": -1
-                                    }
-                                }
-                            ],
-                            "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnSelectionItem:1b},Damage:240}"
+                            "tag": "{Calamity:{SpawnItem:1b,SpawnItemId:102b,SpawnSelectionItem:1b},CustomModelData:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:10s}]}"
                         },
                         {
                             "conditions": [
@@ -39,7 +26,20 @@
                                 }
                             ],
                             "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241}"
+                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241,CustomModelData:2}"
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        "giveSpawnItems": 1
+                                    }
+                                }
+                            ],
+                            "function": "set_nbt",
+                            "tag": "{Damage:240}"
                         }
                     ]
                 }

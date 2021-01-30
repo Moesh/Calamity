@@ -53,7 +53,8 @@ spawnpoint @a[team=blue] 159 45 90
 tp @a[team=red] 113 45 90
 spawnpoint @a[team=red] 113 45 90
 
-# Give players the starting item selection
+# Reset players item selection and give players the starting item selection
+scoreboard players set @a selectedItem -1
 scoreboard players set @a[tag=Playing] giveSpawnItems 1
 
 # Send tellraw BEFORE changing any game modes!

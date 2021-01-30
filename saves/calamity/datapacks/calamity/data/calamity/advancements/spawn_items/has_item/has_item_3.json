@@ -1,0 +1,26 @@
+{
+    "comment1": "Advancement used for detecting if a player has a spawn item of the type in their inventory",
+    "comment2": "(This is used for detecting if a player has spawn item they shouldn't have)",
+    "parent": "calamity:spawn_items/hidden_root",
+    "rewards": {
+        "function": "calamity:player/spawn_items/has_item/has_item_3"
+    },
+    "criteria": {
+        "has_the_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "calamity:spawn_item",
+                        "nbt": "{Calamity:{SpawnSelectionItem:0b,SpawnItemId:103b}}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_the_item"
+        ]
+    ]
+}
