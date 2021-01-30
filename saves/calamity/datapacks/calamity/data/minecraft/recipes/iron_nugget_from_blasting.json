@@ -1,0 +1,12 @@
+{
+  "comment": "Overrides the normal iron tools -> iron nuggets recipes",
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "minecraft:bedrock"
+    }
+  ],
+  "result": "minecraft:bedrock",
+  "experience": 0,
+  "cookingtime": 2147483647
+}

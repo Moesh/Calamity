@@ -75,6 +75,12 @@ scoreboard objectives add SessionID dummy
 scoreboard objectives remove leaveGame
 scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
 
+# Player scores
+scoreboard objectives remove selectedItem
+scoreboard objectives add selectedItem dummy
+scoreboard objectives remove giveSpawnItems
+scoreboard objectives add giveSpawnItems deathCount
+
 # Player triggers
 # These are ALWAYS reset when they are enabled. Players have no score by default.
 # Enabled during the match. Players are moved to spectator if they want to gg out early.

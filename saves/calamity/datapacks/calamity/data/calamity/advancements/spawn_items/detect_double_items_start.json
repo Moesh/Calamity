@@ -1,0 +1,22 @@
+{
+    "comment": "Advancment used for detecting if the player is in a state where they might have 2 spawn items",
+    "parent": "calamity:spawn_items/hidden_root",
+    "rewards": {
+        "function": "calamity:player/spawn_items/setup_double_check"
+    },
+    "criteria": {
+        "inventory_changed": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": {
+                    "nbt": "{Inventory:[{tag:{Calamity:{SpawnItem:1b,SpawnSelectionItem:0b}}}]}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "inventory_changed"
+        ]
+    ]
+}
