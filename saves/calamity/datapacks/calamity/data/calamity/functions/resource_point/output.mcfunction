@@ -18,8 +18,8 @@ execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] 
 execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveEffects
 execute if entity @s[tag=Resource] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveResources
 execute if entity @s[tag=Resource] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveResources
-execute if entity @s[tag=StealPoints] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GivePoints
-execute if entity @s[tag=StealPoints] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GivePoints
+execute if entity @s[tag=Enchant] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add Enchant
+execute if entity @s[tag=Enchant] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add Enchant
 tag @a remove CheckIfStandingOnPoint
 
 # A player successfully captured an important resource point, let's reward them for it!
@@ -42,8 +42,7 @@ execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resi
 execute as @s[tag=Strength] run effect give @a[tag=GiveEffects] minecraft:strength 45
 execute as @s[tag=Speed] run effect give @a[tag=GiveEffects] minecraft:speed 45 1
 execute as @s[tag=Haste] run effect give @a[tag=GiveEffects] minecraft:haste 45 1
-# Steal Points resource point has a special function, so it must be handled separately.
-execute as @a[tag=GivePoints,limit=1] run function calamity:points/steal_points
+execute as @a[tag=Enchant,limit=1] run function calamity:resource_point/enchant
 
 # Play success sounds
 execute as @a[tag=GiveEffects] run playsound minecraft:entity.generic.drink player @s
@@ -54,7 +53,7 @@ tag @a[tag=GiveResources] add GiveMessage
 tag @a[tag=GiveResources] remove GiveResources
 tag @a[tag=GiveEffects] add GiveMessage
 tag @a[tag=GiveEffects] remove GiveEffects
-tag @a[tag=GivePoints] remove GivePoints
+tag @a[tag=Enchant] remove Enchant
 
 # Resources
 execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}

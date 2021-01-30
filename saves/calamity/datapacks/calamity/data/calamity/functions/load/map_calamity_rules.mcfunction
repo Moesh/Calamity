@@ -15,9 +15,6 @@ scoreboard objectives add mapRules dummy
 	scoreboard players set PointChargeTime mapRules 400
 	scoreboard players set PointResetTime mapRules 400
 
-    scoreboard players set StealPointsBase mapRules 30
-        scoreboard players operation PointsToSteal gameVariable = StealPointsBase mapRules
-
     # Points required to win the game
     scoreboard players set RequiredToWin mapRules 500
 

@@ -142,9 +142,9 @@ summon minecraft:area_effect_cloud 170 41 162 {CustomName:'{"text":"ResourcePoin
 summon minecraft:area_effect_cloud 150 32 162 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Strength"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
 summon minecraft:area_effect_cloud 157 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
 
-# Steal point objectives only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 159 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","StealPoints"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+# This objectives only appear on opposing lanes for each team
+summon minecraft:area_effect_cloud 159 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 
 
 # Place resource points
@@ -172,4 +172,4 @@ execute at @e[type=area_effect_cloud,tag=Resistance] run data merge block ^ ^ ^3
 execute at @e[type=area_effect_cloud,tag=Strength] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
 execute at @e[type=area_effect_cloud,tag=Speed] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
 execute at @e[type=area_effect_cloud,tag=Haste] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=StealPoints] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"sign.moesh.stealPoints\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.stealPoints\",\"with\":[{\"score\":{\"name\":\"PointsToSteal\",\"objective\":\"gameVariable\"}}]}"}
+execute at @e[type=area_effect_cloud,tag=Enchant] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"sign.moesh.enchant\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.enchant\"}"}
