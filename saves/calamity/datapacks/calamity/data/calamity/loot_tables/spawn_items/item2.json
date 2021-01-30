@@ -26,7 +26,7 @@
                                 }
                             ],
                             "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241}"
+                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241,CustomModelData:2}"
                         },
                         {
                             "conditions": [
