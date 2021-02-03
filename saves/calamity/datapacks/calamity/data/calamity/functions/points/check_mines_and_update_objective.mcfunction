@@ -8,7 +8,6 @@
 execute store result score OreLeft gameVariable run clone 142 68 182 130 0 194 130 0 182 filtered minecraft:iron_ore move
 # Update the bossbar and sidebar
 execute store result bossbar calamity:iron_ore value run scoreboard players get OreLeft gameVariable
-scoreboard players operation RequiredToWin gameVariable = OreLeft gameVariable
 scoreboard players operation Goal displayPoints = OreLeft gameVariable
 
 bossbar set calamity:iron_ore name {"translate":"Ore Left (%s)","with":[{"score":{"name": "OreLeft","objective": "gameVariable"}}]}

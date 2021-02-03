@@ -15,9 +15,6 @@ scoreboard objectives add mapRules dummy
 	scoreboard players set PointChargeTime mapRules 400
 	scoreboard players set PointResetTime mapRules 400
 
-    # Points required to win the game
-    scoreboard players set RequiredToWin gameVariable 500
-
     # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
     # teams must get to win the game.
     function calamity:load/count_iron_ore

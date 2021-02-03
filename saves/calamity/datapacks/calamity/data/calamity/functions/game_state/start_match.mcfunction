@@ -33,7 +33,7 @@ execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
 gamemode survival @a[tag=Playing]
 
 # Set the correct scoreboard
-scoreboard players operation Goal displayPoints = RequiredToWin gameVariable
+scoreboard players operation Goal displayPoints = OreLeft gameVariable
 scoreboard players set Blue displayPoints 0
 scoreboard players set Red displayPoints 0
 scoreboard objectives setdisplay sidebar displayPoints
