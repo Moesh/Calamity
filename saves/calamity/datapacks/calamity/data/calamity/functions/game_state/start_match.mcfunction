@@ -18,10 +18,6 @@ function calamity:load/clear_entities
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a SessionID = SessionID gameVariable
 
-# Set the map to Phase 1 when the game begins.
-scoreboard players set Phase gameVariable 1
-scoreboard players operation PhaseMultiplier gameVariable = Phase1Multiplier mapRules
-
 # Make the ore counter visible
 function calamity:points/setup_bossbar
 
@@ -37,7 +33,7 @@ execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
 gamemode survival @a[tag=Playing]
 
 # Set the correct scoreboard
-scoreboard players operation Goal displayPoints = RequiredToWin mapRules
+scoreboard players operation Goal displayPoints = RequiredToWin gameVariable
 scoreboard players set Blue displayPoints 0
 scoreboard players set Red displayPoints 0
 scoreboard objectives setdisplay sidebar displayPoints
@@ -58,7 +54,6 @@ scoreboard players set @a[tag=Playing] giveSpawnItems 1
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"%s Go cause a calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
-tellraw @a {"translate":"%s Phase %s begins! %sx points multiplier.","color":"green","with":[{"text":">>>","color":"white"},{"translate":"1","color":"white"},{"score":{"name":"PhaseMultiplier","objective":"gameVariable"},"color":"white"}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999
 # Purpose: Update game state
 scoreboard players set StartingMatch gameVariable 0

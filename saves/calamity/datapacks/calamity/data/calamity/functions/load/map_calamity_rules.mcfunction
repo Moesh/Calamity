@@ -16,30 +16,11 @@ scoreboard objectives add mapRules dummy
 	scoreboard players set PointResetTime mapRules 400
 
     # Points required to win the game
-    scoreboard players set RequiredToWin mapRules 500
+    scoreboard players set RequiredToWin gameVariable 500
 
-    # Phases (in percentages). Phases happen
-    # Phase1 is 76-100% of ore present in the mines. The less ore in the mines, the more points
-    #   crafted items are worth. This is a straight multiplier in their percentages.
-    # Multiplier 
+    # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
+    # teams must get to win the game.
     function calamity:load/count_iron_ore
-    scoreboard players operation Phase1 mapRules = OreLeft gameVariable
-    scoreboard players set Phase1Multiplier mapRules 2
-    # Give me 75% of the mine ore count
-    scoreboard players operation Phase2 mapRules = Phase1 mapRules
-    scoreboard players operation Phase2 mapRules *= 3 CONST
-    scoreboard players operation Phase2 mapRules /= 4 CONST
-    scoreboard players set Phase2Multiplier mapRules 3
-    # Give me 50% of the mine ore count
-    scoreboard players operation Phase3 mapRules = Phase1 mapRules
-    scoreboard players operation Phase3 mapRules /= 2 CONST
-    scoreboard players set Phase3Multiplier mapRules 4
-    # Give me 25% of the mine ore count
-    scoreboard players operation Phase4 mapRules = Phase1 mapRules
-    scoreboard players operation Phase4 mapRules /= 4 CONST
-    # We set the multiplayer to 5x because we want the final phase to allow for massive swings
-    #   in both directions.
-    scoreboard players set Phase4Multiplier mapRules 6
 
 # The percentage of players who has to trigger the gg trigger before the team will forfeit
 # Number has to be between 0(%) and 100(%).
