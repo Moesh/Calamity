@@ -148,18 +148,18 @@ summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoin
 
 
 # Place resource points
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:-3,mode:"LOAD",posY:-2,sizeX:7,posZ:-3,integrity:1.0f,showair:1b,name:"calamity:blue_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamBlue,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:-2,sizeX:7,posZ:3,integrity:1.0f,showair:1b,name:"calamity:blue_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamRed,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:-3,mode:"LOAD",posY:-2,sizeX:7,posZ:-3,integrity:1.0f,showair:1b,name:"calamity:red_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=TeamRed,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:-2,sizeX:7,posZ:3,integrity:1.0f,showair:1b,name:"calamity:red_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
-execute at @e[type=area_effect_cloud,name=ResourcePoint] run setblock ~ ~1 ~ minecraft:redstone_block
-execute at @e[type=area_effect_cloud,name=ResourcePoint] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:-3,mode:"LOAD",posY:-2,sizeX:7,posZ:-3,integrity:1.0f,showair:1b,name:"calamity:blue_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamBlue,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:-2,sizeX:7,posZ:3,integrity:1.0f,showair:1b,name:"calamity:blue_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamRed,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:-3,mode:"LOAD",posY:-2,sizeX:7,posZ:-3,integrity:1.0f,showair:1b,name:"calamity:red_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamRed,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:-2,sizeX:7,posZ:3,integrity:1.0f,showair:1b,name:"calamity:red_resource_point",sizeY:2,sizeZ:7,showboundingbox:1b}
+execute at @e[type=area_effect_cloud,name="ResourcePoint"] run setblock ~ ~1 ~ minecraft:redstone_block
+execute at @e[type=area_effect_cloud,name="ResourcePoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 
 # Place signs
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
-execute at @e[type=area_effect_cloud,name=ResourcePoint,tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
 # Update signs
-execute at @e[type=area_effect_cloud,name=ResourcePoint] run data merge block ^ ^ ^3 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint"] run data merge block ^ ^ ^3 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,tag=Log] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
 execute at @e[type=area_effect_cloud,tag=Scaffolding] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
 execute at @e[type=area_effect_cloud,tag=GoldIngot] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
