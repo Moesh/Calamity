@@ -15,6 +15,12 @@ scoreboard objectives add mapRules dummy
 	scoreboard players set PointChargeTime mapRules 400
 	scoreboard players set PointResetTime mapRules 400
 
+    # Let's control the points distribution at a central location, so we can alter them quickly
+    #   instead of hunting through several files.
+    scoreboard players set ScoreForCaptureResource mapRules 1
+    scoreboard players set ScoreForEnchanting mapRules 2
+    scoreboard players set ScoreForKill mapRules 1
+
     # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
     # teams must get to win the game.
     function calamity:load/count_iron_ore

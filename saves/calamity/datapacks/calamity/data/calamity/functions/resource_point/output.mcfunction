@@ -23,8 +23,8 @@ execute if entity @s[tag=Enchant] as @a[tag=CheckIfStandingOnPoint,distance=..4]
 tag @a remove CheckIfStandingOnPoint
 
 # A player successfully captured an important resource point, let's reward them for it!
-scoreboard players set @a[tag=GiveEffects] captureScore 1
-scoreboard players set @a[tag=GiveResources] captureScore 1
+scoreboard players operation @a[tag=GiveEffects] captureScore = ScoreForCaptureResource mapRules
+scoreboard players operation @a[tag=GiveResources] captureScore = ScoreForCaptureResource mapRules
 
 execute as @a[team=blue,tag=GiveEffects,limit=1] run tag @a[team=blue] add GiveEffects
 execute as @a[team=red,tag=GiveEffects,limit=1] run tag @a[team=red] add GiveEffects
