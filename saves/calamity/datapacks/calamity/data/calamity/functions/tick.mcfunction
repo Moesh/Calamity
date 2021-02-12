@@ -25,12 +25,6 @@ give @a[tag=RefillItems] minecraft:iron_axe{Damage:240,repairCost:"99999",Enchan
 tag @a remove RefillItems
 
 
-# Convert or kill items as needed
-execute as @e[type=item,nbt={Item:{id:"minecraft:end_stone"}}] run data merge entity @s {Item:{id:"minecraft:cobblestone"}}
-#execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ore"}}] run data merge entity @s {Item:{id:"minecraft:iron_ingot"}}
-kill @e[type=item,nbt={Item:{id:"minecraft:redstone_lamp"}}]
-kill @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}}]
-
 # Feed hungry players, this game isn't about fighting hunger.
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
