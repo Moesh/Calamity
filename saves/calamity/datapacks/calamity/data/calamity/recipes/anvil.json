@@ -2,12 +2,12 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
       "WWW",
-      " W",
-      "WWW "
+      " W ",
+      "WWW"
     ],
     "key": {
       "W": {
-        "tag": "minecraft:iron_ingot"
+        "item": "minecraft:iron_ingot"
       }
     },
     "result": {
