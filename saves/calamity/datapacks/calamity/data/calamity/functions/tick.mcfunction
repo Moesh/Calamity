@@ -16,15 +16,6 @@ execute as @a[tag=!Registered] run tellraw @s {"translate":"%s Calamity by Moesh
 tag @a[tag=!Registered] add Registered
 
 
-tag @a[nbt={Health:0.0f}] add Dead 
-tag @a[tag=Dead] add RefillItems
-tag @a[tag=RefillItems,tag=Dead] remove Dead
-
-
-give @a[tag=RefillItems] minecraft:iron_axe{Damage:240,repairCost:"99999",Enchantments:[{id:"minecraft:vanishing_curse",lvl:1}]} 1
-tag @a remove RefillItems
-
-
 # Feed hungry players, this game isn't about fighting hunger.
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
