@@ -31,5 +31,6 @@ scoreboard players reset #tempVar gameVariable
 execute if entity @s[tag=GiveSelectedStartingItem] run function calamity:player/spawn_items/regive_chosen_item
 tag @s[tag=GiveSelectedStartingItem] remove GiveSelectedStartingItem
 
-# On death give selection items
-execute if entity @s[scores={giveSpawnItems=1..}] run function calamity:player/spawn_items/give_items
+# On death give selection items after a little time
+execute if entity @s[scores={giveSpawnItems=1..}] run scoreboard players add @s giveSpawnItems 1
+execute if entity @s[scores={giveSpawnItems=5..}] run function calamity:player/spawn_items/give_items
