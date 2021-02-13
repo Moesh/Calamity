@@ -143,8 +143,8 @@ summon minecraft:area_effect_cloud 150 32 162 {CustomName:'{"text":"ResourcePoin
 summon minecraft:area_effect_cloud 157 18 189 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Effect","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
 
 # This objectives only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 159 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 159 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingWest","TeamRed","GiveBook"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 113 30 107 {CustomName:'{"text":"ResourcePoint"}',Tags:["Point","FacingEast","TeamBlue","GiveBook"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 
 
 # Place resource points

@@ -6,8 +6,8 @@
 	"resourcePoint.sign.progress": "Charging: %s%%",
 	"resourcePoint.sign.resetting": "Resetting: %s%%",
 	"resourcePoint.sign.type": "[%s%s]",
-	"sign.moesh.enchant": "Enchantment",
-	"resourcePoint.sign.enchant": "Enchant held item",
+	"sign.moesh.enchant": "Enchanted Book",
+	"resourcePoint.sign.enchant": "For main hand",
 
 	"resourcePoint.output.item": "Given [%s] * %s",
 	"resourcePoint.output.effect": "Given [%s%3$s] for %s seconds",
