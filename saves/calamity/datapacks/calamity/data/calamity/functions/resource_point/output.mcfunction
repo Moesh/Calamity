@@ -39,7 +39,7 @@ execute as @s[tag=GoldIngot] run give @a[distance=..4,tag=GiveResources] minecra
 execute as @s[tag=Chain] run give @a[distance=..4,tag=GiveResources] minecraft:chain 24
 execute as @s[tag=Cobblestone] run give @a[distance=..4,tag=GiveResources] minecraft:cobblestone 9
 execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveResources] minecraft:arrow 16
-execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveResources] minecraft:tnt 8
+execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveResources] minecraft:tnt 3
 execute as @s[tag=Regeneration] run effect give @a[tag=GiveEffects] minecraft:regeneration 45
 execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resistance 45 1
 execute as @s[tag=Strength] run effect give @a[tag=GiveEffects] minecraft:strength 45
@@ -134,12 +134,13 @@ tag @a[tag=GiveBook] add Give
 tag @a[tag=GiveBook] remove GiveBook
 
 # Resources
+title @a[tag=GiveMessage] times 0 2 1
 execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
 execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
 execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
 execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"32"}]}
-execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"8"}]}
-execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"8"}]}
+execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 # Effects
 execute as @s[tag=Regeneration] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
 execute as @s[tag=Resistance] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
