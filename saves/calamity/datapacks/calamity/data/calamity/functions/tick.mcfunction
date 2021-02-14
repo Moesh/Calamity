@@ -20,12 +20,8 @@ tag @a[tag=!Registered] add Registered
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
-## Kill players who are in the void
-#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:slowness 1 7
-#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:weakness 1 7
-#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run effect give @s minecraft:mining_fatigue 1 7
-#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s subtitle {"translate": "Out of bounds!","color":"red"} 
-#execute as @a[tag=Playing] at @s if block ~ 69 ~ air run title @s title {"translate": ""} 
+# Kill players who are in the void
+execute as @a[tag=Playing] at @s if block ~ 69 ~ air run function calamity:player/out_of_bounds
 
 # Determine game state, if necessary
 function calamity:game_state/handler
