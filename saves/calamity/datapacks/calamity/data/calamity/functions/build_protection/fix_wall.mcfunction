@@ -6,6 +6,6 @@
 # This means that if we try and fill down at layer 0 it will fail since we can't fill from -8 up to +8 as -8 is outside the world.
 # We also don't want to fill moving_piston blocks above layer 68 since the player can't get there anyways.
 
-execute if score #tempYLocation gameVariable matches 59.. run fill ~ ~-8 ~ ~ 67 ~ minecraft:moving_piston
-execute if score #tempYLocation gameVariable matches ..9 run fill ~ 0 ~ ~ ~8 ~ minecraft:moving_piston
-execute if score #tempYLocation gameVariable matches 10..58 run fill ~ ~-8 ~ ~ ~8 ~ minecraft:moving_piston
+execute if score #tempYLocation gameVariable matches 59.. run fill ~ ~-8 ~ ~ 67 ~ minecraft:moving_piston replace minecraft:air
+execute if score #tempYLocation gameVariable matches ..9 run fill ~ 0 ~ ~ ~8 ~ minecraft:moving_piston replace minecraft:air
+execute if score #tempYLocation gameVariable matches 10..58 run fill ~ ~-8 ~ ~ ~8 ~ minecraft:moving_piston replace minecraft:air

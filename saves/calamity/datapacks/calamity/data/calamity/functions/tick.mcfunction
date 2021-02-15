@@ -21,7 +21,7 @@ effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
 # Kill players who are in the void
-execute as @a[tag=Playing] at @s if block ~ 69 ~ air run function calamity:player/out_of_bounds
+execute as @a[tag=Playing] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
 
 # Determine game state, if necessary
 function calamity:game_state/handler

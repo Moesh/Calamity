@@ -16,16 +16,16 @@
 execute store result score #tempYLocation gameVariable run data get entity @s Pos[1]
 
 # check if there are blocks and split into the small sections
-execute store result score #tempVar gameVariable run clone ~-8 70 ~-8 ~-1 70 ~-1 ~-8 70 ~-8 filtered minecraft:structure_void force
+execute store result score #tempVar gameVariable run clone ~-8 69 ~-8 ~-1 69 ~-1 ~-8 69 ~-8 filtered #calamity:void_protection_block force
 execute if score #tempVar gameVariable matches 1.. positioned ~-4 ~ ~-4 run function calamity:build_protection/section_medium
 
-execute store result score #tempVar gameVariable run clone ~-8 70 ~0 ~-1 70 ~7 ~-8 70 ~0 filtered minecraft:structure_void force
+execute store result score #tempVar gameVariable run clone ~-8 69 ~0 ~-1 69 ~7 ~-8 69 ~0 filtered #calamity:void_protection_block force
 execute if score #tempVar gameVariable matches 1.. positioned ~-4 ~ ~3 run function calamity:build_protection/section_medium
 
-execute store result score #tempVar gameVariable run clone ~0 70 ~-8 ~7 70 ~-1 ~0 70 ~-8 filtered minecraft:structure_void force
+execute store result score #tempVar gameVariable run clone ~0 69 ~-8 ~7 69 ~-1 ~0 69 ~-8 filtered #calamity:void_protection_block force
 execute if score #tempVar gameVariable matches 1.. positioned ~3 ~ ~-4 run function calamity:build_protection/section_medium
 
-execute store result score #tempVar gameVariable run clone ~0 70 ~0 ~7 70 ~7 ~0 70 ~0 filtered minecraft:structure_void force
+execute store result score #tempVar gameVariable run clone ~0 69 ~0 ~7 69 ~7 ~0 69 ~0 filtered #calamity:void_protection_block force
 execute if score #tempVar gameVariable matches 1.. positioned ~3 ~ ~3 run function calamity:build_protection/section_medium
 
 # Reset our temp variables
