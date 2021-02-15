@@ -2,7 +2,6 @@
     "replace": false,
     "values": [
       "minecraft:yellow_stained_glass",
-      "minecraft:red_stained_glass",
-      "minecraft:blue_stained_glass"
+      "#calamity:spawn_area_block"
     ]
 }
