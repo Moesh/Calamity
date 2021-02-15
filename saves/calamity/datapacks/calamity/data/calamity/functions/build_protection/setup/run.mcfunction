@@ -4,3 +4,7 @@
 
 function calamity:build_protection/setup/set_wall
 function calamity:build_protection/setup/reset_wall
+
+# Remove moving pistons at spawn points
+fill 159 45 90 159 46 90 air
+fill 113 45 90 113 46 90 air

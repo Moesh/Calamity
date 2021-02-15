@@ -6,91 +6,92 @@
 
 # Place structure blocks
 # Left side
-setblock 142 0 88 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity1",sizeY:48,sizeZ:12,showboundingbox:1b}
-setblock 142 1 88 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity2",sizeY:22,sizeZ:12,showboundingbox:1b}
-setblock 142 0 100 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity3",sizeY:48,sizeZ:48,showboundingbox:1b}
-setblock 142 1 100 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity4",sizeY:22,sizeZ:48,showboundingbox:1b}
-setblock 142 0 148 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity5",sizeY:48,sizeZ:48,showboundingbox:1b}
-setblock 142 1 148 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity6",sizeY:22,sizeZ:48,showboundingbox:1b}
+setblock 141 0 87 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity1",sizeY:48,sizeZ:12,showboundingbox:1b}
+setblock 141 1 87 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity2",sizeY:22,sizeZ:12,showboundingbox:1b}
+setblock 141 0 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity3",sizeY:48,sizeZ:48,showboundingbox:1b}
+setblock 141 1 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity4",sizeY:22,sizeZ:48,showboundingbox:1b}
+setblock 141 0 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity5",sizeY:48,sizeZ:48,showboundingbox:1b}
+setblock 141 1 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity6",sizeY:22,sizeZ:48,showboundingbox:1b}
 
 # Right side
-setblock 130 0 88 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity1",sizeY:48,sizeZ:12,showboundingbox:1b}
-setblock 130 1 88 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity2",sizeY:22,sizeZ:12,showboundingbox:1b}
-setblock 130 0 100 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity3",sizeY:48,sizeZ:48,showboundingbox:1b}
-setblock 130 1 100 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity4",sizeY:22,sizeZ:48,showboundingbox:1b}
-setblock 130 0 148 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity5",sizeY:48,sizeZ:48,showboundingbox:1b}
-setblock 130 1 148 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity6",sizeY:22,sizeZ:48,showboundingbox:1b}
+setblock 131 0 87 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity1",sizeY:48,sizeZ:12,showboundingbox:1b}
+setblock 131 1 87 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity2",sizeY:22,sizeZ:12,showboundingbox:1b}
+setblock 131 0 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity3",sizeY:48,sizeZ:48,showboundingbox:1b}
+setblock 131 1 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity4",sizeY:22,sizeZ:48,showboundingbox:1b}
+setblock 131 0 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity5",sizeY:48,sizeZ:48,showboundingbox:1b}
+setblock 131 1 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:47,sizeX:33,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity6",sizeY:22,sizeZ:48,showboundingbox:1b}
 
 # Crosslane
-setblock 130 3 180 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:-3,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity7",sizeY:48,sizeZ:15,showboundingbox:1b}
-setblock 130 4 180 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:44,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity8",sizeY:22,sizeZ:15,showboundingbox:1b}
+setblock 131 3 179 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:-3,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity7",sizeY:48,sizeZ:15,showboundingbox:1b}
+setblock 131 4 179 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:44,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity8",sizeY:22,sizeZ:15,showboundingbox:1b}
 
 
 # Activate the structure blocks!
 # Left side
-setblock 142 0 87 minecraft:redstone_block
-setblock 142 1 87 minecraft:redstone_block
-setblock 142 0 99 minecraft:redstone_block
-setblock 142 1 99 minecraft:redstone_block
-setblock 142 0 147 minecraft:redstone_block
-setblock 142 1 147 minecraft:redstone_block
+setblock 141 0 86 minecraft:redstone_block
+setblock 141 1 86 minecraft:redstone_block
+setblock 141 0 100 minecraft:redstone_block
+setblock 141 1 100 minecraft:redstone_block
+setblock 141 0 148 minecraft:redstone_block
+setblock 141 1 148 minecraft:redstone_block
 # Right side
-setblock 130 0 87 minecraft:redstone_block
-setblock 130 1 87 minecraft:redstone_block
-setblock 130 0 99 minecraft:redstone_block
-setblock 130 1 99 minecraft:redstone_block
-setblock 130 0 147 minecraft:redstone_block
-setblock 130 1 147 minecraft:redstone_block
+setblock 131 0 86 minecraft:redstone_block
+setblock 131 1 86 minecraft:redstone_block
+setblock 131 0 100 minecraft:redstone_block
+setblock 131 1 100 minecraft:redstone_block
+setblock 131 0 148 minecraft:redstone_block
+setblock 131 1 148 minecraft:redstone_block
 
 # Crosslane
-setblock 130 3 179 minecraft:redstone_block
-setblock 130 4 179 minecraft:redstone_block
+setblock 131 3 178 minecraft:redstone_block
+setblock 131 4 178 minecraft:redstone_block
 
 # Clean-up everything
 # Left side
-setblock 142 0 88 minecraft:air
-setblock 142 1 88 minecraft:air
-setblock 142 0 100 minecraft:air
-setblock 142 1 100 minecraft:air
-setblock 142 0 148 minecraft:air
-setblock 142 1 148 minecraft:air
-setblock 142 0 87 minecraft:air
-setblock 142 1 87 minecraft:air
-setblock 142 0 99 minecraft:air
-setblock 142 1 99 minecraft:air
-setblock 142 0 147 minecraft:air
-setblock 142 1 147 minecraft:air
+setblock 141 0 87 minecraft:air
+setblock 141 1 87 minecraft:air
+setblock 141 0 101 minecraft:air
+setblock 141 1 101 minecraft:air
+setblock 141 0 149 minecraft:air
+setblock 141 1 149 minecraft:air
+setblock 141 0 86 minecraft:air
+setblock 141 1 86 minecraft:air
+setblock 141 0 100 minecraft:air
+setblock 141 1 100 minecraft:air
+setblock 141 0 148 minecraft:air
+setblock 141 1 148 minecraft:air
 # Right side
-setblock 130 0 88 minecraft:air
-setblock 130 1 88 minecraft:air
-setblock 130 0 100 minecraft:air
-setblock 130 1 100 minecraft:air
-setblock 130 0 148 minecraft:air
-setblock 130 1 148 minecraft:air
-setblock 130 0 87 minecraft:air
-setblock 130 1 87 minecraft:air
-setblock 130 0 99 minecraft:air
-setblock 130 1 99 minecraft:air
-setblock 130 0 147 minecraft:air
-setblock 130 1 147 minecraft:air
+setblock 131 0 87 minecraft:air
+setblock 131 1 87 minecraft:air
+setblock 131 0 101 minecraft:air
+setblock 131 1 101 minecraft:air
+setblock 131 0 149 minecraft:air
+setblock 131 1 149 minecraft:air
+setblock 131 0 86 minecraft:air
+setblock 131 1 86 minecraft:air
+setblock 131 0 100 minecraft:air
+setblock 131 1 100 minecraft:air
+setblock 131 0 148 minecraft:air
+setblock 131 1 148 minecraft:air
 # Crosslane
-setblock 130 3 179 minecraft:air
-setblock 130 4 179 minecraft:air
+setblock 131 3 178 minecraft:air
+setblock 131 4 178 minecraft:air
 
-setblock 130 1 180 minecraft:air
-setblock 130 0 180 minecraft:air
-setblock 130 3 180 minecraft:air
-setblock 130 4 180 minecraft:air
+setblock 131 0 179 minecraft:air
+setblock 131 1 179 minecraft:air
+setblock 131 3 179 minecraft:air
+setblock 131 4 179 minecraft:air
 
 # If the world was switched to dev mode, we need to clean up additional blocks.
-setblock 137 0 180 minecraft:air
-setblock 137 1 180 minecraft:air
-setblock 135 0 180 minecraft:air
-setblock 135 1 180 minecraft:air
+setblock 137 0 179 minecraft:air
+setblock 137 1 179 minecraft:air
+setblock 135 0 179 minecraft:air
+setblock 135 1 179 minecraft:air
+fill 141 0 178 141 1 179 air
 
 # IMPORTANT: Replace the blue glass in the structure with red glass on the red side. This command
 #   needs to be updated each time we edit this shape.
-fill 97 69 88 129 69 98 minecraft:red_stained_glass
+fill 96 69 87 130 69 98 minecraft:red_stained_glass
 
 # Setup banners to be red
 setblock 113 47 101 minecraft:red_wall_banner[facing=south]

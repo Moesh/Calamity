@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:yellow_stained_glass",
+      "#calamity:spawn_area_block"
+    ]
+}

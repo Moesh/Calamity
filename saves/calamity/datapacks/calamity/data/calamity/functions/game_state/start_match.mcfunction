@@ -44,9 +44,9 @@ scoreboard players reset * teamSelected
 scoreboard players enable @a[tag=Playing] gg
 
 # Teleport players to starting location
-tp @a[team=blue] 159 45 90
+tp @a[team=blue] 159 45 90 0 0
 spawnpoint @a[team=blue] 159 45 90
-tp @a[team=red] 113 45 90
+tp @a[team=red] 113 45 90 0 0
 spawnpoint @a[team=red] 113 45 90
 
 # Reset players item selection and give players the starting item selection
