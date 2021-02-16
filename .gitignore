@@ -62,3 +62,11 @@ saves/server.properties
 saves/whitelist.json
 
 server-resource-packs/
+saves/plugins/
+saves/bukkit.yml
+saves/commands.yml
+saves/help.yml
+saves/permissions.yml
+saves/spigot-1.16.5.jar
+saves/spigot.yml
+saves/wepif.yml
