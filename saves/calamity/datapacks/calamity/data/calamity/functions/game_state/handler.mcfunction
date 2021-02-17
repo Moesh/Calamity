@@ -56,6 +56,10 @@ execute if score GameState gameVariable matches 1 if score BluePoints gameVariab
 execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run tellraw @a {"translate":"%s Red wins!","color":"red","with":[{"text":">>>","color":"white"}]}
 execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run function calamity:game_state/end_match
 
+# Make sure there is air at the spawn points (Players can't respawn in moving piston blocks)
+execute if score GameState gameVariable matches 1 run fill 159 45 90 159 46 90 air destroy
+execute if score GameState gameVariable matches 1 run fill 113 45 90 113 46 90 air destroy
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the post-game
 #---------------------------------------------------------------------------------------------------
