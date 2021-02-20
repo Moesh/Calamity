@@ -95,6 +95,7 @@ setblock 131 0 179 minecraft:air
 setblock 131 1 179 minecraft:air
 setblock 131 3 179 minecraft:air
 setblock 131 4 179 minecraft:air
+fill 141 0 178 141 1 179 minecraft:air
 
 # Lobby
 setblock 117 33 26 minecraft:air
