@@ -5,7 +5,8 @@
 		"calamity:load/setup_teams",
 		"calamity:load/setup_tags",
 		"calamity:load/set_gamerules",
-		"calamity:load/arenas/arena_calamity_rules",
-		"calamity:load/arenas/arena_calamity"
+		"calamity:load/arena/calamity/set_gamerules",
+		"calamity:load/arena/calamity/load_blocks",
+		"calamity:load/arena/calamity/send_welcome_message"
 	]
 }
