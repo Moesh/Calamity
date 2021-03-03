@@ -15,7 +15,6 @@ execute as @a[tag=!Registered] at @s run function #calamity:register_player
 execute as @a[tag=!Registered] run tellraw @s {"translate":"%s Calamity by Moesh","color":"light_purple","with":[{"text":">>>","color":"white"}]}
 tag @a[tag=!Registered] add Registered
 
-
 # Feed hungry players, this game isn't about fighting hunger.
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
