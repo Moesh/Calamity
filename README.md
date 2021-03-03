@@ -25,6 +25,8 @@ This game is played in survival mode, but some elements have been modified. This
 - Edited gamerules
   - Players will respawn instantly when they die
   - Players will not need to eat food, but they will not be oversaturated
+- Used for development purposes
+  - Nether Star (item)
 
 ## Features of the Calamity game mode
 - Resource points
@@ -58,7 +60,7 @@ Calamity is both the game mode, and the first arena introduced. I hope to make, 
 - Resource points take 20 seconds (400 redstone ticks) to charge and reset
 - Scoring
   - Players are awarded 1 point for capturing resource or status effect resource points
-  - Players are awarded 2 points for capturing the Enchanted Book resource point
+  - Players are awarded 10 points for capturing the Enchanted Book resource point
   - Players are awarded 1 point for killing other players
 
 # Usage
