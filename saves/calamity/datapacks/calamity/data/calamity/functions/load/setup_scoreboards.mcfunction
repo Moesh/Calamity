@@ -40,6 +40,8 @@ scoreboard objectives remove SuccessCount
 scoreboard objectives add SuccessCount dummy
 scoreboard objectives remove loggedOff
 scoreboard objectives add loggedOff minecraft.custom:minecraft.leave_game
+scoreboard objectives remove timeSinceDeath
+scoreboard objectives add timeSinceDeath minecraft.custom:minecraft.time_since_death
 
 scoreboard objectives remove PointTimer
 scoreboard objectives add PointTimer dummy
