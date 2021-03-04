@@ -72,14 +72,16 @@ To play or modify Calamity: Definitive Edition, you should follow these steps:
 4. Point the custom installation profile directory to the base Calamity folder.
 5. Launch Minecraft: Java Edition and open the world save.
 6. Type `/function #calamity:load` to initalize the map. This will only need to be done once.
-7. Until the lobby is craeted, menu functions can accessed by typing `/trigger ` using [TAB] to see what commands are currently available to you. All players can use these commands.
+7. Until the lobby is craeted, menu functions can accessed by typing `/trigger ` and seeing what autocomplete commands come up. Use [TAB] to cycle through what commands are currently available to you. All players can use these commands.
 
 ### Available commands
 During the lobby stage:
 - `/trigger startMatch`: Triggers 15 second countdown to start the match.
-- `/trigger cancelStart`: Available during the 15 second countdown.
-- `/trigger teamSelect set 1`: Join the blue team, or leave team if already on this team.
-- `/trigger teamSelect set 2`: Join the red team, or leave team if already on this team.
+- `/trigger cancelStart`: Cancel match start. Available during the 15 second start match countdown.
+- `/trigger selectTeam set 1`: Join the blue team. Available if you're not on a team.
+- `/trigger selectTeam set 2`: Join the red team. Available if you're not on a team.
+- `/trigger leaveTeam`: Leave your team. Available if you are on a team.
+- `/trigger spectate`: Change gamemode to spectator mode.
 
 During the match:
 - `/trigger gg`: If 75% of the team uses this command, the match will end.
