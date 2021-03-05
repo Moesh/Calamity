@@ -27,6 +27,9 @@
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:39,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby2",sizeY:33,sizeZ:3,showboundingbox:1b}
     setblock 137 33 77 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:27,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby3",sizeY:33,sizeZ:11,showboundingbox:1b}
     setblock 109 33 77 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:26,mode:"LOAD",posY:2,sizeX:27,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby3",sizeY:33,sizeZ:11,showboundingbox:1b}
+    # Big logo
+    setblock 109 60 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:48,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo1",sizeY:21,sizeZ:3,showboundingbox:1b}
+    setblock 157 60 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:7,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo1",sizeY:21,sizeZ:3,showboundingbox:1b}
 
 # Activate the structure blocks!
     # Left side
@@ -51,6 +54,8 @@
     setblock 117 32 74 minecraft:redstone_block
     setblock 137 32 77 minecraft:redstone_block
     setblock 109 32 77 minecraft:redstone_block
+    setblock 109 60 73 minecraft:redstone_block
+    setblock 157 60 73 minecraft:redstone_block
 
 # Clean-up everything
     # Left side
@@ -108,6 +113,11 @@
     # Lobby 3 flipped
     setblock 137 32 77 minecraft:air
     setblock 109 32 77 minecraft:air
+    # Logo
+    setblock 109 60 73 minecraft:redstone_block
+    setblock 157 60 73 minecraft:redstone_block
+    setblock 109 60 74 minecraft:redstone_block
+    setblock 157 60 74 minecraft:redstone_block
 
 # IMPORTANT: Replace the blue glass in the structure with red glass on the red side. This command
 #   needs to be updated each time we edit this shape.
