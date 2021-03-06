@@ -13,6 +13,3 @@ execute as @e[type=!player] run kill @s
 # Some devs will tell you you only need to run a kill command and be done with it. Sometimes
 #   entities drop things. Those items are left over on the ground, so we teleport all entities to
 #   just above the void before killing them. This makes the clean-up easier and more reliable.
-
-# Let's alert the devs.
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"All non-player entities cleared","color":"light_purple"}]}

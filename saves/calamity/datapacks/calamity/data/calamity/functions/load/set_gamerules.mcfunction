@@ -39,9 +39,5 @@ gamerule reducedDebugInfo false
 gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 7
-
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Gamerules set","color":"light_purple"}]}
-
 # Submitted for the approval of the Midnight Society...
 time set midnight
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Time set to midnight","color":"light_purple"}]}

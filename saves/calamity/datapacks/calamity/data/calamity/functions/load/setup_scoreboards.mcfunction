@@ -290,7 +290,3 @@ scoreboard players set GameState gameVariable 0
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,
 # calamity:game_state/trigger_cancel_start, and calamity:game_state/trigger_start_match
 scoreboard players set StartingMatch gameVariable 0
-
-
-# Let's alert the devs.
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Teams and objectives removed and reset","color":"light_purple"}]}
