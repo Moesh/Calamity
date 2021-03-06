@@ -25,11 +25,9 @@
     # Lobby
     setblock 117 33 26 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:39,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby1",sizeY:33,sizeZ:48,showboundingbox:1b}
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:39,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby2",sizeY:33,sizeZ:3,showboundingbox:1b}
-    setblock 137 33 77 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:27,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby3",sizeY:33,sizeZ:11,showboundingbox:1b}
-    setblock 109 33 77 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"CLOCKWISE_180",posX:26,mode:"LOAD",posY:2,sizeX:27,posZ:0,integrity:1.0f,showair:0b,name:"minecraft:lobby3",sizeY:33,sizeZ:11,showboundingbox:1b}
-    # Big logo
-    setblock 109 60 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:48,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo1",sizeY:21,sizeZ:3,showboundingbox:1b}
-    setblock 157 60 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:7,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo1",sizeY:21,sizeZ:3,showboundingbox:1b}
+    # Logo
+    setblock 109 60 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo1",sizeY:21,sizeZ:5,showboundingbox:1b}
+    setblock 157 60 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:7,posZ:1,integrity:1.0f,showair:0b,name:"minecraft:logo2",sizeY:21,sizeZ:5,showboundingbox:1b}
 
 # Activate the structure blocks!
     # Left side
@@ -52,8 +50,6 @@
     # Lobby
     setblock 117 32 26 minecraft:redstone_block
     setblock 117 32 74 minecraft:redstone_block
-    setblock 137 32 77 minecraft:redstone_block
-    setblock 109 32 77 minecraft:redstone_block
     setblock 109 60 73 minecraft:redstone_block
     setblock 157 60 73 minecraft:redstone_block
 
@@ -91,33 +87,20 @@
     setblock 131 1 179 minecraft:air
     setblock 131 3 179 minecraft:air
     setblock 131 4 179 minecraft:air
-    fill 141 0 178 141 1 179 minecraft:air
-    # Lobby
-    setblock 117 33 26 minecraft:air
-    setblock 117 33 74 minecraft:air
-    setblock 109 33 77 minecraft:air
-    setblock 137 33 77 minecraft:air
-    setblock 117 32 26 minecraft:air
-    setblock 117 32 74 minecraft:air
+    # Lobby and logo
+    fill 117 32 26 117 34 26 stone
+    fill 109 60 73 109 60 74 minecraft:air
+    fill 157 60 73 157 60 74 minecraft:air
+
+
     # If the world was switched to dev mode, we need to clean up additional blocks.
     setblock 137 0 179 minecraft:air
     setblock 137 1 179 minecraft:air
     setblock 135 0 179 minecraft:air
     setblock 135 1 179 minecraft:air
-    fill 141 0 178 141 1 179 air
-    # Save structure blocks
-    setblock 117 34 26 minecraft:air
-    setblock 117 34 74 minecraft:air
-    setblock 137 34 77 minecraft:air
-    # Load structure blocks
-    # Lobby 3 flipped
-    setblock 137 32 77 minecraft:air
-    setblock 109 32 77 minecraft:air
-    # Logo
-    setblock 109 60 73 minecraft:redstone_block
-    setblock 157 60 73 minecraft:redstone_block
-    setblock 109 60 74 minecraft:redstone_block
-    setblock 157 60 74 minecraft:redstone_block
+    fill 117 32 74 117 34 74 minecraft:air
+    fill 141 0 178 141 1 179 minecraft:air
+
 
 # IMPORTANT: Replace the blue glass in the structure with red glass on the red side. This command
 #   needs to be updated each time we edit this shape.
