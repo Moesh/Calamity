@@ -20,8 +20,10 @@ tag @a[tag=!Registered] add Registered
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
-# Kill players who are in the void
+# Kill players who are out of bounds
 execute as @a[tag=Playing,gamemode=survival] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=survival] at @s if block 96 ~ 86 minecraft:barrier run tellraw @s {"text":"You cheated not only the game, but yourself. You didn't grow. You didn't improve. You took a shortcut and gained nothing. You experienced a hollow victory. Nothing was risked and nothing was gained. It's sad that you don't know the difference.","color": "gray","italic": true}
+execute as @a[tag=Playing,gamemode=survival] at @s if block 96 ~ 86 minecraft:barrier run kill @s
 
 # Highlight players who fell in this location.
 execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
