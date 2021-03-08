@@ -81,7 +81,7 @@ During the lobby stage:
 - `/trigger selectTeam set 1`: Join the blue team. Available if you're not on a team.
 - `/trigger selectTeam set 2`: Join the red team. Available if you're not on a team.
 - `/trigger leaveTeam`: Leave your team. Available if you are on a team.
-- `/trigger spectate`: Change gamemode to spectator mode.
+- `/trigger toggleSpectator`: Toggle between spectator and adventure gamemodes.
 
 During the match:
 - `/trigger gg`: If 75% of the team uses this command, the match will end.

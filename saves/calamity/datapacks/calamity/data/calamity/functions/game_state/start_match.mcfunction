@@ -31,6 +31,7 @@ tag @a[team=red] add Playing
 # Clear the player's items and effects, give them items, refill their health and hunger
 execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
 gamemode survival @a[tag=Playing]
+gamemode spectator @a[tag=!Playing]
 
 # Set the correct scoreboard
 scoreboard players operation Goal displayPoints = OreLeft gameVariable

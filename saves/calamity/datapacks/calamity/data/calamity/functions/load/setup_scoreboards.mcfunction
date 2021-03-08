@@ -99,21 +99,17 @@ scoreboard objectives add reset trigger
 	scoreboard objectives remove cancelStart
 	scoreboard objectives add cancelStart trigger
 	# Select a team
-	scoreboard objectives add teamSelected trigger
-	scoreboard objectives remove teamSelected
+	scoreboard objectives add selectTeam trigger
+	scoreboard objectives remove selectTeam
+	# Leave your team
+	scoreboard objectives remove leaveTeam
+	scoreboard objectives add leaveTeam trigger
 	# Spectate
-	scoreboard objectives add spectate trigger
-	scoreboard objectives remove spectate
+	scoreboard objectives remove toggleSpectator
+	scoreboard objectives add toggleSpectator trigger
 	# Reset after match is complete
 	scoreboard objectives remove reset
 	scoreboard objectives add reset trigger
-	# Used in [lobby/team_selected]
-	scoreboard objectives remove teamSelected
-	scoreboard objectives add teamSelected trigger
-	scoreboard objectives remove leaveTeam
-	scoreboard objectives add leaveTeam trigger
-	scoreboard objectives remove spectate
-	scoreboard objectives add spectate trigger
 
 # The percentage of players who has to trigger the gg trigger before the team will forfeit
 # Number has to be between 0(%) and 100(%).
