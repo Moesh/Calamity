@@ -99,8 +99,8 @@ scoreboard objectives add reset trigger
 	scoreboard objectives remove cancelStart
 	scoreboard objectives add cancelStart trigger
 	# Select a team
-	scoreboard objectives add selectTeam trigger
 	scoreboard objectives remove selectTeam
+	scoreboard objectives add selectTeam trigger
 	# Leave your team
 	scoreboard objectives remove leaveTeam
 	scoreboard objectives add leaveTeam trigger

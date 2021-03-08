@@ -8,6 +8,10 @@ execute if score GameState gameVariable matches 0 run scoreboard players reset @
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s startMatch
 execute if score GameState gameVariable matches 0 run scoreboard players reset @s toggleSpectator
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s selectTeam
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s selectTeam
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s toggleSpectator
 
 # Enable if the match is in progress
 execute if score GameState gameVariable matches 1 run scoreboard players reset @s gg
