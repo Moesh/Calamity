@@ -24,7 +24,7 @@ effect clear @a[scores={food=20}] minecraft:saturation
 execute as @a[tag=Playing,gamemode=survival] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
 
 # Highlight players who fell in this location.
-execute as @a[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
+execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
 execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"%s fell in the troll hole! How embarassing!","with": [{"selector":"@s"}]}
 execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tag @s add MessageSent
 execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2,tag=MessageSent] run tag @s remove HowEmbarassing
