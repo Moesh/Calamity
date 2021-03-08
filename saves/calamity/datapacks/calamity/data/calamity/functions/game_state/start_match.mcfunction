@@ -10,10 +10,6 @@ gamerule showDeathMessages true
 gamerule announceAdvancements false
 gamerule doFireTick true
 
-# Set map rules and clean-up
-# Kill all non-player, non-villager entities
-function calamity:load/kill_entities
-
 # Purpose: Establish a SessionID by using game time
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a SessionID = SessionID gameVariable
