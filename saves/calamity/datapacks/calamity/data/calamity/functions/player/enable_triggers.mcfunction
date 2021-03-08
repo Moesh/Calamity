@@ -3,10 +3,6 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Register the player on all the scoreboard they need. Enable triggers and set default
 #---------------------------------------------------------------------------------------------------
-
-# Always run
-scoreboard players set @s sneakTime 0
-
 # Enable if the match is in lobby mode
 execute if score GameState gameVariable matches 0 run scoreboard players reset @s startMatch
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s startMatch
