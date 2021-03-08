@@ -1,4 +1,4 @@
-# Called from: #minecraft:tick
+# Called from: calamity:tick
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: A player has gone out of bounds, let's punish them a bit for it.
