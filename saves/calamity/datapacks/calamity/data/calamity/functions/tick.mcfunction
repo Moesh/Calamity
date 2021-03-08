@@ -19,7 +19,7 @@ effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
 # Kill players who are in the void
-execute as @a[tag=Playing] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=survival] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
 
 # Highlight players who fell in this location.
 execute as @a[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing

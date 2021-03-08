@@ -40,7 +40,7 @@ scoreboard objectives setdisplay sidebar displayPoints
 
 # Update player triggers
 scoreboard players reset * cancelStart
-scoreboard players reset * teamSelected
+scoreboard players reset * selectTeam
 scoreboard players enable @a[tag=Playing] gg
 
 # Teleport players to starting location
