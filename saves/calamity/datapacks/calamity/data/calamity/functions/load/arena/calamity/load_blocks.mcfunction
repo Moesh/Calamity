@@ -99,6 +99,7 @@
     setblock 135 0 179 minecraft:air
     setblock 135 1 179 minecraft:air
     fill 117 32 74 117 34 74 minecraft:air
+    fill 117 32 26 117 34 26 minecraft:air
     fill 141 0 178 141 1 179 minecraft:air
 
 
@@ -169,16 +170,64 @@ execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=FacingEast] run se
 execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
 # Update signs
 execute at @e[type=area_effect_cloud,name="ResourcePoint"] run data merge block ^ ^ ^3 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
-execute at @e[type=area_effect_cloud,tag=Log] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Scaffolding] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=area_effect_cloud,tag=GoldIngot] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Chain] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Cobblestone] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Arrow] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=area_effect_cloud,tag=TNT] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Regeneration] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Resistance] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Strength] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Speed] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Haste] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=area_effect_cloud,tag=Enchant] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"sign.moesh.enchant\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.enchant\"}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Log] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Scaffolding] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=GoldIngot] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Chain] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Cobblestone] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Arrow] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=TNT] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Regeneration] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Resistance] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Strength] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Speed] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Haste] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="ResourcePoint",tag=Enchant] run data merge block ^ ^ ^3 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"sign.moesh.enchant\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.enchant\"}"}
+
+#---------------------------------------------------------------------------------------------------
+# Purpose: Place lobby points and act on them.
+#---------------------------------------------------------------------------------------------------
+summon minecraft:area_effect_cloud 120 56 63 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Scaffolding"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 122 56 51 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Cobblestone"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 130 55 54 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Chain"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 129 63 45 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Arrow"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 126 62 35 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","TNT"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+# Blue team effect points only appear on the red lane
+summon minecraft:area_effect_cloud 146 60 27 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Regeneration"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 153 55 41 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Resistance"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 143 51 41 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Strength"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 146 44 27 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+
+# Red team resource points only appear on the red lane
+summon minecraft:area_effect_cloud 152 56 63 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Scaffolding"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 150 56 51 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Cobblestone"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 142 55 54 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Chain"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 143 63 45 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Arrow"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 146 62 35 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","TNT"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+# Red team effect points only appear on the blue lane
+summon minecraft:area_effect_cloud 126 60 27 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Regeneration"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 119 55 41 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Resistance"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 129 51 41 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Strength"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 126 44 27 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+# This objectives only appear on opposing lanes for each team
+summon minecraft:area_effect_cloud 147 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 125 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+
+# Place signs
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
+# Update signs
+execute at @e[type=area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Log] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Scaffolding] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=GoldIngot] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Chain] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Cobblestone] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Arrow] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=TNT] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Regeneration] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Resistance] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Strength] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Speed] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"resourcePoint.output.effect.level2\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Haste] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Enchant] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"sign.moesh.enchant\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.enchant\"}"}
