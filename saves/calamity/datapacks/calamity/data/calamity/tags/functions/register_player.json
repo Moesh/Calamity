@@ -3,7 +3,6 @@
         "calamity:player/reset_data",
         "calamity:player/enable_triggers",
         "calamity:player/refill_items_and_health",
-        "calamity:player/set_to_lobby_mode",
         "calamity:load/arena/calamity/send_welcome_message"
     ]
 }
