@@ -1,4 +1,4 @@
-# Called from: calamity:tick
+# Called from: #calamity:register_player
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Register the player on all the scoreboard they need. Enable triggers and set default
