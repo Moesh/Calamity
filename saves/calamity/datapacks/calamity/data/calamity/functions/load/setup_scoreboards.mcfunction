@@ -34,6 +34,8 @@ scoreboard objectives remove health
 scoreboard objectives add health health {"text":"❤","color":"purple"}
 	scoreboard objectives setdisplay belowName health
 	scoreboard objectives modify health rendertype hearts
+scoreboard objectives remove food
+scoreboard objectives add food food
 scoreboard objectives remove QueryResult
 scoreboard objectives add QueryResult dummy
 scoreboard objectives remove SuccessCount
@@ -111,10 +113,6 @@ scoreboard objectives add reset trigger
 	scoreboard objectives remove reset
 	scoreboard objectives add reset trigger
 
-# The percentage of players who has to trigger the gg trigger before the team will forfeit
-# Number has to be between 0(%) and 100(%).
-scoreboard players set PercentPlayersToForfeit mapRules 75
-    
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
 # Diamond can be found on the map, I am not counting these for points.
