@@ -145,8 +145,6 @@ scoreboard objectives add itemCounts dummy
     scoreboard players set crossbow itemCounts 1
     scoreboard players set detector_rail itemValues 6
     scoreboard players set detector_rail itemCounts 6
-    scoreboard players set flint_and_steel itemValues 1
-    scoreboard players set flint_and_steel itemCounts 1
     scoreboard players set heavy_weighted_pressure_plate itemValues 2
     scoreboard players set heavy_weighted_pressure_plate itemCounts 1
     scoreboard players set hopper itemValues 5
@@ -211,8 +209,6 @@ scoreboard objectives remove craftedObjItem08
 scoreboard objectives add craftedObjItem08 minecraft.crafted:minecraft.crossbow
 scoreboard objectives remove craftedObjItem09
 scoreboard objectives add craftedObjItem09 minecraft.crafted:minecraft.detector_rail
-scoreboard objectives remove craftedObjItem10
-scoreboard objectives add craftedObjItem10 minecraft.crafted:minecraft.flint_and_steel
 scoreboard objectives remove craftedObjItem11
 scoreboard objectives add craftedObjItem11 minecraft.crafted:minecraft.heavy_weighted_pressure_plate
 scoreboard objectives remove craftedObjItem12
