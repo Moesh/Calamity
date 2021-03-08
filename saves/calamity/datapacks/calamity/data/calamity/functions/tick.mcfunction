@@ -12,7 +12,6 @@ execute as @a[scores={leaveGame=1..}] at @s run function calamity:player/left_ga
 
 # The functions below will handle players, no matter what state the game is in.
 execute as @a[tag=!Registered] at @s run function #calamity:register_player
-execute as @a[tag=!Registered] run function calamity:load/arena/calamity/send_welcome_message
 tag @a[tag=!Registered] add Registered
 
 # Feed hungry players, this game isn't about fighting hunger.
