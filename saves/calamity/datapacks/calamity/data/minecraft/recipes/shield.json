@@ -7,7 +7,7 @@
   ],
   "key": {
     "W": {
-      "item": "minecraft:scaffolding"
+      "tag": "minecraft:planks"
     },
     "o": {
       "item": "minecraft:chain"
