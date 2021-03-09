@@ -8,7 +8,7 @@ tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is o
 playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
 
 # Make all players spectators!
-execute as @a run function calamity:player/spectate
+execute as @a run function calamity:player/set_to_spectate_mode
 
 # The match has ended, let's updated the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime

@@ -12,8 +12,7 @@ function calamity:load/map_calamity
 execute at @a run function calamity:player/reset_data
 execute at @a run function calamity:player/enable_triggers
 execute at @a run function calamity:player/refill_items_and_health
-execute as @a run function calamity:player/spectate
-execute at @a run function calamity:player/teleport_to_spawn
+execute at @a run function calamity:player/set_to_lobby_mode
 
 # Reset the ores bossbar.
 bossbar set calamity:iron_ore visible false
