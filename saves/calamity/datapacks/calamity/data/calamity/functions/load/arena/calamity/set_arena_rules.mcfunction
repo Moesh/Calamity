@@ -21,6 +21,11 @@ scoreboard objectives add mapRules dummy
     scoreboard players set ScoreForEnchanting mapRules 2
     scoreboard players set ScoreForKill mapRules 1
 
-    # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
-    # teams must get to win the game.
-    function calamity:load/count_iron_ore
+    # The percentage of players who has to trigger the gg trigger before the team will forfeit
+    # Number has to be between 0(%) and 100(%). This has to live here in-case an arena is built for
+    # different team sizes.
+    scoreboard players set PercentPlayersToForfeit mapRules 75
+
+# Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
+# teams must get to win the game.
+function calamity:load/count_iron_ore
