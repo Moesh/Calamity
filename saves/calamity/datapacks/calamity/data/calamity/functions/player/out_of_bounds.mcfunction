@@ -10,3 +10,4 @@ effect give @s minecraft:mining_fatigue 1 7
 title @s times 0 2 1
 title @s subtitle {"translate": "Out of bounds!","color":"red"} 
 title @s title {"translate": ""} 
+gamemode adventure @s[gamemode=survival]
