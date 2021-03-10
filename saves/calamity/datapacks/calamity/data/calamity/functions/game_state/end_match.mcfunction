@@ -14,9 +14,6 @@ execute as @a run function calamity:player/set_to_spectate_mode
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a SessionID = SessionID gameVariable
 
-# Allow players to reset the map themselves
-tellraw @a {"translate":"Thanks for playing! Use [%s] to play again.","color":"green","with":[{"text":"/trigger reset","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger reset"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
-
 # Update player triggers
 scoreboard players reset @a gg
 scoreboard players reset @a reset
@@ -24,6 +21,9 @@ scoreboard players enable @a reset
 
 # Remove forfeit tag
 tag @a remove VotedForfeit
+
+# Allow players to reset the map themselves
+tellraw @a {"translate":"Thanks for playing! Use [%s] to play again.","color":"green","with":[{"text":"/trigger reset","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger reset"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update game state
