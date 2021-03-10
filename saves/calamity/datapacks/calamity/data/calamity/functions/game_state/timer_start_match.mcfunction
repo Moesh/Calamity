@@ -21,6 +21,9 @@ execute if score TimeInTicks gameVariable matches 80 run tellraw @a {"translate"
 execute if score TimeInTicks gameVariable matches 60 run tellraw @a {"translate":"%s %s...","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
 execute if score TimeInTicks gameVariable matches 40 run tellraw @a {"translate":"%s %s...","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
 execute if score TimeInTicks gameVariable matches 20 run tellraw @a {"translate":"%s %s...","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
+# Reset fall damage for everyone, so players that are currently falling won't die after the game has started
+execute if score TimeInTicks gameVariable matches 1 run effect give @a minecraft:slow_falling 1 0 true
+execute if score TimeInTicks gameVariable matches 0 run effect clear @a minecraft:slow_falling
 # It's time to start the game!
 execute if score TimeInTicks gameVariable matches 0 run function calamity:game_state/start_match
 
