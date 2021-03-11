@@ -24,6 +24,6 @@ scoreboard players set @a[scores={leaveTeam=..-1}] leaveTeam 0
 scoreboard players set @a[scores={leaveTeam=1..}] leaveTeam 0
 
 # Always enable triggers
-scoreboard players enable @a[team=] selectTeam
+scoreboard players enable @a selectTeam
 scoreboard players enable @a[team=blue] leaveTeam
 scoreboard players enable @a[team=red] leaveTeam
