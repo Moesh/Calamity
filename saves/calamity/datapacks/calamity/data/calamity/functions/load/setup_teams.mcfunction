@@ -13,7 +13,7 @@ team remove red
 # Add And Configure Scoreboard Teams
 team add lobby {"translate":"team.name.lobby"}
 team add spectator {"translate":"team.name.spectator"}
-	team modify green color green
+	team modify gray color gray
 team add blue {"translate":"team.name.blue"}
 	team modify blue collisionRule pushOtherTeams
 	team modify blue color blue
