@@ -23,9 +23,13 @@ execute if score GameState gameVariable matches 0 if score StartingMatch gameVar
 #---------------------------------------------------------------------------------------------------
 
 # Kill players who are out of bounds
-execute as @a[tag=Playing,gamemode=survival] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
-execute as @a[tag=Playing,gamemode=survival] at @s if block 96 ~ 86 minecraft:barrier run tellraw @s {"text":"You cheated not only the game, but yourself. You didn't grow. You didn't improve. You took a shortcut and gained nothing. You experienced a hollow victory. Nothing was risked and nothing was gained. It's sad that you don't know the difference.","color": "gray","italic": true}
-execute as @a[tag=Playing,gamemode=survival] at @s if block 96 ~ 86 minecraft:barrier run kill @s
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=adventure] at @s unless block ~ 69 ~ #calamity:out_of_bounds_block run gamemode survival @s
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run tellraw @s {"text":"You cheated not only the game, but yourself. You didn't grow. You didn't improve. You took a shortcut and gained nothing. You experienced a hollow victory. Nothing was risked and nothing was gained. It's sad that you don't know the difference.","color": "gray","italic": true}
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run kill @s
+
+# Kill out of bounds boats
+execute as @e[type=boat] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run kill @s
 
 # Handle the spawn items
 execute if score GameState gameVariable matches 1 as @a[tag=Playing] run function calamity:player/spawn_items/handler
