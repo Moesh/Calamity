@@ -29,3 +29,4 @@ scoreboard players set @a[scores={leaveTeam=1..}] leaveTeam 0
 scoreboard players enable @a selectTeam
 scoreboard players enable @a[team=blue] leaveTeam
 scoreboard players enable @a[team=red] leaveTeam
+scoreboard players enable @a[team=spectator] leaveTeam
