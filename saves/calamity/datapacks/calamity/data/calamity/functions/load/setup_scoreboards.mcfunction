@@ -73,11 +73,11 @@ scoreboard objectives remove killScore
 scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
 
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
-scoreboard objectives remove SessionID
-scoreboard objectives add SessionID dummy
+scoreboard objectives remove sessionID
+scoreboard objectives add sessionID dummy
 # Minecraft will tick this up when a player disconnects from the game.
-scoreboard objectives remove leaveGame
-scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
+scoreboard objectives remove leftGame
+scoreboard objectives add leftGame minecraft.custom:minecraft.leave_game
 
 # Player scores
 scoreboard objectives remove selectedItem

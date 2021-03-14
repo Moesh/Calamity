@@ -12,7 +12,7 @@ execute as @a run function calamity:player/set_to_spectate_mode
 
 # The match has ended, let's updated the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime
-scoreboard players operation @a SessionID = SessionID gameVariable
+scoreboard players operation @a sessionID = SessionID gameVariable
 
 # Update player triggers
 scoreboard players reset @a gg

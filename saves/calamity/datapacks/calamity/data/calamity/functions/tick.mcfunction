@@ -18,7 +18,7 @@ execute if score #tableCandleSmoke gameVariable matches 80.. run scoreboard play
 
 # Let's first check to see if any online player has left the game
 # If a player fails the initial check in this function, they are no longer registered.
-execute as @a[scores={leaveGame=1..}] at @s run function calamity:player/left_game
+execute as @a[scores={leftGame=1..}] at @s run function calamity:player/left_game
 
 # The functions below will handle players, no matter what state the game is in.
 execute as @a[tag=!Registered] at @s run function #calamity:register_player

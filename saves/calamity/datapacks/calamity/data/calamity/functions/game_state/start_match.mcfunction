@@ -12,7 +12,7 @@ gamerule doFireTick true
 
 # Purpose: Establish a SessionID by using game time
 execute store result score SessionID gameVariable run time query gametime
-scoreboard players operation @a SessionID = SessionID gameVariable
+scoreboard players operation @a sessionID = SessionID gameVariable
 
 # Make the ore counter visible
 function calamity:points/setup_bossbar
@@ -38,6 +38,7 @@ scoreboard objectives setdisplay sidebar displayPoints
 # Update player triggers
 scoreboard players reset * cancelStart
 scoreboard players reset * selectTeam
+scoreboard players reset * toggleSpectator
 scoreboard players enable @a[tag=Playing] gg
 
 # Teleport players to starting location

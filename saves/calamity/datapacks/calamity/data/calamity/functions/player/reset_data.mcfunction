@@ -25,3 +25,6 @@ effect give @s minecraft:absorption 3 4 false
 # Refill stats
 effect give @s minecraft:instant_health 3 10 true
 effect give @s minecraft:saturation 5 10 true
+
+# Update the player sessionID to match current SessionID
+scoreboard players operation @s sessionID = SessionID gameVariable
