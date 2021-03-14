@@ -27,6 +27,7 @@ tag @a remove CheckIfStandingOnPoint
 # This section scores points towards the objective!
 scoreboard players operation @a[tag=GiveEffects] captureScore = ScoreForCaptureResource mapRules
 scoreboard players operation @a[tag=GiveResources] captureScore = ScoreForCaptureResource mapRules
+scoreboard players operation @a[tag=GiveBook] captureScore = ScoreForEnchantedBook mapRules
 
 # A player has scored effects for their team, let's flag the whole team!
 execute as @a[team=blue,tag=GiveEffects,limit=1] run tag @a[team=blue] add GiveEffects
