@@ -6,6 +6,16 @@
 #---------------------------------------------------------------------------------------------------
 # Any function here usually has it's own handling for lobby time and match time.
 
+# This torch particle replication is so important that we must dedicate an entire section to it.
+# Torch flame
+execute if score #tableCandle gameVariable matches 0 run particle minecraft:flame 136.125 58.65 68.86 0 0 0 0 1 normal
+scoreboard players add #tableCandle gameVariable 1
+execute if score #tableCandle gameVariable matches 5.. run scoreboard players set #tableCandle gameVariable 0
+# Torch smoke!
+execute if score #tableCandleSmoke gameVariable matches 0 run particle minecraft:smoke 136.125 58.65 68.86 0 0.1 0 0 1 normal
+scoreboard players add #tableCandleSmoke gameVariable 1
+execute if score #tableCandleSmoke gameVariable matches 80.. run scoreboard players set #tableCandleSmoke gameVariable 0
+
 # Let's first check to see if any online player has left the game
 # If a player fails the initial check in this function, they are no longer registered.
 execute as @a[scores={leaveGame=1..}] at @s run function calamity:player/left_game

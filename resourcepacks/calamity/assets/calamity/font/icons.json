@@ -1,0 +1,25 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "calamity:font/right_click.png",
+            "ascent": 8,
+            "height": 10,
+            "chars": ["\uE000"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/shuffle_rest.png",
+            "ascent": 7,
+            "height": 9,
+            "chars": ["\uE001"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/shuffle_all.png",
+            "ascent": 7,
+            "height": 9,
+            "chars": ["\uE002"]
+        }
+    ]
+}

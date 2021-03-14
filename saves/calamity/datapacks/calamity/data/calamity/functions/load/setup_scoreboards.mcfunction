@@ -266,6 +266,8 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set RedPoints gameVariable 0
 	# oreLeft is polled from calamity:points/update_mines
 	scoreboard players set OreLeft gameVariable 0
+    scoreboard players set #tableCandle gameVariable 0
+    scoreboard players set #tableCandleSmoke gameVariable 0
 
 
 # Index:

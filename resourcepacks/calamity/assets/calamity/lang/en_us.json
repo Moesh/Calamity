@@ -22,5 +22,7 @@
 	"resourcePoint.statusMessage.resettingSecond": "Resetting: %s second left",
 
 	"team.name.blue": "Blue",
-	"team.name.red": "Red"
+	"team.name.red": "Red",
+
+	"book.pageIndicator": "§d§ov5.0.0"
 }
