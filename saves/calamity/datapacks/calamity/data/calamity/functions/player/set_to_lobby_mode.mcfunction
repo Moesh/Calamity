@@ -4,5 +4,5 @@
 # Purpose: Set the player to the lobby state
 #---------------------------------------------------------------------------------------------------
 teleport @s 136 57 65 0 0
-spawnpoint @s 136 55 67
+spawnpoint @s 136 57 65
 gamemode adventure
