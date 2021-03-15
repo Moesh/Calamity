@@ -23,7 +23,7 @@ execute as @a[scores={leftGame=1..}] at @s run function calamity:player/left_gam
 # The functions below will handle players, no matter what state the game is in.
 execute as @a[tag=!Registered] at @s run function #calamity:register_player
 execute as @a[tag=!Registered] if score GameState gameVariable matches 0 run function calamity:player/set_to_lobby_mode
-execute as @a[tag=!Registered] if score GameState gameVariable matches 1 run function calamity:player/set_to_spectate_mode
+execute as @a[tag=!Registered] if score GameState gameVariable matches 1 run gamemode spectator @s
 tag @a[tag=!Registered] add Registered
 
 # Feed hungry players, this game isn't about fighting hunger.
