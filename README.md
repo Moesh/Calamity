@@ -60,7 +60,7 @@ Calamity is both the game mode, and the first arena introduced. I hope to make, 
 - Resource points take 20 seconds (400 redstone ticks) to charge and reset
 - Scoring
   - Players are awarded 1 point for capturing resource or status effect resource points
-  - Players are awarded 10 points for capturing the Enchanted Book resource point
+  - Players are awarded 20 points for capturing the Enchanted Book resource point
   - Players are awarded 1 point for killing other players
 
 # Usage
