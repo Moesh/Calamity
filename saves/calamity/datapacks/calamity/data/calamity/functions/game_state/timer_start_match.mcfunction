@@ -25,7 +25,7 @@ execute if score TimeInTicks gameVariable matches 20 run tellraw @a {"translate"
 execute if score TimeInTicks gameVariable matches 1 run effect give @a minecraft:slow_falling 1 0 true
 execute if score TimeInTicks gameVariable matches 0 run effect clear @a minecraft:slow_falling
 # It's time to start the game!
-execute if score TimeInTicks gameVariable matches 0 run function calamity:game_state/start_match
+execute if score TimeInTicks gameVariable matches 0 run function calamity:game_state/check_if_start_conditions_met
 
 # This function is run every tick as long as this
 execute if score TimeInTicks gameVariable matches 1.. run scoreboard players remove TimeInTicks gameVariable 1
