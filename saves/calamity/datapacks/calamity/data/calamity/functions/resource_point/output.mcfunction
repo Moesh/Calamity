@@ -17,6 +17,8 @@ execute as @s[tag=TeamRed] run tag @a[distance=..4,team=red] add CheckIfStanding
 #   exactly match Minecraft's search radius.
 execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveEffects
 execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveEffects
+execute if entity @s[tag=AttackEffect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add AttackWithEffect
+execute if entity @s[tag=AttackEffect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add AttackWithEffect
 execute if entity @s[tag=Resource] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveResources
 execute if entity @s[tag=Resource] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveResources
 execute if entity @s[tag=GiveBook] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveBook
@@ -32,6 +34,10 @@ scoreboard players operation @a[tag=GiveBook] captureScore = ScoreForEnchantedBo
 # A player has scored effects for their team, let's flag the whole team!
 execute as @a[team=blue,tag=GiveEffects,limit=1] run tag @a[team=blue] add GiveEffects
 execute as @a[team=red,tag=GiveEffects,limit=1] run tag @a[team=red] add GiveEffects
+execute as @a[team=blue,tag=AttackWithEffect,limit=1] run tag @a[team=red] add GiveAttackEffect
+execute as @a[team=blue,tag=AttackWithEffect,limit=1] run tag @a[team=blue] remove GiveAttackEffect
+execute as @a[team=red,tag=AttackWithEffect,limit=1] run tag @a[team=blue] add GiveAttackEffect
+execute as @a[team=red,tag=AttackWithEffect,limit=1] run tag @a[team=red] remove GiveAttackEffect
 
 # Check for resource point type and give resources/effects
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveResources] minecraft:oak_log 16
@@ -42,10 +48,14 @@ execute as @s[tag=Cobblestone] run give @a[distance=..4,tag=GiveResources] minec
 execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveResources] minecraft:arrow 16
 execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveResources] minecraft:tnt 3
 execute as @s[tag=Regeneration] run effect give @a[tag=GiveEffects] minecraft:regeneration 45
-execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resistance 45 1
+execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resistance 45
 execute as @s[tag=Strength] run effect give @a[tag=GiveEffects] minecraft:strength 45
 execute as @s[tag=Speed] run effect give @a[tag=GiveEffects] minecraft:speed 45 1
 execute as @s[tag=Haste] run effect give @a[tag=GiveEffects] minecraft:haste 45 1
+# Attack
+execute as @s[tag=MiningFatigue] run effect give @a[tag=GiveAttackEffect] minecraft:mining_fatigue 45 1
+execute as @s[tag=Blindness] run effect give @a[tag=GiveAttackEffect] minecraft:blindness 45
+execute as @s[tag=Blindness] run effect give @a[tag=AttackWithEffect] minecraft:glowing 45
 
 # We've identified that a player is standing on a resource point type called "GiveBook". Now let's
 #   check what item they are holding in their main hand. This will determine what kind of book they
@@ -131,6 +141,10 @@ tag @a[tag=GiveResources] add GiveMessage
 tag @a[tag=GiveResources] remove GiveResources
 tag @a[tag=GiveEffects] add GiveMessage
 tag @a[tag=GiveEffects] remove GiveEffects
+tag @a[tag=AttackWithEffect] add GiveMessageAttack
+tag @a[tag=AttackWithEffect] remove AttackWithEffect
+tag @a[tag=GiveAttackEffect] add GiveMessageAttacked
+tag @a[tag=GiveAttackEffect] remove GiveAttackEffect
 tag @a[tag=GiveBook] add Give
 tag @a[tag=GiveBook] remove GiveBook
 
@@ -143,12 +157,19 @@ execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"
 execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 # Effects
-execute as @s[tag=Regeneration] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
-execute as @s[tag=Resistance] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Strength] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=Speed] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Haste] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Regeneration] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
+execute as @s[tag=Resistance] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"45"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"45"}]}
+execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 tag @a[tag=GiveMessage] remove GiveMessage
+tag @a[tag=GiveMessageAttack] remove GiveMessageAttack
+tag @a[tag=GiveMessageAttacked] remove GiveMessageAttacked
 
 # Update signs
 execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}

@@ -2,6 +2,7 @@
 	"resourcePoint.sign.ready": "Ready",
 	"resourcePoint.sign.perPlayer": "%s per player",
 	"resourcePoint.sign.perTeam": "%s sec. for team",
+	"resourcePoint.sign.attack": "%s sec. attack",
 	"resourcePoint.sign.activated": "Activated!",
 	"resourcePoint.sign.progress": "Charging: %s%%",
 	"resourcePoint.sign.resetting": "Resetting: %s%%",
@@ -11,6 +12,8 @@
 
 	"resourcePoint.output.item": "Given [%s] * %s",
 	"resourcePoint.output.effect": "Given [%s%3$s] for %s seconds",
+	"resourcePoint.output.attackEffect": "Sent enemy [%s%3$s] for %s seconds",
+	"resourcePoint.output.attackedEffect": "Given [%s%3$s] for %s seconds",
 	"resourcePoint.output.effect.level2": " II",
 
 	"team.blue": "Blue",
