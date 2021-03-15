@@ -14,7 +14,7 @@ execute if score #tableCandle gameVariable matches 5.. run scoreboard players se
 # Torch smoke!
 execute if score #tableCandleSmoke gameVariable matches 0 run particle minecraft:smoke 136.125 58.65 68.86 0 0.1 0 0 1 normal
 scoreboard players add #tableCandleSmoke gameVariable 1
-execute if score #tableCandleSmoke gameVariable matches 80.. run scoreboard players set #tableCandleSmoke gameVariable 0
+execute if score #tableCandleSmoke gameVariable matches 45.. run scoreboard players set #tableCandleSmoke gameVariable 0
 
 # Let's first check to see if any online player has left the game
 # If a player fails the initial check in this function, they are no longer registered.
