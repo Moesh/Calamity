@@ -55,9 +55,9 @@ scoreboard objectives remove progressSound
 scoreboard objectives add progressSound dummy
 
 # Display scoreboards
-scoreboard objectives remove displayPercent
-scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displaySecond
+scoreboard objectives add displaySecond dummy
+scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
 scoreboard objectives add displayPoints dummy {"translate":"Score"}
