@@ -1,0 +1,14 @@
+{
+    "calamity.eye.squish": {
+    "sounds": [
+        "calamity:resource_point/squish"
+    ],
+    "subtitle": "calamity.subtitle.eye.squish"
+  },
+  "calamity.eye.release": {
+    "sounds": [
+      "calamity:resource_point/release"
+    ],
+    "subtitle": "calamity.subtitle.eye.release"
+  }
+}

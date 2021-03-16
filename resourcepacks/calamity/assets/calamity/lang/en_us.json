@@ -27,5 +27,8 @@
 	"team.name.blue": "Blue",
 	"team.name.red": "Red",
 
-	"book.pageIndicator": "§d§ov5.0.0"
+	"book.pageIndicator": "§d§ov5.0.0",
+
+	"calamity.subtitle.eye.squish": "Eye squished",
+	"calamity.subtitle.eye.release": "Eye opened"
 }
