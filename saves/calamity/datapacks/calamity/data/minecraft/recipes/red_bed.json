@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "replace": true,
+  "group": "bed",
+  "pattern": [
+    "###",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_wool"
+    },
+    "X": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "minecraft:red_bed"
+  }
+}

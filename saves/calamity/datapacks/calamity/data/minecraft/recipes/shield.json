@@ -7,7 +7,7 @@
   ],
   "key": {
     "W": {
-      "tag": "minecraft:planks"
+      "item": "minecraft:tnt"
     },
     "o": {
       "item": "minecraft:chain"
