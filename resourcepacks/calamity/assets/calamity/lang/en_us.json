@@ -30,5 +30,7 @@
 	"book.pageIndicator": "§d§ov5.0.0",
 
 	"calamity.subtitle.eye.squish": "Eye squished",
-	"calamity.subtitle.eye.release": "Eye opened"
+	"calamity.subtitle.eye.release": "Eye opened",
+	
+	"death.attack.outOfWorld": "%1$s fell to calamity"
 }

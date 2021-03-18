@@ -52,7 +52,7 @@ scoreboard players set @a selectedItem -1
 scoreboard players set @a[tag=Playing] giveSpawnItems 1
 
 # Send tellraw BEFORE changing any game modes!
-tellraw @a {"translate":"%s Go cause a calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
+tellraw @a {"translate":"%s Seek glory or fall to calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999
 # Purpose: Update game state
 scoreboard players set StartingMatch gameVariable 0
