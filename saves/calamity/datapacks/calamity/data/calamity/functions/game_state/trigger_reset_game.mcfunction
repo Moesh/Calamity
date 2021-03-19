@@ -8,15 +8,13 @@
 scoreboard players set GameState gameVariable 0
 
 tellraw @a {"translate":">>> Returning to lobby mode"}
-function calamity:load/map_calamity
+function calamity:load/arena/calamity/load_blocks
+function calamity:points/check_mines_and_update_objective
+function calamity:points/setup_bossbar
 execute at @a run function calamity:player/reset_data
 execute at @a run function calamity:player/enable_triggers
 execute at @a run function calamity:player/refill_items_and_health
 execute at @a run function calamity:player/set_to_lobby_mode
-
-# Reset the ores bossbar.
-bossbar set calamity:iron_ore visible false
-bossbar remove calamity:iron_ore
 
 scoreboard players set BluePoints gameVariable 0
 scoreboard players set RedPoints gameVariable 0
