@@ -44,7 +44,6 @@ execute if score GameState gameVariable matches 1 store result score #tempVar ga
 execute if score GameState gameVariable matches 1 run scoreboard players operation Players gameVariable -= #tempVar gameVariable
 execute if score GameState gameVariable matches 1 if score Players gameVariable matches 1.. run function calamity:game_state/trigger_gg
 execute if score GameState gameVariable matches 1 run scoreboard players operation Players gameVariable = #tempVar gameVariable
-
 # Reset our temp variable
 scoreboard players reset #tempVar gameVariable
 
