@@ -5,4 +5,4 @@
 #---------------------------------------------------------------------------------------------------
 
 tellraw @s {"translate":"%s Welcome to Calamity: Definitive Edition! Created by Moesh.","color":"light_purple","with":[{"text":">>>","color":"white"}]}
-tellraw @s {"translate":"%s Check your recipe book for new 2x2 and 3x3 recipes! Scaffolding can be used as planks! The lobby is a half-sized recreation of the map! Use /trigger to see a list of commands.","color": "gray", "italic": true,"with":[{"text":">>>","color":"white","italic": false}]}
+tellraw @s {"translate":"%s Objective: Collect enough points to reach the score goal. Click %s to view the online readme!","color": "gray", "italic": true,"with":[{"text":">>>","color":"white","italic": false},{"translate":"here","underlined": true,"color": "blue","hoverEvent": {"action": "show_text","value": {"translate":"View the GitHub repo."}},"clickEvent": {"action": "open_url","value": "https://github.com/Moesh/Calamity/tree/develop#calamity-definitive-edition"}}]}
