@@ -163,8 +163,8 @@ execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate"
 execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
 execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
 execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"45"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"45"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"30"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"30"}]}
 execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
 tag @a[tag=GiveMessage] remove GiveMessage
