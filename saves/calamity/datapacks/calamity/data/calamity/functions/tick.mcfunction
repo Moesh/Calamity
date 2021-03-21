@@ -32,7 +32,7 @@ effect clear @a[scores={food=20}] minecraft:saturation
 
 # Highlight players who fell in this location.
 execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
-execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"%s fell in the troll hole! How embarassing!","with": [{"selector":"@s"}]}
+execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"%s fell in the troll hole! How embarassing!","color": "gray","italic": true,"with": [{"selector":"@s"}]}
 execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tag @s add MessageSent
 execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2,tag=MessageSent] run tag @s remove HowEmbarassing
 execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2,tag=MessageSent] run tag @s remove MessageSent
