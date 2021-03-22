@@ -20,6 +20,20 @@
             "ascent": 7,
             "height": 9,
             "chars": ["\uE002"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/calamity.png",
+            "ascent": 18,
+            "height": 25,
+            "chars": ["C"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/glory.png",
+            "ascent": 18,
+            "height": 25,
+            "chars": ["G"]
         }
     ]
 }

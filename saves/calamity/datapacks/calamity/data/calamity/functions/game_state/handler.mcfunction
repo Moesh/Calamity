@@ -33,7 +33,7 @@ execute as @e[type=boat] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run
 
 # Handle the spawn items
 execute if score GameState gameVariable matches 1 as @a[tag=Playing] run function calamity:player/spawn_items/handler
-kill @e[type=item,nbt={Item:{tag:{Calamity:{SpawnItem:1b}}}}]
+kill @e[type=item,nbt={Item: {tag: {Calamity: {SpawnItem: 1b}}}}]
 
 # Count the players and check if someone left. If they did recheck forfeit state
 # The forfeit check normally only happens when someone triggers the gg trigger
@@ -55,10 +55,8 @@ execute if score GameState gameVariable matches 1 run scoreboard players enable 
 execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s if score GameState gameVariable matches 1 run function calamity:game_state/trigger_gg
 
 # Check for winner
-execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= OreLeft gameVariable run tellraw @a {"translate":"%s Blue wins!","color":"blue","with":[{"text":">>>","color":"white"}]}
-execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= OreLeft gameVariable run function calamity:game_state/end_match
-execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run tellraw @a {"translate":"%s Red wins!","color":"red","with":[{"text":">>>","color":"white"}]}
-execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run function calamity:game_state/end_match
+execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= OreLeft gameVariable run function calamity:game_state/blue_wins
+execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run function calamity:game_state/red_wins
 
 # Make sure there is air at the spawn points (Players can't respawn in moving piston blocks)
 execute if score GameState gameVariable matches 1 run fill 159 45 90 159 46 90 air destroy
