@@ -6,7 +6,7 @@
 # Control where commands output and how
 gamerule commandBlockOutput false
 gamerule logAdminCommands false
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 
 # Set specific rules for this map
 gamerule doDaylightCycle false
