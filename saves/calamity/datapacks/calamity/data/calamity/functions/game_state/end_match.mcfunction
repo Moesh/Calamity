@@ -4,11 +4,11 @@
 # Purpose: Reset the map and player states to neutral
 #---------------------------------------------------------------------------------------------------
 # Make the announcement
-tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is over.","color":"green"}]}
+tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is over","color":"green"}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
 
 # Make all players spectators!
-execute as @a run gamemode spectator @s
+gamemode spectator @a
 
 # The match has ended, let's updated the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime

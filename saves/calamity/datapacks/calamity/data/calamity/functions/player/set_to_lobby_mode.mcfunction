@@ -5,4 +5,4 @@
 #---------------------------------------------------------------------------------------------------
 teleport @s 136 57 65 0 0
 spawnpoint @s 136 57 65
-gamemode adventure
+gamemode adventure @s[gamemode=!adventure]

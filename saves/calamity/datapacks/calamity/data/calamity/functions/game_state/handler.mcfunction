@@ -72,4 +72,4 @@ execute if score GameState gameVariable matches 2 run scoreboard players set @a[
 execute if score GameState gameVariable matches 2 run scoreboard players enable @a[scores={reset=0}] reset
 
 # If a game is not starting, check to see if players want to start a game
-execute as @a[scores={reset=1..}] at @s if score GameState gameVariable matches 2 run function calamity:game_state/trigger_reset_game
+execute as @a[scores={reset=1..}] at @s if score GameState gameVariable matches 2 run function calamity:game_state/reset
