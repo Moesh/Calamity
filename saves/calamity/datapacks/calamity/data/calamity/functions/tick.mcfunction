@@ -38,8 +38,8 @@ execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z
 tag @a[tag=!HowEmbarassing,tag=MessageSent] remove MessageSent
 
 # Kill players in enemy spawn (But only if their full body is inside and they are standing on a block)
-execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 69 ~0.3 minecraft:red_stained_glass if block ~ 69 ~-0.3 minecraft:red_stained_glass if block ~0.3 69 ~ minecraft:red_stained_glass if block ~-0.3 69 ~ minecraft:red_stained_glass if entity @s[nbt={OnGround:1b}] run kill @s
-execute as @a[team=red,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 69 ~0.3 minecraft:blue_stained_glass if block ~ 69 ~-0.3 minecraft:blue_stained_glass if block ~0.3 69 ~ minecraft:blue_stained_glass if block ~-0.3 69 ~ minecraft:blue_stained_glass if entity @s[nbt={OnGround:1b}] run kill @s
+execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 69 ~0.3 minecraft:red_stained_glass if block ~ 69 ~-0.3 minecraft:red_stained_glass if block ~0.3 69 ~ minecraft:red_stained_glass if block ~-0.3 69 ~ minecraft:red_stained_glass if entity @s[nbt={OnGround: 1b}] run kill @s
+execute as @a[team=red,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 69 ~0.3 minecraft:blue_stained_glass if block ~ 69 ~-0.3 minecraft:blue_stained_glass if block ~0.3 69 ~ minecraft:blue_stained_glass if block ~-0.3 69 ~ minecraft:blue_stained_glass if entity @s[nbt={OnGround: 1b}] run kill @s
 
 # Kill entities which aren't allowed in the spawn area
 execute as @e[type=#calamity:banned_from_spawn] at @s if block ~ 69 ~ #calamity:spawn_area_block run kill @s

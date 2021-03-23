@@ -61,60 +61,60 @@ execute as @s[tag=Blindness] run effect give @a[tag=AttackWithEffect] minecraft:
 #   check what item they are holding in their main hand. This will determine what kind of book they
 #   are
 tag @a[tag=GiveBook] add CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:bow"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:punch",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:bow"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:crossbow"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:multishot",lvl:1s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:crossbow"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_axe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_axe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_axe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_axe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_axe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_axe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_axe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_axe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:sharpness",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:fortune",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:fortune",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:fortune",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:fortune",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:fortune",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_shovel"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_shovel"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_shovel"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_shovel"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_shovel"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_shovel"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_shovel"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:3s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_shovel"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_shovel"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:efficiency",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_shovel"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:knockback",lvl:1s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_sword"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:knockback",lvl:1s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:stone_sword"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_sword"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:knockback",lvl:1s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:golden_sword"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_sword"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:knockback",lvl:1s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:iron_sword"}}] remove CheckForValidItem
-give @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:knockback",lvl:2s}]}
-tag @a[tag=CheckForValidItem,nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:bow"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:punch", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:bow"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:crossbow"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:multishot", lvl: 1s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:crossbow"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_axe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:sharpness", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_axe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:sharpness", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:sharpness", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:sharpness", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:sharpness", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_hoe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:fortune", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_hoe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_hoe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:fortune", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_hoe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_hoe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:fortune", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_hoe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_hoe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:fortune", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_hoe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_hoe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:fortune", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_hoe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_pickaxe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_pickaxe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_pickaxe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_pickaxe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_pickaxe"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_pickaxe"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_shovel"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_shovel"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_shovel"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_shovel"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_shovel"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_shovel"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_shovel"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 3s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_shovel"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_shovel"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:efficiency", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_shovel"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_sword"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:knockback", lvl: 1s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_sword"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_sword"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:knockback", lvl: 1s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_sword"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_sword"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:knockback", lvl: 1s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_sword"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_sword"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:knockback", lvl: 1s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_sword"}}] remove CheckForValidItem
+give @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_sword"}}] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:knockback", lvl: 2s}]}
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_sword"}}] remove CheckForValidItem
 
 # We must handle messaging different for this section, as we will likely expand it it to be more
 #   clear. Players will want to know or learn what item gives what Enchanted Book, so we should
@@ -128,7 +128,7 @@ execute if entity @a[tag=GiveBook,team=red] run tellraw @a {"text":"An Enchanted
 # No valid item found, give default book
 # Default book should be a rather innoculous, but useful book. Should not be a book meant for
 #   for combat, as we want to continue promoting good logistics.
-give @a[tag=CheckForValidItem] minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1s}]}
+give @a[tag=CheckForValidItem] minecraft:enchanted_book{StoredEnchantments: [{id: "minecraft:mending", lvl: 1s}]}
 tag @a[tag=CheckForValidItem] remove CheckForValidItem
 
 # Play success sounds
@@ -172,8 +172,8 @@ tag @a[tag=GiveMessageAttack] remove GiveMessageAttack
 tag @a[tag=GiveMessageAttacked] remove GiveMessageAttacked
 
 # Update signs
-execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"}
-execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2:"{\"translate\":\"resourcePoint.sign.activated\"}"} 
+execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"resourcePoint.sign.activated\"}"}
+execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"resourcePoint.sign.activated\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove Output

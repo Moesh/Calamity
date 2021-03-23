@@ -41,6 +41,10 @@ scoreboard players reset * selectTeam
 scoreboard players reset * toggleSpectator
 scoreboard players enable @a[tag=Playing] gg
 
+# Reset fall damage for everyone, so players that are currently falling won't die after the game has started
+effect give @a minecraft:slow_falling 1 0 true
+effect clear @a minecraft:slow_falling
+
 # Teleport players to starting location
 tp @a[team=blue] 159 45 90 0 0
 spawnpoint @a[team=blue] 159 45 90
