@@ -212,12 +212,12 @@ summon minecraft:area_effect_cloud 119 55 41 {CustomName:'{"text":"LobbyPoint"}'
 summon minecraft:area_effect_cloud 129 51 41 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Blindness"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 summon minecraft:area_effect_cloud 126 44 27 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Speed"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 # This objectives only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 147 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
-summon minecraft:area_effect_cloud 125 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 147 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingWest","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[90.0f,-0.0f]}
+summon minecraft:area_effect_cloud 125 50 69 {CustomName:'{"text":"LobbyPoint"}',Tags:["Point","FacingEast","Enchant"],CustomNameVisible:0b,Duration:2147483647,Rotation:[-90.0f,-0.0f]}
 
 # Place signs
-execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
-execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
+execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
 # Update signs
 execute at @e[type=area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2:"{\"translate\":\"resourcePoint.sign.ready\"}",Text3:"{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Log] run data merge block ^ ^ ^1 {Text1:"{\"translate\":\"resourcePoint.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}",Text4:"{\"translate\":\"resourcePoint.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
