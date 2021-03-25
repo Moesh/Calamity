@@ -26,6 +26,7 @@ tag @a[team=red] add Playing
 
 # Clear the player's items and effects, give them items, refill their health and hunger
 execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
+execute as @a[tag=Playing] run function calamity:player/give_match_effects
 gamemode survival @a[tag=Playing]
 gamemode spectator @a[tag=!Playing]
 
@@ -38,6 +39,7 @@ scoreboard objectives setdisplay sidebar displayPoints
 # Update player triggers
 scoreboard players reset * cancelStart
 scoreboard players reset * selectTeam
+scoreboard players reset * leaveTeam
 scoreboard players reset * toggleSpectator
 scoreboard players enable @a[tag=Playing] gg
 

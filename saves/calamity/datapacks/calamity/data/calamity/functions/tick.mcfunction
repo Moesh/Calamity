@@ -30,6 +30,10 @@ tag @a[tag=!Registered] add Registered
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
+# Flag dead players and then do things to them.
+execute if score GameState gameVariable matches 0 as @a[scores={timeSinceDeath=..1}] run effect give @s minecraft:weakness 999999 9 true
+execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=..1}] run function calamity:player/give_game_effects
+
 # Highlight players who fell in this location.
 execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
 execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"%s fell in the troll hole! How embarassing!","color": "gray","italic": true,"with": [{"selector":"@s"}]}
