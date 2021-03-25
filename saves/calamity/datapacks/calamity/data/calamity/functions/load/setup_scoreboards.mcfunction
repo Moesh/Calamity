@@ -61,6 +61,9 @@ scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
 scoreboard objectives add displayPoints dummy {"translate":"Score"}
+    scoreboard objectives setdisplay sidebar displayPoints
+    scoreboard players set Blue displayPoints 0
+    scoreboard players set Red displayPoints 0
 
 # Objectives for determining score
 scoreboard objectives remove prepScore
