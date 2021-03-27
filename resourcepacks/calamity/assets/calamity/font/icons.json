@@ -5,21 +5,21 @@
             "file": "calamity:font/right_click.png",
             "ascent": 8,
             "height": 10,
-            "chars": ["\uE000"]
+            "chars": ["0"]
         },
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_rest.png",
-            "ascent": 7,
+            "ascent": 8,
             "height": 9,
-            "chars": ["\uE001"]
+            "chars": ["1"]
         },
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_all.png",
-            "ascent": 7,
+            "ascent": 8,
             "height": 9,
-            "chars": ["\uE002"]
+            "chars": ["2"]
         },
         {
             "type": "bitmap",
@@ -34,6 +34,20 @@
             "ascent": 18,
             "height": 25,
             "chars": ["G"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/arena_calamityv5.png",
+            "ascent": 0,
+            "height": 92,
+            "chars": ["z"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/arena_shattered.png",
+            "ascent": 0,
+            "height": 92,
+            "chars": ["x"]
         }
     ]
 }
