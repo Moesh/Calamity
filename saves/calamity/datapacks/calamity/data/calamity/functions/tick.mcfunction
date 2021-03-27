@@ -32,7 +32,7 @@ effect clear @a[scores={food=20}] minecraft:saturation
 
 # Flag dead players and then do things to them.
 execute if score GameState gameVariable matches 0 as @a[scores={timeSinceDeath=..1}] run effect give @s minecraft:weakness 999999 9 true
-execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=..1}] run function calamity:player/give_game_effects
+execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=..1}] run function calamity:player/give_match_effects
 
 # Highlight players who fell in this location.
 execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
