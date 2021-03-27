@@ -6,10 +6,13 @@
 
 # Join a team
 team join blue @a[scores={selectTeam=1}]
+execute as @a[scores={selectTeam=1},gamemode=spectator] run function calamity:player/set_to_lobby_mode
 execute as @a[scores={selectTeam=1}] run tellraw @a {"translate":">>> %s sided with %s.","italic":true, "with":[{"selector":"@s[scores={selectTeam=1}]"}, {"translate":"Blue"}]}
 team join red @a[scores={selectTeam=2}]
+execute as @a[scores={selectTeam=2},gamemode=spectator] run function calamity:player/set_to_lobby_mode
 execute as @a[scores={selectTeam=2}] run tellraw @a {"translate":">>> %s sided with %s.","italic":true, "with":[{"selector":"@s[scores={selectTeam=2}]"}, {"translate":"Red"}]}
 team join spectator @a[scores={selectTeam=3}]
+gamemode spectator @a[scores={selectTeam=3}]
 execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":">>> %s moved to the sidelines.","italic":true,"color": "gray", "with":[{"selector":"@s[scores={selectTeam=3}]"}]}
 
 # Leave your team

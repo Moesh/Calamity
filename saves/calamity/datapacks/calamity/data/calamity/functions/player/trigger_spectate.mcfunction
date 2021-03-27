@@ -11,7 +11,7 @@
 
 # A player in adventure mode wants to change gamemode to spectator
 tag @a[gamemode=adventure,scores={toggleSpectator=1..}] add SetToSpectatorMode
-execute as @a[tag=SetToSpectatorMode] run gamemode spectator @s
+gamemode spectator @a[tag=SetToSpectatorMode]
 scoreboard players set @a[tag=SetToSpectatorMode] toggleSpectator 0
 tag @a[tag=SetToSpectatorMode] remove SetToSpectatorMode
 
