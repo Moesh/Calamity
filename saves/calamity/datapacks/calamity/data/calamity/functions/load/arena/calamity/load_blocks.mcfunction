@@ -139,7 +139,7 @@ summon minecraft:area_effect_cloud 157 55 173 {CustomName: '{"text":"ResourcePoi
 # Blue team effect points only appear on the red lane
 summon minecraft:area_effect_cloud 115 50 189 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingEast", "TeamBlue", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 102 41 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingEast", "TeamBlue", "AttackEffect", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 122 32 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingEast", "TeamBlue", "AttackEffect", "Blindness"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 122 32 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingEast", "TeamBlue", "Effect", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 115 18 189 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingEast", "TeamBlue", "Effect", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 
 # Red team resource points only appear on the red lane
@@ -151,7 +151,7 @@ summon minecraft:area_effect_cloud 115 55 173 {CustomName: '{"text":"ResourcePoi
 # Red team effect points only appear on the blue lane
 summon minecraft:area_effect_cloud 157 50 189 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 170 41 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "AttackEffect", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 150 32 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "AttackEffect", "Blindness"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 150 32 162 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "Effect", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 157 18 189 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "Effect", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 # This objectives only appear on opposing lanes for each team
 summon minecraft:area_effect_cloud 159 30 107 {CustomName: '{"text":"ResourcePoint"}', Tags: ["Point", "FacingWest", "TeamRed", "GiveBook"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
@@ -197,7 +197,7 @@ summon minecraft:area_effect_cloud 126 62 35 {CustomName: '{"text":"LobbyPoint"}
 # Blue team effect points only appear on the red lane
 summon minecraft:area_effect_cloud 146 60 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 153 55 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 143 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Blindness"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 143 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 146 44 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 
 # Red team resource points only appear on the red lane
@@ -209,7 +209,7 @@ summon minecraft:area_effect_cloud 146 62 35 {CustomName: '{"text":"LobbyPoint"}
 # Red team effect points only appear on the blue lane
 summon minecraft:area_effect_cloud 126 60 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 119 55 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 129 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Blindness"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 129 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 126 44 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 # This objectives only appear on opposing lanes for each team
 summon minecraft:area_effect_cloud 147 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}

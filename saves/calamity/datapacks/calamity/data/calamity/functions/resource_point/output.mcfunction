@@ -51,7 +51,7 @@ execute as @s[tag=Regeneration] run effect give @a[tag=GiveEffects] minecraft:re
 execute as @s[tag=Resistance] run effect give @a[tag=GiveEffects] minecraft:resistance 45
 execute as @s[tag=Strength] run effect give @a[tag=GiveEffects] minecraft:strength 45
 execute as @s[tag=Speed] run effect give @a[tag=GiveEffects] minecraft:speed 45 1
-execute as @s[tag=Haste] run effect give @a[tag=GiveEffects] minecraft:haste 45 1
+execute as @s[tag=Haste] run effect give @a[tag=GiveEffects] minecraft:haste 45 3
 # Attack
 execute as @s[tag=MiningFatigue] run effect give @a[tag=GiveAttackEffect] minecraft:mining_fatigue 45 1
 execute as @s[tag=Blindness] run effect give @a[tag=GiveAttackEffect] minecraft:blindness 45
