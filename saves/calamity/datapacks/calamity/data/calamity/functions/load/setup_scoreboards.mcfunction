@@ -130,7 +130,7 @@ scoreboard objectives add itemCounts dummy
     #   create below.
     scoreboard players set activator_rail itemValues 6
     scoreboard players set activator_rail itemCounts 6
-    scoreboard players set anvil itemValues 31
+    scoreboard players set anvil itemValues 7
     scoreboard players set anvil itemCounts 1
     scoreboard players set blast_furnace itemValues 5
     scoreboard players set blast_furnace itemCounts 1
