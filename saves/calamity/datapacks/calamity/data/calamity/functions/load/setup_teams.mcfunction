@@ -20,12 +20,22 @@ team add blue {"translate":"team.name.blue"}
 	team modify blue deathMessageVisibility always
 	team modify blue friendlyFire false
 	team modify blue nametagVisibility always
+	team modify blue seeFriendlyInvisibles true
+	team modify blue prefix {"translate":"b ","color":"blue","font":"calamity:icons"}
 team add red {"translate":"team.name.red"}
 	team modify red collisionRule pushOtherTeams
 	team modify red color red
 	team modify red deathMessageVisibility always
 	team modify red friendlyFire false
 	team modify red nametagVisibility always
+	team modify red seeFriendlyInvisibles true
+	team modify red prefix {"translate":"r ","color":"red","font":"calamity:icons"}
+team add fakeBlue {"translate":"team.name.blue"}
+	team modify blue collisionRule pushOtherTeams
+	team modify blue color blue
+team add fakeRed {"translate":"team.name.red"}
+	team modify red collisionRule pushOtherTeams
+	team modify red color red
 
 # AddFakePlayersToTeam
 team join blue Blue

@@ -48,6 +48,20 @@
             "ascent": 0,
             "height": 92,
             "chars": ["x"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/blue_team.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["b"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/red_team.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["r"]
         }
     ]
 }

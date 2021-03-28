@@ -35,7 +35,7 @@ gamerule doTraderSpawning false
 gamerule maxCommandChainLength 65536
 gamerule maxEntityCramming 0
 gamerule randomTickSpeed 10
-gamerule reducedDebugInfo false
+gamerule reducedDebugInfo true
 gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 7
