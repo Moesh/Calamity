@@ -273,19 +273,17 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set RedPoints gameVariable 0
 	scoreboard players set ReadyBlue gameVariable 0
 	scoreboard players set ReadyRed gameVariable 0
-	# oreLeft is polled from calamity:points/update_mines
+	# oreLeft is polled from calamity:points/update_displays
 	scoreboard players set OreLeft gameVariable 0
     scoreboard players set #tableCandle gameVariable 0
     scoreboard players set #tableCandleSmoke gameVariable 0
 
-
-# Index:
-# 0 = Lobby
-# 1 = In-progress
-# 2 = Post game
-
 # Game starts in lobby mode by default.
 scoreboard players set GameState gameVariable 0
+    # Index:
+    # 0 = Lobby
+    # 1 = In-progress
+    # 2 = Post game
 
 # Used to determine whether or not the game has started.
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,

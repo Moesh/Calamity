@@ -9,7 +9,9 @@ tellraw @a {"translate":"%s Returning to lobby mode","color":"green","with":[{"t
 scoreboard players reset @a[scores={reset=1..}] reset
 scoreboard players set GameState gameVariable 0
 scoreboard players set BluePoints gameVariable 0
+scoreboard players set Blue displayPoints 0
 scoreboard players set RedPoints gameVariable 0
+scoreboard players set Red displayPoints 0
 
 # Fake players need to join a new team to get rid of their prefixes
 team join fakeBlue Blue
@@ -18,7 +20,7 @@ team join fakeRed Red
 # Reset the whole arena
 # TODO: Add support for multiple arenas
 function calamity:load/arena/calamity/load_blocks
-function calamity:points/check_mines_and_update_objective
+function calamity:points/update_displays
 function calamity:points/setup_bossbar
 
 # Return the player to the lobby state

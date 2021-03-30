@@ -62,6 +62,13 @@
             "ascent": 7,
             "height": 7,
             "chars": ["r"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/iron_ore.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["i"]
         }
     ]
 }

@@ -4,8 +4,6 @@
 # Purpose: Determine if a player has scored points and handle accordingly.
 #---------------------------------------------------------------------------------------------------
 
-function calamity:points/check_mines_and_update_objective
-
 # This is the most important variable in this function. We will add together all the aquired points
 #   and then apply our modifiers. If any players has scored points, we will transfer them to their
 #   team pool by the end of this function. This variable will then be wiped.
@@ -31,6 +29,4 @@ scoreboard players operation RedPoints gameVariable += @a[tag=Playing,team=red] 
 
 execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"%s %s: +%s points","color":"gray","with":[{"text":">>>","color":"gray"},{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"}}]}
 
-# Update the display scoreboard
-scoreboard players operation Blue displayPoints = BluePoints gameVariable
-scoreboard players operation Red displayPoints = RedPoints gameVariable
+function calamity:points/update_displays
