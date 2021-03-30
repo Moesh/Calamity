@@ -26,8 +26,8 @@
     setblock 117 33 26 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/lobby1", sizeY: 33, sizeZ: 48, showboundingbox: 1b}
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/lobby2", sizeY: 33, sizeZ: 3, showboundingbox: 1b}
     # Logo
-    setblock 109 60 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 0, sizeX: 48, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/logo1", sizeY: 21, sizeZ: 5, showboundingbox: 1b}
-    setblock 157 60 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 0, sizeX: 7, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/logo2", sizeY: 21, sizeZ: 5, showboundingbox: 1b}
+    setblock 109 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo1",sizeY:12,sizeZ:7,showboundingbox:1b}
+    setblock 157 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:7,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo2",sizeY:12,sizeZ:7,showboundingbox:1b}
 
 # Activate the structure blocks!
     # Left side
@@ -50,8 +50,8 @@
     # Lobby
     setblock 117 32 26 minecraft:redstone_block
     setblock 117 32 74 minecraft:redstone_block
-    setblock 109 60 73 minecraft:redstone_block
-    setblock 157 60 73 minecraft:redstone_block
+    setblock 109 67 73 minecraft:redstone_block
+    setblock 157 67 73 minecraft:redstone_block
 
 # Clean-up everything
     # Left side
@@ -88,9 +88,8 @@
     setblock 131 3 179 minecraft:air
     setblock 131 4 179 minecraft:air
     # Lobby and logo
-    fill 117 32 26 117 34 26 stone
-    fill 109 60 73 109 60 74 minecraft:air
-    fill 157 60 73 157 60 74 minecraft:air
+    fill 109 67 73 109 67 74 minecraft:air
+    fill 157 67 73 157 67 74 minecraft:air
 
 
     # If the world was switched to dev mode, we need to clean up additional blocks.

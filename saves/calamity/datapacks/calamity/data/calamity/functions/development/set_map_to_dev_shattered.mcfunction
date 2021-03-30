@@ -54,7 +54,7 @@ setblock 117 34 74 minecraft:structure_block[mode=save]{metadata: "", mirror: "N
 setblock 117 33 26 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattered/lobby1", sizeY: 33, sizeZ: 48, showboundingbox: 1b}
 setblock 117 33 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattered/lobby2", sizeY: 33, sizeZ: 3, showboundingbox: 1b}
 # Big logo
-setblock 109 60 74 minecraft:structure_block[mode=save]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "SAVE", posY: 0, sizeX: 48, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattered/logo1", sizeY: 21, sizeZ: 5, showboundingbox: 1b}
-setblock 157 60 74 minecraft:structure_block[mode=save]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "SAVE", posY: 0, sizeX: 7, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattered/logo2", sizeY: 21, sizeZ: 5, showboundingbox: 1b}
+setblock 109 67 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:2,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo1",sizeY:12,sizeZ:7,showboundingbox:1b}
+setblock 157 67 74 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:2,sizeX:7,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo2",sizeY:12,sizeZ:7,showboundingbox:1b}
 
 
