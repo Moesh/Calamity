@@ -33,7 +33,7 @@ execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score 
 
 # Check if the whole blue team has forfeited
 scoreboard players set #tempBlueForfeit gameVariable 0
-execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Blue has forfeited!"}
+execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run function calamity:game_state/blue_forfeits
 execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempBlueForfeit gameVariable 1
 
 
@@ -55,7 +55,7 @@ execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #
 
 # Check if the whole red team has forfeited
 scoreboard players set #tempRedForfeit gameVariable 0
-execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run tellraw @a {"translate":">>> Red has forfeited!"}
+execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run function calamity:game_state/red_forfeits
 execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempRedForfeit gameVariable 1
 
 
