@@ -2,23 +2,23 @@
     "providers": [
         {
             "type": "bitmap",
-            "file": "calamity:font/right_click.png",
-            "ascent": 8,
-            "height": 10,
+            "file": "calamity:font/view.png",
+            "ascent": 7,
+            "height": 7,
             "chars": ["0"]
         },
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_rest.png",
-            "ascent": 8,
-            "height": 9,
+            "ascent": 7,
+            "height": 7,
             "chars": ["1"]
         },
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_all.png",
-            "ascent": 8,
-            "height": 9,
+            "ascent": 7,
+            "height": 7,
             "chars": ["2"]
         },
         {

@@ -19,8 +19,8 @@
 	"team.blue": "Blue",
 	"team.red": "Red",
 
-	"calamity.ready":" Ready",
-	"calamity.notReady":" Not ready",
+	"calamity.ready":"Ready",
+	"calamity.notReady":"Not ready",
 
 	"resourcePoint.statusMessage.chargeSeconds": "Charging: %s seconds left",
 	"resourcePoint.statusMessage.chargeSecond": "Charging: %s second left",
