@@ -12,7 +12,7 @@ fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_sla
 execute store result bossbar calamity:iron_ore value run scoreboard players get OreLeft gameVariable
 scoreboard players operation Goal displayPoints = OreLeft gameVariable
 
-bossbar set calamity:iron_ore name {"translate":"Ore Left (%s)","with":[{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
+function calamity:points/update_bossbar
 
 # Reset our temp variable
 scoreboard players reset #tempVar gameVariable

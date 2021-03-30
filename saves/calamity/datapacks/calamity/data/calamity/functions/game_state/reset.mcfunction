@@ -11,6 +11,10 @@ scoreboard players set GameState gameVariable 0
 scoreboard players set BluePoints gameVariable 0
 scoreboard players set RedPoints gameVariable 0
 
+# Fake players need to join a new team to get rid of their prefixes
+team join fakeBlue Blue
+team join fakeRed Red
+
 # Reset the whole arena
 # TODO: Add support for multiple arenas
 function calamity:load/arena/calamity/load_blocks

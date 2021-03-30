@@ -11,11 +11,9 @@ function calamity:math/divide_by_twenty
 # When #Every20Ticks equals 0, a second has passed. Play a sound.
 execute if score #Every20Ticks gameVariable matches 0 run playsound minecraft:block.note_block.bit master @a 217 100 195 999999 0.7
 
-
-
 # Check our progress. Announce to the player when enough time has passed.
 # 15, 10, and 5 seconds
-execute if score TimeInTicks gameVariable matches 300 run tellraw @a {"translate":"%s Match begins in %s seconds","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
+execute if score TimeInTicks gameVariable matches 300 run tellraw @a {"translate":"%s Match ▶ begins in %s seconds","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
 execute if score TimeInTicks gameVariable matches 200 run tellraw @a {"translate":"%s Match begins in %s seconds","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
 execute if score TimeInTicks gameVariable matches 100 run tellraw @a {"translate":"%s Match begins in %s seconds","color":"green","with":[{"text":">>>","color":"white"},{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}
 # 4 seconds to 1 seconds...

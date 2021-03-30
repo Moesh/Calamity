@@ -31,8 +31,9 @@ scoreboard objectives add CONST dummy
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
-scoreboard objectives add health health {"text":"❤","color":"purple"}
+scoreboard objectives add health health {"text":"❤","color":"light_purple"}
 	scoreboard objectives setdisplay belowName health
+	scoreboard objectives setdisplay list health
 	scoreboard objectives modify health rendertype hearts
 scoreboard objectives remove food
 scoreboard objectives add food food
@@ -60,7 +61,7 @@ scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
-scoreboard objectives add displayPoints dummy {"translate":"Score"}
+scoreboard objectives add displayPoints dummy {"translate":"Calamity","color": "light_purple"}
     scoreboard objectives setdisplay sidebar displayPoints
     scoreboard players set Blue displayPoints 0
     scoreboard players set Red displayPoints 0
@@ -115,6 +116,9 @@ scoreboard objectives add reset trigger
 	# Reset after match is complete
 	scoreboard objectives remove reset
 	scoreboard objectives add reset trigger
+    # Let teams ready up
+    scoreboard objectives remove readyTeam
+    scoreboard objectives add readyTeam trigger
 
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
@@ -267,6 +271,8 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set TimeToStartMatch gameVariable 300
 	scoreboard players set BluePoints gameVariable 0
 	scoreboard players set RedPoints gameVariable 0
+	scoreboard players set ReadyBlue gameVariable 0
+	scoreboard players set ReadyRed gameVariable 0
 	# oreLeft is polled from calamity:points/update_mines
 	scoreboard players set OreLeft gameVariable 0
     scoreboard players set #tableCandle gameVariable 0

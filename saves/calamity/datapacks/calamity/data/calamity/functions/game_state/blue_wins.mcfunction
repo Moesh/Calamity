@@ -4,6 +4,8 @@
 # Purpose: Blue has won the game, let's announce it
 #---------------------------------------------------------------------------------------------------
 
+function calamity:points/update_displays
+
 # Example: ">>> 250 to 42. Blue wins!"
 tellraw @a {"translate":"%s %s to %s. %s wins!","color":"white","with":[{"text":">>>","color":"white"},{"score":{"name": "BluePoints","objective": "gameVariable"},"color": "blue"},{"score":{"name": "RedPoints","objective": "gameVariable"},"color": "red"},{"translate":"team.name.blue","color":"blue"}]}
 scoreboard players operation #tempVar gameVariable = BluePoints gameVariable

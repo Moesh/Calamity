@@ -35,10 +35,17 @@ scoreboard players operation Goal displayPoints = OreLeft gameVariable
 scoreboard players set Blue displayPoints 0
 scoreboard players set Red displayPoints 0
 scoreboard objectives setdisplay sidebar displayPoints
+scoreboard players set ReadyBlue gameVariable 0
+scoreboard players set ReadyRed gameVariable 0
+team join blue Blue
+team join red Red
+team modify fakeRed prefix {"translate":"☒ ","color":"dark_red"}
+team modify fakeBlue prefix {"translate":"☒ ","color":"dark_red"}
 
 # Update player triggers
 scoreboard players reset * cancelStart
 scoreboard players reset * selectTeam
+scoreboard players reset * readyTeam
 scoreboard players reset * leaveTeam
 scoreboard players reset * toggleSpectator
 scoreboard players enable @a[tag=Playing] gg

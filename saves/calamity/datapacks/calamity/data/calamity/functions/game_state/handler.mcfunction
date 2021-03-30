@@ -4,18 +4,22 @@
 # Purpose: Tick these functions during the lobby stage
 #---------------------------------------------------------------------------------------------------
 
+# Check if any player has used "/trigger readyTeam" and update the team state
+execute if score GameState gameVariable matches 0 run function calamity:game_state/trigger_ready_team
+execute if score ReadyBlue gameVariable matches 1 unless entity @a[team=blue] run function calamity:game_state/ready_team/blue_not_ready
+execute if score ReadyRed gameVariable matches 1 unless entity @a[team=red] run function calamity:game_state/ready_team/red_not_ready
+
 # This line below is for players who want to be cheeky. If they ever set a score for startMatch,
 # go ahead and assume they want to start the match.
 execute if score GameState gameVariable matches 0 run scoreboard players set @a[scores={startMatch=..-1}] startMatch 0
 execute if score GameState gameVariable matches 0 run scoreboard players enable @a[scores={startMatch=0}] startMatch
-
 # If a game is not starting, check to see if players want to start a game
 execute as @a[scores={startMatch=1..}] at @s run function calamity:game_state/trigger_start_match
 
 # If a game start is happening, check to see if players want to cancel it
-execute as @a[scores={cancelStart=1..}] at @s run execute if score StartingMatch gameVariable matches 1 run function calamity:game_state/trigger_cancel_start
+execute as @a[scores={cancelStart=1..}] at @s if score StartingMatch gameVariable matches 1 run function calamity:game_state/trigger_cancel_start
 
-# Tick this every second if the players will it
+# Tick this every second, if the players will it
 execute if score GameState gameVariable matches 0 if score StartingMatch gameVariable matches 1 run function calamity:game_state/timer_start_match
 
 #---------------------------------------------------------------------------------------------------
@@ -27,7 +31,6 @@ execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block
 execute as @a[tag=Playing,gamemode=adventure] at @s unless block ~ 69 ~ #calamity:out_of_bounds_block run gamemode survival @s
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run tellraw @s {"text":"You cheated not only the game, but yourself. You didn't grow. You didn't improve. You took a shortcut and gained nothing. You experienced a hollow victory. Nothing was risked and nothing was gained. It's sad that you don't know the difference.","color": "gray","italic": true}
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run kill @s
-
 # Kill out of bounds boats
 execute as @e[type=boat] at @s if block ~ 69 ~ #calamity:out_of_bounds_block run kill @s
 
