@@ -1,6 +1,11 @@
 # Called form calamity:player/spawn_items/handler
 # (Called after player has died)
 
+# Clear player's selected item choice if they have chosen so
+execute if entity @s[tag=ResetTheSpawnItem] run scoreboard players set @s selectedItem -1
+execute if entity @s[tag=ResetTheSpawnItem] run tag @s remove ResetTheSpawnItem
+
+
 # Revoke spawn item advancements both to clean up, but also to allow players to have spawn items again 
 advancement revoke @s from calamity:spawn_items/hidden_root
 advancement grant @s only calamity:spawn_items/hidden_root
