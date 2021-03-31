@@ -33,3 +33,6 @@ tag @s[tag=GiveSelectedStartingItem] remove GiveSelectedStartingItem
 
 # On death give selection items after a little time
 execute if entity @s[scores={giveSpawnItems=1..,timeSinceDeath=1..}] run function calamity:player/spawn_items/give_items
+
+scoreboard players enable @s resetSpawnItem
+execute unless score @s resetSpawnItem matches 0 run function calamity:player/spawn_items/reset_item_trigger
