@@ -25,7 +25,7 @@ team add blue {"translate":"team.blue"}
 	team modify blue nametagVisibility always
 	team modify blue seeFriendlyInvisibles true
 	team modify blue suffix {"translate":"spacer.left","color":"blue","with": [{"translate":"calamity.icon.blue_team","font":"calamity:icons"}]}
-team add red {"translate":"team.name.red"}
+team add red {"translate":"team.red"}
 	team modify red collisionRule pushOtherTeams
 	team modify red color red
 	team modify red deathMessageVisibility always
@@ -38,7 +38,7 @@ team add fakeBlue {"translate":"team.blue"}
 	team modify fakeBlue color blue
 	team modify fakeBlue prefix {"translate":"spacer.right","color":"blue","with": [{"translate":"calamity.unicode.ballotBox.scratch","color":"dark_red"}]}
 	team modify fakeBlue suffix {"translate":"spacer.left","color":"blue","with": [{"translate":"calamity.icon.blue_team","font":"calamity:icons"}]}
-team add fakeRed {"translate":"team.name.red"}
+team add fakeRed {"translate":"team.red"}
 	team modify fakeRed collisionRule pushOtherTeams
 	team modify fakeRed color red
 	team modify fakeRed prefix {"translate":"spacer.right","color":"red","with": [{"translate":"calamity.unicode.ballotBox.scratch","color":"dark_red"}]}

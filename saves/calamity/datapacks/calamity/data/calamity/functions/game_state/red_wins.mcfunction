@@ -9,7 +9,7 @@ function calamity:points/update_displays
 scoreboard players operation #tempVar gameVariable = RedPoints gameVariable
 scoreboard players operation #tempVar gameVariable -= BluePoints gameVariable
 # Example: ">>> 100 to 42. Red r won by 58 points!"
-tellraw @a {"translate":"system.message","with":[{"translate":"calamity.match.stats","color": "green","with":[{"score":{"name": "RedPoints","objective": "gameVariable"},"color": "red"},{"score":{"name": "BluePoints","objective": "gameVariable"},"color": "blue"},{"translate":"team.name.red","color":"red"},{"translate":"calamity.icon.red_team","font": "calamity:icons","color":"red"},{"score":{"name": "#tempVar","objective": "gameVariable"},"color": "red"}]}]}
+tellraw @a {"translate":"system.message","with":[{"translate":"calamity.match.stats","color": "green","with":[{"score":{"name": "RedPoints","objective": "gameVariable"},"color": "red"},{"score":{"name": "BluePoints","objective": "gameVariable"},"color": "blue"},{"translate":"team.red","color":"red"},{"translate":"calamity.icon.red_team","font": "calamity:icons","color":"red"},{"score":{"name": "#tempVar","objective": "gameVariable"},"color": "red"}]}]}
 
 title @a times 20 200 20
 title @a[team=red] subtitle {"translate":"calamity.prestige.won","color": "green","with": [ { "score": { "name":"#tempVar", "objective":"gameVariable"},"color": "white" } ]}
