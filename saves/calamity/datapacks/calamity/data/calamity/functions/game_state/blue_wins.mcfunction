@@ -6,15 +6,15 @@
 
 function calamity:points/update_displays
 
-# Example: ">>> 250 to 42. Blue wins!"
-tellraw @a {"translate":"%s %s to %s. %s wins!","color":"white","with":[{"text":">>>","color":"white"},{"score":{"name": "BluePoints","objective": "gameVariable"},"color": "blue"},{"score":{"name": "RedPoints","objective": "gameVariable"},"color": "red"},{"translate":"team.name.blue","color":"blue"}]}
 scoreboard players operation #tempVar gameVariable = BluePoints gameVariable
 scoreboard players operation #tempVar gameVariable -= RedPoints gameVariable
+# Example: ">>> 250 to 75. Blue r won by 175 points!"
+tellraw @a {"translate":"system.message","with":[{"translate":"calamity.match.stats","color": "green","with":[{"score":{"name": "BluePoints","objective": "gameVariable"},"color": "blue"},{"score":{"name": "RedPoints","objective": "gameVariable"},"color": "red"},{"translate":"team.blue","color":"blue"},{"translate":"calamity.icon.blue_team","font": "calamity:icons","color":"blue"},{"score":{"name": "#tempVar","objective": "gameVariable"},"color": "blue"}]}]}
 
 title @a times 20 200 20
-title @a[team=blue] subtitle {"translate":"Won by %s points","color": "green","with": [ { "score": { "name":"#tempVar", "objective":"gameVariable"},"color": "white" } ]}
-title @a[team=blue] title {"text":"G","font":"calamity:icons"}
-title @a[team=red] subtitle {"translate":"Lost by %s points","color": "red","with": [ { "score": { "name":"#tempVar", "objective":"gameVariable"},"color": "white" } ]}
-title @a[team=red] title {"text":"C","font":"calamity:icons"}
+title @a[team=blue] subtitle {"translate":"calamity.prestige.won","color": "green","with": [ { "score": { "name":"#tempVar", "objective":"gameVariable"},"color": "white" } ]}
+title @a[team=blue] title {"translate":"calamity.icon.glory","font":"calamity:icons"}
+title @a[team=red] subtitle {"translate":"calamity.prestige.lost","color": "red","with": [ { "score": { "name":"#tempVar", "objective":"gameVariable"},"color": "white" } ]}
+title @a[team=red] title {"translate":"calamity.icon.calamity","font":"calamity:icons"}
 
 function calamity:game_state/end_match

@@ -39,8 +39,8 @@ scoreboard players set ReadyBlue gameVariable 0
 scoreboard players set ReadyRed gameVariable 0
 team join blue Blue
 team join red Red
-team modify fakeRed prefix {"translate":"☒ ","color":"dark_red"}
-team modify fakeBlue prefix {"translate":"☒ ","color":"dark_red"}
+team modify fakeRed prefix {"translate":"spacer.right","with":[{"translate":"calamity.unicode.ballotBox.scratch","color":"dark_red"}]}
+team modify fakeBlue prefix {"translate":"spacer.right","with":[{"translate":"calamity.unicode.ballotBox.scratch","color":"dark_red"}]}
 
 # Update player triggers
 scoreboard players reset * cancelStart
@@ -65,7 +65,7 @@ scoreboard players set @a selectedItem -1
 scoreboard players set @a[tag=Playing] giveSpawnItems 1
 
 # Send tellraw BEFORE changing any game modes!
-tellraw @a {"translate":"%s Seek glory or fall to calamity!","color":"green","with":[{"text":">>>","color":"white"}]}
+tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.seekGlory"}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999
 # Purpose: Update game state
 scoreboard players set StartingMatch gameVariable 0

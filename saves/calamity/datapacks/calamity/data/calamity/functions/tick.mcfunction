@@ -36,7 +36,7 @@ execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=.
 
 # Highlight players who fell in this location.
 execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
-execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"%s fell in the troll hole! How embarassing!","color": "gray","italic": true,"with": [{"selector":"@s"}]}
+execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"calamity.troll","color": "gray","italic": true,"with": [{"selector":"@s"}]}
 tag @a[tag=HowEmbarassing,tag=!MessageSent] add MessageSent
 execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2] run tag @s remove HowEmbarassing
 tag @a[tag=!HowEmbarassing,tag=MessageSent] remove MessageSent
