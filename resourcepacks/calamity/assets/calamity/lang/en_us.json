@@ -1,30 +1,12 @@
 {	
-	"book.pageIndicator": "§d§ov5.0.0",
-	"commands.trigger.failed.unprimed": "You're not able to use this command right now",
-	"death.attack.outOfWorld": "%1$s fell to calamity",
-	
-	"by.author":"by %s",
-	"map.author.hover.link":"Click to view link",
-	"map.author.name":"Moesh",
-	"map.name":"Calamity",
-
 	"arena.calamity.author":"Moesh",
 	"arena.calamity.icon":"z",
 	"arena.calamity.name":"Calamity",
 	"arena.shattering.author":"Moesh",
 	"arena.shattering.icon":"x",
 	"arena.shattering.name":"Shattering",
-
-	"spacer.brackets.left":" (%s)",
-	"spacer.left":" %s",
-	"spacer.middle":"%s %s",
-	"spacer.right":"%s ",
-	"system.message":">>> %s",
-	
-	"team.blue": "Blue",
-	"team.red": "Red",
-	"team.spectator": "Spectator",
-
+	"book.pageIndicator": "§d§ov5.0.0",
+	"by.author":"by %s",
 	"calamity.book.cancelStart":"cancel",
 	"calamity.book.forfeit":"Forfeit",
 	"calamity.book.gm":"gm",
@@ -132,5 +114,18 @@
 	"calamity.unicode.play":"▶",
 	"calamity.unicode.stop":"⏹",
 	"calamity.welcome.objective":"Objective: Collect enough points to reach the score goal. Click %s to view the online readme!",
-	"calamity.welcome":"Welcome to Calamity: Definitive Edition! Created by Moesh."
+	"calamity.welcome":"Welcome to Calamity: Definitive Edition! Created by Moesh.",
+	"commands.trigger.failed.unprimed": "You're not able to use this command right now",
+	"death.attack.outOfWorld": "%1$s fell to calamity",
+	"map.author.hover.link":"Click to view link",
+	"map.author.name":"Moesh",
+	"map.name":"Calamity",
+	"spacer.brackets.left":" (%s)",
+	"spacer.left":" %s",
+	"spacer.middle":"%s %s",
+	"spacer.right":"%s ",
+	"system.message":">>> %s",
+	"team.blue": "Blue",
+	"team.red": "Red",
+	"team.spectator": "Spectator"
 }
