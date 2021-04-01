@@ -4,7 +4,6 @@
 # Purpose: Reset the map and player states to neutral
 #---------------------------------------------------------------------------------------------------
 # Make the announcement
-tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is over","color":"green"}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
 
 # Make all players spectators!
@@ -27,7 +26,7 @@ tag @a remove VotedForfeit
 tag @a remove ResetTheSpawnItem
 
 # Allow players to reset the map themselves
-tellraw @a {"translate":"Thanks for playing! Use [%s] to play again.","color":"green","with":[{"text":"/trigger reset","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger reset"},"hoverEvent":{"action":"show_text","value":"Click here to send the command to your text box."}}]}
+tellraw @a {"translate":"system.message","with": [{"translate":"calamity.reset.map","color":"green","with":[{"text":"/trigger reset","color":"blue","underlined": true,"clickEvent":{"action":"suggest_command","value":"/trigger reset"},"hoverEvent":{"action":"show_text","value":{"translate":"calamity.hover.sendTriggerCommand"}}}]}]}
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update game state

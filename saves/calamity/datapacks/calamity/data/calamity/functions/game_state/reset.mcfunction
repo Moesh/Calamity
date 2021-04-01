@@ -5,7 +5,7 @@
 #   This will reset the map to the lobby state, reset the level and ready the game to be ran again.
 #---------------------------------------------------------------------------------------------------
 # Reset the trigger
-tellraw @a {"translate":"%s Returning to lobby mode","color":"green","with":[{"translate":">>>","color":"white"}]}
+tellraw @a {"translate":"system.message","with":[{"translate":"calamity.resetting","color":"green"}]}
 scoreboard players reset @a[scores={reset=1..}] reset
 scoreboard players set GameState gameVariable 0
 scoreboard players set BluePoints gameVariable 0

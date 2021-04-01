@@ -150,30 +150,30 @@ tag @a[tag=GiveBook] remove GiveBook
 
 # Resources
 title @a[tag=GiveMessage] times 5 30 10
-execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
-execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
-execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
-execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"32"}]}
-execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
-execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
+execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
+execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
+execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"32"}]}
+execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 # Effects
-execute as @s[tag=Regeneration] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
-execute as @s[tag=Resistance] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
-execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
-execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"30"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"30"}]}
-execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Regeneration] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
+execute as @s[tag=Resistance] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.resourcePoint.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"30"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"30"}]}
+execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
 tag @a[tag=GiveMessage] remove GiveMessage
 tag @a[tag=GiveMessageAttack] remove GiveMessageAttack
 tag @a[tag=GiveMessageAttacked] remove GiveMessageAttacked
 
 # Update signs
-execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"resourcePoint.sign.activated\"}"}
-execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"resourcePoint.sign.activated\"}"}
+execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.activated\"}"}
+execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.activated\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove Output

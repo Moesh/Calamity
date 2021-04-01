@@ -31,7 +31,7 @@ scoreboard objectives add CONST dummy
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
-scoreboard objectives add health health {"text":"❤","color":"light_purple"}
+scoreboard objectives add health health {"translate":"calamity.unicode.ballotBox.heart","color":"light_purple"}
 	scoreboard objectives setdisplay belowName health
 	scoreboard objectives setdisplay list health
 	scoreboard objectives modify health rendertype hearts
@@ -61,7 +61,7 @@ scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
-scoreboard objectives add displayPoints dummy {"translate":"Calamity","color": "light_purple"}
+scoreboard objectives add displayPoints dummy {"translate":"map.name","color": "light_purple"}
     scoreboard objectives setdisplay sidebar displayPoints
     scoreboard players set Blue displayPoints 0
     scoreboard players set Red displayPoints 0

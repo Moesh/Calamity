@@ -7,22 +7,22 @@
 # Join a team
 team join blue @a[scores={selectTeam=1}]
 execute as @a[scores={selectTeam=1},gamemode=spectator] run function calamity:player/set_to_lobby_mode
-execute as @a[scores={selectTeam=1}] run tellraw @a {"translate":">>> %s joined Blue", "color":"blue", "with":[{"selector":"@s[scores={selectTeam=1}]"}]}
+execute as @a[scores={selectTeam=1}] run tellraw @a {"translate":"system.message", "color":"blue","with":[{"translate":"calamity.joined.team", "with":[{"selector":"@s[scores={selectTeam=1}]"},{"translate":"team.blue"}]}]}
 team join red @a[scores={selectTeam=2}]
 execute as @a[scores={selectTeam=2},gamemode=spectator] run function calamity:player/set_to_lobby_mode
-execute as @a[scores={selectTeam=2}] run tellraw @a {"translate":">>> %s joined Red", "color":"red", "with":[{"selector":"@s[scores={selectTeam=2}]"}]}
+execute as @a[scores={selectTeam=2}] run tellraw @a {"translate":"system.message", "color":"red","with":[{"translate":"calamity.joined.team", "with":[{"selector":"@s[scores={selectTeam=2}]"},{"translate":"team.red"}]}]}
 team join spectator @a[scores={selectTeam=3}]
 gamemode spectator @a[scores={selectTeam=3}]
-execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":">>> %s moved to the sidelines","color": "gray", "with":[{"selector":"@s[scores={selectTeam=3}]"}]}
+execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":"system.message", "color": "gray","with":[{"translate":"calamity.sidelines", "with":[{"selector":"@s[scores={selectTeam=3}]"}]}]}
 
 # Leave your team
 tag @a[team=blue,scores={leaveTeam=1..}] remove JoinBlue
 tag @a[team=red,scores={leaveTeam=1..}] remove JoinRed
 team leave @a[scores={leaveTeam=1..}]
-execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":">>> %s abandoned hope", "color":"gray", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}
+execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":"system.message", "color":"gray","with":[{"translate":"calamity.left.team", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}]}
 
-# Always reset triggers if the score is not zero. We've already processed them, so let's just
-#   prep them to be enabled.
+# Always reset triggers if the score is not zero. We've already processed them, so let's just prep
+#   them to be enabled.
 scoreboard players set @a[scores={selectTeam=..-1}] selectTeam 0
 scoreboard players set @a[scores={selectTeam=1..}] selectTeam 0
 scoreboard players set @a[scores={leaveTeam=..-1}] leaveTeam 0
