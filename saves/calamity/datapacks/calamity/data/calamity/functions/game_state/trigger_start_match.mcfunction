@@ -6,9 +6,9 @@
 
 # It's time to start the game!
 function calamity:game_state/check_if_start_conditions_met
-execute as @a[scores={startMatch=1..},team=blue] run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.started.byPlayer","color":"blue","with":[{"selector":"@s"}]}]}
-execute as @a[scores={startMatch=1..},team=red] run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.started.byPlayer","color":"red","with":[{"selector":"@s"}]}]}
-execute if score #PlayersPlaying gameVariable matches 0 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.cancelled.noPlayers","color":"red"}]}
+execute as @a[scores={startMatch=1..},team=blue] run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.started.byPlayer","color":"blue","with":[{"selector":"@s"},{"translate":"calamity.unicode.play"}]}]}
+execute as @a[scores={startMatch=1..},team=red] run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.started.byPlayer","color":"red","with":[{"selector":"@s"},{"translate":"calamity.unicode.play"}]}]}
+execute if score #PlayersPlaying gameVariable matches 0 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.cancelled.noPlayers","color":"red","with":[{"translate":"calamity.unicode.stop"}]}]}
 execute if score #PlayersPlaying gameVariable matches 0 run function calamity:game_state/trigger_cancel_start
 
 # This variable tracks whether or not game is beginning.
