@@ -20,8 +20,6 @@
 	"calamity.book.hover.readyTeam":"Toggle your team's ready status. Match countdown will begin when both teams are ready.",
 	"calamity.book.hover.resetSpawnItem":"Choose a new respawn item when you respawn",
 	"calamity.book.hover.start":"Start match after 15 seconds",
-	"calamity.book.hover.toggleSpectator.1":"Toggle your game mode between",
-	"calamity.book.hover.toggleSpectator.2":"adventure and creative",
 	"calamity.book.leaveTeam":"Leave team",
 	"calamity.book.li.li":"  + ",
 	"calamity.book.li":"• ",
@@ -29,9 +27,9 @@
 	"calamity.book.objective.1":"Gain points by capturing resources, killing, or crafting items with iron ingots. First team to reach the score goal wins!",
 	"calamity.book.objective.2":"The score goal is lowered when iron ore is removed from the central mines.",
 	"calamity.book.objective.title":"Objective:",
-	"calamity.book.randomize.all":"Randomize all",
-	"calamity.book.randomize.rest":"Randomize rest",
-	"calamity.book.readyTeam":"Toggle team ready",
+	"calamity.book.randomize.all":"Shuffle all",
+	"calamity.book.randomize.rest":"Shuffle rest",
+	"calamity.book.readyTeam":"Ready team",
 	"calamity.book.resetSpawnItem":"Reset spawn item",
 	"calamity.book.selectArena.title":"Select arena: ",
 	"calamity.book.spectate":"Spectate",
@@ -118,5 +116,7 @@
 	"translator.name":"Moesh",
 	"calamity.resourcePoint.enchantedBook.valid":"Valid item found! %s given.",
 	"calamity.resourcePoint.enchantedBook.invalid":"No valid item found in main hand. Have a %s book.",
-	"calamity.resourcePoint.enchantedBook.announced":"An %s was created by %s %s!"
+	"calamity.resourcePoint.enchantedBook.announced":"An %s was created by %s %s!",
+	"calamity.book.toggleGamemode":"Toggle gamemode",
+	"calamity.book.toggleGamemode.hover":"Toggle game mode between survival and adventure"
 }

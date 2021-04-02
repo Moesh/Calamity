@@ -31,6 +31,6 @@ scoreboard players reset #tempVar gameVariable
 bossbar set calamity:iron_ore name {"translate":"%s %s","with":[{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
 
 # Update the sidebar
-scoreboard players operation Goal displayPoints = OreLeft gameVariable
+scoreboard players operation ░░░░░░ displayPoints = OreLeft gameVariable
 scoreboard players operation Blue displayPoints = BluePoints gameVariable
 scoreboard players operation Red displayPoints = RedPoints gameVariable

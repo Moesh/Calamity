@@ -69,6 +69,18 @@
             "ascent": 7,
             "height": 7,
             "chars": ["i"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/toggle.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["t"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/transparent.png",
+            "chars": [""]
         }
     ]
 }
