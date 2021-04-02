@@ -120,10 +120,11 @@ tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_sword"}}
 #   clear. Players will want to know or learn what item gives what Enchanted Book, so we should
 #   work that in some day, but not in alpha.
 # TODO: Expand messages to include custom message for each book type.
-tellraw @a[tag=GiveBook,tag=!CheckForValidItem] {"text":"Valid item found! Enchanted Book given.","color": "light_grey","italic": true}
-tellraw @a[tag=GiveBook,tag=CheckForValidItem] {"text":"No valid item found in main hand. Enjoy this Mending book.","color": "light_grey","italic": true}
-execute if entity @a[tag=GiveBook,team=blue] run tellraw @a {"text":"An Enchanted Book has been created by Blue team!!","color":"blue"}
-execute if entity @a[tag=GiveBook,team=red] run tellraw @a {"text":"An Enchanted Book has been created by the Red team!","color": "red"}
+tellraw @a[tag=GiveBook,tag=!CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedBook.valid","color": "light_grey","italic": true,"with":[{"translate":"item.minecraft.enchanted_book"}]}
+tellraw @a[tag=GiveBook,tag=!CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedBook.valid","color": "light_grey","italic": true}
+tellraw @a[tag=GiveBook,tag=CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedBook.invalid","color": "light_grey","italic": true,"with":[{"translate":"item.minecraft.enchanted_book"}]}
+execute if entity @a[tag=GiveBook,team=blue] run tellraw @a {"translate":"calamity.resourcePoint.enchantedBook.announced","color":"blue","with":[{"translate":"item.minecraft.enchanted_book"},{"translate":"team.blue"},{"translate":"b","color":"blue","font": "calamity:icons"}]}
+execute if entity @a[tag=GiveBook,team=red] run tellraw @a {"translate":"calamity.resourcePoint.enchantedBook.announced","color":"red","with":[{"translate":"item.minecraft.enchanted_book"},{"translate":"team.red"},{"translate":"r","color": "red","font": "calamity:icons"}]}
 
 # No valid item found, give default book
 # Default book should be a rather innoculous, but useful book. Should not be a book meant for

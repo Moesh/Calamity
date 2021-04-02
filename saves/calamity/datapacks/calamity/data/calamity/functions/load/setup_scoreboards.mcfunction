@@ -31,7 +31,7 @@ scoreboard objectives add CONST dummy
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
-scoreboard objectives add health health {"translate":"calamity.unicode.ballotBox.heart","color":"light_purple"}
+scoreboard objectives add health health {"translate":"❤","color":"light_purple"}
 	scoreboard objectives setdisplay belowName health
 	scoreboard objectives setdisplay list health
 	scoreboard objectives modify health rendertype hearts

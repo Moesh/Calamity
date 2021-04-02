@@ -13,14 +13,14 @@ execute if score #Every20Ticks gameVariable matches 0 run playsound minecraft:bl
 
 # Check our progress. Announce to the player when enough time has passed.
 # 15, 10, and 5 seconds
-execute if score TimeInTicks gameVariable matches 300 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
-execute if score TimeInTicks gameVariable matches 200 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
-execute if score TimeInTicks gameVariable matches 100 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 300 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 200 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 100 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
 # 4 seconds to 1 seconds...
-execute if score TimeInTicks gameVariable matches 80 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
-execute if score TimeInTicks gameVariable matches 60 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
-execute if score TimeInTicks gameVariable matches 40 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.start","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
-execute if score TimeInTicks gameVariable matches 20 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.oneSecond","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 80 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown.lastFiveSeconds","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 60 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown.lastFiveSeconds","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 40 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown.lastFiveSeconds","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
+execute if score TimeInTicks gameVariable matches 20 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.startMatch.countdown.lastFiveSeconds","with":[{"score":{"name":"#InSeconds","objective":"gameVariable"},"color":"white"}]}]}
 
 # It's time to start the game!
 function calamity:game_state/check_if_start_conditions_met

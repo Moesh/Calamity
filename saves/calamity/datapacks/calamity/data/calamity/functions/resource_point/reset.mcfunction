@@ -11,7 +11,7 @@ tag @s remove Charging
 # If a player is nearby, advise them the point is ready to use.
 execute as @a[distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveMessage
 execute as @a[distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveMessage
-title @a[tag=GiveMessage] actionbar {"translate":"Ready","color":"green"}
+title @a[tag=GiveMessage] actionbar {"translate":"calamity.ready","color":"green"}
 tag @a[tag=GiveMessage] remove GiveMessage
 
 # Update the sign

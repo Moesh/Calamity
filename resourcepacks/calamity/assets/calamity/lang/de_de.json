@@ -20,7 +20,7 @@
     "calamity.book.hover.readyTeam": "Schalte den Bereitschaftsstatus deins Teams um. Der Countdown beginnt, wenn beide Teams bereit sind.",
     "calamity.book.hover.resetSpawnItem": "W\u00e4hle ein neues respawn Item wenn du respawnst",
     "calamity.book.hover.start": "Startet ein Spiel nach 15 Sekunden",
-    "calamity.book.hover.toggleSpectator.1": "Wechlse deinen Spielmodus zwischen",
+    "calamity.book.hover.toggleSpectator.1": "Wechsle deinen Spielmodus zwischen",
     "calamity.book.hover.toggleSpectator.2": "Abenteuer und Kreativ",
     "calamity.book.leaveTeam": "Team verlassen",
     "calamity.book.li.li": "  + ",
@@ -53,7 +53,7 @@
     "calamity.match.cancelled.byPlayer": "%s \u23f9 hat das Spiel abgebrochen",
     "calamity.match.cancelled.noPlayers": "Es muss mindestens ein Spieler in einem Team sein um ein Spiel zu beginnen",
     "calamity.match.cancelled": "Spiel \u23f9 abgebrochen",
-    "calamity.match.started.byPlayer": "%s %s hat ein Spiel gestartet",
+    "calamity.match.started.byPlayer": "%s %s hat ein Spiel gestartet"
     "calamity.match.stats": "%1$s zu %2$s. %3$s %4$s hat mit %5$s Punkten gewonnen!",
     "calamity.notReady": "Nicht bereit",
     "calamity.out.of.bounds": "Au\u00dferhalb des Spielbereichs!",
@@ -115,5 +115,5 @@
     "system.message": ">>> %s",
     "team.blue": "Blau",
     "team.red": "Rot",
-    "team.spectator": "Zuschauer"
+    "team.spectator": "Zuschauer",
 }
