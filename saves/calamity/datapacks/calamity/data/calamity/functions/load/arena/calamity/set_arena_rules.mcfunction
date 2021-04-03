@@ -18,7 +18,7 @@ scoreboard objectives add mapRules dummy
     # Let's control the points distribution at a central location, so we can alter them quickly
     #   instead of hunting through several files.
     scoreboard players set ScoreForCaptureResource mapRules 1
-    scoreboard players set ScoreForEnchantedBook mapRules 13
+    scoreboard players set ScoreForEnchantedItem mapRules 13
     scoreboard players set ScoreForKill mapRules 1
 
     # The percentage of players who has to trigger the gg trigger before the team will forfeit

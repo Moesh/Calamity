@@ -13,5 +13,5 @@ tag @a remove GiveMessage
 tag @a remove GiveMessageAttack
 tag @a remove GiveMessageAttacked
 tag @a remove GiveEffects
-tag @a remove GiveBooks
+tag @a remove GiveEnchant
 tag @a remove GiveResources

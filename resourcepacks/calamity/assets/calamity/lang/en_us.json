@@ -79,9 +79,9 @@
 	"calamity.resetItems.haventChosen": "You haven't selected an item yet. Nothing to reset.",
 	"calamity.resetItems": "You will get to select a new item the next time you respawn.",
 	"calamity.resetting": "Resetting to default state",
-	"calamity.resourcePoint.enchantedBook.announced": "An %s was created by %s %s!",
-	"calamity.resourcePoint.enchantedBook.invalid": "No valid item found in main hand. Have a %s book.",
-	"calamity.resourcePoint.enchantedBook.valid": "Valid item found! %s given.",
+	"calamity.resourcePoint.enchantedItem.announced": "An %s was created by %s %s!",
+	"calamity.resourcePoint.enchantedItem.invalid": "No valid item found in main hand. Have an %s.",
+	"calamity.resourcePoint.enchantedItem.valid": "Valid item found! %s given.",
 	"calamity.resourcePoint.output.attackedEffect": "Given [%s%3$s] for %s seconds",
 	"calamity.resourcePoint.output.attackEffect": "Sent enemy [%s%3$s] for %s seconds",
 	"calamity.resourcePoint.output.effect.level2": " II",
@@ -127,5 +127,6 @@
 	"team.blue": "Blue",
 	"team.red": "Red",
 	"team.spectator": "Spectator",
-	"translator.name": "Moesh"
+	"translator.name": "Moesh",
+	"calamity.enchanted.item":"Enchanted Item"
 }
