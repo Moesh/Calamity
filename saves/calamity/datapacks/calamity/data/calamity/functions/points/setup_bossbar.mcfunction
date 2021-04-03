@@ -6,7 +6,7 @@
 
 # Create Mines boss bar
 bossbar remove calamity:iron_ore
-bossbar add calamity:iron_ore {"translate":"%s %s","with":[{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
+bossbar add calamity:iron_ore {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"text":"0:00"},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
     function calamity:load/count_iron_ore
     execute store result bossbar calamity:iron_ore max run scoreboard players get OreLeft gameVariable
     bossbar set calamity:iron_ore style notched_10

@@ -20,6 +20,7 @@ scoreboard objectives add CONST dummy
 	scoreboard players set 6 CONST 6
 	scoreboard players set 12 CONST 12
 	scoreboard players set 20 CONST 20
+	scoreboard players set 60 CONST 60
 	scoreboard players set 80 CONST 80
 	scoreboard players set 100 CONST 100
 
@@ -61,7 +62,7 @@ scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
-scoreboard objectives add displayPoints dummy {"translate":"map.name","color": "light_purple"}
+scoreboard objectives add displayPoints dummy {"translate":"calamity.goal","color": "light_purple"}
     scoreboard objectives setdisplay sidebar displayPoints
     scoreboard players set Blue displayPoints 0
     scoreboard players set Red displayPoints 0
@@ -276,7 +277,7 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set RedPoints gameVariable 0
 	scoreboard players set ReadyBlue gameVariable 0
 	scoreboard players set ReadyRed gameVariable 0
-	# oreLeft is polled from calamity:points/update_displays
+	# oreLeft is polled from calamity:player/update_displays
 	scoreboard players set OreLeft gameVariable 0
     scoreboard players set #tableCandle gameVariable 0
     scoreboard players set #tableCandleSmoke gameVariable 0

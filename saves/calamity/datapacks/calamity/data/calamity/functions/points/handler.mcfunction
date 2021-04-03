@@ -29,4 +29,4 @@ scoreboard players operation RedPoints gameVariable += @a[tag=Playing,team=red] 
 
 execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"system.message","color":"gray","with":[{"translate":"%s: +%s points","color":"gray","with":[{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"}}]}]}
 
-function calamity:points/update_displays
+function calamity:player/update_displays

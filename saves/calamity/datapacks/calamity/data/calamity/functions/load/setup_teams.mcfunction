@@ -9,6 +9,7 @@ team remove lobby
 team remove spectator
 team remove blue
 team remove red
+team remove finishLine
 
 # Add And Configure Scoreboard Teams
 team add lobby {"translate":"team.name.lobby"}
@@ -43,7 +44,11 @@ team add fakeRed {"translate":"team.red"}
 	team modify fakeRed color red
 	team modify fakeRed prefix {"translate":"spacer.right","color":"red","with": [{"translate":"☒","color":"dark_red"}]}
 	team modify fakeRed suffix {"translate":"spacer.left","color":"red","with": [{"translate":"r","font":"calamity:icons"}]}
+team add finishLine
+	team modify finishLine color white 
+	team modify finishLine suffix {"translate":"spacer.left","color":"white","with": [{"translate":"i","font":"calamity:icons","color":"white"}]}
 
 # AddFakePlayersToTeam
 team join fakeBlue Blue
 team join fakeRed Red
+team join finishLine ░░░░░░

@@ -65,6 +65,8 @@ execute if score GameState gameVariable matches 1 if score RedPoints gameVariabl
 execute if score GameState gameVariable matches 1 run fill 159 45 90 159 46 90 air destroy
 execute if score GameState gameVariable matches 1 run fill 113 45 90 113 46 90 air destroy
 
+execute if score GameState gameVariable matches 1 run function calamity:game_state/timer
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the post-game
 #---------------------------------------------------------------------------------------------------
