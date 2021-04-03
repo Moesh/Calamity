@@ -9,5 +9,11 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"cSpell.words": [
+			"moesh",
+			"respawn"
+		]
+	}
 }
