@@ -128,5 +128,6 @@
 	"team.red": "Red",
 	"team.spectator": "Spectator",
 	"translator.name": "Moesh",
-	"calamity.enchanted.item":"Enchanted Item"
+	"calamity.enchanted.item":"Enchanted Item",
+	"calamity.select.respawnItem":"Select your respawn item by using one of these tools."
 }
