@@ -10,16 +10,44 @@
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_rest.png",
-            "ascent": 7,
+            "ascent": 6,
             "height": 7,
             "chars": ["1"]
         },
         {
             "type": "bitmap",
             "file": "calamity:font/shuffle_all.png",
-            "ascent": 7,
+            "ascent": 6,
             "height": 7,
             "chars": ["2"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/clock.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["3"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/fork.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["4"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/twitter.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["5"]
+        },
+        {
+            "type": "bitmap",
+            "file": "calamity:font/github.png",
+            "ascent": 7,
+            "height": 7,
+            "chars": ["6"]
         },
         {
             "type": "bitmap",
@@ -76,11 +104,6 @@
             "ascent": 7,
             "height": 7,
             "chars": ["t"]
-        },
-        {
-            "type": "bitmap",
-            "file": "calamity:font/transparent.png",
-            "chars": [""]
         }
     ]
 }
