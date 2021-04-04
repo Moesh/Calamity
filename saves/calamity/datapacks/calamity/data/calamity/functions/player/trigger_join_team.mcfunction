@@ -19,7 +19,7 @@ execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":"system.message
 tag @a[team=blue,scores={leaveTeam=1..}] remove JoinBlue
 tag @a[team=red,scores={leaveTeam=1..}] remove JoinRed
 team leave @a[scores={leaveTeam=1..}]
-execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":"system.message", "color":"gray","with":[{"translate":"calamity.left.team", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}]}
+execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":"system.message", "with":[{"translate":"calamity.left.team", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}]}
 
 # Always reset triggers if the score is not zero. We've already processed them, so let's just prep
 #   them to be enabled.

@@ -46,6 +46,7 @@ scoreboard players reset * cancelStart
 scoreboard players reset * selectTeam
 scoreboard players reset * readyTeam
 scoreboard players reset * leaveTeam
+scoreboard players reset * shuffle
 scoreboard players reset * toggleSpectator
 scoreboard players enable @a[tag=Playing] gg
 

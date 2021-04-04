@@ -9,6 +9,10 @@ execute if score GameState gameVariable matches 0 run function calamity:game_sta
 execute if score ReadyBlue gameVariable matches 1 unless entity @a[team=blue] run function calamity:game_state/ready_team/blue_not_ready
 execute if score ReadyRed gameVariable matches 1 unless entity @a[team=red] run function calamity:game_state/ready_team/red_not_ready
 
+# Shuffle the players if someone has made a request to!
+execute if score GameState gameVariable matches 0 run function calamity:game_state/trigger_shuffle
+execute if score #ShufflePlayers gameVariable matches 1 run function calamity:game_state/shuffle_rest
+
 # This line below is for players who want to be cheeky. If they ever set a score for startMatch,
 # go ahead and assume they want to start the match.
 execute if score GameState gameVariable matches 0 run scoreboard players set @a[scores={startMatch=..-1}] startMatch 0

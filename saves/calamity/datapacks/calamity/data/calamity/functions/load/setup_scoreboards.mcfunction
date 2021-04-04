@@ -123,6 +123,9 @@ scoreboard objectives add reset trigger
     # Resets your chosen starting weapon
     scoreboard objectives remove resetSpawnItem
     scoreboard objectives add resetSpawnItem trigger
+    # Shuffle teams
+    scoreboard objectives remove shuffle
+    scoreboard objectives add shuffle trigger
 
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
