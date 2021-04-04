@@ -186,6 +186,7 @@ tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:netherite_boots"
 tellraw @a[tag=Enchant,tag=!CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedItem.valid","color": "gray","italic": true,"with":[{"translate":"calamity.enchanted.item","color":"white"}]}
 tellraw @a[tag=Enchant,tag=CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedItem.invalid","color": "gray","italic": true,"with":[{"translate":"item.minecraft.enchanted_book","color":"white"}]}
 execute if entity @a[tag=Enchant,team=blue] run tellraw @a {"translate":"calamity.resourcePoint.enchantedItem.announced","color":"blue","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.blue"},{"translate":"b","color":"blue","font": "calamity:icons"}]}
+
 execute if entity @a[tag=Enchant,team=red] run tellraw @a {"translate":"calamity.resourcePoint.enchantedItem.announced","color":"red","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.red"},{"translate":"r","color": "red","font": "calamity:icons"}]}
 
 # No valid item found, give default book
@@ -198,6 +199,8 @@ tag @a[tag=CheckForValidItem] remove CheckForValidItem
 execute as @a[tag=GiveEffects] run playsound minecraft:entity.generic.drink player @s
 execute as @s[tag=GiveResources] run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 0.5
 execute as @s[tag=Enchant] run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 0.5
+execute as @a[tag=Enchant,team=blue] run playsound calamity:calamity.announcer.enchanted.item master @a[team=red] ~ ~ ~ 500
+execute as @a[tag=Enchant,team=red] run playsound calamity:calamity.announcer.enchanted.item master @a[team=blue] ~ ~ ~ 500
 
 # Give title message and resource/effect
 tag @a[tag=GiveResources] add GiveMessage

@@ -131,5 +131,7 @@
 	"calamity.shuffle.newTeamAdditions":"Shuffled to %s: %s",
 	"calamity.shuffle.newTeam":"%s: %s",
 	"calamity.shuffle.playerShuffled.rest":"%s shuffled players who were not on a team",
-	"calamity.shuffle.playerShuffled.all":"%s shuffled all players"
+	"calamity.shuffle.playerShuffled.all":"%s shuffled all players",
+	"calamity.player.sessionID.mismatch":"SessionID mismatch. You will be processed as a new player.",
+	"calamity.subtitle.announcer":"Announcer speaks"
 }

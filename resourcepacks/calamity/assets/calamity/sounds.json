@@ -5,10 +5,70 @@
     ],
     "subtitle": "calamity.subtitle.eye.squish"
   },
-  "calamity.eye.release": {
+  "calamity.announcer.countdown.1": {
     "sounds": [
-      "calamity:resource_point/release"
+      "calamity:announcer_test/1"
     ],
-    "subtitle": "calamity.subtitle.eye.release"
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.countdown.2": {
+    "sounds": [
+      "calamity:announcer_test/2"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.countdown.3": {
+    "sounds": [
+      "calamity:announcer_test/3"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.countdown.4": {
+    "sounds": [
+      "calamity:announcer_test/4"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.countdown.5": {
+    "sounds": [
+      "calamity:announcer_test/5"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.match.countdown.start": {
+    "sounds": [
+      "calamity:announcer_test/match-begins-in-15-seconds"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.match.cancelled": {
+    "sounds": [
+      "calamity:announcer_test/match-cancelled"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.match.started": {
+    "sounds": [
+      "calamity:announcer_test/seek-glory-or-fall-to-calamity"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.enchanted.item": {
+    "sounds": [
+      "calamity:announcer_test/the-enemy-has-an-enchanted-item"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.lead.enemy": {
+    "sounds": [
+      "calamity:announcer_test/the-enemy-is-in-the-lead"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.announcer.lead.friendly": {
+    "sounds": [
+      "calamity:announcer_test/you-have-taken-the-lead"
+    ],
+    "subtitle": "calamity.subtitle.announcer"
   }
 }

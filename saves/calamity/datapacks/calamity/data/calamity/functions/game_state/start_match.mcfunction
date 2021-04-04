@@ -71,6 +71,7 @@ scoreboard players set @a[tag=Playing] giveSpawnItems 1
 tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.seekGlory"}]}
 tellraw @a {"translate":"calamity.select.respawnItem","color":"gray","with":[{"translate":"calamity.select.respawnItem","italic": true}]}
 playsound minecraft:event.raid.horn master @a 217 100 195 999999
+playsound calamity:calamity.announcer.match.started master @a 136 150 89 500
 # Purpose: Update game state
 scoreboard players set StartingMatch gameVariable 0
 scoreboard players set GameState gameVariable 1
