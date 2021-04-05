@@ -40,12 +40,12 @@ This game is played in survival mode, but some elements have been modified. This
   - Crafting items with iron ingots gives points equal the amount of iron ingots used in the recipe
     - Crafting Iron Blocks, Iron Nuggets, or Iron Ingots does not award points
   - Other point scoring is determined by map rules, see section below
-- Enchanted Books
+- Enchanted items
   - This generator is located under your enemy's base
   - The output is determined by what item is held in your main hand
-  - Holding a sword will produce a sword-related enchanted book (Knockback I)
-  - Holding a tool will produce an enchanted book related to that tool
-  - Every player in the server will be made aware if you are given an enchanted book
+  - Holding a sword will produce a sword-related enchantment (Knockback I)
+  - Holding a tool will produce an enchant related to that tool
+  - Every player in the server will be made aware if you are given an enchanted item
 - Iron Mines
   - The iron mine in the crosslanes determines what the score limit is
   - Players can remove, add, or destroy iron ore to change the score limit
