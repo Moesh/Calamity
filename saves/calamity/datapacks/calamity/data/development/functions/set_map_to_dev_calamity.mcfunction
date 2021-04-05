@@ -43,7 +43,7 @@ setblock 135 1 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "L
 
 # Command blocks for seting up the void protection
 setblock 141 0 179 minecraft:command_block[conditional=false,facing=up]{auto: 0b, powered: 0b, UpdateLastExecution: 1b, Command: "/function calamity:build_protection/setup/clear_walls"}
-setblock 141 1 179 minecraft:chain_command_block[conditional=false,facing=up]{auto: 1b, powered: 1b, UpdateLastExecution: 1b, Command: "/execute positioned 159 69 93 run function calamity:build_protection/setup/run"}
+setblock 141 1 179 minecraft:chain_command_block[conditional=false,facing=up]{auto: 1b, powered: 1b, UpdateLastExecution: 1b, Command: "/execute positioned 159 73 93 run function calamity:build_protection/setup/run"}
 setblock 141 0 178 minecraft:stone_button[face=wall,facing=north,powered=false]
 
 # Lobby
