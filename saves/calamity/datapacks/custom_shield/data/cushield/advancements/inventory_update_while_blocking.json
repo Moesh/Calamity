@@ -1,0 +1,27 @@
+{
+	"criteria": {
+		"change": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"cush.block_total": {
+								"min": 1,
+								"max": 2147483647
+							}
+						}
+					}
+				]
+			}
+		},
+		"base": {
+			"trigger": "minecraft:location"
+		}
+	},
+	"rewards": {
+		"function": "cushield:block/inventory_update"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"subtitles.item.shield.up": "Shield up",
+	"subtitles.item.shield.down": "Shield down",
+	"subtitles.item.shield.ready": "Shield ready",
+	"subtitles.item.shield.disable": "Shield disabled",
+	"attribute.modifier.equals.time": "%ss %s",
+	"item.modifiers.blocking": "While Blocking:",
+	"attribute.name.shield.block_time": "Block Duration"
+}

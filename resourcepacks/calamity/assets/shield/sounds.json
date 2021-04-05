@@ -1,0 +1,104 @@
+{
+	"large_shield.parry": {
+		"sounds": [
+			"shield:large_shield/parry"
+		],
+		"subtitle": "subtitles.item.shield.block"
+	},
+	"large_shield.block_some": {
+		"sounds": [
+			"mob/zombie/wood1",
+			"mob/zombie/wood2",
+			"mob/zombie/wood3",
+			"mob/zombie/wood4"
+		],
+		"subtitle": "subtitles.item.shield.block"
+	},
+	"large_shield.block_all": {
+		"sounds": [
+			"shield:large_shield/block"
+		],
+		"subtitle": "subtitles.item.shield.block"
+	},
+	"large_shield.block_all.wobble": {
+		"sounds": [
+			{
+				"name": "entity/player/attack/crit1",
+				"volume": 0.7
+			},
+			{
+				"name": "entity/player/attack/crit2",
+				"volume": 0.7
+			},
+			{
+				"name": "entity/player/attack/crit3",
+				"volume": 0.7
+			}
+		]
+	},
+	"large_shield.up.shift": {
+		"sounds": [
+			"shield:large_shield/up"
+		],
+		"subtitle": "subtitles.item.shield.up"
+	},
+	"large_shield.up.ruffle": {
+		"sounds": [
+			"item/armor/equip_generic1",
+			"item/armor/equip_generic2",
+			"item/armor/equip_generic3",
+			"item/armor/equip_generic4",
+			"item/armor/equip_generic5",
+			"item/armor/equip_generic6"
+		]
+	},
+	"large_shield.up.bump": {
+		"sounds": [
+			"mob/turtle/armor",
+			{
+				"name": "mob/turtle/armor",
+				"pitch": 0.85
+			},
+			{
+				"name": "mob/turtle/armor",
+				"pitch": 1.1
+			}
+		]
+	},
+	"large_shield.down.shift": {
+		"sounds": [
+			"shield:large_shield/down"
+		],
+		"subtitle": "subtitles.item.shield.down"
+	},
+	"large_shield.down.ruffle": {
+		"sounds": [
+			"item/armor/equip_iron1",
+			"item/armor/equip_iron2",
+			"item/armor/equip_iron3",
+			"item/armor/equip_iron4",
+			"item/armor/equip_iron5",
+			"item/armor/equip_iron6"
+		]
+	},
+	"ready": {
+		"sounds": [
+			{
+				"name": "item/crossbow/loading_end",
+				"volume": 2
+			}
+		],
+		"subtitle": "subtitles.item.shield.ready"
+	},
+	"large_shield.break.cling": {
+		"sounds": [
+			"random/break"
+		],
+		"subtitle": "subtitles.item.shield.disable"
+	},
+	"large_shield.break.crack": {
+		"sounds": [
+			"mob/zombie/woodbreak"
+		]
+	}
+}

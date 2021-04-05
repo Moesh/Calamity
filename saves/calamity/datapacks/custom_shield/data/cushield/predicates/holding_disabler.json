@@ -1,0 +1,43 @@
+[
+	{
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"tag": "cushield:disabler"
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"nbt": "{disabler:1b}"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"mainhand": {
+						"nbt": "{disabler:0b}"
+					}
+				}
+			}
+		}
+	}
+]

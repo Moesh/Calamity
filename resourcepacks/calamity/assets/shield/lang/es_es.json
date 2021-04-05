@@ -1,0 +1,9 @@
+{
+	"subtitles.item.shield.up": "Escudo levantado",
+	"subtitles.item.shield.down": "Escudo bajado",
+	"subtitles.item.shield.ready": "Escudo preparado",
+	"subtitles.item.shield.disable": "Escudo desactivado",
+	"attribute.modifier.equals.time": "%ss %s",
+	"item.modifiers.blocking": "Mientras bloquees:",
+	"attribute.name.shield.block_time": "Duración de bloqueo"
+}

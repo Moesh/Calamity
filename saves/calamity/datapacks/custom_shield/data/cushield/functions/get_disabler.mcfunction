@@ -1,0 +1,2 @@
+#this one command took me 4 hours to get working, entirely because the logic nightmare of this predicate and the fact match tool doesn't work like we expected
+execute store success score disable= cush.main if predicate cushield:holding_disabler

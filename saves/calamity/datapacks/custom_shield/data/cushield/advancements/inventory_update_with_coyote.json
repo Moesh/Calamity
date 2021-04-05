@@ -1,0 +1,21 @@
+{
+	"criteria": {
+		"change": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:warped_fungus_on_a_stick",
+						"nbt": "{shield:{can_coyote:1}}"
+					}
+				]
+			}
+		},
+		"base": {
+			"trigger": "minecraft:location"
+		}
+	},
+	"rewards": {
+		"function": "cushield:coyote/shield_update"
+	}
+}

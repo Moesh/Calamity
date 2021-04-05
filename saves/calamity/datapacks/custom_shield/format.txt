@@ -1,0 +1,30 @@
+Block Angle - *Presets: Wide: 90/120, Average: 90/90, Narrow: 90/60
+x_angle             | value	- angle	| vertical angle for blocking window
+y_angle             | value - angle	| horizontal angle for blocking window
+
+*max_time            | value	- time	| maximum amount of time you can block with the shield
+*cooldown            | value	- time	| amount of time you after you drop your shield before you can block again
+*durability          | value	- int	| maximum durability (unbreakable if not specified)
+
+Normal Blocking
+*block_value         | value			| amount of damage to reduce from non-parry block
+minimum_block_value | value			| minimum amount of damage to block, *Presets: High: (m = block_value), Medium: (m = 1/2 block_value), Low: (m = 0)
+*player_block_effect | value			| effect to apply to player when a block succeeds
+*entity_block_effect | value			| effect to apply to entity that hit player when a block succeeds
+
+Parry
+parry_time			| value	- time	| amount of time you can parry
+can_coyote          | true/false	| allow coyote time parry
+coyote_time         | value	- time	| amount of time system attempts to coyote parry 
+*player_parry_effect | value			| effect to apply to player when a parry succeeds
+*entity_parry_effect | value			| effect to apply to entity that hit player when a parry succeeds
+
+*default_model       | value			| custom model data used for default display
+*blocking_model      | value			| custom model data used for blocking display
+
+*bash_effect			| value			| effect to use when a player bashes
+
+*disable_resistant	| true/false	| can't be disabled when hit with an [item in the #cushield:disabler item tag/item with {disabler:1b}]
+disable_time		| value - time	| amount of time that shield gets disabled (default value 50, overridden if specified)
+
+*can_reflect_arrows	| true/false	| weather the shield can reflect blocked arrows

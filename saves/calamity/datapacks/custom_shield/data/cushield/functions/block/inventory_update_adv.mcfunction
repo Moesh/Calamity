@@ -1,0 +1,1 @@
+advancement revoke @a[advancements={cushield:inventory_update_while_blocking=true}] only cushield:inventory_update_while_blocking change
