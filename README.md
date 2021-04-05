@@ -18,7 +18,7 @@ This game is played in survival mode, but some elements have been modified. This
   - Shields can be crafted with Chain in the place of the Iron Ingot
   - Crafting Table can be crafted with Scaffolding (2x2)
   - Flint and Steel can be crafted with Flint and Chain
-  - Scaffolding can craft 6 Sticks (1x2)
+  - Scaffolding can craft 4 Sticks (1x2)
   - Wooden Tools can be crafted using Scaffolding in the place of planks
   - Anvils can be crafted with only 7 iron ingots
 - Edited game rules
