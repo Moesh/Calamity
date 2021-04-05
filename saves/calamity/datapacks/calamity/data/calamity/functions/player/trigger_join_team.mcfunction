@@ -16,10 +16,14 @@ gamemode spectator @a[scores={selectTeam=3}]
 execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":"system.message", "color": "gray","with":[{"translate":"calamity.sidelines", "with":[{"selector":"@s[scores={selectTeam=3}]"}]}]}
 
 # Leave your team
-tag @a[team=blue,scores={leaveTeam=1..}] remove JoinBlue
-tag @a[team=red,scores={leaveTeam=1..}] remove JoinRed
+tag @a[team=blue,scores={leaveTeam=1..}] add LeftBlue
+tag @a[team=red,scores={leaveTeam=1..}] add LeftRed
 team leave @a[scores={leaveTeam=1..}]
-execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":"system.message", "with":[{"translate":"calamity.left.team", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}]}
+execute as @a[scores={leaveTeam=1..},tag=LeftBlue] run tellraw @a { "translate":"system.message", "with":[ { "translate":"calamity.left.team", "with":[ {"selector":"@s[scores={leaveTeam=1..}]"}, { "translate":"spacer.middle", "color":"blue", "with":[ {"translate":"team.blue"}, {"translate":"b","font": "calamity:icons"} ] } ] } ] }
+
+execute as @a[scores={leaveTeam=1..},tag=LeftRed] run tellraw @a { "translate":"system.message", "with":[ { "translate":"calamity.left.team", "with":[ {"selector":"@s[scores={leaveTeam=1..}]"}, { "translate":"spacer.middle", "color":"red", "with":[ {"translate":"team.red"}, {"translate":"r","font": "calamity:icons"} ] } ] } ] }
+tag @a[tag=LeftBlue] remove LeftBlue
+tag @a[tag=LeftRed] remove LeftRed
 
 # Always reset triggers if the score is not zero. We've already processed them, so let's just prep
 #   them to be enabled.

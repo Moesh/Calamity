@@ -55,7 +55,7 @@
 	"calamity.hover.sendTriggerCommand": "Click here to send the command to your text box",
 	"calamity.hover.viewGitHub": "Click to view the GitHub repo",
 	"calamity.joined.team": "%s joined %s",
-	"calamity.left.team": "%s left their team",
+	"calamity.left.team": "%s left team %s",
 	"calamity.match.cancelled.byPlayer": "%s %s cancelled a match",
 	"calamity.match.cancelled.noPlayers": "At least one player must be on a team to start a match",
 	"calamity.match.cancelled": "Match %s cancelled",
