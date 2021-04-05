@@ -1,9 +1,15 @@
 {
     "calamity.eye.squish": {
     "sounds": [
-        "calamity:resource_point/squish"
+        "calamity:generator/squish"
     ],
     "subtitle": "calamity.subtitle.eye.squish"
+  },
+  "calamity.eye.release": {
+    "sounds": [
+        "calamity:generator/release"
+    ],
+    "subtitle": "calamity.subtitle.eye.release"
   },
   "calamity.announcer.countdown.1": {
     "sounds": [
