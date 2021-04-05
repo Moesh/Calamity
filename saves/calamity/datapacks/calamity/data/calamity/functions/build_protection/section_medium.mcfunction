@@ -1,6 +1,6 @@
 # Called from: calamity:build_protection/handle_explosion
 
-# Put the barrier blocks back
+# Put the replaced barrier blocks back
 fill ~-6 73 ~-6 ~5 73 ~5 minecraft:barrier replace minecraft:glass
 
 # Do the split into 4x4 sections.

@@ -1,6 +1,6 @@
 # Called from: calamity:build_protection/section_medium
 
-# Put the barrier blocks back
+# Put the replaced barrier blocks back
 fill ~ 73 ~ ~3 73 ~3 minecraft:barrier replace minecraft:glass
 
 # Check if there is supposed to be a moving_piston wall and fix the wall
