@@ -178,6 +178,7 @@ execute at @e[type=area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingWest
 execute at @e[type=area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 3, mode: "LOAD", posY: -2, sizeX: 7, posZ: 3, integrity: 1.0f, showair: 1b, name: "calamity:red_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
 execute at @e[type=area_effect_cloud,name="Generator"] run setblock ~ ~1 ~ minecraft:redstone_block
 execute at @e[type=area_effect_cloud,name="Generator"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
+execute at @e[type=area_effect_cloud,name="Generator"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
 
 # Place signs
 execute at @e[type=area_effect_cloud,name="Generator",tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
@@ -232,6 +233,8 @@ summon minecraft:area_effect_cloud 125 50 69 {CustomName: '{"text":"LobbyPoint"}
 # Place signs
 execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
 execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
+# Rotate those eyes
+execute at @e[type=area_effect_cloud,name="LobbyPoint"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
 # Update signs
 execute at @e[type=area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Arrow] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
