@@ -102,9 +102,10 @@
     fill 141 0 178 141 1 179 minecraft:air
 
 
-# IMPORTANT: Replace the blue glass in the structure with red glass on the red side. This command
+# IMPORTANT: Removes the blue spawn marking blocks in the structure and places the red spawn marker blocks on the red side. These commands
 #   needs to be updated each time we edit this shape.
-fill 96 69 87 130 69 98 minecraft:red_stained_glass
+fill 96 71 87 130 71 98 minecraft:air
+fill 96 70 87 130 70 98 minecraft:barrier
 
 # Setup banners to be red
 setblock 102 45 109 minecraft:red_wall_banner[facing=south]

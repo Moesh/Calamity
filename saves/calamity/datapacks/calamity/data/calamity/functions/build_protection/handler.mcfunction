@@ -23,12 +23,11 @@
 # We summon a marker entity at tnt which is about to explode so we can use the tnt's location after it has blown up.
 execute as @e[tag=ExplosionMarker] at @s run function calamity:build_protection/handle_explosion
 execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Duration: 2, Tags: ["ExplosionMarker"]}
-execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run fill ~5 68 ~5 ~-5 68 ~-5 minecraft:barrier
 
 # Also have to fix the protection if it was blown up by a bed.
 # There is no real way to detect if a bed explosion so we have changed bed loot tables to drop a nether star when broken.
 # Then we can execute from the star and fix the protection.
 # (Using nether stars because they can't blow up)
 execute as @e[type=item,tag=!HandledProtection,nbt={Item: {id: "minecraft:nether_star", tag: {CustomModelData: 1}}}] at @s run function calamity:build_protection/handle_explosion
-execute as @e[type=item,tag=!HandledProtection] at @s if block ~ 69 ~ #calamity:void_protection_block run fill ~ 0 ~ ~ 67 ~ minecraft:moving_piston replace #calamity:protection_replaceable
+execute as @e[type=item,tag=!HandledProtection] at @s if block ~ 73 ~ minecraft:barrier run fill ~ 0 ~ ~ 67 ~ minecraft:moving_piston replace #calamity:protection_replaceable
 tag @e[type=item,tag=!HandledProtection] add HandledProtection
