@@ -16,8 +16,8 @@ effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
 # Flag dead players and then do things to them.
-execute as @a[scores={timeSinceDeath=..1}] if score GameState gameVariable matches 0 run function calamity:player/give_lobby_effects
-execute as @a[scores={timeSinceDeath=..1}] if score GameState gameVariable matches 1 run function calamity:player/give_match_effects
+execute as @a[scores={timeSinceDeath=0}] if score GameState gameVariable matches 0 run function calamity:player/give_lobby_effects
+execute as @a[scores={timeSinceDeath=0}] if score GameState gameVariable matches 1 run function calamity:player/give_match_effects
 
 # Kill players in enemy spawn (But only if their full body is inside and they are standing on a block)
 execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 69 ~0.3 minecraft:red_stained_glass if block ~ 69 ~-0.3 minecraft:red_stained_glass if block ~0.3 69 ~ minecraft:red_stained_glass if block ~-0.3 69 ~ minecraft:red_stained_glass if entity @s[nbt={OnGround: 1b}] run kill @s
