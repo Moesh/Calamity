@@ -4,39 +4,35 @@
 # Purpose: A player wants to join or leave a team, let them.
 #---------------------------------------------------------------------------------------------------
 
-# Flag player to be added to team if not on team
-tag @a[team=!blue,scores={teamSelected=1}] add JoinBlue
-tag @a[team=!red,scores={teamSelected=2}] add JoinRed
-tag @a[scores={teamSelected=3}] add Spectate
-
-# Remove player if already on that team
-tag @a[team=blue,scores={teamSelected=1}] add LeaveTeam
-tag @a[team=red,scores={teamSelected=2}] add LeaveTeam
-# This is so players can use triggers to leave their team if they please.
-tag @a[scores={teamSelected=4}] add LeaveTeam
+# Join a team
+team join blue @a[scores={selectTeam=1}]
+execute as @a[scores={selectTeam=1},gamemode=spectator] run function calamity:player/set_to_lobby_mode
+execute as @a[scores={selectTeam=1}] run tellraw @a {"translate":"system.message", "color":"blue","with":[{"translate":"calamity.joined.team", "with":[{"selector":"@s[scores={selectTeam=1}]"},{"translate":"team.blue"}]}]}
+team join red @a[scores={selectTeam=2}]
+execute as @a[scores={selectTeam=2},gamemode=spectator] run function calamity:player/set_to_lobby_mode
+execute as @a[scores={selectTeam=2}] run tellraw @a {"translate":"system.message", "color":"red","with":[{"translate":"calamity.joined.team", "with":[{"selector":"@s[scores={selectTeam=2}]"},{"translate":"team.red"}]}]}
+team join spectator @a[scores={selectTeam=3}]
+gamemode spectator @a[scores={selectTeam=3}]
+execute as @a[scores={selectTeam=3}] run tellraw @a {"translate":"system.message", "color": "gray","with":[{"translate":"calamity.sidelines", "with":[{"selector":"@s[scores={selectTeam=3}]"}]}]}
 
 # Leave your team
-tag @a[team=blue,tag=LeaveTeam] remove JoinBlue
-tag @a[team=red,tag=LeaveTeam] remove JoinRed
-team leave @a[tag=LeaveTeam]
-execute as @a[tag=LeaveTeam] run tellraw @a {"translate":">>> %s abandoned their people.", "color":"gray","italic":true, "with":[{"selector":"@s[tag=LeaveTeam]"}]}
+tag @a[team=blue,scores={leaveTeam=1..}] remove JoinBlue
+tag @a[team=red,scores={leaveTeam=1..}] remove JoinRed
+team leave @a[scores={leaveTeam=1..}]
+execute as @a[scores={leaveTeam=1..}] run tellraw @a {"translate":"system.message", "with":[{"translate":"calamity.left.team", "with":[{"selector":"@s[scores={leaveTeam=1..}]"}]}]}
 
-# Join Blue
-team join blue @a[tag=JoinBlue]
-execute as @a[tag=JoinBlue] run tellraw @a {"translate":">>> %s sided with %s.","italic":true, "with":[{"selector":"@s[tag=JoinBlue]"}, {"translate":"Blue"}]}
+# Always reset triggers if the score is not zero. We've already processed them, so let's just prep
+#   them to be enabled.
+scoreboard players set @a[scores={selectTeam=..-1}] selectTeam 0
+scoreboard players set @a[scores={selectTeam=1..}] selectTeam 0
+scoreboard players set @a[scores={leaveTeam=..-1}] leaveTeam 0
+scoreboard players set @a[scores={leaveTeam=1..}] leaveTeam 0
 
-# Join Red
-team join red @a[tag=JoinRed]
-execute as @a[tag=JoinRed] run tellraw @a {"translate":">>> %s sided with %s.","italic":true, "with":[{"selector":"@s[tag=JoinRed]"}, {"translate":"Red"}]}
-
-# Spectate
-team leave @a[tag=Spectate]
-
-# Reset tags
-tag @a[tag=JoinBlue] remove JoinBlue
-tag @a[tag=JoinRed] remove JoinRed
-tag @a[tag=Spectate] remove Spectate
-tag @a[tag=LeaveTeam] remove LeaveTeam
-scoreboard players set @a[scores={teamSelected=..-1}] teamSelected 0
-scoreboard players set @a[scores={teamSelected=1..}] teamSelected 0
-scoreboard players enable @a teamSelected
+# Always enable triggers
+scoreboard players enable @a selectTeam
+scoreboard players reset @a[team=!] readyTeam
+scoreboard players enable @a[team=blue] leaveTeam
+scoreboard players enable @a[team=blue] readyTeam
+scoreboard players enable @a[team=red] leaveTeam
+scoreboard players enable @a[team=red] readyTeam
+scoreboard players enable @a[team=spectator] leaveTeam

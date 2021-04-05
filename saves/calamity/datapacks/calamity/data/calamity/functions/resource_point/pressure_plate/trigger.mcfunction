@@ -17,16 +17,15 @@ execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=ResetPoint] at @s 
 # If blue team...
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamBlue,tag=!PlayerAlreadyChecked] at @s positioned ~-0.5 ~ ~-0.5 if entity @a[dx=0,dy=1,dz=0,team=blue] run tag @s add CheckStatus
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamBlue] at @s run setblock ~ ~-1 ~ minecraft:end_portal_frame[eye=true,facing=west]
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamBlue] at @s run playsound minecraft:block.piston.extend block @a[team=blue] ~ ~-1 ~ 1 1.5
+execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamBlue] at @s run playsound calamity:calamity.eye.squish block @a[team=blue] ~ ~-1 ~ 0.5
 # If red team...
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=TeamRed,tag=!PlayerAlreadyChecked] at @s positioned ~-0.5 ~ ~-0.5 if entity @a[dx=0,dy=1,dz=0,team=red] positioned ~-0.5 ~ ~-0.5 run tag @s add CheckStatus
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamRed] at @s run setblock ~ ~-1 ~ minecraft:end_portal_frame[eye=true,facing=west]
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamRed] at @s run playsound minecraft:block.piston.extend block @a[team=red] ~ ~-1 ~ 1 1.5
+execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=TeamRed] at @s run playsound calamity:calamity.eye.release block @a[team=red] ~ ~-1 ~ 0.5
  
 # Has status been checked already?
 # Is the point charging or resetting? Send a message.
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=Charging] at @s run function calamity:resource_point/status_message
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=Resetting] at @s run function calamity:resource_point/status_message
+execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus] run function calamity:resource_point/status_message
 
 # Is the point idle? Start charging.
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=CheckStatus,tag=!Charging,tag=!Resetting] run function calamity:resource_point/start

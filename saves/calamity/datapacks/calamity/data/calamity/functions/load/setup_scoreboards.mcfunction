@@ -20,6 +20,7 @@ scoreboard objectives add CONST dummy
 	scoreboard players set 6 CONST 6
 	scoreboard players set 12 CONST 12
 	scoreboard players set 20 CONST 20
+	scoreboard players set 60 CONST 60
 	scoreboard players set 80 CONST 80
 	scoreboard players set 100 CONST 100
 
@@ -31,15 +32,20 @@ scoreboard objectives add CONST dummy
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
-scoreboard objectives add health health {"text":"❤","color":"purple"}
+scoreboard objectives add health health {"translate":"❤","color":"light_purple"}
 	scoreboard objectives setdisplay belowName health
+	scoreboard objectives setdisplay list health
 	scoreboard objectives modify health rendertype hearts
+scoreboard objectives remove food
+scoreboard objectives add food food
 scoreboard objectives remove QueryResult
 scoreboard objectives add QueryResult dummy
 scoreboard objectives remove SuccessCount
 scoreboard objectives add SuccessCount dummy
 scoreboard objectives remove loggedOff
 scoreboard objectives add loggedOff minecraft.custom:minecraft.leave_game
+scoreboard objectives remove timeSinceDeath
+scoreboard objectives add timeSinceDeath minecraft.custom:minecraft.time_since_death
 
 scoreboard objectives remove PointTimer
 scoreboard objectives add PointTimer dummy
@@ -51,12 +57,15 @@ scoreboard objectives remove progressSound
 scoreboard objectives add progressSound dummy
 
 # Display scoreboards
-scoreboard objectives remove displayPercent
-scoreboard objectives add displaySecond dummy
 scoreboard objectives remove displaySecond
+scoreboard objectives add displaySecond dummy
+scoreboard objectives remove displayPercent
 scoreboard objectives add displayPercent dummy
 scoreboard objectives remove displayPoints
-scoreboard objectives add displayPoints dummy {"translate":"Score"}
+scoreboard objectives add displayPoints dummy {"translate":"calamity.goal","color": "light_purple"}
+    scoreboard objectives setdisplay sidebar displayPoints
+    scoreboard players set Blue displayPoints 0
+    scoreboard players set Red displayPoints 0
 
 # Objectives for determining score
 scoreboard objectives remove prepScore
@@ -69,11 +78,11 @@ scoreboard objectives remove killScore
 scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
 
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
-scoreboard objectives remove SessionID
-scoreboard objectives add SessionID dummy
+scoreboard objectives remove sessionID
+scoreboard objectives add sessionID dummy
 # Minecraft will tick this up when a player disconnects from the game.
-scoreboard objectives remove leaveGame
-scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
+scoreboard objectives remove leftGame
+scoreboard objectives add leftGame minecraft.custom:minecraft.leave_game
 
 # Player scores
 scoreboard objectives remove selectedItem
@@ -97,22 +106,27 @@ scoreboard objectives add reset trigger
 	scoreboard objectives remove cancelStart
 	scoreboard objectives add cancelStart trigger
 	# Select a team
-	scoreboard objectives add teamSelected trigger
-	scoreboard objectives remove teamSelected
+	scoreboard objectives remove selectTeam
+	scoreboard objectives add selectTeam trigger
+	# Leave your team
+	scoreboard objectives remove leaveTeam
+	scoreboard objectives add leaveTeam trigger
 	# Spectate
-	scoreboard objectives add spectate trigger
-	scoreboard objectives remove spectate
+	scoreboard objectives remove toggleSpectator
+	scoreboard objectives add toggleSpectator trigger
 	# Reset after match is complete
 	scoreboard objectives remove reset
 	scoreboard objectives add reset trigger
-	# Used in [lobby/team_selected]
-	scoreboard objectives remove teamSelected
-	scoreboard objectives add teamSelected trigger
+    # Let teams ready up
+    scoreboard objectives remove readyTeam
+    scoreboard objectives add readyTeam trigger
+    # Resets your chosen starting weapon
+    scoreboard objectives remove resetSpawnItem
+    scoreboard objectives add resetSpawnItem trigger
+    # Shuffle teams
+    scoreboard objectives remove shuffle
+    scoreboard objectives add shuffle trigger
 
-# The percentage of players who has to trigger the gg trigger before the team will forfeit
-# Number has to be between 0(%) and 100(%).
-scoreboard players set PercentPlayersToForfeit mapRules 75
-    
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
 # Diamond can be found on the map, I am not counting these for points.
@@ -127,7 +141,7 @@ scoreboard objectives add itemCounts dummy
     #   create below.
     scoreboard players set activator_rail itemValues 6
     scoreboard players set activator_rail itemCounts 6
-    scoreboard players set anvil itemValues 31
+    scoreboard players set anvil itemValues 7
     scoreboard players set anvil itemCounts 1
     scoreboard players set blast_furnace itemValues 5
     scoreboard players set blast_furnace itemCounts 1
@@ -143,8 +157,6 @@ scoreboard objectives add itemCounts dummy
     scoreboard players set crossbow itemCounts 1
     scoreboard players set detector_rail itemValues 6
     scoreboard players set detector_rail itemCounts 6
-    scoreboard players set flint_and_steel itemValues 1
-    scoreboard players set flint_and_steel itemCounts 1
     scoreboard players set heavy_weighted_pressure_plate itemValues 2
     scoreboard players set heavy_weighted_pressure_plate itemCounts 1
     scoreboard players set hopper itemValues 5
@@ -209,8 +221,6 @@ scoreboard objectives remove craftedObjItem08
 scoreboard objectives add craftedObjItem08 minecraft.crafted:minecraft.crossbow
 scoreboard objectives remove craftedObjItem09
 scoreboard objectives add craftedObjItem09 minecraft.crafted:minecraft.detector_rail
-scoreboard objectives remove craftedObjItem10
-scoreboard objectives add craftedObjItem10 minecraft.crafted:minecraft.flint_and_steel
 scoreboard objectives remove craftedObjItem11
 scoreboard objectives add craftedObjItem11 minecraft.crafted:minecraft.heavy_weighted_pressure_plate
 scoreboard objectives remove craftedObjItem12
@@ -268,23 +278,21 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set TimeToStartMatch gameVariable 300
 	scoreboard players set BluePoints gameVariable 0
 	scoreboard players set RedPoints gameVariable 0
-	# oreLeft is polled from calamity:points/update_mines
+	scoreboard players set ReadyBlue gameVariable 0
+	scoreboard players set ReadyRed gameVariable 0
+	# oreLeft is polled from calamity:player/update_displays
 	scoreboard players set OreLeft gameVariable 0
-
-
-# Index:
-# 0 = Lobby
-# 1 = In-progress
-# 2 = Post game
+    scoreboard players set #tableCandle gameVariable 0
+    scoreboard players set #tableCandleSmoke gameVariable 0
 
 # Game starts in lobby mode by default.
 scoreboard players set GameState gameVariable 0
+    # Index:
+    # 0 = Lobby
+    # 1 = In-progress
+    # 2 = Post game
 
 # Used to determine whether or not the game has started.
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,
 # calamity:game_state/trigger_cancel_start, and calamity:game_state/trigger_start_match
 scoreboard players set StartingMatch gameVariable 0
-
-
-# Let's alert the devs.
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Teams and objectives removed and reset","color":"light_purple"}]}

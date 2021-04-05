@@ -3,8 +3,7 @@
         "calamity:player/reset_data",
         "calamity:player/enable_triggers",
         "calamity:player/refill_items_and_health",
-        "calamity:player/spectate",
-        "calamity:player/teleport_to_spawn",
-        "calamity:player/spectate"
+        "calamity:player/give_recipes",
+        "calamity:load/arena/calamity/send_welcome_message"
     ]
 }

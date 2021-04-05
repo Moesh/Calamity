@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "resourcepacks\\Calamity"
+		},
+		{
+			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"cSpell.words": [
+			"moesh",
+			"respawn"
+		]
+	}
 }

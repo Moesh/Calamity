@@ -1,15 +1,19 @@
-# Called from: calamity:tick
+# Called from: #calamity:register_player
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Register the player on all the scoreboard they need. Enable triggers and set default
 #---------------------------------------------------------------------------------------------------
-
-# Always run
-scoreboard players set @s sneakTime 0
-
 # Enable if the match is in lobby mode
 execute if score GameState gameVariable matches 0 run scoreboard players reset @s startMatch
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s startMatch
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s selectTeam
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s selectTeam
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s toggleSpectator
+execute if score GameState gameVariable matches 0 run scoreboard players reset @s shuffle
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s shuffle
 
 # Enable if the match is in progress
 execute if score GameState gameVariable matches 1 run scoreboard players reset @s gg

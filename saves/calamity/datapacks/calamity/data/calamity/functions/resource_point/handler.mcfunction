@@ -17,8 +17,8 @@ function calamity:resource_point/pressure_plate/trigger
 
 # If running, update lights and play a sound
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Charging] at @s run function calamity:resource_point/update_lights_progress
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Charging] at @s run function calamity:resource_point/update_lights_charging 
-execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Charging] at @s run function calamity:resource_point/playsound_every_second 
+execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Charging] at @s run function calamity:resource_point/update_lights_charging
+execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Charging] at @s run function calamity:resource_point/playsound_every_second
 # If resetting, update lights only
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Resetting] at @s run function calamity:resource_point/update_lights_progress
 execute as @e[type=area_effect_cloud,name="ResourcePoint",tag=Resetting] at @s run function calamity:resource_point/update_lights_resetting

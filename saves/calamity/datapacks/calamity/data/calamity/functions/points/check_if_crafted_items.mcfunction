@@ -61,12 +61,6 @@ scoreboard players operation @s[scores={craftedObjItem09=1..}] craftedScore /= d
 scoreboard players operation @s[scores={craftedObjItem09=1..}] prepScore += @s craftedScore
 scoreboard players set @s[scores={craftedObjItem09=1..}] craftedObjItem09 0
 
-scoreboard players operation @s[scores={craftedObjItem10=1..}] craftedScore = @s craftedObjItem10
-scoreboard players operation @s[scores={craftedObjItem10=1..}] craftedScore *= flint_and_steel itemValues
-scoreboard players operation @s[scores={craftedObjItem10=1..}] craftedScore /= flint_and_steel itemCounts
-scoreboard players operation @s[scores={craftedObjItem10=1..}] prepScore += @s craftedScore
-scoreboard players set @s[scores={craftedObjItem10=1..}] craftedObjItem10 0
-
 scoreboard players operation @s[scores={craftedObjItem11=1..}] craftedScore = @s craftedObjItem11
 scoreboard players operation @s[scores={craftedObjItem11=1..}] craftedScore *= heavy_weighted_pressure_plate itemValues
 scoreboard players operation @s[scores={craftedObjItem11=1..}] craftedScore /= heavy_weighted_pressure_plate itemCounts

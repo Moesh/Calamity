@@ -6,7 +6,7 @@
 # Control where commands output and how
 gamerule commandBlockOutput false
 gamerule logAdminCommands false
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 
 # Set specific rules for this map
 gamerule doDaylightCycle false
@@ -35,13 +35,9 @@ gamerule doTraderSpawning false
 gamerule maxCommandChainLength 65536
 gamerule maxEntityCramming 0
 gamerule randomTickSpeed 10
-gamerule reducedDebugInfo false
+gamerule reducedDebugInfo true
 gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 7
-
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Gamerules set","color":"light_purple"}]}
-
 # Submitted for the approval of the Midnight Society...
 time set midnight
-tellraw @a[gamemode=creative] {"translate":">>> %s","color":"white","with":[{"translate":"Time set to midnight","color":"light_purple"}]}

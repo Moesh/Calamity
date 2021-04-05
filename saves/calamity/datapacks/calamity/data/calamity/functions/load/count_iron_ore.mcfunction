@@ -1,4 +1,4 @@
-# Called from: calamity:map_calamity_rules, calamity:points/setup_bossbar
+# Called from: calamity:arena/calamity/set_arena_rules, calamity:points/setup_bossbar
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Count the iron ore and fill it out.
