@@ -27,6 +27,11 @@ scoreboard players set @a killScore 0
 scoreboard players operation BluePoints gameVariable += @a[tag=Playing,team=blue] prepScore
 scoreboard players operation RedPoints gameVariable += @a[tag=Playing,team=red] prepScore
 
-execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"system.message","color":"gray","with":[{"translate":"calamity.points","color":"gray","with":[{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"}}]}]}
+# Send a progressively fancier message based on the amount of points the player gained
+execute as @a[tag=Playing,scores={prepScore=1..2}] run tellraw @a { "translate":"system.message", "color":"gray", "with":[ { "translate":"spacer.colon", "with":[ {"selector": "@s"}, { "translate":"calamity.points", "color":"gray", "with":[ {"score": {"name":"@s","objective":"prepScore"}} ] } ] } ] }
+execute as @a[tag=Playing,scores={prepScore=3..8}] run tellraw @a { "translate":"system.message", "color":"gray", "with":[ { "translate":"spacer.colon", "with":[ {"selector": "@s"}, { "translate":"calamity.points", "color":"dark_aqua", "with":[ {"score": {"name":"@s","objective":"prepScore"}} ] } ] } ] }
+execute as @a[tag=Playing,scores={prepScore=9..15}] run tellraw @a { "translate":"system.message", "color":"gray", "with":[ { "translate":"spacer.colon", "with":[ {"selector": "@s"}, { "translate":"calamity.points", "color":"aqua", "with":[ {"score": {"name":"@s","objective":"prepScore"}} ] } ] } ] }
+execute as @a[tag=Playing,scores={prepScore=16..21}] run tellraw @a { "translate":"system.message", "color":"gray", "with":[ { "translate":"spacer.colon", "with":[ {"selector": "@s"}, { "translate":"calamity.points", "color":"yellow", "with":[ {"score": {"name":"@s","objective":"prepScore"}} ] } ] } ] }
+execute as @a[tag=Playing,scores={prepScore=22..}] run tellraw @a { "translate":"system.message", "color":"gray", "with":[ { "translate":"spacer.colon", "with":[ {"selector": "@s"}, { "translate":"calamity.points", "color":"gold", "with":[ {"score": {"name":"@s","objective":"prepScore"}} ] } ] } ] }
 
 function calamity:player/update_displays
