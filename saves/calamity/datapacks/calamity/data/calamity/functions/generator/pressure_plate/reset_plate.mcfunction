@@ -1,4 +1,4 @@
-# Called from: calamity:resource_point/pressure_plate/trigger
+# Called from: calamity:generator/pressure_plate/trigger
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: When no player is detected on the pressure plate

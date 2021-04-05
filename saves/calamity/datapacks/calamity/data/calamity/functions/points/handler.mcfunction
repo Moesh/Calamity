@@ -13,7 +13,7 @@ scoreboard players set @a prepScore 0
 # We do not count iron_block, iron_ingot, or iron_nuggets.
 execute as @a[tag=Playing] run function calamity:points/check_if_crafted_items
 
-# Players can also capture a resource point for 1 point. We're really trying to make everyone feel
+# Players can also capture a generator for 1 point. We're really trying to make everyone feel
 # like they are contributing, even by gathering resources. Frankly speaking, it's a bit of travesty
 # that capturing resources is just as valuable as ending a life.
 execute as @a[tag=Playing] run scoreboard players operation @s prepScore += @s captureScore

@@ -1,6 +1,6 @@
 {
         "values": [
-                "calamity:resource_point/handler",
+                "calamity:generator/handler",
                 "calamity:points/handler",
                 "calamity:build_protection/handler"
 	]

@@ -1,7 +1,7 @@
-# Called from: calamity:resource_point/handler
+# Called from: calamity:generator/handler
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: Update lights for when a resource point is charging
+# Purpose: Update lights for when a generator is charging
 #---------------------------------------------------------------------------------------------------
 # Lights turn off right to left.
 

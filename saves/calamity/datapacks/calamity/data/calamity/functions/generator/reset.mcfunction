@@ -1,10 +1,10 @@
-# Called from: calamity:resource_point/handler
+# Called from: calamity:generator/handler
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: The resource point is returning to a neutral state.
+# Purpose: The generator is returning to a neutral state.
 #---------------------------------------------------------------------------------------------------
 
-# Remove tag which determine the resource point state.
+# Remove tag which determine the generator state.
 tag @s remove Resetting
 tag @s remove Charging
 
@@ -15,8 +15,8 @@ title @a[tag=GiveMessage] actionbar {"translate":"calamity.ready","color":"green
 tag @a[tag=GiveMessage] remove GiveMessage
 
 # Update the sign
-execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.ready\"}"}
-execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.ready\"}"}
+execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}"}
+execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove ReadyToStart

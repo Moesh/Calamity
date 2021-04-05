@@ -4,7 +4,7 @@ This repository houses the Minecraft: Java Edition custom profile for Calamity.
 
 Calamity is a two-laned attack and defend game mode for Minecraft: Java Edition. The goal of the game is to gain enough points to reach the score limit. The score limit is determined by how much ore is left in the central iron mines. The less iron ore in the mines, the lower the score limit will be.
 
-Players can gain points for their team by crafting items with iron ingots, capturing resource points, and through killing other players. Players can remove iron ore from the central mines to lower the score limit, making it easier to win. If players venture into enemy territory, they can capture power status effects for their team, or even Enchanted Books to power-up their tools or weapons.
+Players can gain points for their team by crafting items with iron ingots, capturing generators, and through killing other players. Players can remove iron ore from the central mines to lower the score limit, making it easier to win. If players venture into enemy territory, they can capture power status effects for their team, or even Enchanted Books to power-up their tools or weapons.
 
 ## Modified Minecraft elements
 This game is played in survival mode, but some elements have been modified. This is an entirely uncomprehensive list:
@@ -31,7 +31,7 @@ This game is played in survival mode, but some elements have been modified. This
 - Resource points
   - Has a modifiable charge and reset time (see map-specific rules below)
   - Players who are standing on the point when it is charged will receive items or status effects
-  - Players can only use resource points outlined in their team's color
+  - Players can only use generators outlined in their team's color
   - Points which give status effects are team wide, but only require one player to activate
 - Spawn items
   - Players will first spawn with a set of iron tools. The first tool you use is the one you will respawn with. Use /trigger resetSpawnItem to change your chosen item on your next life.
@@ -41,7 +41,7 @@ This game is played in survival mode, but some elements have been modified. This
     - Crafting Iron Blocks, Iron Nuggets, or Iron Ingots does not award points
   - Other point scoring is determined by map rules, see section below
 - Enchanted Books
-  - This resource point is located under your enemy's base
+  - This generator is located under your enemy's base
   - The output is determined by what item is held in your main hand
   - Holding a sword will produce a sword-related enchanted book (Knockback I)
   - Holding a tool will produce an enchanted book related to that tool
@@ -58,7 +58,7 @@ Calamity is both the game mode, and the first arena introduced. I hope to make, 
 - Mobs will not spawn
 - Resource points take 20 seconds (400 redstone ticks) to charge and reset
 - Scoring
-  - Players are awarded 1 point for capturing resource or status effect resource points
+  - Players are awarded 1 point for capturing resource or status effect generators
   - Players are awarded 20 points for capturing the Enchanted Book resource point
   - Players are awarded 1 point for killing other players
 

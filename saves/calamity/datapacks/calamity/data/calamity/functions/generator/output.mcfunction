@@ -1,10 +1,10 @@
-# Called from: calamity:resource_point/handler
+# Called from: calamity:generator/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Resource point has finished charging, check for nearby players and give resources or
 #   apply team effects. Update players and state.
 #---------------------------------------------------------------------------------------------------
-# Update resource point state
+# Update generator state
 tag @s add Resetting
 tag @s remove Charging
 scoreboard players operation @s PointTimer = PointResetTime mapRules
@@ -13,7 +13,7 @@ scoreboard players operation @s PointTimer = PointResetTime mapRules
 execute as @s[tag=TeamBlue] run tag @a[distance=..4,team=blue] add CheckIfStandingOnPoint
 execute as @s[tag=TeamRed] run tag @a[distance=..4,team=red] add CheckIfStandingOnPoint
 
-# We use this weird "if block" section because we know the shape of our resource point does not
+# We use this weird "if block" section because we know the shape of our generator does not
 #   exactly match Minecraft's search radius.
 execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-3 ~ minecraft:bedrock run tag @s add GiveEffects
 execute if entity @s[tag=Effect] as @a[tag=CheckIfStandingOnPoint,distance=..4] if block ~ ~-2 ~ minecraft:bedrock run tag @s add GiveEffects
@@ -39,7 +39,7 @@ execute as @a[team=blue,tag=AttackWithEffect,limit=1] run tag @a[team=blue] remo
 execute as @a[team=red,tag=AttackWithEffect,limit=1] run tag @a[team=blue] add GiveAttackEffect
 execute as @a[team=red,tag=AttackWithEffect,limit=1] run tag @a[team=red] remove GiveAttackEffect
 
-# Check for resource point type and give resources/effects
+# Check for generator type and give resources/effects
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveResources] minecraft:oak_log 16
 execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveResources] minecraft:scaffolding 16
 execute as @s[tag=GoldIngot] run give @a[distance=..4,tag=GiveResources] minecraft:gold_ingot 24
@@ -57,7 +57,7 @@ execute as @s[tag=MiningFatigue] run effect give @a[tag=GiveAttackEffect] minecr
 execute as @s[tag=Blindness] run effect give @a[tag=GiveAttackEffect] minecraft:blindness 45
 execute as @s[tag=Blindness] run effect give @a[tag=AttackWithEffect] minecraft:glowing 45
 
-# We've identified that a player is standing on a resource point type called "Enchant". Now let's
+# We've identified that a player is standing on a generator type called "Enchant". Now let's
 #   check what item they are holding in their main hand. This will determine what kind of book they
 #   are
 tag @a[tag=Enchant] add CheckForValidItem
@@ -183,11 +183,11 @@ tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:netherite_boots"
 #   clear. Players will want to know or learn what item gives what Enchanted Book, so we should
 #   work that in some day, but not in alpha.
 # TODO: Expand messages to include custom message for each book type.
-tellraw @a[tag=Enchant,tag=!CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedItem.valid","color": "gray","italic": true,"with":[{"translate":"calamity.enchanted.item","color":"white"}]}
-tellraw @a[tag=Enchant,tag=CheckForValidItem] {"translate":"calamity.resourcePoint.enchantedItem.invalid","color": "gray","italic": true,"with":[{"translate":"item.minecraft.enchanted_book","color":"white"}]}
-execute if entity @a[tag=Enchant,team=blue] run tellraw @a {"translate":"calamity.resourcePoint.enchantedItem.announced","color":"blue","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.blue"},{"translate":"b","color":"blue","font": "calamity:icons"}]}
+tellraw @a[tag=Enchant,tag=!CheckForValidItem] {"translate":"calamity.generator.enchantedItem.valid","color": "gray","italic": true,"with":[{"translate":"calamity.enchanted.item","color":"white"}]}
+tellraw @a[tag=Enchant,tag=CheckForValidItem] {"translate":"calamity.generator.enchantedItem.invalid","color": "gray","italic": true,"with":[{"translate":"item.minecraft.enchanted_book","color":"white"}]}
+execute if entity @a[tag=Enchant,team=blue] run tellraw @a {"translate":"calamity.generator.enchantedItem.announced","color":"blue","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.blue"},{"translate":"b","color":"blue","font": "calamity:icons"}]}
 
-execute if entity @a[tag=Enchant,team=red] run tellraw @a {"translate":"calamity.resourcePoint.enchantedItem.announced","color":"red","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.red"},{"translate":"r","color": "red","font": "calamity:icons"}]}
+execute if entity @a[tag=Enchant,team=red] run tellraw @a {"translate":"calamity.generator.enchantedItem.announced","color":"red","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.red"},{"translate":"r","color": "red","font": "calamity:icons"}]}
 
 # No valid item found, give default book
 # Default book should be a rather innoculous, but useful book. Should not be a book meant for
@@ -215,30 +215,31 @@ tag @a[tag=Enchant] remove Enchant
 
 # Resources
 title @a[tag=GiveMessage] times 5 30 10
-execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
-execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
-execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
-execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"32"}]}
-execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
-execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=Log] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.birch_log"},{"text":"16"}]}
+execute as @s[tag=Scaffolding] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.scaffolding"},{"text":"16"}]}
+execute as @s[tag=GoldIngot] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"item.minecraft.gold_ingot"},{"text":"24"}]}
+execute as @s[tag=Cobblestone] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.cobblestone"},{"text":"9"}]}
+execute as @s[tag=Arrow] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"item.minecraft.arrow"},{"text":"16"}]}
+execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=Points] run title @a[distance=..4,tag=GiveMessage] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 # Effects
-execute as @s[tag=Regeneration] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
-execute as @s[tag=Resistance] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.resourcePoint.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
-execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
-execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"30"}]}
-execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.resourcePoint.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"30"}]}
-execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
-execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.resourcePoint.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"calamity.resourcePoint.output.effect.level2"}]}
+execute as @s[tag=Regeneration] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.regeneration"},{"text":"45"}]}
+execute as @s[tag=Resistance] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.resistance"},{"text":"45"},{"translate":"calamity.generator.output.effect.level2"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.generator.output.attackEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=MiningFatigue] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.generator.output.attackedEffect","with":[{"translate":"effect.minecraft.mining_fatigue"},{"text":"45"}]}
+execute as @s[tag=Strength] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.strength"},{"text":"45"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttack] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.glowing"},{"text":"30"}]}
+execute as @s[tag=Blindness] run title @a[tag=GiveMessageAttacked] actionbar {"translate":"calamity.generator.output.attackedEffect","with":[{"translate":"effect.minecraft.blindness"},{"text":"30"}]}
+execute as @s[tag=Speed] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.speed"},{"text":"45"},{"translate":"calamity.generator.output.effect.level2"}]}
+execute as @s[tag=Haste] run title @a[tag=GiveMessage] actionbar {"translate":"calamity.generator.output.effect","with":[{"translate":"effect.minecraft.haste"},{"text":"45"},{"translate":"calamity.generator.output.effect.level2"}]}
 tag @a[tag=GiveMessage] remove GiveMessage
 tag @a[tag=GiveMessageAttack] remove GiveMessageAttack
 tag @a[tag=GiveMessageAttacked] remove GiveMessageAttacked
 
 # Update signs
-execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.activated\"}"}
-execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.resourcePoint.sign.activated\"}"}
+execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
+execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove Output

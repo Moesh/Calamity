@@ -1,4 +1,4 @@
-# Called from: calamity:resource_point/handler
+# Called from: calamity:generator/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Convert PointTimer into a percentage in preparation for updating lights
