@@ -6,7 +6,7 @@
                 {
                     "weight": 1,
                     "type": "item",
-                    "name": "minecraft:iron_shovel",
+                    "name": "minecraft:wooden_shovel",
                     "functions": [
                         {
                             "function": "set_nbt",
@@ -26,7 +26,7 @@
                                 }
                             ],
                             "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:241,CustomModelData:2}"
+                            "tag": "{Calamity:{SpawnSelectionItem:0b},Damage:46,CustomModelData:2}"
                         },
                         {
                             "conditions": [
@@ -42,7 +42,7 @@
                                 }
                             ],
                             "function": "set_nbt",
-                            "tag": "{Damage:240}"
+                            "tag": "{Damage:45}"
                         }
                     ]
                 }
