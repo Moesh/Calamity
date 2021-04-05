@@ -27,6 +27,6 @@ scoreboard players set @a killScore 0
 scoreboard players operation BluePoints gameVariable += @a[tag=Playing,team=blue] prepScore
 scoreboard players operation RedPoints gameVariable += @a[tag=Playing,team=red] prepScore
 
-execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"system.message","color":"gray","with":[{"translate":"%s: +%s points","color":"gray","with":[{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"}}]}]}
+execute as @a[tag=Playing,scores={prepScore=1..}] run tellraw @a {"translate":"system.message","color":"gray","with":[{"translate":"calamity.points","color":"gray","with":[{"selector": "@s"},{"score": {"name":"@s","objective":"prepScore"}}]}]}
 
 function calamity:player/update_displays
