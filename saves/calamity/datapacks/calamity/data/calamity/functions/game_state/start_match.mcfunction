@@ -25,6 +25,7 @@ tag @a[team=blue] add Playing
 tag @a[team=red] add Playing
 
 # Clear the player's items and effects, give them items, refill their health and hunger
+clear @a
 execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
 execute as @a[tag=Playing] run function calamity:player/give_match_effects
 gamemode survival @a[tag=Playing]
