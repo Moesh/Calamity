@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{Calamity:{SpawnItem:1b,SpawnItemId:103b,SpawnSelectionItem:1b},CustomModelData:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:10s}]}"
+                            "tag": "{Calamity:{SpawnItem:1b,SpawnItemId:103b,SpawnSelectionItem:1b},CustomModelData:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:1,Operation:0,UUID:[I;1633905484,2096447499,-1409204144,-359398214],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:4,Operation:0,UUID:[I;756803010,-1596436689,-1516152494,-323591883],Slot:\"mainhand\"}]}"
                         },
                         {
                             "conditions": [
