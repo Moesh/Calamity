@@ -80,6 +80,11 @@ scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
 scoreboard objectives remove sessionID
 scoreboard objectives add sessionID dummy
+    # Establish a SessionID by using game time. We wouldn't normally act on all players in a
+    #   function like this, but it's important the players are registered so an error message won't
+    #   play when we reload the game.
+    execute store result score SessionID gameVariable run time query gametime
+    scoreboard players operation @a sessionID = SessionID gameVariable
 # Minecraft will tick this up when a player disconnects from the game.
 scoreboard objectives remove leftGame
 scoreboard objectives add leftGame minecraft.custom:minecraft.leave_game
