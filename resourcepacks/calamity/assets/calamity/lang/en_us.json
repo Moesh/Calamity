@@ -51,7 +51,7 @@
 	"calamity.generator.enchantedItem.alreadyEnchanted": "Item already has this enchantment.",
 	"calamity.generator.enchantedItem.announced.invalid": "%s %s attempted to enchant an item and failed!",
 	"calamity.generator.enchantedItem.announced": "An %s was created by %s %s!",
-	"calamity.generator.enchantedItem.invalid": "No valid item found in main hand. Have an %s.",
+	"calamity.generator.enchantedItem.invalid": "No valid item found in main hand.",
 	"calamity.generator.enchantedItem.valid": "Valid item found! %s given.",
 	"calamity.generator.output.attackedEffect": "Given [%s%3$s] for %s seconds",
 	"calamity.generator.output.attackEffect": "Sent enemy [%s%3$s] for %s seconds",
