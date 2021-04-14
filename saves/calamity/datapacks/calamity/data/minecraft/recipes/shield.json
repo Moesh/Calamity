@@ -1,16 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WoW",
-    "WWW",
-    " W "
+    "ooo",
+    "ooo",
+    " o "
   ],
   "key": {
-    "W": {
-      "item": "minecraft:tnt"
-    },
     "o": {
-      "item": "minecraft:chain"
+      "tag": "minecraft:planks"
     }
   },
   "result": {
