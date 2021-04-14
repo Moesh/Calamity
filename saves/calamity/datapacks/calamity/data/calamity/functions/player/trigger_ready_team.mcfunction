@@ -37,4 +37,4 @@ scoreboard players enable @a[team=red] readyTeam
 scoreboard players set #tempVar gameVariable 0
 execute if score GameState gameVariable matches 0 run scoreboard players operation #tempVar gameVariable = ReadyBlue gameVariable
 execute if score GameState gameVariable matches 0 run scoreboard players operation #tempVar gameVariable += ReadyRed gameVariable
-execute if score #tempVar gameVariable matches 2 if score StartingMatch gameVariable matches 0 run function calamity:game_state/trigger_start_match
+execute if score #tempVar gameVariable matches 2 if score StartingMatch gameVariable matches 0 run function calamity:player/trigger_start_match

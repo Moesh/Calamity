@@ -5,12 +5,12 @@
 #---------------------------------------------------------------------------------------------------
 
 # Check if any player has used "/trigger readyTeam" and update the team state
-execute if score GameState gameVariable matches 0 run function calamity:game_state/trigger_ready_team
+execute if score GameState gameVariable matches 0 run function calamity:player/trigger_ready_team
 execute if score ReadyBlue gameVariable matches 1 unless entity @a[team=blue] run function calamity:game_state/ready_team/blue_not_ready
 execute if score ReadyRed gameVariable matches 1 unless entity @a[team=red] run function calamity:game_state/ready_team/red_not_ready
 
 # Shuffle the players if someone has made a request to!
-execute if score GameState gameVariable matches 0 run function calamity:game_state/trigger_shuffle
+execute if score GameState gameVariable matches 0 run function calamity:player/trigger_shuffle
 execute if score #ShufflePlayers gameVariable matches 1 run function calamity:game_state/shuffle_rest
 
 # This line below is for players who want to be cheeky. If they ever set a score for startMatch,
@@ -18,10 +18,10 @@ execute if score #ShufflePlayers gameVariable matches 1 run function calamity:ga
 execute if score GameState gameVariable matches 0 run scoreboard players set @a[scores={startMatch=..-1}] startMatch 0
 execute if score GameState gameVariable matches 0 run scoreboard players enable @a[scores={startMatch=0}] startMatch
 # If a game is not starting, check to see if players want to start a game
-execute as @a[scores={startMatch=1..}] at @s run function calamity:game_state/trigger_start_match
+execute as @a[scores={startMatch=1..}] at @s run function calamity:player/trigger_start_match
 
 # If a game start is happening, check to see if players want to cancel it
-execute as @a[scores={cancelStart=1..}] at @s if score StartingMatch gameVariable matches 1 run function calamity:game_state/trigger_cancel_start
+execute as @a[scores={cancelStart=1..}] at @s if score StartingMatch gameVariable matches 1 run function calamity:player/trigger_cancel_start
 
 # Tick this every second, if the players will it
 execute if score GameState gameVariable matches 0 if score StartingMatch gameVariable matches 1 run function calamity:game_state/timer_start_match
@@ -49,7 +49,7 @@ kill @e[type=item,nbt={Item: {tag: {Calamity: {SpawnItem: 1b}}}}]
 # We fix this problem by checking if a player leaves and then checks the forfeit state
 execute if score GameState gameVariable matches 1 store result score #tempVar gameVariable run execute if entity @a
 execute if score GameState gameVariable matches 1 run scoreboard players operation Players gameVariable -= #tempVar gameVariable
-execute if score GameState gameVariable matches 1 if score Players gameVariable matches 1.. run function calamity:game_state/trigger_gg
+execute if score GameState gameVariable matches 1 if score Players gameVariable matches 1.. run function calamity:player/trigger_gg
 execute if score GameState gameVariable matches 1 run scoreboard players operation Players gameVariable = #tempVar gameVariable
 # Reset our temp variable
 scoreboard players reset #tempVar gameVariable
@@ -59,7 +59,7 @@ scoreboard players reset #tempVar gameVariable
 # /trigger set gg 0, therefore disabling the gg trigger for themselves.
 execute if score GameState gameVariable matches 1 run scoreboard players set @a[scores={gg=..-1}] gg 0
 execute if score GameState gameVariable matches 1 run scoreboard players enable @a[scores={gg=0}] gg
-execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s if score GameState gameVariable matches 1 run function calamity:game_state/trigger_gg
+execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s if score GameState gameVariable matches 1 run function calamity:player/trigger_gg
 
 # Check for winner
 execute if score GameState gameVariable matches 1 if score BluePoints gameVariable >= OreLeft gameVariable run function calamity:game_state/blue_wins

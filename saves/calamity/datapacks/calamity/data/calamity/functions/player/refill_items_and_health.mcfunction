@@ -1,4 +1,4 @@
-# Called from: #calamity:register_player, calamity:game_state/start_match, calamity:game_state/trigger_reset_game
+# Called from: #calamity:register_player, calamity:game_state/start_match, calamity:player/trigger_reset_game
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Take ores from players and keep track until the end of the game.

@@ -1,4 +1,4 @@
-# Called from: calamity:game_state/trigger_ready_team
+# Called from: calamity:player/trigger_ready_team
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Update a team's sidebar state

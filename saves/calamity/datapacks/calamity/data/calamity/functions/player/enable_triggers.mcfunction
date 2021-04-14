@@ -25,7 +25,7 @@ execute if score GameState gameVariable matches 1 run scoreboard players enable 
 # The player who didn't vote leaves and another player joins in the same tick.
 # The player left check in calamity:game_state/handler would miss a player has left.
 # The forfeit vote would end up in an invalid state where everyone has voted for forfeit but the game didn't end.
-execute if score GameState gameVariable matches 1 run function calamity:game_state/trigger_gg
+execute if score GameState gameVariable matches 1 run function calamity:player/trigger_gg
 
 # Enable if post-game
 execute if score GameState gameVariable matches 2 run scoreboard players reset @s reset

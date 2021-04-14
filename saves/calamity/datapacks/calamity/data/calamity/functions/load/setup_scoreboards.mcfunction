@@ -131,6 +131,9 @@ scoreboard objectives add reset trigger
     # Shuffle teams
     scoreboard objectives remove shuffle
     scoreboard objectives add shuffle trigger
+    # Select arena
+    scoreboard objectives remove arena
+    scoreboard objectives add arena trigger
 
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
@@ -299,5 +302,5 @@ scoreboard players set GameState gameVariable 0
 
 # Used to determine whether or not the game has started.
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,
-# calamity:game_state/trigger_cancel_start, and calamity:game_state/trigger_start_match
+# calamity:player/trigger_cancel_start, and calamity:player/trigger_start_match
 scoreboard players set StartingMatch gameVariable 0

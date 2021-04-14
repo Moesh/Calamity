@@ -32,7 +32,7 @@ execute if score TimeInTicks gameVariable matches 20 run playsound calamity:cala
 function calamity:game_state/check_if_start_conditions_met
 execute if score #PlayersPlaying gameVariable matches 0 run playsound calamity:calamity.announcer.match.cancelled master @a 136 150 89 500
 execute if score #PlayersPlaying gameVariable matches 0 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.cancelled.noPlayers","color":"red"}]}
-execute if score #PlayersPlaying gameVariable matches 0 run function calamity:game_state/trigger_cancel_start
+execute if score #PlayersPlaying gameVariable matches 0 run function calamity:player/trigger_cancel_start
 
 execute if score TimeInTicks gameVariable matches 0 if score #PlayersPlaying gameVariable matches 1.. run function calamity:game_state/start_match
 
