@@ -9,7 +9,7 @@ scoreboard players operation #Every20Ticks gameVariable = TimeInTicks gameVariab
 function calamity:math/divide_by_twenty
 
 # When #Every20Ticks equals 0, a second has passed. Play a sound.
-execute if score #Every20Ticks gameVariable matches 0 run playsound minecraft:block.note_block.bit master @a 217 100 195 999999 0.7
+execute if score #Every20Ticks gameVariable matches 0 run playsound minecraft:block.note_block.bit master @a 136 150 89 999999 0.7
 
 # Check our progress. Announce to the player when enough time has passed.
 # 15, 10, and 5 seconds

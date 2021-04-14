@@ -4,7 +4,7 @@
 # Purpose: Reset the map and player states to neutral
 #---------------------------------------------------------------------------------------------------
 # Make the announcement
-playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
+playsound minecraft:event.raid.horn master @a 136 150 89 999999 0.75
 
 # Make all players spectators!
 gamemode spectator @a
