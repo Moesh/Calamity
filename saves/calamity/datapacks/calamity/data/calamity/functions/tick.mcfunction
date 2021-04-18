@@ -1,11 +1,12 @@
 # Called from: #minecraft:tick
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: Always tick these functions. Calls main game handlers. Sometimes a function is a single
-#   line.
+# Purpose: Always tick these functions
 #---------------------------------------------------------------------------------------------------
-# Any function here usually has it's own handling for lobby time and match time.
-function calamity:details
+
+# Some arenas may have special effects or other easter egg cases. Always tick these.
+scoreboard players set #arenaAction gameVariable 2
+function calamity:arena/handler
 
 # We know a player has just joined the game. If they're cool, let them pass. If they're not cool,
 #   then let them know they're gonna be cool and process them until they are cool. Cool? Cool.

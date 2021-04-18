@@ -19,9 +19,8 @@ team join fakeRed Red
 
 # Reset the whole arena
 # TODO: Add support for multiple arenas
-function calamity:load/arena/calamity/load_blocks
-function calamity:player/update_displays
-function calamity:points/setup_bossbar
+scoreboard players set #arenaAction gameVariable 0
+function calamity:arena/handler
 
 # Return the player to the lobby state
 execute as @a run function #calamity:register_player

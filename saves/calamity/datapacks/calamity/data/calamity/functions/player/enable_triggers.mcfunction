@@ -4,6 +4,7 @@
 # Purpose: Reset all potential triggers and enable ones based on current game mode.
 #---------------------------------------------------------------------------------------------------
 # Reset everything each time this function is run
+scoreboard players reset @s arena
 scoreboard players reset @s gg
 scoreboard players reset @s selectTeam
 scoreboard players reset @s shuffle
@@ -11,6 +12,7 @@ scoreboard players reset @s startMatch
 scoreboard players reset @s toggleSpectator
 
 # Enable if the match is in lobby mode
+execute if score GameState gameVariable matches 0 run scoreboard players enable @s arena
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s selectTeam
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s shuffle
 execute if score GameState gameVariable matches 0 run scoreboard players enable @s startMatch

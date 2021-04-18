@@ -6,8 +6,8 @@
 
 # Update the bossbar max value to corrolate with how much ore is left in the mines
 # Check out how many iron_ore blocks are in this area and store it
-execute store result score OreLeft gameVariable run fill 142 67 181 130 0 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
-fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
+scoreboard players set #arenaAction gameVariable 3
+function calamity:arena/handler
 execute store result bossbar calamity:iron_ore max run scoreboard players get OreLeft gameVariable
 
 # Update the bossbar current value and color with the score of whoever is currently winning

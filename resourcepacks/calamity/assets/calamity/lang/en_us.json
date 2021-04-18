@@ -7,6 +7,7 @@
 	"arena.shattering.name": "Shattering",
 	"book.pageIndicator": "\u00a7ov5.0.0",
 	"by.author": "by %s",
+	"calamity.arena.error.sameArena": "This arena is already selected.",
 	"calamity.book.cancelStart": "Cancel",
 	"calamity.book.forfeit": "Forfeit",
 	"calamity.book.hover.cancel": "Cancel match start",

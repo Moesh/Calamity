@@ -4,10 +4,7 @@
 			"path": "saves\\calamity\\datapacks\\calamity"
 		},
 		{
-			"path": "resourcepacks\\Calamity"
-		},
-		{
-			"path": "."
+			"path": "resourcepacks\\calamity"
 		}
 	],
 	"settings": {

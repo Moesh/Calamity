@@ -7,7 +7,10 @@
 # Create Mines boss bar
 bossbar remove calamity:iron_ore
 bossbar add calamity:iron_ore {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"text":"0:00"},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
-    function calamity:load/count_iron_ore
+    # Counting iron ore is done per arena, so let's call the arena handler and ask for an ore count
+    scoreboard players set #arenaAction gameVariable 3
+    function calamity:arena/handler
+    # Take the results and apply them to the boss bar
     execute store result bossbar calamity:iron_ore max run scoreboard players get OreLeft gameVariable
     bossbar set calamity:iron_ore style notched_10
     bossbar set calamity:iron_ore visible true

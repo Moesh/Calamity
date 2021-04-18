@@ -56,10 +56,10 @@ effect give @a minecraft:slow_falling 1 0 true
 effect clear @a minecraft:slow_falling
 
 # Teleport players to starting location
-tp @a[team=blue] 159 45 90 0 0
-spawnpoint @a[team=blue] 159 45 90
-tp @a[team=red] 113 45 90 0 0
-spawnpoint @a[team=red] 113 45 90
+execute at @e[type=area_effect_cloud,name="BlueSpawnpoint"] run teleport @a[team=blue] ~ ~ ~ 0 0
+execute at @e[type=area_effect_cloud,name="BlueSpawnpoint"] run spawnpoint @a[team=blue] ~ ~ ~
+execute at @e[type=area_effect_cloud,name="RedSpawnpoint"] run teleport @a[team=red] ~ ~ ~ 0 0
+execute at @e[type=area_effect_cloud,name="RedSpawnpoint"] run spawnpoint @a[team=red] ~ ~ ~
 
 # Reset the match timer
 scoreboard players set MatchTimeInTicks gameVariable 0

@@ -1,0 +1,9 @@
+{
+    "values": [
+        "calamity:arena/calamity/load_blocks",
+        "calamity:player/update_displays",
+        "calamity:points/setup_bossbar",
+        "calamity:arena/calamity/set_arena_rules",
+        "calamity:arena/calamity/send_welcome_message"
+    ]
+}

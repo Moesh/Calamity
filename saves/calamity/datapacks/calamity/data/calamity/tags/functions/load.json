@@ -4,8 +4,8 @@
 		"calamity:load/setup_teams",
 		"calamity:load/setup_tags",
 		"calamity:load/set_gamerules",
-		"calamity:load/arena/calamity/set_arena_rules",
-		"calamity:load/arena/calamity/load_blocks",
+		"calamity:arena/calamity/set_arena_rules",
+		"calamity:arena/calamity/load_blocks",
 		"calamity:points/setup_bossbar"
 	]
 }

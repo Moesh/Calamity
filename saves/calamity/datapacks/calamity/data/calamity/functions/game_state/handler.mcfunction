@@ -3,7 +3,6 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the lobby stage
 #---------------------------------------------------------------------------------------------------
-
 # Check if any player has used "/trigger readyTeam" and update the team state
 execute if score GameState gameVariable matches 0 run function calamity:player/trigger_ready_team
 execute if score ReadyBlue gameVariable matches 1 unless entity @a[team=blue] run function calamity:game_state/ready_team/blue_not_ready
@@ -29,7 +28,6 @@ execute if score GameState gameVariable matches 0 if score StartingMatch gameVar
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the match
 #---------------------------------------------------------------------------------------------------
-
 # Kill players who are out of bounds
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s unless block ~ 74 ~ minecraft:barrier run function calamity:player/out_of_bounds
 execute as @a[tag=Playing,gamemode=adventure] at @s if block ~ 74 ~ minecraft:barrier run gamemode survival @s
@@ -66,19 +64,16 @@ execute if score GameState gameVariable matches 1 if score BluePoints gameVariab
 execute if score GameState gameVariable matches 1 if score RedPoints gameVariable >= OreLeft gameVariable run function calamity:game_state/red_wins
 
 # Make sure there is air at the spawn points (Players can't respawn in moving piston blocks)
-execute if score GameState gameVariable matches 1 run fill 159 45 90 159 46 90 air destroy
-execute if score GameState gameVariable matches 1 run fill 113 45 90 113 46 90 air destroy
+execute if score GameState gameVariable matches 1 at @e[type=area_effect_cloud,name="BlueSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
+execute if score GameState gameVariable matches 1 at @e[type=area_effect_cloud,name="RedSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
 
+# Tick the game timer
 execute if score GameState gameVariable matches 1 run function calamity:game_state/timer
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the post-game
-#---------------------------------------------------------------------------------------------------
-
-# This line below is for players who want to be cheeky. If they ever set a score for startMatch,
-# go ahead and assume they want to start the match.
+#--------------------------------------------------------------------------------------------------
+# Players used trigger reset, let's process what they did.
 execute if score GameState gameVariable matches 2 run scoreboard players set @a[scores={reset=..-1}] reset 0
 execute if score GameState gameVariable matches 2 run scoreboard players enable @a[scores={reset=0}] reset
-
-# If a game is not starting, check to see if players want to start a game
 execute as @a[scores={reset=1..}] at @s if score GameState gameVariable matches 2 run function calamity:game_state/reset

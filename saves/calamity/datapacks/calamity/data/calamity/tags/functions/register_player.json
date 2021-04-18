@@ -4,6 +4,6 @@
         "calamity:player/enable_triggers",
         "calamity:player/refill_items_and_health",
         "calamity:player/give_recipes",
-        "calamity:load/arena/calamity/send_welcome_message"
+        "calamity:arena/calamity/send_welcome_message"
     ]
 }

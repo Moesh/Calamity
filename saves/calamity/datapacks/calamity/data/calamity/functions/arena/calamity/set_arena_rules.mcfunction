@@ -28,4 +28,5 @@ scoreboard objectives add mapRules dummy
 
 # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
 # teams must get to win the game.
-function calamity:load/count_iron_ore
+scoreboard players set #arenaAction gameVariable 3
+function calamity:arena/handler
