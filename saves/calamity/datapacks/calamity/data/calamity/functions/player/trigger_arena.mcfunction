@@ -27,9 +27,9 @@ execute if score #selectedArena gameVariable matches 1.. run function calamity:a
 # Calamity's arena makers must load and unload their own levels. The default action for the arena
 #   handler is to load the level, so we will not need to define #actionAction gameVariable for
 #   this action to run correctly.
+execute if score #selectedArena gameVariable matches 1.. run scoreboard players operation #currentArena gameVariable = #selectedArena gameVariable
 execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
-# Teleport all the players to the lobby start
-execute if score #selectedArena gameVariable matches 1.. run function calamity:player/set_to_lobby_mode
+execute if score #selectedArena gameVariable matches 1.. run execute as @a run function calamity:player/set_to_lobby_mode
 
 scoreboard players set #selectedArena gameVariable 0
 # Cases

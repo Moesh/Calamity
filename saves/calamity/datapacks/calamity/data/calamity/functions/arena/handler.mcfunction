@@ -20,7 +20,7 @@
 
 # 1 - Calamity: Modern by Moesh
     # Load a new arena
-    execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariables matches 1 run function #calamity:load_arena_1_modern
+    execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 1 run function #calamity:load_arena_1_modern
     # Erase the arenas
     execute if score #arenaAction gameVariable matches 1 if score #currentArena gameVariable matches 1 run function calamity:arena/calamity/erase
     # Some arenas might have additional things to tick every second. It should all be stored here.
@@ -31,7 +31,7 @@
 
 # 2 - Shattering by Moesh
     # Load a new arena
-    execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariables matches 2 run function #calamity:load_arena_2_shattering
+    execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 2 run function #calamity:load_arena_2_shattering
     # Erase the arenas
     execute if score #arenaAction gameVariable matches 1 if score #currentArena gameVariable matches 2 run function calamity:arena/shattering/erase
     # Additional actions

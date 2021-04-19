@@ -33,6 +33,7 @@ function calamity:game_state/handler
 # What if a player selects a team using a trigger?
 execute if score GameState gameVariable matches 0 run function calamity:player/trigger_join_team
 execute if score GameState gameVariable matches 0 run function calamity:player/trigger_spectate
+execute if score GameState gameVariable matches 0 run function calamity:player/trigger_arena
 
 # Run the functions listed in #calamity:tick_match if a match is running
 execute if score GameState gameVariable matches 1 run function #calamity:tick_match
