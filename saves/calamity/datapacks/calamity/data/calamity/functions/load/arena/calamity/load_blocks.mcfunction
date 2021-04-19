@@ -122,6 +122,11 @@ setblock 127 45 109 minecraft:red_wall_banner[facing=south]
 setblock 99 45 109 minecraft:red_wall_banner[facing=south]
 
 #---------------------------------------------------------------------------------------------------
+# Purpose: Load map height build protection
+#---------------------------------------------------------------------------------------------------
+summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"BuildHeight"}', Tags:["marker","mapHeight"], CustomNameVisible:0b, Duration:2147483647}
+
+#---------------------------------------------------------------------------------------------------
 # Purpose: Load generators
 #---------------------------------------------------------------------------------------------------
 # Kill all entities to ensure no drops or other things are left over.

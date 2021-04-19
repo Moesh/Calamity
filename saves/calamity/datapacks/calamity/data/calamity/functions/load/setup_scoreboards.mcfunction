@@ -23,6 +23,8 @@ scoreboard objectives add CONST dummy
 	scoreboard players set 60 CONST 60
 	scoreboard players set 80 CONST 80
 	scoreboard players set 100 CONST 100
+    scoreboard players set 8 CONST 8
+    scoreboard players set -8 CONST -8
 
 # Game rules are editable options, so they exist in the main directory, next to [calamity:tick] and
 #	are called directly from calamity:load
