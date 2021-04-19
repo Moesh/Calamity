@@ -1,4 +1,4 @@
-# Called from: #calamity:load, calamity:arena/handler, calamity:player/trigger_arena
+# Called from: #calamity:load, calamity:arena/handler
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load world blocks
