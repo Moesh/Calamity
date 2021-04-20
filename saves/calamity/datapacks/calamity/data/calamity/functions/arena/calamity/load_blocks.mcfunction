@@ -5,24 +5,6 @@
 #---------------------------------------------------------------------------------------------------
 # Place structure blocks
     # Left side
-<<<<<<< HEAD:saves/calamity/datapacks/calamity/data/calamity/functions/arena/calamity/load_blocks.mcfunction
-    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity2", sizeY: 27, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity4", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity6", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    # Right side
-    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity2", sizeY: 27, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity4", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity6", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    # Crosslane
-    setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
-    setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity8", sizeY: 27, sizeZ: 15, showboundingbox: 1b}
-=======
     setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
     setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
     setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
@@ -39,15 +21,10 @@
     # Crosslane
     setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
     setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/calamity8", sizeY: 21, sizeZ: 15, showboundingbox: 1b}
->>>>>>> 534e814 (structures and staged world for modular bounds system):saves/calamity/datapacks/calamity/data/calamity/functions/load/arena/calamity/load_blocks.mcfunction
     # Lobby
     setblock 117 33 26 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/lobby1", sizeY: 33, sizeZ: 48, showboundingbox: 1b}
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/lobby2", sizeY: 33, sizeZ: 3, showboundingbox: 1b}
     # Logo
-<<<<<<< HEAD:saves/calamity/datapacks/calamity/data/calamity/functions/arena/calamity/load_blocks.mcfunction
-    setblock 109 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 48, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/logo1", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
-    setblock 157 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 7, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/logo2", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
-=======
     setblock 109 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo1",sizeY:12,sizeZ:7,showboundingbox:1b}
     setblock 157 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:7,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/logo2",sizeY:12,sizeZ:7,showboundingbox:1b}
     # Data left side
@@ -61,7 +38,6 @@
     setblock 131 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data1", sizeY: 5, sizeZ: 12, showboundingbox: 1b}
     setblock 131 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 131 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
->>>>>>> 534e814 (structures and staged world for modular bounds system):saves/calamity/datapacks/calamity/data/calamity/functions/load/arena/calamity/load_blocks.mcfunction
 
 # Activate the structure blocks!
     # Left side
@@ -98,84 +74,7 @@
     setblock 131 252 101 minecraft:redstone_block
     setblock 131 252 149 minecraft:redstone_block
 
-
-<<<<<<< HEAD:saves/calamity/datapacks/calamity/data/calamity/functions/arena/calamity/load_blocks.mcfunction
 # Swap banner colors to red for mirrored lane
-=======
-# Clean-up everything
-    # Left side
-    setblock 141 0 87 minecraft:air
-    setblock 141 1 87 minecraft:air
-    setblock 141 0 101 minecraft:air
-    setblock 141 1 101 minecraft:air
-    setblock 141 0 149 minecraft:air
-    setblock 141 1 149 minecraft:air
-    setblock 141 0 86 minecraft:air
-    setblock 141 1 86 minecraft:air
-    setblock 141 0 100 minecraft:air
-    setblock 141 1 100 minecraft:air
-    setblock 141 0 148 minecraft:air
-    setblock 141 1 148 minecraft:air
-    # Right side
-    setblock 131 0 87 minecraft:air
-    setblock 131 1 87 minecraft:air
-    setblock 131 0 101 minecraft:air
-    setblock 131 1 101 minecraft:air
-    setblock 131 0 149 minecraft:air
-    setblock 131 1 149 minecraft:air
-    setblock 131 0 86 minecraft:air
-    setblock 131 1 86 minecraft:air
-    setblock 131 0 100 minecraft:air
-    setblock 131 1 100 minecraft:air
-    setblock 131 0 148 minecraft:air
-    setblock 131 1 148 minecraft:air
-    # Crosslane
-    setblock 131 3 178 minecraft:air
-    setblock 131 4 178 minecraft:air
-    setblock 131 0 179 minecraft:air
-    setblock 131 1 179 minecraft:air
-    setblock 131 3 179 minecraft:air
-    setblock 131 4 179 minecraft:air
-    # Lobby and logo
-    fill 109 67 73 109 67 74 minecraft:air
-    fill 157 67 73 157 67 74 minecraft:air
-    # Data left side
-    setblock 141 251 87 minecraft:air
-    setblock 141 251 101 minecraft:air
-    setblock 141 251 149 minecraft:air
-    setblock 141 252 87 minecraft:air
-    setblock 141 252 101 minecraft:air
-    setblock 141 252 149 minecraft:air
-    # Data crosslane
-    setblock 137 251 179 minecraft:air
-    setblock 131 251 179 minecraft:air
-    setblock 137 252 179 minecraft:air
-    setblock 131 252 179 minecraft:air
-    # Data right side
-    setblock 131 251 87 minecraft:air
-    setblock 131 251 101 minecraft:air
-    setblock 131 251 149 minecraft:air
-    setblock 131 252 87 minecraft:air
-    setblock 131 252 101 minecraft:air
-    setblock 131 252 149 minecraft:air
-
-    # If the world was switched to dev mode, we need to clean up additional blocks.
-    setblock 137 0 179 minecraft:air
-    setblock 137 1 179 minecraft:air
-    setblock 135 0 179 minecraft:air
-    setblock 135 1 179 minecraft:air
-    fill 117 32 74 117 34 74 minecraft:air
-    fill 117 32 26 117 34 26 minecraft:air
-    fill 141 0 178 141 1 179 minecraft:air
-
-
-# IMPORTANT: Removes the blue spawn marking blocks in the structure and places the red spawn marker blocks on the red side. These commands
-#   needs to be updated each time we edit this shape.
-fill 96 71 87 130 71 98 minecraft:air
-fill 96 70 87 130 70 98 minecraft:barrier
-
-# Setup banners to be red
->>>>>>> 534e814 (structures and staged world for modular bounds system):saves/calamity/datapacks/calamity/data/calamity/functions/load/arena/calamity/load_blocks.mcfunction
 setblock 102 45 109 minecraft:red_wall_banner[facing=south]
 setblock 105 45 109 minecraft:red_wall_banner[facing=south]
 setblock 108 45 109 minecraft:red_wall_banner[facing=south]
@@ -190,7 +89,6 @@ setblock 127 45 109 minecraft:red_wall_banner[facing=south]
 setblock 99 45 109 minecraft:red_wall_banner[facing=south]
 
 #---------------------------------------------------------------------------------------------------
-<<<<<<< HEAD:saves/calamity/datapacks/calamity/data/calamity/functions/arena/calamity/load_blocks.mcfunction
 # Purpose: Erase structure and redstone blocks
 #---------------------------------------------------------------------------------------------------
 # Lobby
@@ -227,11 +125,6 @@ fill 131 0 86 131 1 87 minecraft:air
 #---------------------------------------------------------------------------------------------------
 # Purpose: Kill all entities to ensure no drops or other things are left over.
 #---------------------------------------------------------------------------------------------------
-=======
-# Purpose: Kill all entities to ensure no drops or other things are left over.
-#---------------------------------------------------------------------------------------------------
-
->>>>>>> 534e814 (structures and staged world for modular bounds system):saves/calamity/datapacks/calamity/data/calamity/functions/load/arena/calamity/load_blocks.mcfunction
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.
 function calamity:load/kill_entities
 
@@ -244,13 +137,6 @@ execute store result score #arenaHeight gameVariable run data get entity @e[type
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load generators
 #---------------------------------------------------------------------------------------------------
-<<<<<<< HEAD:saves/calamity/datapacks/calamity/data/calamity/functions/arena/calamity/load_blocks.mcfunction
-=======
-
-# The players are decidely always in the play space. We can assume it's safe to remove all resource
-#   points and reset them.
-kill @e[type=area_effect_cloud,tag=Point]
->>>>>>> 534e814 (structures and staged world for modular bounds system):saves/calamity/datapacks/calamity/data/calamity/functions/load/arena/calamity/load_blocks.mcfunction
 # Blue team generators only appear on the blue lane
 summon minecraft:area_effect_cloud 169 42 118 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 164 43 142 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
