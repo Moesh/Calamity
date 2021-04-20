@@ -7,8 +7,8 @@
 # We also don't want to fill moving_piston blocks above the arena height since the player can't get there anyways.
 
 # y=0 to y=9
-execute if score #tempYLocation gameVariable matches ..7 run fill ~ 0 ~ ~ ~8 ~ minecraft:red_sandstone replace #calamity:protection_replaceable
+execute if score #tempYLocation gameVariable matches ..7 run fill ~ 0 ~ ~ ~8 ~ minecraft:moving_piston replace #calamity:protection_replaceable
 # y=9 to y=arenaHeight-8
-execute if score #tempHeight gameVariable >= 8 CONST if score #tempYLocation gameVariable matches 8.. run fill ~ ~-8 ~ ~ ~8 ~ minecraft:red_sandstone replace #calamity:protection_replaceable
+execute if score #tempHeight gameVariable >= 8 CONST if score #tempYLocation gameVariable matches 8.. run fill ~ ~-8 ~ ~ ~8 ~ minecraft:moving_piston replace #calamity:protection_replaceable
 # y=arenaHeight-8 to y=arenaHeight
 execute if score #tempHeight gameVariable < 8 CONST run function calamity:build_protection/fix_wall_high
