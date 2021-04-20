@@ -101,19 +101,19 @@ fill 131 0 100 131 1 101 minecraft:air
 fill 131 0 86 131 1 87 minecraft:air
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: Load map height build protection
+# Purpose: Kill all entities to ensure no drops or other things are left over.
 #---------------------------------------------------------------------------------------------------
-summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"BuildHeight"}', Tags:["marker","mapHeight"], CustomNameVisible:0b, Duration:2147483647}
+#IMPORTANT: This will kill any entity markers. Run before new markers are made.
+function calamity:load/kill_entities
+
+#---------------------------------------------------------------------------------------------------
+# Purpose: Load arena height marker
+#---------------------------------------------------------------------------------------------------
+summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"BuildHeight"}', Tags:["marker","arenaHeight"], CustomNameVisible:0b, Duration:2147483647}
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load generators
 #---------------------------------------------------------------------------------------------------
-# Kill all entities to ensure no drops or other things are left over.
-function calamity:load/kill_entities
-
-# The players are decidely always in the play space. We can assume it's safe to remove all resource
-#   points and reset them.
-kill @e[type=area_effect_cloud,tag=Point]
 # Blue team generators only appear on the blue lane
 summon minecraft:area_effect_cloud 169 42 118 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 164 43 142 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}

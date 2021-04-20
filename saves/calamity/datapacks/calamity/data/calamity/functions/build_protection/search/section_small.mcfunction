@@ -1,4 +1,4 @@
-# Called from: calamity:build_protection/section_medium
+# Called from: calamity:build_protection/search/section_medium
 
 # Put the replaced barrier blocks back
 fill ~ 73 ~ ~3 73 ~3 minecraft:barrier replace minecraft:glass

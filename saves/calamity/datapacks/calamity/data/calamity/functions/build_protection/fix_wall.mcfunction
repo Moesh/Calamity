@@ -1,4 +1,4 @@
-# Called from: calamity:build_protection/section_small
+# Called from: calamity:build_protection/search/section_small, calamity:build_protection/search/section_small_all
 
 # We only really need to fix the wall at around the same y layer as the explosion happened
 # We will just do a relative fill a from a y layer a little under the explosion up to a y layer a little higher

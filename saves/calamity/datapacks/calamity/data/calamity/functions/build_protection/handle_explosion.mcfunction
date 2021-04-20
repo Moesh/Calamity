@@ -1,45 +1,37 @@
 # Called from: calamity:build_protection/handler
 
-# A tnt has exploded. Now lets fix the walls of moving_piston blocks.
-# tnt seems to be able to blow up moving_piston up to around 5 blocks away.
-# To know where there is supposed to be moving_piston blocks after they are blown up we use marker blocks at layer y=70 
-# Now to fix the wall we just check y=70, if there is a block there then we know we have to fill in some moving_piston blocks
-#
-# Sadly there is no easy way to find all the y=70 blocks around the explosion.
-# We have to check one block at a time to see if there should be a wall or not.
-# Thats a lot of blocks we have to check one by one. And just to be sure we should check a little more so we check 24x24 around the explosion.
-# 
-# To minimize the amount of commands we need to run we split the 24x24 section into 4 smaller sections which are 12x12 big.
-# We then check if those sections contains any blocks at y=70. If they do we split the section into smaller 4x4 sections.
-# We then go through the blocks one by one in those 4x4 sections and place moving_piston blocks if needed.
+# A tnt has exploded. Now lets fix moving_piston blocks.
+# TNT seems to be able to blow up moving_piston up to around 5 blocks away.
+# The "wall" moving_piston blocks are marked by marker blocks at layer y=73.
+# The "roof" moving_piston blocks are marked by marker blocks at layer y=74. This is the in bounds region.
+# The height of the roof is determined by the height of a marker entity @e[tag=marker,tag=arenaHeight].
 
+# Check for all of these markers to determine where to replace moving_piston blocks.
+# We have to check one block at a time to see if there should be a moving_piston.
+# That is a lot of blocks we have to check one by one.
+# An x/y/z space of 24x16x24 blocks around the explosion will be checked. 
+# First check to see if the y height is in range of the arena height. If it is we have to search y=74 for the bounds region.
+# Since this will be a search over an x/z plane, y=73 at the same time.
+# If the y height is not in range of the arena height, only search the x/z plane for y=73.
+#
+# The 24x24 x/z search area is split into 12x12 x/z planes and checked for barrier marker blocks. (section_large)
+# If a 12x12 x/z area contains a marker block, split the 12x12 search area 3x3 x/z planes. (section_mediumn)
+# If a 3x3 x/z plane contains a marker block, check each block in that plane for a marker block. (section_small)
+
+# get the explosion height
 execute store result score #tempYLocation gameVariable run data get entity @s Pos[1]
 
-# check if there are blocks and split into the small sections
-execute store result score #tempVar gameVariable run fill ~-12 73 ~-12 ~-1 73 ~-1 minecraft:glass replace minecraft:barrier
-execute if score #tempVar gameVariable matches 1.. positioned ~-6 ~ ~-6 run function calamity:build_protection/section_medium
-
-execute store result score #tempVar gameVariable run fill ~-12 73 ~0 ~-1 73 ~11 minecraft:glass replace minecraft:barrier
-execute if score #tempVar gameVariable matches 1.. positioned ~-6 ~ ~6 run function calamity:build_protection/section_medium
-
-execute store result score #tempVar gameVariable run fill ~0 73 ~-12 ~11 73 ~-1 minecraft:glass replace minecraft:barrier
-execute if score #tempVar gameVariable matches 1.. positioned ~6 ~ ~-6 run function calamity:build_protection/section_medium
-
-execute store result score #tempVar gameVariable run fill ~0 73 ~0 ~11 73 ~11 minecraft:glass replace minecraft:barrier
-execute if score #tempVar gameVariable matches 1.. positioned ~6 ~ ~6 run function calamity:build_protection/section_medium
-
-
-# The map height moving_piston blocks also need to be fixed. The map height is got from the map height marker @e[tag=marker,tag=mapHeight]. It is required for each arena.
-# If the explosion is not with in 8 vertical blocks of the map height, then I do not need to fix anything.
-execute store result score #tempExplosion gameVariable run data get entity @s Pos[1]
-execute store result score #tempHeight gameVariable run data get entity @e[tag=marker,tag=mapHeight,limit=1,type=area_effect_cloud] Pos[1]
-scoreboard players operation #tempExplosion gameVariable -= #tempHeight gameVariable
-execute if score #tempExplosion gameVariable < 8 CONST if score #tempExplosion gameVariable > -8 CONST run function calamity:build_protection/height/fix
-scoreboard players reset #tempExplosion gameVariable
-scoreboard players reset #tempHeight
+# Only search for fixable height blocks if the explosion was in range of the height. 
+execute store result score #tempHeight gameVariable run data get entity @e[tag=marker,tag=arenaHeight,limit=1,type=area_effect_cloud] Pos[1]
+scoreboard players operation #tempHeight gameVariable -= #tempYLocation gameVariable
+execute if score #tempHeight gameVariable <= 8 CONST if score #tempHeight gameVariable >= -8 CONST run function calamity:build_protection/search/section_large_all
+# If the explosion was not in range of the height, only search for walls.
+# If it is higher than the map height, it will also be higher than the walls. Only run the wall check if below the map height.
+execute if score #tempHeight gameVariable < -8 CONST run function calamity:build_protection/search/section_large
 
 # Reset our temp variables
 scoreboard players reset #tempVar gameVariable
+scoreboard players reset #tempHeight gameVariable
 scoreboard players reset #tempYLocation gameVariable
 
 # Kill the entity if it's the item from a bed explosion
