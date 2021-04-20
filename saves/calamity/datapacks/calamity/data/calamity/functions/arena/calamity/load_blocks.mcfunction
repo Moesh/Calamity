@@ -101,6 +101,11 @@ fill 131 0 100 131 1 101 minecraft:air
 fill 131 0 86 131 1 87 minecraft:air
 
 #---------------------------------------------------------------------------------------------------
+# Purpose: Load map height build protection
+#---------------------------------------------------------------------------------------------------
+summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"BuildHeight"}', Tags:["marker","mapHeight"], CustomNameVisible:0b, Duration:2147483647}
+
+#---------------------------------------------------------------------------------------------------
 # Purpose: Load generators
 #---------------------------------------------------------------------------------------------------
 # Kill all entities to ensure no drops or other things are left over.

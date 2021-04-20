@@ -28,6 +28,16 @@ execute if score #tempVar gameVariable matches 1.. positioned ~6 ~ ~-6 run funct
 execute store result score #tempVar gameVariable run fill ~0 73 ~0 ~11 73 ~11 minecraft:glass replace minecraft:barrier
 execute if score #tempVar gameVariable matches 1.. positioned ~6 ~ ~6 run function calamity:build_protection/section_medium
 
+
+# The map height moving_piston blocks also need to be fixed. The map height is got from the map height marker @e[tag=marker,tag=mapHeight]. It is required for each arena.
+# If the explosion is not with in 8 vertical blocks of the map height, then I do not need to fix anything.
+execute store result score #tempExplosion gameVariable run data get entity @s Pos[1]
+execute store result score #tempHeight gameVariable run data get entity @e[tag=marker,tag=mapHeight,limit=1,type=area_effect_cloud] Pos[1]
+scoreboard players operation #tempExplosion gameVariable -= #tempHeight gameVariable
+execute if score #tempExplosion gameVariable < 8 CONST if score #tempExplosion gameVariable > -8 CONST run function calamity:build_protection/height/fix
+scoreboard players reset #tempExplosion gameVariable
+scoreboard players reset #tempHeight
+
 # Reset our temp variables
 scoreboard players reset #tempVar gameVariable
 scoreboard players reset #tempYLocation gameVariable
