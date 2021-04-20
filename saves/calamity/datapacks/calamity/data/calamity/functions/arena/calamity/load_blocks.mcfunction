@@ -107,9 +107,10 @@ fill 131 0 86 131 1 87 minecraft:air
 function calamity:load/kill_entities
 
 #---------------------------------------------------------------------------------------------------
-# Purpose: Load arena height marker
+# Purpose: Load arena height marker and define the map height
 #---------------------------------------------------------------------------------------------------
-summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"BuildHeight"}', Tags:["marker","arenaHeight"], CustomNameVisible:0b, Duration:2147483647}
+summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"ArenaHeight"}', Tags:["marker","arenaHeight"], CustomNameVisible:0b, Duration:2147483647}
+execute store result score #arenaHeight gameVariable run data get entity @e[type=area_effect_cloud,tag=marker,tag=arenaHeight,limit=1] Pos[1]
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Load generators

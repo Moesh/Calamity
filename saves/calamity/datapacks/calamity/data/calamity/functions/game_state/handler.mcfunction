@@ -29,12 +29,14 @@ execute if score GameState gameVariable matches 0 if score StartingMatch gameVar
 # Purpose: Tick these functions during the match
 #---------------------------------------------------------------------------------------------------
 # Kill players who are out of bounds
-execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s unless block ~ 74 ~ minecraft:barrier run function calamity:player/out_of_bounds
-execute as @a[tag=Playing,gamemode=adventure] at @s if block ~ 74 ~ minecraft:barrier run gamemode survival @s
-execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run tellraw @s {"translate":"calamity.cheated.yourself","color": "gray","italic": true}
-execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s if block 96 ~1 86 minecraft:barrier run kill @s
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] store result score @s playerHeight run data get entity @s Pos[1]
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] run scoreboard players operation @s playerHeight -= 2 CONST
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s unless block ~ 255 ~ minecraft:barrier run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] unless score @s playerHeight < #arenaHeight gameVariable run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=adventure] at @s if block ~ 255 ~ minecraft:barrier run gamemode survival @s
+
 # Kill out of bounds boats
-execute as @e[type=boat] at @s unless block ~ 74 ~ minecraft:barrier run kill @s
+execute as @e[type=boat] at @s unless block ~ 255 ~ minecraft:barrier run kill @s
 
 # Handle the spawn items
 execute if score GameState gameVariable matches 1 as @a[tag=Playing] run function calamity:player/spawn_items/handler

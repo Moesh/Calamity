@@ -96,6 +96,7 @@ scoreboard objectives remove selectedItem
 scoreboard objectives add selectedItem dummy
 scoreboard objectives remove giveSpawnItems
 scoreboard objectives add giveSpawnItems deathCount
+scoreboard objectives add playerHeight dummy
 
 # Player triggers
 # These are ALWAYS reset when they are enabled. Players have no score by default.
