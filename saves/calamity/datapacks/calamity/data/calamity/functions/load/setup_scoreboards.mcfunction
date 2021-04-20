@@ -14,10 +14,12 @@
 scoreboard objectives remove CONST
 scoreboard objectives add CONST dummy
 	scoreboard players set -100 CONST -100
+	scoreboard players set -8 CONST -8
 	scoreboard players set 2 CONST 2
 	scoreboard players set 3 CONST 3
 	scoreboard players set 4 CONST 4
 	scoreboard players set 6 CONST 6
+	scoreboard players set 8 CONST 8
 	scoreboard players set 12 CONST 12
 	scoreboard players set 20 CONST 20
 	scoreboard players set 60 CONST 60
@@ -94,6 +96,7 @@ scoreboard objectives remove selectedItem
 scoreboard objectives add selectedItem dummy
 scoreboard objectives remove giveSpawnItems
 scoreboard objectives add giveSpawnItems deathCount
+scoreboard objectives add playerHeight dummy
 
 # Player triggers
 # These are ALWAYS reset when they are enabled. Players have no score by default.
