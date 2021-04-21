@@ -290,8 +290,7 @@ tag @a[tag=GiveMessageAttack] remove GiveMessageAttack
 tag @a[tag=GiveMessageAttacked] remove GiveMessageAttacked
 
 # Update signs
-execute as @s[tag=FacingWest] run data merge block ~-3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
-execute as @s[tag=FacingEast] run data merge block ~3 ~ ~ {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
+execute as @s run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove Output
