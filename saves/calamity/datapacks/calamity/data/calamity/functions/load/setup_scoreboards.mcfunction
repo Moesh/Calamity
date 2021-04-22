@@ -286,18 +286,22 @@ scoreboard objectives add craftedObjItem32 minecraft.crafted:minecraft.tripwire_
 # This objective is removed and reset after each round to ensure no hanky panky has occurred. 
 scoreboard objectives remove gameVariable
 scoreboard objectives add gameVariable dummy
-	scoreboard players set TimeToStartMatch gameVariable 300
+    # Setup visible variables
+    scoreboard players set ArenaSelectCooldown gameVariable 0
 	scoreboard players set BluePoints gameVariable 0
-	scoreboard players set RedPoints gameVariable 0
-	scoreboard players set ReadyBlue gameVariable 0
-	scoreboard players set ReadyRed gameVariable 0
 	# oreLeft is polled from calamity:player/update_displays
 	scoreboard players set OreLeft gameVariable 0
+	scoreboard players set ReadyBlue gameVariable 0
+	scoreboard players set ReadyRed gameVariable 0
+	scoreboard players set RedPoints gameVariable 0
+	scoreboard players set TimeToStartMatch gameVariable 300
+    # Setup hidden variables
+    scoreboard players set #arenaAction gameVariable 0
+    scoreboard players set #currentArena gameVariable 1
+    scoreboard players set #currentArena gameVariable 1
+    scoreboard players set #selectedArena gameVariable 0
     scoreboard players set #tableCandle gameVariable 0
     scoreboard players set #tableCandleSmoke gameVariable 0
-    scoreboard players set #arenaAction gameVariable 0
-    scoreboard players set #selectedArena gameVariable 0
-    scoreboard players set #currentArena gameVariable 1
 
 # Game starts in lobby mode by default.
 scoreboard players set GameState gameVariable 0

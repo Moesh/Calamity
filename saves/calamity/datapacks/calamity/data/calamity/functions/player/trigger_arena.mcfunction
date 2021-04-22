@@ -4,6 +4,14 @@
 #> Purpose: A player has tried to use the /trigger arena command.
 #>--------------------------------------------------------------------------------------------------
 
+# If an arena was recently switched, continue the cooldown timer
+execute if score ArenaSelectCooldown gameVariable matches 1.. run scoreboard players remove ArenaSelectCooldown gameVariable 1
+
+# Check if the arena has been switched recently and is still on cooldown
+execute if entity @a[scores={arena=1..},limit=1] if score ArenaSelectCooldown gameVariable matches 1.. run tellraw @a {"translate":"system.message","color": "red","with":[{"translate":"calamity.arena.error.cooldown"}]}
+execute if entity @a[scores={arena=1..},limit=1] if score ArenaSelectCooldown gameVariable matches 1.. run scoreboard players reset @a arena
+execute if entity @a[scores={arena=1..},limit=1] if score ArenaSelectCooldown gameVariable matches 1.. run scoreboard players enable @a arena
+
 # If the #currentArena gameVariable matches trigger number, the current arena is already selected.
 #   Advise the player that they've made a mistake
 execute if score @a[scores={arena=1..},limit=1] arena = #currentArena gameVariable run tellraw @a[scores={arena=1..}] {"translate":"system.message","color":"red","with":[{"translate": "calamity.arena.error.sameArena"}]}
@@ -20,6 +28,10 @@ scoreboard players enable @a arena
 #   level.
 execute if score #selectedArena gameVariable matches 1.. run scoreboard players set #arenaAction gameVariable 1
 execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
+
+# Switching arenas too quickly can cause a crash because of how many blocks are loading and
+#   unloading. Let's limit this to every 5 seconds and advise the player.
+execute if score #selectedArena gameVariable matches 1.. run scoreboard players set ArenaSelectCooldown gameVariable 60
 
 # Calamity's arena makers must load and unload their own levels. The default action for the arena
 #   handler is to load the level, so we will not need to define #actionAction gameVariable for
