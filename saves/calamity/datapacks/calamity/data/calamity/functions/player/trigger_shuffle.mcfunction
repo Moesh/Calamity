@@ -1,8 +1,8 @@
-# Called from: calamity:game_state/handler
+# Called from: calamity:game_state/tick_lobby
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: A player has requested to shuffle players onto a teams. Let's do it intelligently.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: A player has requested to shuffle players onto a teams. Let's do it intelligently.
+#>--------------------------------------------------------------------------------------------------
 
 # We'll first handle "shuffle rest of the players" option, which is /trigger shuffle (default: 1).
 # This command stores the success count of a test. The test in this next line is

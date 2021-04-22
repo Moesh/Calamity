@@ -1,8 +1,8 @@
-# Called from: calamity:game_state/handler
+# Called from: calamity:game_state/tick_lobby
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Let players tell each other they are ready to start
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Let players tell each other they are ready to start
+#>--------------------------------------------------------------------------------------------------
 
 # This first section is an important step in understanding scripting logic. A player has used the
 #   slash command, "/trigger readyTeam". This is a single-input command that treats itself like a

@@ -1,8 +1,9 @@
 # Called from: #calamity:register_player
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Reset all potential triggers and enable ones based on current game mode.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Reset all potential triggers and enable ones based on current game mode.
+#>--------------------------------------------------------------------------------------------------
+
 # Reset everything each time this function is run
 scoreboard players reset @s arena
 scoreboard players reset @s gg
@@ -24,7 +25,7 @@ execute if score GameState gameVariable matches 1 run scoreboard players enable 
 # An invalid state could have been hit by:
 #   - Everyone but one players vote for forfeit.
 #   - The player who didn't vote leaves and another player joins in the same tick.
-#   - The player left check in calamity:game_state/handler would miss a player has left.
+#   - The player left check would miss a player has left.
 #   - The forfeit vote would end up in an invalid state where everyone has voted for forfeit but
 #       the game didn't end.
 execute if score GameState gameVariable matches 1 run function calamity:player/trigger_gg

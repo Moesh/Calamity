@@ -1,8 +1,10 @@
-# Called from: calamity:tick
+# Called from: calamity:game_state/timer, calamity:game_state/toast/blue_wins,
+#   calamity:game_state/toast/red_wins, calamity:load/setup_scoreboards, calamity:points/handler,
+#   #calamity:load_arena_<all>
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Check the iron mines in the crosslane every tick and update the objective score
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Check the iron mines in the crosslane and update the objective score
+#>--------------------------------------------------------------------------------------------------
 
 # Update the bossbar max value to corrolate with how much ore is left in the mines
 # Check out how many iron_ore blocks are in this area and store it

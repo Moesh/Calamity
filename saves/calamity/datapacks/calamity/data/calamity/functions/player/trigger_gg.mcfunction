@@ -1,8 +1,9 @@
-# Called from: calamity:game_state/handler
+# Called from: calamity:game_state/tick_match
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Let a player quit the game early.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: "Good game" mechanic. If a match is not going well, why force players to play through
+#>  the whole match? Let them keep their dignity and GG the heck out of there.
+#>--------------------------------------------------------------------------------------------------
 
 # Mark players who have run the gg trigger
 tag @a[team=blue,gamemode=!spectator,scores={gg=1..}] add ForfeitTriggered
@@ -35,7 +36,6 @@ execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score 
 scoreboard players set #tempBlueForfeit gameVariable 0
 execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempBlueForfeit gameVariable 1
 
-
 #---------------------------------------------------------------------------------------------------
 # Red team forfeit
 #---------------------------------------------------------------------------------------------------
@@ -56,17 +56,15 @@ execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #
 scoreboard players set #tempRedForfeit gameVariable 0
 execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempRedForfeit gameVariable 1
 
-
 #---------------------------------------------------------------------------------------------------
 # Check forfeit scores
 #---------------------------------------------------------------------------------------------------
 
 # It's possible for both teams to forfeit at the exact same time.
-# So we check if one or both team forfeited and give the correct message based on that.
-# TODO: Write prestige function for what happens when both teams forfeit at the same time.
+# If one or both team forfeited and give the correct message based on that.
 execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 1 run tellraw @a {"translate":"system.message","with":[{"translate":"calamity.forfeit.draw","color":"green"}]}
-execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 0 run function calamity:game_state/blue_forfeits
-execute if score #tempBlueForfeit gameVariable matches 0 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/red_forfeits
+execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 0 run function calamity:game_state/toast/blue_forfeits
+execute if score #tempBlueForfeit gameVariable matches 0 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/toast/red_forfeits
 
 # End the game if a team has forfeited
 execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/end_match

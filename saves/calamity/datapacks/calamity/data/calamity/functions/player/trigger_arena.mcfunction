@@ -1,11 +1,8 @@
-# Called from: calamity:game_state/handler
+# Called from: calamity:game_state/tick_lobby
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: A player has tried to use the /trigger arena command.
-#---------------------------------------------------------------------------------------------------
-
-# #selectedArena gameVariable 0
-# #currentArena gameVariable 0
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: A player has tried to use the /trigger arena command.
+#>--------------------------------------------------------------------------------------------------
 
 # If the #currentArena gameVariable matches trigger number, the current arena is already selected.
 #   Advise the player that they've made a mistake
@@ -31,15 +28,5 @@ execute if score #selectedArena gameVariable matches 1.. run scoreboard players 
 execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
 execute if score #selectedArena gameVariable matches 1.. run execute as @a run function calamity:player/set_to_lobby_mode
 
+# Always reset this variable
 scoreboard players set #selectedArena gameVariable 0
-# Cases
-# - Player selects current arena:
-#   - Send message: No action can be taken, arena already selected
-#   - Exit
-# - Player selects another arena:
-#   - Pass trigger variable to #NewArenaSelection gameVariable
-#   - Run arena handler to erase current arena
-#   - Erase current arena
-#   - Load new arena
-#   - Reset players to new lobby location
-
