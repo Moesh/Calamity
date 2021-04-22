@@ -1,3 +1,9 @@
+# Called from: calamity:game_state/tick_match
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Handling for spawn items
+#>--------------------------------------------------------------------------------------------------
+
 # When an item changing command is called from a function which was granted by an advancement triggered by an inventory changed
 # the items sometimes don't visually update.
 # To fix this we give the player a tag to show what change we want to make to the inventory and then make that change in here.

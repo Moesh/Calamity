@@ -1,6 +1,9 @@
 # Called from: calamity:build_protection/handle_explosion
 
-# check if there are blocks and split into the small sections
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Check if there are blocks and split into the small sections
+#>--------------------------------------------------------------------------------------------------
+
 execute store result score #tempVar gameVariable run fill ~-12 254 ~-12 ~-1 254 ~-1 minecraft:glass replace minecraft:barrier
 execute if score #tempVar gameVariable matches 1.. positioned ~-6 ~ ~-6 run function calamity:build_protection/search/section_medium
 

@@ -1,5 +1,8 @@
 # Called form calamity:player/spawn_items/handler
-# (Called after player has died)
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Called after player has died. Give player new starting items.
+#>--------------------------------------------------------------------------------------------------
 
 # Clear player's selected item choice if they have chosen so
 execute if entity @s[tag=ResetTheSpawnItem] run scoreboard players set @s selectedItem -1

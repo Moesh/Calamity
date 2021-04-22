@@ -1,8 +1,8 @@
 # Called from: calamity:generator/handler
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Handler for triggering the custom pressure plate
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Handler for triggering the custom pressure plate
+#>--------------------------------------------------------------------------------------------------
 # I've always liked the idea of using the Ender Eye Portal Block as a pressure plate. This
 # implementation is design to allow multiple players to quickly activate the trigger without having
 # the delay of a normal pressure plate. In order to do this, we must also

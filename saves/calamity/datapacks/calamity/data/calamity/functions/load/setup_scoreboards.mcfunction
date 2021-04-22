@@ -1,12 +1,12 @@
 # Called from: #calamity:load
 # TODO: Remove this from map loading state on release.
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: When a objective is removed, all of its data is wiped clean. Since we use the scoreboard
-#	primarily for storing data, this becomes an efficient way to hard reset the project to its
-#	"factory state". If this projet were to ever need some kind of persistent data between sessions,
-#	another solution should be designed.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: When a objective is removed, all of its data is wiped clean. Since we use the scoreboard
+#>	primarily for storing data, this becomes an efficient way to hard reset the project to its
+#>	"factory state". If this projet were to ever need some kind of persistent data between sessions,
+#>	another solution should be designed.
+#>--------------------------------------------------------------------------------------------------
 
 # Remove Scoreboard Objectives
 # CONSTANT scoreboard stores values which should not be changed or altered in any way. They are
@@ -49,8 +49,8 @@ scoreboard objectives add loggedOff minecraft.custom:minecraft.leave_game
 scoreboard objectives remove timeSinceDeath
 scoreboard objectives add timeSinceDeath minecraft.custom:minecraft.time_since_death
 
-scoreboard objectives remove PointTimer
-scoreboard objectives add PointTimer dummy
+scoreboard objectives remove GeneratorTimer
+scoreboard objectives add GeneratorTimer dummy
 scoreboard objectives remove progressLights
 scoreboard objectives add progressLights dummy
 scoreboard objectives remove progressSecond
@@ -277,9 +277,9 @@ scoreboard objectives add craftedObjItem31 minecraft.crafted:minecraft.stonecutt
 scoreboard objectives remove craftedObjItem32
 scoreboard objectives add craftedObjItem32 minecraft.crafted:minecraft.tripwire_hook
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Set-up scoreboard for customizable game variables.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Set-up scoreboard for customizable game variables.
+#>--------------------------------------------------------------------------------------------------
 # Many more gameVariables are set from custom-level:set_game_variables
 
 # SET GAME VARIABLES

@@ -1,9 +1,10 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: If the player has requested to return to the lobby and reset the game, let them.
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: If the player has requested to return to the lobby and reset the game, let them.
 #   This will reset the map to the lobby state, reset the level and ready the game to be ran again.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+
 # Reset the trigger
 tellraw @a {"translate":"system.message","with":[{"translate":"calamity.resetting","color":"green"}]}
 scoreboard players reset @a[scores={reset=1..}] reset
@@ -18,7 +19,6 @@ team join fakeBlue Blue
 team join fakeRed Red
 
 # Reset the whole arena
-# TODO: Add support for multiple arenas
 scoreboard players set #arenaAction gameVariable 0
 function calamity:arena/handler
 

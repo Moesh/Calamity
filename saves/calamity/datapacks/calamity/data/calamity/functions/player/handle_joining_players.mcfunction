@@ -1,8 +1,8 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: A player has just joined the server. Let's process them.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: A player has just joined the server. Let's process them.
+#>--------------------------------------------------------------------------------------------------
 
 # Let's first check to see if any online player has left the game
 # If a player fails the initial check in this function, they are no longer registered.

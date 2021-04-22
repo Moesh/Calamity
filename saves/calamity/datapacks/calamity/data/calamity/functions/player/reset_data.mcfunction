@@ -1,9 +1,9 @@
 # Called from: #calamity:register_player, calamity:player/trigger_reset_game
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Returns players to their initial state at the start of the map (lobby, not match)
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Returns players to their initial state at the start of the map (lobby, not match)
 #   This function MUST NOT affect the player's team or position.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # Tags
 tag @s remove Playing

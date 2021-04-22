@@ -1,8 +1,9 @@
 # Called from: nowhere
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Sets the arena to development mode.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Sets the arena to development mode.
+#>--------------------------------------------------------------------------------------------------
+
 # We're actively develping Calamity, and sometimes that means changing the physical level. The level
 #   is stored in structure files which are in this datapack. This means we're able to place
 #   structure blocks to both place

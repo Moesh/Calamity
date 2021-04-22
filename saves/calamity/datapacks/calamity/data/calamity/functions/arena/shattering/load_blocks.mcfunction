@@ -1,8 +1,9 @@
 # Called from: #calamity:load
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Load world blocks
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Load world blocks
+#>--------------------------------------------------------------------------------------------------
+
 # Place structure blocks
     # Left side
     setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
@@ -66,9 +67,9 @@ setblock 124 45 109 minecraft:red_wall_banner[facing=south]
 setblock 127 45 109 minecraft:red_wall_banner[facing=south]
 setblock 99 45 109 minecraft:red_wall_banner[facing=south]
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Erase structure and redstone blocks
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Erase structure and redstone blocks
+#>--------------------------------------------------------------------------------------------------
 # Lobby
 fill 117 32 26 117 34 26 minecraft:air
 fill 117 32 74 117 34 74 minecraft:air
@@ -100,9 +101,9 @@ fill 131 0 100 131 1 101 minecraft:air
 # Load calamity1, calamity2
 fill 131 0 86 131 1 87 minecraft:air
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Add details
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Add details
+#>--------------------------------------------------------------------------------------------------
 # Replace blue stained glass with red for base
 fill 96 16 88 129 49 113 minecraft:red_stained_glass replace minecraft:blue_stained_glass
 
@@ -130,9 +131,9 @@ setblock 124 45 109 minecraft:red_wall_banner[facing=south]
 setblock 127 45 109 minecraft:red_wall_banner[facing=south]
 setblock 99 45 109 minecraft:red_wall_banner[facing=south]
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Load generators
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Load generators
+#>--------------------------------------------------------------------------------------------------
 # Kill all entities to ensure no drops or other things are left over.
 function calamity:load/kill_entities
 
@@ -196,16 +197,16 @@ execute at @e[type=area_effect_cloud,name="Generator",tag=Speed] run data merge 
 execute at @e[type=area_effect_cloud,name="Generator",tag=Strength] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
 execute at @e[type=area_effect_cloud,name="Generator",tag=TNT] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Place spawnpoint markers
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place spawnpoint markers
+#>--------------------------------------------------------------------------------------------------
 summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Place lobby tutorial generators
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place lobby tutorial generators
+#>--------------------------------------------------------------------------------------------------
 summon minecraft:area_effect_cloud 120 56 63 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 122 56 51 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 130 55 54 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}

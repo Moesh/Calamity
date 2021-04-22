@@ -1,8 +1,9 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Cancel the timer to start a match
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Cancel the timer to start a match
+#>--------------------------------------------------------------------------------------------------
+
 scoreboard players set StartingMatch gameVariable 0
 execute if entity @a[scores={cancelStart=1..}] run playsound calamity:calamity.announcer.match.cancelled master @a 136 150 89 500
 execute as @a[scores={cancelStart=1..},team=blue] run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.cancelled.byPlayer","color":"blue","with":[{"selector":"@s"},{"translate":"⏹"}]}]}

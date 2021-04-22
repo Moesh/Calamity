@@ -1,8 +1,8 @@
 # Called from: calamity:load/reset_entities
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Kill entities and items by teleporting them down to void and then killing them.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Kill entities and items by teleporting them down to void and then killing them.
+#>--------------------------------------------------------------------------------------------------
 
 # We're going to teleport entities down to void, let's make them not glow first.
 # I guess players are essential, don't kill em.

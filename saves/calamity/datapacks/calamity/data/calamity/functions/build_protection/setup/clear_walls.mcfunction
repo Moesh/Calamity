@@ -1,4 +1,8 @@
-# Used for clearing the void protection walls
+# Called from: nowhere
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Used for clearing the void protection walls
+#>--------------------------------------------------------------------------------------------------
 
 fill 176 0 196 96 2 87 minecraft:air replace minecraft:moving_piston
 fill 176 3 196 96 5 87 minecraft:air replace minecraft:moving_piston

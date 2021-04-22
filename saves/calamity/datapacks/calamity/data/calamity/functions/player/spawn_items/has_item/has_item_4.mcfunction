@@ -1,4 +1,4 @@
-# called from the advancement calamity:spawn_items/has_item/has_item_0
+# Called from: [advancement] calamity:spawn_items/has_item/has_item_0
 
 # Tag player if they aren't supposed to have the item.
 execute unless score @s selectedItem matches 104 run tag @s add clearWrongSpawnItems

@@ -1,9 +1,9 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: A player wants to change to spectator game mode. Let them. We don't care what game mode
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: A player wants to change to spectator game mode. Let them. We don't care what game mode
 #   the player is in. It only matters if they are on a team or not on a team.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # Since this trigger is a toggle and not a specific use like selectTeam, we must add a little bit of
 #   tag handling. We have one scoreboard trigger to access this function, and then we will check the
@@ -24,5 +24,6 @@ tag @a[tag=SetToAdventureMode] remove SetToAdventureMode
 # Always reset trigger if the score is not zero.
 scoreboard players set @a[scores={toggleSpectator=..-1}] toggleSpectator 0
 scoreboard players set @a[scores={toggleSpectator=1..}] toggleSpectator 0
+
 # Always enable the trigger
 scoreboard players enable @a toggleSpectator

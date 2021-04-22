@@ -1,8 +1,8 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Determine if a player has scored points and handle accordingly.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Determine if a player has scored points and handle accordingly.
+#>--------------------------------------------------------------------------------------------------
 
 # This is the most important variable in this function. We will add together all the aquired points
 #   and then apply our modifiers. If any players has scored points, we will transfer them to their

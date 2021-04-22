@@ -1,8 +1,9 @@
 # Called from: calamity:tick, calamity:player/gg
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Reset the map and player states to neutral
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Reset the map and player states to neutral
+#>--------------------------------------------------------------------------------------------------
+
 # Make the announcement
 playsound minecraft:event.raid.horn master @a 136 150 89 999999 0.75
 
@@ -19,16 +20,12 @@ scoreboard players reset @a gg
 scoreboard players reset @a reset
 scoreboard players enable @a reset
 
-# Remove forfeit tag
+# Remove tags
 tag @a remove VotedForfeit
-
-# Remove reset items tag in case they have it
 tag @a remove ResetTheSpawnItem
 
 # Allow players to reset the map themselves
 tellraw @a {"translate":"system.message","with": [{"translate":"calamity.reset.map","color":"green","with":[{"text":"/trigger reset","color":"blue","underlined": true,"clickEvent":{"action":"suggest_command","value":"/trigger reset"},"hoverEvent":{"action":"show_text","value":{"translate":"calamity.hover.sendTriggerCommand"}}}]}]}
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Update game state
-#---------------------------------------------------------------------------------------------------
+# Update game state
 scoreboard players set GameState gameVariable 2

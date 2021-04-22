@@ -1,8 +1,9 @@
 # Called from: calamity:trigger_start_match
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: TimeInTicks from 15 seconds and then start the match.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: TimeInTicks from 15 seconds and then start the match.
+#>--------------------------------------------------------------------------------------------------
+
 # Load variables into the math function and run it.
 scoreboard players operation #InSeconds gameVariable = TimeInTicks gameVariable
 scoreboard players operation #Every20Ticks gameVariable = TimeInTicks gameVariable

@@ -1,16 +1,16 @@
-# Called from: calamity:tick
+# Called from: calamity:game_state/tick_match
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Handler for for full generator machine
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Handler for for full generator machine
+#>--------------------------------------------------------------------------------------------------
 
 # If a point is running, tick it down and set it to Output if finished
-scoreboard players remove @e[type=minecraft:area_effect_cloud,name="Generator",tag=Charging,scores={PointTimer=1..}] PointTimer 1
-tag @e[type=minecraft:area_effect_cloud,name="Generator",tag=Charging,scores={PointTimer=0}] add Output
+scoreboard players remove @e[type=minecraft:area_effect_cloud,name="Generator",tag=Charging,scores={GeneratorTimer=1..}] GeneratorTimer 1
+tag @e[type=minecraft:area_effect_cloud,name="Generator",tag=Charging,scores={GeneratorTimer=0}] add Output
 
 # If a point is resetting tick it down and set it to ReadyToStart if finished
-scoreboard players remove @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resetting,scores={PointTimer=1..}] PointTimer 1
-tag @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resetting,scores={PointTimer=0}] add ReadyToStart
+scoreboard players remove @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resetting,scores={GeneratorTimer=1..}] GeneratorTimer 1
+tag @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resetting,scores={GeneratorTimer=0}] add ReadyToStart
 
 # Check if a player is standing on the custom "pressure plate" every tick.
 function calamity:generator/pressure_plate/trigger

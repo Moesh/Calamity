@@ -16,9 +16,9 @@ tag @a[tag=ForfeitTriggered,tag=!VotedForfeit] add VotedForfeit
 tag @a[tag=ForfeitTriggered,tag=StopForfeit] remove VotedForfeit
 tag @a[tag=ForfeitTriggered,tag=StopForfeit] remove StopForfeit
 
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 # Blue team forfeit
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # Count the amount of players on blue team
 # And count the players who has voted for forfeit
@@ -36,9 +36,9 @@ execute if entity @a[team=blue,tag=ForfeitTriggered,tag=!VotedForfeit] if score 
 scoreboard players set #tempBlueForfeit gameVariable 0
 execute if entity @a[team=blue,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempBlueForfeit gameVariable 1
 
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 # Red team forfeit
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # Count the amount of players on red team
 execute store result score #tempPlayerCount gameVariable run execute if entity @a[team=red]
@@ -56,9 +56,9 @@ execute if entity @a[team=red,tag=ForfeitTriggered,tag=!VotedForfeit] if score #
 scoreboard players set #tempRedForfeit gameVariable 0
 execute if entity @a[team=red,tag=VotedForfeit] if score #tempPlayerCount gameVariable <= #tempForfeitCount gameVariable run scoreboard players set #tempRedForfeit gameVariable 1
 
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 # Check forfeit scores
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # It's possible for both teams to forfeit at the exact same time.
 # If one or both team forfeited and give the correct message based on that.

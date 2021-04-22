@@ -1,8 +1,8 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: If the player has requested to start the game, let them.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: If the player has requested to start the game, let them.
+#>--------------------------------------------------------------------------------------------------
 
 # It's time to start the game!
 function calamity:game_state/check_if_start_conditions_met

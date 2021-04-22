@@ -1,4 +1,8 @@
-#replace barrier with glass so it won't be detected again
+# Called from: self, calamity:build_protection/setup/run
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Replace barrier with glass so it won't be detected again
+#>--------------------------------------------------------------------------------------------------
 fill ~ ~ ~ ~ ~ ~ minecraft:glass replace minecraft:barrier
 
 fill ~ 0 ~ ~ 67 ~ minecraft:moving_piston replace #calamity:protection_replaceable

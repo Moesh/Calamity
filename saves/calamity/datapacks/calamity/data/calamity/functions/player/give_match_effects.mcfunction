@@ -1,9 +1,10 @@
 # Called from: #calamity:reset
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Playing coming out of spawn should be a bit more powerful, so that they are not trapped
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Playing coming out of spawn should be a bit more powerful, so that they are not trapped
 #   by an overpowered player.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+
 effect clear @s
 effect give @s minecraft:speed 10 1
 effect give @s minecraft:strength 10 1

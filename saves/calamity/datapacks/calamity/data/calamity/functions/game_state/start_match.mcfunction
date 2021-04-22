@@ -1,8 +1,9 @@
 # Called from: calamity:game_state/timer_start_match
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Reset the map and player states to neutral
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Reset the map and player states to neutral
+#>--------------------------------------------------------------------------------------------------
+
 # Set map rules
 difficulty normal
 gamerule doInsomnia false
@@ -10,16 +11,17 @@ gamerule showDeathMessages true
 gamerule announceAdvancements false
 gamerule doFireTick true
 
-# Purpose: Establish a SessionID by using game time
+#> Purpose: Establish a SessionID by using game time
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a sessionID = SessionID gameVariable
 
 # Make the ore counter visible
 function calamity:points/setup_bossbar
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Give players items and effects and let them play the game.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Give players items and effects and let them play the game.
+#>--------------------------------------------------------------------------------------------------
+
 # Any player on a blue/red team are playing the game
 tag @a[team=blue] add Playing
 tag @a[team=red] add Playing
@@ -73,6 +75,7 @@ tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"c
 tellraw @a {"translate":"calamity.select.respawnItem","color":"gray","with":[{"translate":"calamity.select.respawnItem","italic": true}]}
 playsound minecraft:event.raid.horn master @a 136 150 89 999999
 playsound calamity:calamity.announcer.match.started master @a 136 150 89 500
-# Purpose: Update game state
+
+# Update game state
 scoreboard players set StartingMatch gameVariable 0
 scoreboard players set GameState gameVariable 1

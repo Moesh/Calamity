@@ -1,8 +1,8 @@
 # Called from: nowhere
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Demonstrate style guide to follow when sending messages.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Demonstrate style guide to follow when sending messages.
+#>--------------------------------------------------------------------------------------------------
 tellraw @a {"text":"\n\nMoesh's Style Guide","bold": true}
 tellraw @a {"translate":"system.message","color": "green","with":[{"text":"Messages sent by the system look like this."}]}
 tellraw @a {"translate":"system.message","color": "green","with":[{"text":"Status messages often use no punctuation"}]}

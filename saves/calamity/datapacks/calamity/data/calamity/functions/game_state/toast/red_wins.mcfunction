@@ -4,6 +4,7 @@
 #> Purpose: Red has won the game, let's announce it
 #>--------------------------------------------------------------------------------------------------
 
+# Update the displays one last time
 function calamity:player/update_displays
 
 # Output match statistics

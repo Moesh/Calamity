@@ -1,13 +1,14 @@
 # Called from: calamity:generator/handler
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Resource point has finished charging, check for nearby players and give resources or
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Resource point has finished charging, check for nearby players and give resources or
 #   apply team effects. Update players and state.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+
 # Update generator state
 tag @s add Resetting
 tag @s remove Charging
-scoreboard players operation @s PointTimer = PointResetTime mapRules
+scoreboard players operation @s GeneratorTimer = PointResetTime mapRules
 
 # Determine if nearby players are standing on bedrock (2 blocks down is y-3)
 execute as @s[tag=TeamBlue] run tag @a[distance=..4,team=blue] add CheckIfStandingOnPoint

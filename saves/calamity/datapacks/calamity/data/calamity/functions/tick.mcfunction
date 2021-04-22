@@ -21,4 +21,3 @@ function calamity:arena/handler
 execute if score GameState gameVariable matches 0 run function calamity:game_state/tick_lobby
 execute if score GameState gameVariable matches 1 run function calamity:game_state/tick_match
 execute if score GameState gameVariable matches 2 run function calamity:game_state/tick_post_game
-

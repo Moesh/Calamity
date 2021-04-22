@@ -1,8 +1,8 @@
 # Called from: calamity:game_state/start_match
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Creates and makes the iron ore boss bar visible to all players. It polls the current
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Creates and makes the iron ore boss bar visible to all players. It polls the current
+#>--------------------------------------------------------------------------------------------------
 
 # Create Mines boss bar
 bossbar remove calamity:iron_ore

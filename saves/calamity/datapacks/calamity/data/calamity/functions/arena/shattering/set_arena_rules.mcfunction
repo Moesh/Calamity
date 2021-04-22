@@ -1,8 +1,9 @@
 # Called from: #calamity:load
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Game rules control global elements of the game.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Game rules control global elements of the game.
+#>--------------------------------------------------------------------------------------------------
+
 # Removing and readding objectives complete wipes the set data and sets these values.
 scoreboard objectives remove mapRules
 scoreboard objectives add mapRules dummy

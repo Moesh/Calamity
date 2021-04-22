@@ -1,8 +1,9 @@
 # Called from: #calamity:load
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Erase the whole level and marker entities
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Erase the whole level and marker entities
+#>--------------------------------------------------------------------------------------------------
+
 # Place empty structure blocks
 # Left side
 setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/erase1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
@@ -52,9 +53,9 @@ setblock 117 32 74 minecraft:redstone_block
 setblock 109 67 73 minecraft:redstone_block
 setblock 157 67 73 minecraft:redstone_block
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Erase structure and redstone blocks
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Erase structure and redstone blocks
+#>--------------------------------------------------------------------------------------------------
 # Lobby
 fill 117 32 26 117 34 26 minecraft:air
 fill 117 32 74 117 34 74 minecraft:air

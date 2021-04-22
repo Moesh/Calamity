@@ -1,9 +1,9 @@
 # Called from: calamity:tick
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Always tick these functions. Calls main game handlers. Sometimes a function is a single
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Always tick these functions. Calls main game handlers. Sometimes a function is a single
 #   line.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # This torch particle replication is so important that we must dedicate an entire section to it.
 # Torch flame

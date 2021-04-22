@@ -1,8 +1,9 @@
 # Called from: minecraft:load
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Reset all parts of the map which do not affect the current game state.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Reset all parts of the map which do not affect the current game state.
+#>--------------------------------------------------------------------------------------------------
+
 # Control where commands output and how
 gamerule commandBlockOutput false
 gamerule logAdminCommands false
@@ -39,5 +40,6 @@ gamerule reducedDebugInfo true
 gamerule disableElytraMovementCheck true
 gamerule spectatorsGenerateChunks true
 gamerule spawnRadius 7
+
 # Submitted for the approval of the Midnight Society...
 time set midnight

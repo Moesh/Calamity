@@ -1,9 +1,9 @@
 # Called from: calamity:points/handler
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Determine if this player has crafted an item and transfer the correlating point value to
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Determine if this player has crafted an item and transfer the correlating point value to
 #   prepScore for further processing.
-#---------------------------------------------------------------------------------------------------
+#>--------------------------------------------------------------------------------------------------
 
 # Apply appropriate point multiplier to crafted item and then add to prepScore
 scoreboard players operation @s[scores={craftedObjItem01=1..}] craftedScore = @s craftedObjItem01
