@@ -28,6 +28,17 @@
     # Logo
     setblock 109 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 48, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/logo1", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
     setblock 157 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 7, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/logo2", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
+    # Data left side
+    setblock 141 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data1", sizeY: 5, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
+    # Data crosslane
+    setblock 131 251 179 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:1b,seed:0L,author:"",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:11,posZ:1,integrity:1.0f,showair:0b,name:"calamity:shattering/data4",sizeY:5,sizeZ:17,showboundingbox:1b}
+    # Data right side
+    setblock 131 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data1", sizeY: 5, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 251 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"CLOCKWISE_180",posX:-1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:shattering/data5",sizeY:5,sizeZ:14,showboundingbox:1b}
 
 # Activate the structure blocks!
     # Left side
