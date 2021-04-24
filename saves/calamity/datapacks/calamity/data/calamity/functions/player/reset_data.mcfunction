@@ -1,4 +1,4 @@
-# Called from: #calamity:register_player, calamity:player/trigger_reset_game
+# Called from: #calamity:register_player, calamity:player/trigger/reset_game
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Returns players to their initial state at the start of the map (lobby, not match)

@@ -28,7 +28,7 @@ execute if score GameState gameVariable matches 1 run scoreboard players enable 
 #   - The player left check would miss a player has left.
 #   - The forfeit vote would end up in an invalid state where everyone has voted for forfeit but
 #       the game didn't end.
-execute if score GameState gameVariable matches 1 run function calamity:player/trigger_gg
+execute if score GameState gameVariable matches 1 run function calamity:player/trigger/gg
 
 # Enable if post-game
 execute if score GameState gameVariable matches 2 run scoreboard players reset @s reset

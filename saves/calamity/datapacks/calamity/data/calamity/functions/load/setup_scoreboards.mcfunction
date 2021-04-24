@@ -312,5 +312,5 @@ scoreboard players set GameState gameVariable 0
 
 # Used to determine whether or not the game has started.
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,
-# calamity:player/trigger_cancel_start, and calamity:player/trigger_start_match
+# calamity:player/trigger/cancel_start, and calamity:player/trigger/start_match
 scoreboard players set StartingMatch gameVariable 0

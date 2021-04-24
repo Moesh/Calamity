@@ -31,7 +31,7 @@ kill @e[type=item,nbt={Item: {tag: {Calamity: {SpawnItem: 1b}}}}]
 #   leaves and then checks the forfeit state.
 execute store result score #tempVar gameVariable run execute if entity @a
 scoreboard players operation Players gameVariable -= #tempVar gameVariable
-execute if score Players gameVariable matches 1.. run function calamity:player/trigger_gg
+execute if score Players gameVariable matches 1.. run function calamity:player/trigger/gg
 execute run scoreboard players operation Players gameVariable = #tempVar gameVariable
 # Reset our temp variable
 scoreboard players reset #tempVar gameVariable
@@ -40,7 +40,7 @@ scoreboard players reset #tempVar gameVariable
 #   no effect. This set of lines handles all cases for how
 scoreboard players set @a[scores={gg=..-1}] gg 0
 scoreboard players enable @a gg
-execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s run function calamity:player/trigger_gg
+execute as @a[scores={gg=1..},limit=1,tag=Playing] at @s run function calamity:player/trigger/gg
 
 # Check for a winner
 execute if score BluePoints gameVariable >= OreLeft gameVariable run function calamity:game_state/toast/blue_wins
