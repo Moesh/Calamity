@@ -3,6 +3,6 @@
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Moesh wants to test stuff. This file doesn't ever ship.
 #>--------------------------------------------------------------------------------------------------
-team join blue @a
-tag Moesh remove Registered
 scoreboard objectives setdisplay sidebar gameVariable
+scoreboard players set PointChargeTime mapRules 40
+scoreboard players set PointResetTime mapRules 40

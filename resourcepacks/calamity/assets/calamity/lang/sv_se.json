@@ -34,7 +34,7 @@
     "calamity.forfeit.retracted": "%s har dragit tillbaka sin röst. %s av de %s röster som behövs på laget har röstat för att ge upp matchen.",
     "calamity.forfeit.retracted.stopped": "%s har dragit tillbaka sin röst. Röstningen har stoppats.",
     "calamity.forfeit.started": "%s har röstat för att ge upp matchen. %s av de %s röster som behövs har röstat för att ge upp. Använd [%s] för att rösta.",
-    "calamity.generator.output.attackEffect": "Skickade motståndare [%s%3$s] i %s sekunder",
+    "calamity.generator.output.effect.sent.level": "Skickade motståndare [%s%3$s] i %s sekunder",
     "calamity.generator.sign.activated": "Aktiverat!",
     "calamity.generator.sign.enchant": "För huvudgrepp",
     "calamity.generator.sign.perPlayer": "%s per spelare",

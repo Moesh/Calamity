@@ -1,4 +1,4 @@
-# Called from: #calamity:load
+# Called from: #calamity:load, calamity:arena/handler
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Load world blocks
@@ -6,28 +6,28 @@
 
 # Place structure blocks
     # Left side
-    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering2", sizeY: 27, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering4", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering6", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
     # Right side
-    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering2", sizeY: 27, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering4", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering6", sizeY: 27, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
     # Crosslane
-    setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
-    setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering8", sizeY: 27, sizeZ: 15, showboundingbox: 1b}
+    setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
+    setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity8", sizeY: 21, sizeZ: 15, showboundingbox: 1b}
     # Lobby
     setblock 117 33 26 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/lobby1", sizeY: 33, sizeZ: 48, showboundingbox: 1b}
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/lobby2", sizeY: 33, sizeZ: 3, showboundingbox: 1b}
     # Logo
-    setblock 109 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 48, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/logo1", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
-    setblock 157 67 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 7, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/logo2", sizeY: 12, sizeZ: 7, showboundingbox: 1b}
+    setblock 109 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"calamity:shattering/logo1",sizeY:12,sizeZ:7,showboundingbox:1b}
+    setblock 157 67 74 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:2,sizeX:7,posZ:0,integrity:1.0f,showair:0b,name:"calamity:shattering/logo2",sizeY:12,sizeZ:7,showboundingbox:1b}
     # Data left side
     setblock 141 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data1", sizeY: 5, sizeZ: 12, showboundingbox: 1b}
     setblock 141 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
@@ -39,7 +39,6 @@
     setblock 131 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 131 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 131 251 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"CLOCKWISE_180",posX:-1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:shattering/data5",sizeY:5,sizeZ:14,showboundingbox:1b}
-
 # Activate the structure blocks!
     # Left side
     setblock 141 0 86 minecraft:redstone_block
@@ -63,6 +62,17 @@
     setblock 117 32 74 minecraft:redstone_block
     setblock 109 67 73 minecraft:redstone_block
     setblock 157 67 73 minecraft:redstone_block
+    # Data left side
+    setblock 141 252 87 minecraft:redstone_block
+    setblock 141 252 101 minecraft:redstone_block
+    setblock 141 252 149 minecraft:redstone_block
+    # Data crosslane
+    setblock 137 252 179 minecraft:redstone_block
+    setblock 131 252 179 minecraft:redstone_block
+    # Data right side
+    setblock 131 252 87 minecraft:redstone_block
+    setblock 131 252 101 minecraft:redstone_block
+    setblock 131 252 149 minecraft:redstone_block
 
 # Swap banner colors to red for mirrored lane
 setblock 102 45 109 minecraft:red_wall_banner[facing=south]
@@ -113,44 +123,30 @@ fill 131 0 100 131 1 101 minecraft:air
 fill 131 0 86 131 1 87 minecraft:air
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Add details
+#> Purpose: Kill all entities and ensure items are left over
 #>--------------------------------------------------------------------------------------------------
-# Replace blue stained glass with red for base
-fill 96 16 88 129 49 113 minecraft:red_stained_glass replace minecraft:blue_stained_glass
-
-# Replace protection huts on red lane
-fill 107 41 116 109 45 120 minecraft:red_stained_glass replace minecraft:blue_stained_glass
-fill 109 43 117 109 44 119 minecraft:red_stained_glass_pane replace minecraft:blue_stained_glass_pane
-fill 122 32 148 124 36 152 minecraft:red_stained_glass replace minecraft:blue_stained_glass
-fill 124 34 149 124 35 151 minecraft:red_stained_glass_pane replace minecraft:blue_stained_glass_pane
-fill 125 55 152 127 59 156 minecraft:red_stained_glass replace minecraft:blue_stained_glass
-fill 127 57 153 127 58 155 minecraft:red_stained_glass_pane replace minecraft:blue_stained_glass_pane
-fill 109 58 186 111 62 190 minecraft:red_stained_glass replace minecraft:blue_stained_glass
-fill 111 60 187 111 61 189 minecraft:red_stained_glass_pane replace minecraft:blue_stained_glass_pane
-
-# Setup banners to be red
-setblock 102 45 109 minecraft:red_wall_banner[facing=south]
-setblock 105 45 109 minecraft:red_wall_banner[facing=south]
-setblock 108 45 109 minecraft:red_wall_banner[facing=south]
-setblock 111 47 94 minecraft:red_wall_banner[facing=north]
-setblock 113 47 101 minecraft:red_wall_banner[facing=south]
-setblock 113 47 98 minecraft:red_wall_banner[facing=north]
-setblock 115 47 94 minecraft:red_wall_banner[facing=north]
-setblock 118 45 109 minecraft:red_wall_banner[facing=south]
-setblock 121 45 109 minecraft:red_wall_banner[facing=south]
-setblock 124 45 109 minecraft:red_wall_banner[facing=south]
-setblock 127 45 109 minecraft:red_wall_banner[facing=south]
-setblock 99 45 109 minecraft:red_wall_banner[facing=south]
-
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Load generators
-#>--------------------------------------------------------------------------------------------------
-# Kill all entities to ensure no drops or other things are left over.
+#IMPORTANT: This will kill any entity markers. Run before new markers are made.
 function calamity:load/kill_entities
 
-# The players are decidely always in the play space. We can assume it's safe to remove all resource
-#   points and reset them.
-kill @e[type=minecraft:area_effect_cloud,tag=Point]
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Define the map height
+#>--------------------------------------------------------------------------------------------------
+summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"ArenaHeight"}', Tags:["marker","arenaHeight"], CustomNameVisible:0b, Duration:2147483647}
+execute store result score #arenaHeight gameVariable run data get entity @e[type=minecraft:area_effect_cloud,tag=marker,tag=arenaHeight,limit=1] Pos[1]
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place spawnpoint markers
+#>--------------------------------------------------------------------------------------------------
+
+summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place generators
+#>--------------------------------------------------------------------------------------------------
+
+#> Lobby
 # Blue team generators only appear on the blue lane
 summon minecraft:area_effect_cloud 169 42 118 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 164 43 142 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
@@ -178,46 +174,7 @@ summon minecraft:area_effect_cloud 157 18 189 {CustomName: '{"text":"Generator"}
 summon minecraft:area_effect_cloud 159 30 107 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamRed", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 113 30 107 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamBlue", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 
-# Place generators
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: -2, sizeX: 7, posZ: -3, integrity: 1.0f, showair: 1b, name: "calamity:blue_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamBlue,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 3, mode: "LOAD", posY: -2, sizeX: 7, posZ: 3, integrity: 1.0f, showair: 1b, name: "calamity:blue_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: -2, sizeX: 7, posZ: -3, integrity: 1.0f, showair: 1b, name: "calamity:red_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 3, mode: "LOAD", posY: -2, sizeX: 7, posZ: 3, integrity: 1.0f, showair: 1b, name: "calamity:red_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run setblock ~ ~1 ~ minecraft:redstone_block
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
-
-# Place signs
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
-# Update signs
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Arrow] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Blindness] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.blindness\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.attack\",\"with\":[{\"text\":\"30\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Chain] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Cobblestone] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=GoldIngot] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Enchant] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"container.enchant\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.enchant\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Haste] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Log] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=MiningFatigue] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.mining_fatigue\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.attack\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Regeneration] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resistance] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Scaffolding] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Speed] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Strength] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TNT] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
-
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Place spawnpoint markers
-#>--------------------------------------------------------------------------------------------------
-summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Place lobby tutorial generators
-#>--------------------------------------------------------------------------------------------------
+#> Tutorial
 summon minecraft:area_effect_cloud 120 56 63 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 122 56 51 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 130 55 54 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
@@ -244,28 +201,12 @@ summon minecraft:area_effect_cloud 126 44 27 {CustomName: '{"text":"LobbyPoint"}
 summon minecraft:area_effect_cloud 147 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 125 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 
-# Place signs
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
-# Rotate those eyes
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
-# Update signs
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Arrow] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Blindness] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.blindness\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"30\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Chain] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Cobblestone] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Enchant] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"container.enchant\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.enchant\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=GoldIngot] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Haste] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Log] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=MiningFatigue] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.mining_fatigue\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Regeneration] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Resistance] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Scaffolding] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Speed] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Strength] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=TNT] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
+# Setup generators. This functio nis required to make the generators work.
+function calamity:load/setup_generators
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place main menu tables
+#>--------------------------------------------------------------------------------------------------
 
 # Main menu oak table
 # This next command makes use of a custom font. I use several characters in this custom font, but

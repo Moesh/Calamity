@@ -123,20 +123,30 @@ fill 131 0 100 131 1 101 minecraft:air
 fill 131 0 86 131 1 87 minecraft:air
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Kill all entities to ensure no drops or other things are left over.
+#> Purpose: Kill all entities and ensure items are left over
 #>--------------------------------------------------------------------------------------------------
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.
 function calamity:load/kill_entities
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Load arena height marker and define the map height
+#> Purpose: Define the map height
 #>--------------------------------------------------------------------------------------------------
 summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"ArenaHeight"}', Tags:["marker","arenaHeight"], CustomNameVisible:0b, Duration:2147483647}
 execute store result score #arenaHeight gameVariable run data get entity @e[type=minecraft:area_effect_cloud,tag=marker,tag=arenaHeight,limit=1] Pos[1]
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Load generators
+#> Purpose: Place spawnpoint markers
 #>--------------------------------------------------------------------------------------------------
+
+summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place generators
+#>--------------------------------------------------------------------------------------------------
+
+#> Lobby
 # Blue team generators only appear on the blue lane
 summon minecraft:area_effect_cloud 169 42 118 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 164 43 142 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
@@ -164,46 +174,7 @@ summon minecraft:area_effect_cloud 157 18 189 {CustomName: '{"text":"Generator"}
 summon minecraft:area_effect_cloud 159 30 107 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamRed", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 113 30 107 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamBlue", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 
-# Place generators
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: -2, sizeX: 7, posZ: -3, integrity: 1.0f, showair: 1b, name: "calamity:blue_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamBlue,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 3, mode: "LOAD", posY: -2, sizeX: 7, posZ: 3, integrity: 1.0f, showair: 1b, name: "calamity:blue_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: -2, sizeX: 7, posZ: -3, integrity: 1.0f, showair: 1b, name: "calamity:red_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TeamRed,tag=FacingEast] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 3, mode: "LOAD", posY: -2, sizeX: 7, posZ: 3, integrity: 1.0f, showair: 1b, name: "calamity:red_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run setblock ~ ~1 ~ minecraft:redstone_block
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
-
-# Place signs
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
-# Update signs
-execute at @e[type=minecraft:area_effect_cloud,name="Generator"] run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Arrow] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Blindness] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.blindness\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.attack\",\"with\":[{\"text\":\"30\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Chain] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Cobblestone] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=GoldIngot] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Enchant] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"container.enchant\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.enchant\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Haste] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Log] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=MiningFatigue] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.mining_fatigue\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.attack\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Regeneration] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resistance] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Scaffolding] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Speed] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=Strength] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="Generator",tag=TNT] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
-
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Place spawnpoint markers
-#>--------------------------------------------------------------------------------------------------
-summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Place lobby tutorial generators
-#>--------------------------------------------------------------------------------------------------
+#> Tutorial
 summon minecraft:area_effect_cloud 120 56 63 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 122 56 51 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 130 55 54 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
@@ -230,28 +201,12 @@ summon minecraft:area_effect_cloud 126 44 27 {CustomName: '{"text":"LobbyPoint"}
 summon minecraft:area_effect_cloud 147 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 125 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 
-# Place signs
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
-# Rotate those eyes
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
-# Update signs
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Arrow] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Blindness] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.blindness\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"30\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Chain] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.chain\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Cobblestone] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.cobblestone\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"9\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Enchant] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"container.enchant\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.enchant\"}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=GoldIngot] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.gold_ingot\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"24\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Haste] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.haste\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Log] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.birch_log\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=MiningFatigue] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.mining_fatigue\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Regeneration] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.regeneration\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Resistance] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.resistance\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Scaffolding] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.scaffolding\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Speed] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.speed\"},{\"translate\":\"calamity.generator.output.effect.level2\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=Strength] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"effect.minecraft.strength\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perTeam\",\"with\":[{\"text\":\"45\"}]}"}
-execute at @e[type=minecraft:area_effect_cloud,name="LobbyPoint",tag=TNT] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"block.minecraft.tnt\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"3\"}]}"}
+# Setup generators. This functio nis required to make the generators work.
+function calamity:load/setup_generators
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Place main menu tables
+#>--------------------------------------------------------------------------------------------------
 
 # Main menu oak table
 # This next command makes use of a custom font. I use several characters in this custom font, but

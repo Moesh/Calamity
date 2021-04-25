@@ -29,4 +29,6 @@ execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=Resetting] a
 
 # Only output or reset AFTER updating lights/sign
 execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=Output] at @s run function calamity:generator/output
+
+# Reset timer is finished, reset the generator
 execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=ReadyToStart] at @s run function calamity:generator/reset
