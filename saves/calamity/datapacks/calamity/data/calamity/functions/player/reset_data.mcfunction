@@ -18,11 +18,11 @@ scoreboard players set @s kills 0
 team leave @s
 
 effect clear @s
+# Give status effects
 # Register player in the food scoreboard
 effect give @a minecraft:hunger 1 100 true
-# Refill stats
 effect give @s minecraft:instant_health 3 10 true
-effect give @s minecraft:saturation 5 10 true
+effect give @s minecraft:regeneration 3 10 false
 
 # Update the player sessionID to match current SessionID
 scoreboard players operation @s sessionID = SessionID gameVariable

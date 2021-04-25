@@ -28,7 +28,7 @@ tag @a[team=red] add Playing
 
 # Clear the player's items and effects, give them items, refill their health and hunger
 clear @a
-execute as @a[tag=Playing] run function calamity:player/refill_items_and_health
+effect give @a[tag=Playing] minecraft:regeneration 3 10 false
 execute as @a[tag=Playing] run function calamity:player/give_match_effects
 gamemode survival @a[tag=Playing]
 gamemode spectator @a[tag=!Playing]

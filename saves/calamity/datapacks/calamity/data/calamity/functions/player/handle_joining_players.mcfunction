@@ -4,9 +4,8 @@
 #> Purpose: A player has just joined the server. Let's process them.
 #>--------------------------------------------------------------------------------------------------
 
-# Let's first check to see if any online player has left the game
-# If a player fails the initial check in this function, they are no longer registered.
-# Player has left the game and their SessionID does not match the current one. Let's reset them.
+# When a player exists and the scoreboards have been reset, there can be desync. Players will have
+#   no sessionID, so let's always add 0 to ensure they exist on the scoreboard.
 scoreboard players add @a sessionID 0
 
 # This player has no sessionID. We can assume they have been on the map before, but scoreboards

@@ -2,8 +2,6 @@
     "values": [
         "calamity:player/reset_data",
         "calamity:player/enable_triggers",
-        "calamity:player/refill_items_and_health",
-        "calamity:player/give_recipes",
-        "calamity:arena/calamity/send_welcome_message"
+        "calamity:player/give_recipes"
     ]
 }
