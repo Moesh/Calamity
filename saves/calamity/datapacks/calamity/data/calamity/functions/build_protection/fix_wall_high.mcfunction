@@ -5,7 +5,7 @@
 #>--------------------------------------------------------------------------------------------------
 
 # This marker will self expire
-summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["tempExplosion","marker"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {Tags: ["tempExplosion", "marker"], Duration: 1}
 # Set the markers to map height
 data modify entity @e[tag=tempExplosion,limit=1,sort=nearest] Pos[1] set from entity @e[tag=marker,tag=arenaHeight,type=minecraft:area_effect_cloud,limit=1] Pos[1]
 # Fix it

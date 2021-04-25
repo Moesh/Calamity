@@ -45,7 +45,7 @@ team add fakeRed {"translate":"team.red"}
 	team modify fakeRed prefix {"translate":"spacer.right","color":"red","with": [{"translate":"☒","color":"dark_red"}]}
 	team modify fakeRed suffix {"translate":"spacer.left","color":"red","with": [{"translate":"r","font":"calamity:icons"}]}
 team add finishLine
-	team modify finishLine color white 
+	team modify finishLine color white
 	team modify finishLine suffix {"translate":"spacer.left","color":"white","with": [{"translate":"i","font":"calamity:icons","color":"white"}]}
 
 # AddFakePlayersToTeam
