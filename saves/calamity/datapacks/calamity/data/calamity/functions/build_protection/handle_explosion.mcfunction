@@ -27,7 +27,7 @@
 execute store result score #tempYLocation gameVariable run data get entity @s Pos[1]
 
 # Only search for fixable height blocks if the explosion was in range of the height
-execute store result score #tempHeight gameVariable run data get entity @e[tag=marker,tag=arenaHeight,limit=1,type=area_effect_cloud] Pos[1]
+execute store result score #tempHeight gameVariable run data get entity @e[tag=marker,tag=arenaHeight,limit=1,type=minecraft:area_effect_cloud] Pos[1]
 scoreboard players operation #tempHeight gameVariable -= #tempYLocation gameVariable
 execute if score #tempHeight gameVariable <= 8 CONST if score #tempHeight gameVariable >= -8 CONST run function calamity:build_protection/search/section_large_all
 # If the explosion was not in range of the height, only search for walls.

@@ -47,8 +47,8 @@ execute if score BluePoints gameVariable >= OreLeft gameVariable run function ca
 execute if score RedPoints gameVariable >= OreLeft gameVariable run function calamity:game_state/toast/red_wins
 
 # Players can't respawn in moving piston blocks. Make sure there is air at the spawn points.
-execute at @e[type=area_effect_cloud,name="BlueSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
-execute at @e[type=area_effect_cloud,name="RedSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
+execute at @e[type=minecraft:area_effect_cloud,name="BlueSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
+execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
 
 # Kill players in enemy spawn (But only if their full body is inside and they are standing on a block)
 execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 252 ~0.3 minecraft:barrier if block ~ 252 ~-0.3 minecraft:barrier if block ~0.3 252 ~ minecraft:barrier if block ~-0.3 252 ~ minecraft:barrier if entity @s[nbt={OnGround: 1b}] run kill @s
