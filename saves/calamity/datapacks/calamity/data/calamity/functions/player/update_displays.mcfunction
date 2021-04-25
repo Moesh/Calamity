@@ -48,6 +48,6 @@ execute if score #Every20Ticks gameVariable matches 0 if score displaySecond gam
 execute if score #Every20Ticks gameVariable matches 0 if score displaySecond gameVariable matches 10.. run bossbar set calamity:iron_ore name {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"translate":"%s:%s","with":[{"score":{"name":"displayMinute", "objective":"gameVariable"} },{"score":{"name":"displaySecond", "objective":"gameVariable"} } ]},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
 
 # Update the sidebar
-scoreboard players operation ░░░░░░ displayPoints = OreLeft gameVariable
+scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable
 scoreboard players operation Blue displayPoints = BluePoints gameVariable
 scoreboard players operation Red displayPoints = RedPoints gameVariable

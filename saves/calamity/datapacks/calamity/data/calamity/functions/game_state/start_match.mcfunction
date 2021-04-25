@@ -34,7 +34,7 @@ gamemode survival @a[tag=Playing]
 gamemode spectator @a[tag=!Playing]
 
 # Set the correct scoreboard
-scoreboard players operation ░░░░░░ displayPoints = OreLeft gameVariable
+scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable
 scoreboard players set Blue displayPoints 0
 scoreboard players set Red displayPoints 0
 scoreboard objectives setdisplay sidebar displayPoints

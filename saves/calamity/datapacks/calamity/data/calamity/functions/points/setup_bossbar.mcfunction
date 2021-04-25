@@ -21,4 +21,4 @@ bossbar add calamity:iron_ore {"translate":"%s %s  %s %s","with":[{"translate":"
     #   before you make it visible to players, it will appear instantly full. (Notice how I am
     #   storing the ore count in max above and then in value below, after the bar is visible.)
     execute store result bossbar calamity:iron_ore value run scoreboard players get OreLeft gameVariable
-    scoreboard players operation ░░░░░░ displayPoints = OreLeft gameVariable
+    scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable

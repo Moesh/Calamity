@@ -51,4 +51,4 @@ team add finishLine
 # AddFakePlayersToTeam
 team join fakeBlue Blue
 team join fakeRed Red
-team join finishLine ░░░░░░
+team join finishLine ░░░░░
