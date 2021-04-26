@@ -6,22 +6,22 @@
 
 # Place structure blocks
     # Left side
-    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
-    setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 141 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 141 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
     # Right side
-    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
-    setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 1 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering2", sizeY: 21, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 1 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering4", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
+    setblock 131 1 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 47, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering6", sizeY: 21, sizeZ: 48, showboundingbox: 1b}
     # Crosslane
-    setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
-    setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/calamity8", sizeY: 21, sizeZ: 15, showboundingbox: 1b}
+    setblock 131 3 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: -3, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering7", sizeY: 48, sizeZ: 15, showboundingbox: 1b}
+    setblock 131 4 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 0, mode: "LOAD", posY: 44, sizeX: 13, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/shattering8", sizeY: 21, sizeZ: 15, showboundingbox: 1b}
     # Lobby
     setblock 117 33 26 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/lobby1", sizeY: 33, sizeZ: 48, showboundingbox: 1b}
     setblock 117 33 74 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 2, sizeX: 39, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/lobby2", sizeY: 33, sizeZ: 3, showboundingbox: 1b}
@@ -33,12 +33,11 @@
     setblock 141 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 141 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     # Data crosslane
-    setblock 131 251 179 minecraft:structure_block[mode=save]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 1b, seed: 0L, author: "", rotation: "NONE", posX: 0, mode: "SAVE", posY: 0, sizeX: 11, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data4", sizeY: 5, sizeZ: 17, showboundingbox: 1b}
+    setblock 131 251 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 0, mode: "LOAD", posY: 0, sizeX: 11, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data4", sizeY: 5, sizeZ: 17, showboundingbox: 1b}
     # Data right side
-    setblock 131 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data1", sizeY: 5, sizeZ: 12, showboundingbox: 1b}
+    setblock 95 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data5", sizeY: 5, sizeZ: 14, showboundingbox: 1b}
     setblock 131 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 131 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
-    setblock 131 251 87 minecraft:structure_block[mode=save]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "CLOCKWISE_180", posX: -1, mode: "SAVE", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:shattering/data5", sizeY: 5, sizeZ: 14, showboundingbox: 1b}
 # Activate the structure blocks!
     # Left side
     setblock 141 0 86 minecraft:redstone_block
@@ -67,10 +66,9 @@
     setblock 141 252 101 minecraft:redstone_block
     setblock 141 252 149 minecraft:redstone_block
     # Data crosslane
-    setblock 137 252 179 minecraft:redstone_block
     setblock 131 252 179 minecraft:redstone_block
     # Data right side
-    setblock 131 252 87 minecraft:redstone_block
+    setblock 95 252 87 minecraft:redstone_block
     setblock 131 252 101 minecraft:redstone_block
     setblock 131 252 149 minecraft:redstone_block
 
@@ -121,6 +119,21 @@ fill 131 0 148 131 1 149 minecraft:air
 fill 131 0 100 131 1 101 minecraft:air
 # Load calamity1, calamity2
 fill 131 0 86 131 1 87 minecraft:air
+
+# data1
+fill 141 251 87 141 252 87 minecraft:air
+# data2
+fill 141 251 101 141 252 101 minecraft:air
+# data3
+fill 141 251 149 141 252 149 minecraft:air
+# data4
+fill 131 251 179 131 252 179 minecraft:air
+# data3 mirrored
+fill 131 251 149 131 252 149 minecraft:air
+# data2 mirrored
+fill 131 251 101 131 252 101 minecraft:air
+# data5 (red spawn)
+fill 95 251 87 95 252 87 minecraft:air
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Kill all entities and ensure items are left over

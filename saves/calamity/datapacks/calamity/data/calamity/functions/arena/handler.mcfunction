@@ -18,6 +18,7 @@
 
 # NOTE TO ARENA MAKERS: Each action requires an entry for your level to be accepted.
 
+
 # 1 - Calamity: Modern by Moesh
     # Load a new arena
     execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 1 run function #calamity:load_arena_1_modern
@@ -39,6 +40,9 @@
     # Count the ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 130 0 181 142 67 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
+
+# If this funciton was called and an arena was loaded, let's make sure players are reset
+execute if score #arenaAction gameVariable matches 0 as @a run function calamity:player/reset_data
 
 # Always set score to zero. Players never have access to this variable, so we can take advantage of
 #   how the behavior will work.

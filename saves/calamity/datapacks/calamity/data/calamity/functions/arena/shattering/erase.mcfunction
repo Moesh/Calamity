@@ -88,5 +88,9 @@ fill 131 0 100 131 1 101 minecraft:air
 # Load calamity1, calamity2
 fill 131 0 86 131 1 87 minecraft:air
 
+# Erase data (large chunks)
+fill 95 251 87 176 255 165 minecraft:air
+fill 96 251 166 176 255 196 minecraft:air
+
 # Kill all entities to ensure no drops or other things are left over.
 function calamity:load/kill_entities

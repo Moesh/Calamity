@@ -1,9 +1,12 @@
 # Called from: calamity:tick
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Play particles for the game table
+#> Purpose: Arena-specific actions. Can be used to add detailing, or specific mechanics.
 #>--------------------------------------------------------------------------------------------------
 
+#---------------------------------------------------------------------------------------------------
+# Play particles for the game table
+#---------------------------------------------------------------------------------------------------
 # This torch particle replication is so important that we must dedicate an entire section to it.
 # Torch flame
 execute if score #tableCandle gameVariable matches 0 run particle minecraft:flame 136.125 58.65 68.86 0 0 0 0 1 normal
@@ -14,10 +17,9 @@ execute if score #tableCandleSmoke gameVariable matches 0 run particle minecraft
 scoreboard players add #tableCandleSmoke gameVariable 1
 execute if score #tableCandleSmoke gameVariable matches 45.. run scoreboard players set #tableCandleSmoke gameVariable 0
 
-#>--------------------------------------------------------------------------------------------------
-#> Purpose: Makes arrows break glass until it shatt
-#>--------------------------------------------------------------------------------------------------
-
+#---------------------------------------------------------------------------------------------------
+# Make arrows break glass until it shatters
+#---------------------------------------------------------------------------------------------------
 # Detect that arrow is in a block
 tag @e[type=minecraft:arrow,tag=!inBlock,nbt={inGround: 1b}] add inBlock
 tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:glass"}}] add inGlass
