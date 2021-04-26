@@ -14,7 +14,6 @@ clear @s
 xp set @s 0 levels
 xp set @s 0 points
 scoreboard players set @s kills 0
-
 team leave @s
 
 effect clear @s

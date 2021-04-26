@@ -3,7 +3,6 @@
         "calamity:arena/shattering/load_blocks",
         "calamity:player/update_displays",
         "calamity:points/setup_bossbar",
-        "calamity:arena/shattering/set_arena_rules",
-        "calamity:arena/shattering/send_welcome_message"
+        "calamity:arena/shattering/set_arena_rules"
     ]
 }

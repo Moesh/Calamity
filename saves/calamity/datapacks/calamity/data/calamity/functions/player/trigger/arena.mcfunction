@@ -36,8 +36,14 @@ execute if score #selectedArena gameVariable matches 1.. run scoreboard players 
 # Calamity's arena makers must load and unload their own levels. The default action for the arena
 #   handler is to load the level, so we will not need to define #actionAction gameVariable for
 #   this action to run correctly.
+# Load new blocks
 execute if score #selectedArena gameVariable matches 1.. run scoreboard players operation #currentArena gameVariable = #selectedArena gameVariable
 execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
+# Send welcome message
+execute if score #selectedArena gameVariable matches 1.. run scoreboard players set #arenaAction gameVariable 4
+execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
+# Handle players
+execute if score #selectedArena gameVariable matches 1.. run execute as @a run function calamity:player/reset_data
 execute if score #selectedArena gameVariable matches 1.. run execute as @a run function calamity:player/set_to_lobby_mode
 
 # Always reset this variable

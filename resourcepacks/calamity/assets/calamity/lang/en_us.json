@@ -1,13 +1,18 @@
 {
     "death.attack.outOfWorld": "%1$s fell to calamity",
     "commands.trigger.failed.unprimed": "You're not able to use this command right now",
-    "map.name": "Calamity: Definitive Edition",
+    "map.name": "Calamity",
     "by.author": "by %s",
     "map.author": "Moesh",
+    "calamity.welcome.translation.by":"Translation: %s",
+    "calamity.welcome.translation.by.value":"English [en_us] by %s",
+    "calamity.welcome.scripting.by":"Additional scripting: %s",
+    "calamity.welcome.scripting.by.value":"Jeven, gibbsly, NateThePlate, Panguino, Ts, and Vilder50",
     "map.author.hover.link": "Click to view link",
+    "arena.calamity.welcome":"Current arena: %s by %s",
     "arena.calamity.name": "Calamity Modern",
     "arena.calamity.author": "Moesh",
-    "arena.shattering.name": "Shattering",
+    "arena.shattering.name": "Shattering (Modern recolor)",
     "arena.shattering.author": "Moesh",
     "spacer.brackets.left": " (%s)",
     "spacer.left": " %s",
@@ -136,4 +141,5 @@
     "calamity.generator.enchantedItem.announced.invalid": "%s %s attempted to enchant an item and failed!",
     "calamity.arena.error.sameArena": "This arena is already selected",
     "calamity.arena.error.cooldown": "Arena selection is on cooldown"
+    
 }

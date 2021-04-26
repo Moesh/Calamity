@@ -9,6 +9,7 @@
 #   #arenaAction gameVariable 1 = Erase the arena. Used when switching to a new arena.
 #   #arenaAction gameVariable 2 = Run arena actions. Detailing and special features.
 #   #arenaAction gameVariable 3 = Count ore mines
+#   #arenaAction gameVariable 4 = Send welcome message
 
 # Index for arenas
 #   1 = Calamity Modern
@@ -29,6 +30,8 @@
     # Count the ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 1 run execute store result score OreLeft gameVariable run fill 130 0 181 142 67 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 1 run fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    # Send welcome message
+    execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 1 as @a run function calamity:arena/calamity/send_welcome_message
 
 # 2 - Shattering by Moesh
     # Load a new arena
@@ -40,9 +43,8 @@
     # Count the ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 130 0 181 142 67 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
-
-# If this funciton was called and an arena was loaded, let's make sure players are reset
-execute if score #arenaAction gameVariable matches 0 as @a run function calamity:player/reset_data
+    # Send welcome message
+    execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 2 as @a run function calamity:arena/shattering/send_welcome_message
 
 # Always set score to zero. Players never have access to this variable, so we can take advantage of
 #   how the behavior will work.
