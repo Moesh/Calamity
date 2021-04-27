@@ -6,7 +6,7 @@
 #>--------------------------------------------------------------------------------------------------
 
 # Reset the trigger
-tellraw @a {"translate":"system.message","with":[{"translate":"calamity.resetting","color":"green"}]}
+tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.resetting"}]}
 scoreboard players reset @a[scores={reset=1..}] reset
 scoreboard players set GameState gameVariable 0
 scoreboard players set BluePoints gameVariable 0
