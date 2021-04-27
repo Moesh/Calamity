@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "resourcepacks\\calamity"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {
