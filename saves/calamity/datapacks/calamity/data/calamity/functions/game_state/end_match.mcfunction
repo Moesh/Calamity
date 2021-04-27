@@ -10,7 +10,7 @@ playsound minecraft:event.raid.horn master @a 136 150 89 999999 0.75
 # Make all players spectators!
 gamemode spectator @a
 
-# The match has ended, let's updated the SessionID so players are properly handled
+# The match has ended, let's update the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a sessionID = SessionID gameVariable
 

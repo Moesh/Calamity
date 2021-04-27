@@ -18,9 +18,9 @@ scoreboard players set Red displayPoints 0
 team join fakeBlue Blue
 team join fakeRed Red
 
-# Reset the whole arena
-scoreboard players set #arenaAction gameVariable 0
-function calamity:arena/handler
+# Update the SessionID so players are properly handled
+execute store result score SessionID gameVariable run time query gametime
+scoreboard players operation @a sessionID = SessionID gameVariable
 
 # Return the player to the lobby state
 execute as @a run function #calamity:register_player
