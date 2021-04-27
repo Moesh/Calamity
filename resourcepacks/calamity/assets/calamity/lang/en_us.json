@@ -121,6 +121,7 @@
     "calamity.generator.enchantedItem.announced": "An %s was created by %s %s!",
     "calamity.book.toggleGamemode": "Game mode",
     "calamity.book.toggleGamemode.hover": "Toggle game mode between spectator and adventure",
+    "calamity.error.noPlayers":"No players are online, ending the match.",
     "calamity.goal": "Points Race",
     "calamity.hover.moesh.twitter": "Open twitter.com/HeartlessMoesh",
     "calamity.hover.moesh.github": "Open github.com/Moesh",
@@ -140,6 +141,5 @@
     "calamity.generator.enchantedItem.alreadyEnchanted": "Item already has this enchantment.",
     "calamity.generator.enchantedItem.announced.invalid": "%s %s attempted to enchant an item and failed!",
     "calamity.arena.error.sameArena": "This arena is already selected",
-    "calamity.arena.error.cooldown": "Arena selection is on cooldown"
-    
+    "calamity.arena.error.cooldown": "Arena selection is on cooldown"   
 }
