@@ -38,6 +38,7 @@
     setblock 95 251 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "?", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data5", sizeY: 5, sizeZ: 14, showboundingbox: 1b}
     setblock 131 251 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data2", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
     setblock 131 251 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 35, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:calamity/data3", sizeY: 5, sizeZ: 48, showboundingbox: 1b}
+
 # Activate the structure blocks!
     # Left side
     setblock 141 0 86 minecraft:redstone_block
@@ -72,23 +73,10 @@
     setblock 131 252 101 minecraft:redstone_block
     setblock 131 252 149 minecraft:redstone_block
 
-# Swap banner colors to red for mirrored lane
-setblock 102 45 109 minecraft:red_wall_banner[facing=south]
-setblock 105 45 109 minecraft:red_wall_banner[facing=south]
-setblock 108 45 109 minecraft:red_wall_banner[facing=south]
-setblock 111 47 94 minecraft:red_wall_banner[facing=north]
-setblock 113 47 101 minecraft:red_wall_banner[facing=south]
-setblock 113 47 98 minecraft:red_wall_banner[facing=north]
-setblock 115 47 94 minecraft:red_wall_banner[facing=north]
-setblock 118 45 109 minecraft:red_wall_banner[facing=south]
-setblock 121 45 109 minecraft:red_wall_banner[facing=south]
-setblock 124 45 109 minecraft:red_wall_banner[facing=south]
-setblock 127 45 109 minecraft:red_wall_banner[facing=south]
-setblock 99 45 109 minecraft:red_wall_banner[facing=south]
-
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Erase structure and redstone blocks
 #>--------------------------------------------------------------------------------------------------
+
 # Lobby
 fill 117 32 26 117 34 26 minecraft:air
 fill 117 32 74 117 34 74 minecraft:air
@@ -138,12 +126,25 @@ fill 95 251 87 95 252 87 minecraft:air
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Kill all entities and ensure items are left over
 #>--------------------------------------------------------------------------------------------------
+
+# Red logo replace
+setblock 107 56 89 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:red_hearts_sign",sizeY:11,sizeZ:3,showboundingbox:1b}
+# Red logo
+setblock 107 56 88 minecraft:redstone_block
+# Load red team sign
+fill 107 56 89 107 56 88 minecraft:air
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Kill all entities and ensure items are left over
+#>--------------------------------------------------------------------------------------------------
+
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.
 function calamity:load/kill_entities
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Define the map height
 #>--------------------------------------------------------------------------------------------------
+
 summon minecraft:area_effect_cloud 136 68 87 {CustomName: '{"text":"ArenaHeight"}', Tags: ["marker", "arenaHeight"], CustomNameVisible: 0b, Duration: 2147483647}
 execute store result score #arenaHeight gameVariable run data get entity @e[type=minecraft:area_effect_cloud,tag=marker,tag=arenaHeight,limit=1] Pos[1]
 
@@ -151,9 +152,9 @@ execute store result score #arenaHeight gameVariable run data get entity @e[type
 #> Purpose: Place spawnpoint markers
 #>--------------------------------------------------------------------------------------------------
 
-summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
-summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 136 58 32 {CustomName: '{"text":"LobbySpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 165 48 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
+summon minecraft:area_effect_cloud 107 48 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Place generators

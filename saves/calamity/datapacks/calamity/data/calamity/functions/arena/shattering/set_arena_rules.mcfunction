@@ -13,13 +13,12 @@ scoreboard objectives add mapRules dummy
     #   must passes before the the generator can be used again. 
     # 20 redstone ticks = 1 second
     # 400/20 = 20 seconds
-	scoreboard players set PointChargeTime mapRules 400
-	scoreboard players set PointResetTime mapRules 400
+	scoreboard players set PointChargeTime mapRules 200
+	scoreboard players set PointResetTime mapRules 200
 
     # Let's control the points distribution at a central location, so we can alter them quickly
     #   instead of hunting through several files.
     scoreboard players set ScoreForCaptureResource mapRules 1
-    scoreboard players set ScoreForEnchantedItem mapRules 13
     scoreboard players set ScoreForKill mapRules 1
 
     # The percentage of players who has to trigger the gg trigger before the team will forfeit

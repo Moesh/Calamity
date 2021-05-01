@@ -42,6 +42,9 @@ setblock 137 1 179 minecraft:structure_block[mode=save]{metadata: "", mirror: "N
 setblock 135 0 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 0, mode: "LOAD", posY: 0, sizeX: 6, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/mirror_iron_mine1", sizeY: 48, sizeZ: 17, showboundingbox: 1b}
 setblock 135 1 179 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: 0, mode: "LOAD", posY: 47, sizeX: 6, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:calamity/mirror_iron_mine2", sizeY: 27, sizeZ: 17, showboundingbox: 1b}
 
+# Red logo save
+setblock 107 56 89 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:red_hearts_sign",sizeY:11,sizeZ:3,showboundingbox:1b}
+
 # Command blocks for seting up the void protection
 setblock 141 0 179 minecraft:command_block[conditional=false,facing=up]{auto: 0b, powered: 0b, UpdateLastExecution: 1b, Command: "/function calamity:build_protection/setup/clear_walls"}
 setblock 141 1 179 minecraft:chain_command_block[conditional=false,facing=up]{auto: 1b, powered: 1b, UpdateLastExecution: 1b, Command: "/execute positioned 159 73 93 run function calamity:build_protection/setup/run"}
