@@ -36,5 +36,5 @@ execute as @e[type=tnt,nbt={Fuse: 1s}] at @s run summon minecraft:area_effect_cl
 #   Now we can execute from the star and fix the protection. We're using nether stars because they
 #   cannot be blown up.
 execute as @e[type=item,tag=!HandledProtection,nbt={Item: {id: "minecraft:nether_star", tag: {CustomModelData: 1}}}] at @s run function calamity:build_protection/handle_explosion
-execute as @e[type=item,tag=!HandledProtection] at @s if block ~ 73 ~ minecraft:barrier run fill ~ 0 ~ ~ 67 ~ minecraft:moving_piston replace #calamity:protection_replaceable
+execute as @e[type=item,tag=!HandledProtection] at @s if block ~ 254 ~ minecraft:barrier run fill ~ 0 ~ ~ 67 ~ minecraft:moving_piston replace #calamity:protection_replaceable
 tag @e[type=item,tag=!HandledProtection] add HandledProtection

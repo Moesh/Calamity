@@ -1,4 +1,4 @@
-# Called from: #calamity:load
+# Called from: calamity:arena/handler
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Erase the whole level and marker entities
