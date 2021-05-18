@@ -38,14 +38,8 @@ fill 137 0 94 137 0 95 minecraft:air
 fill 89 0 142 89 0 143 minecraft:air
 fill 89 0 94 89 0 95 minecraft:air
 
-# Erase data structure blocks
-setblock 89 50 143 minecraft:air
-setblock 137 50 143 minecraft:air
-setblock 138 50 137 minecraft:air
-setblock 137 50 95 minecraft:air
-setblock 138 50 89 minecraft:air
-setblock 186 50 89 minecraft:air
-setblock 186 50 137 minecraft:air
+# Erase data
+fill 72 55 143 203 55 89 minecraft:barrier
 
 #> Purpose: Kill all entities and ensure items are left over
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.

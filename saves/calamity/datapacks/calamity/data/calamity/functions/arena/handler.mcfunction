@@ -29,11 +29,11 @@
     execute if score #arenaAction gameVariable matches 2 if score #currentArena gameVariable matches 1 run function calamity:arena/calamity/actions
     # Count the ore
     execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 1 run execute store result score OreLeft gameVariable run fill 130 0 181 142 67 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 1 run fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 1 run fill 130 0 181 142 67 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
     # Send welcome message
     execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 1 as @a run function calamity:arena/calamity/send_welcome_message
 
-# 2 - Shattering by Moesh
+# 2 - Shattering by Panguino (edited by Moesh)
     # Load a new arena
     execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 2 run function #calamity:load_arena_2_shattering
     # Erase the arenas
@@ -41,8 +41,8 @@
     # Additional actions
     execute if score #arenaAction gameVariable matches 2 if score #currentArena gameVariable matches 2 run function calamity:arena/shattering/actions
     # Count the ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 130 0 181 142 67 195 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 142 67 181 130 0 195 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 134 4 112 140 14 120 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 134 4 112 140 14 120 minecraft:iron_ore replace minecraft:petrified_oak_slab
     # Send welcome message
     execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 2 as @a run function calamity:arena/shattering/send_welcome_message
 
