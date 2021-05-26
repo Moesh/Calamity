@@ -1,6 +1,6 @@
 # Calamity: Definitive Edition
 
-_This repository houses the Minecraft: Java Edition custom profile for Calamity. _
+*This repository houses the Minecraft: Java Edition custom profile for Calamity.*
 
 Calamity is a resource management team race. The first team to get to the point limit wins. Gaining points isn't the only way to win. You can lower the point limit by removing iron ore from the mines. I'm sure there's a few ways that could be done...
 
