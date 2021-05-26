@@ -29,8 +29,3 @@ scoreboard players operation #Every20Ticks gameVariable %= 20 CONST
 # Anyways, I write my functions to have the least amount of lines as possible. I want to reuse
 #   functions whenever I can. This means I spent a lot of time thinking about logistics of
 #   functions, and less time doing "fun stuff" like, uh, finishing the damn map.
-
-# These functions, right here. These functions are proof I can find time to waste while still having
-#   a ton of fun just tinkering around with Minecraft's weird scripting language. It should be the
-#   only place where you need to update things related to updating the objective bossbars while the
-#   game is running.
