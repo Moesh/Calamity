@@ -7,14 +7,14 @@ scoreboard players operation @a[tag=GiveItem] captureScore += ScoreForCaptureRes
 
 # Check for generator type and give items
 execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveItem] minecraft:arrow 32
-execute as @s[tag=ArrowOfLevitation] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 16
+execute as @s[tag=ArrowOfSlowFalling] run give @a[distance=..4,tag=GiveItem] minecraft:tipped_arrow{Potion: "minecraft:slow_falling"} 16
 execute as @s[tag=Chain] run give @a[distance=..4,tag=GiveItem] minecraft:chain 24
 execute as @s[tag=Cobblestone] run give @a[distance=..4,tag=GiveItem] minecraft:cobblestone 9
 execute as @s[tag=GoldIngot] run give @a[distance=..4,tag=GiveItem] minecraft:gold_ingot 24
 execute as @s[tag=Log] run give @a[distance=..4,tag=GiveItem] minecraft:oak_log 16
 execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveItem] minecraft:scaffolding 16
-execute as @s[tag=SpectralArrow] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 16
-execute as @s[tag=SplashPotionOfSlowFalling] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 1
+execute as @s[tag=SpectralArrow] run give @a[distance=..4,tag=GiveItem] minecraft:spectral_arrow 16
+execute as @s[tag=SplashPotionOfLevitation] run give @a[distance=..4,tag=GiveItem] lingering_potion{display:{Name:'{"translate":"item.minecraft.lingering_potion.effect.levitation"}'},CustomPotionEffects:[{Id:25b,Amplifier:0b,Duration:220,ShowParticles:1b},{Id:28b,Amplifier:0b,Duration:260,ShowParticles:1b}],Potion:"minecraft:empty",CustomPotionColor:16777215} 1
 execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 3
 
 # Play success sounds
