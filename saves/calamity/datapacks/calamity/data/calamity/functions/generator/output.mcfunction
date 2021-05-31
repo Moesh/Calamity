@@ -41,7 +41,4 @@ execute if entity @a[tag=Enchant] run function calamity:generator/output/enchant
 execute as @s run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
 # Make sure the handler doesn't call this function on the next cycle, unless it is needed
 tag @s remove Output
-# Reset tags
-tag @a[tag=GiveMessage] remove GiveMessage
-
 
