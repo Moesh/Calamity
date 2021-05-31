@@ -24,7 +24,7 @@ execute as @e[type=#calamity:banned_from_spawn] at @s if block ~ 251 ~ barrier r
 # Kill out of bounds boats
 execute as @e[type=boat] at @s unless block ~ 255 ~ minecraft:barrier run kill @s
 
-#Handle the spawn items
+# Handle the spawn items
 execute as @a[tag=Playing] run function calamity:player/spawn_items/handler
 kill @e[type=item,nbt={Item: {tag: {Calamity: {SpawnItem: 1b}}}}]
 
