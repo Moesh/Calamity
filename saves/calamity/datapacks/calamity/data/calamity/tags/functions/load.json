@@ -5,6 +5,8 @@
 		"calamity:load/setup_tags",
 		"calamity:load/set_gamerules",
 		"calamity:arena/calamity/set_arena_rules",
+		"calamity:arena/calamity/erase",
+		"calamity:arena/shattering/erase",
 		"calamity:arena/calamity/load_blocks",
 		"calamity:arena/calamity/send_welcome_message",
 		"calamity:points/setup_bossbar"
