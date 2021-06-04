@@ -11,3 +11,7 @@ effect give @s minecraft:strength 10 1
 effect give @s minecraft:absorption 10 1
 effect give @s minecraft:fire_resistance 10 1
 effect give @s minecraft:resistance 10 0
+
+# Perhaps the arena has some special effects. Let's give it to them.
+scoreboard players set #arenaAction gameVariable 7
+function calamity:arena/handler

@@ -9,7 +9,13 @@ execute store result score #OnlinePlayers gameVariable if entity @a[tag=Playing]
 execute if score #OnlinePlayers gameVariable matches 0 run function calamity:game_state/no_players_online
 
 # Give recently respawned players respawn status effects
-execute as @a[scores={timeSinceDeath=0}] run function calamity:player/give_match_effects
+scoreboard players set #arenaAction gameVariable 6
+function calamity:arena/handler
+
+# Give spawn items
+scoreboard players set #arenaAction gameVariable 8
+execute as @a[tag=Playing,scores={timeSinceDeath=0}] run function calamity:arena/handler
+
 
 # Kill players who are out of bounds
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] store result score @s playerHeight run data get entity @s Pos[1]
@@ -23,10 +29,6 @@ execute as @e[type=#calamity:banned_from_spawn] at @s if block ~ 251 ~ barrier r
 
 # Kill out of bounds boats
 execute as @e[type=boat] at @s unless block ~ 255 ~ minecraft:barrier run kill @s
-
-# Handle the spawn items
-execute as @a[tag=Playing] run function calamity:player/spawn_items/handler
-kill @e[type=item,nbt={Item: {tag: {Calamity: {SpawnItem: 1b}}}}]
 
 # Count the players and check if someone left. If they did, recheck forfeit state. The forfeit
 #   check normally only happens when someone triggers the gg trigger. This means that if everyone

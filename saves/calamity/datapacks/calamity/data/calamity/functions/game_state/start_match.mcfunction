@@ -66,9 +66,9 @@ execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run spawnpo
 # Reset the match timer
 scoreboard players set MatchTimeInTicks gameVariable 0
 
-# Reset players item selection and give players the starting item selection
-scoreboard players set @a selectedItem -1
-scoreboard players set @a[tag=Playing] giveSpawnItems 1
+# Give starting items
+scoreboard players set #arenaAction gameVariable 8
+execute as @a[tag=Playing] run function calamity:arena/handler
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.seekGlory"}]}
