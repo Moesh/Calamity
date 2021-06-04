@@ -13,8 +13,8 @@ scoreboard objectives add mapRules dummy
     #   must passes before the the generator can be used again. 
     # 20 redstone ticks = 1 second
     # 400/20 = 20 seconds
-	scoreboard players set PointChargeTime mapRules 200
-	scoreboard players set PointResetTime mapRules 200
+	scoreboard players set PointChargeTime mapRules 100
+	scoreboard players set PointResetTime mapRules 100
 
     # Let's control the points distribution at a central location, so we can alter them quickly
     #   instead of hunting through several files.
@@ -24,7 +24,7 @@ scoreboard objectives add mapRules dummy
     # The percentage of players who has to trigger the gg trigger before the team will forfeit
     # Number has to be between 0(%) and 100(%). This has to live here in-case an arena is built for
     # different team sizes.
-    scoreboard players set PercentPlayersToForfeit mapRules 75
+    scoreboard players set PercentPlayersToForfeit mapRules 100
 
 # Count Iron Ore and set the objective. The amount of iron ore left in the mine is the score
 # teams must get to win the game.
