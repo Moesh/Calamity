@@ -18,6 +18,14 @@ scoreboard players set Red displayPoints 0
 team join fakeBlue Blue
 team join fakeRed Red
 
+# Reload entire arena. We should not need to erase, as the build should be entirely reset, and no
+#   player should have built outside the arena. This is the default action for arena handler.
+function calamity:arena/handler
+
+# Send welcome message
+scoreboard players set #arenaAction gameVariable 4
+function calamity:arena/handler
+
 # Update the SessionID so players are properly handled
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a sessionID = SessionID gameVariable
