@@ -27,6 +27,7 @@ scoreboard players enable @a arena
 #   handler has a special action which handles this. Let's call it and then move onto loading the
 #   level.
 execute if score #selectedArena gameVariable matches 1.. run scoreboard players set #arenaAction gameVariable 1
+execute if score #selectedArena gameVariable matches 1.. run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.arena.loading"}]}
 execute if score #selectedArena gameVariable matches 1.. run function calamity:arena/handler
 
 # Switching arenas too quickly can cause a crash because of how many blocks are loading and

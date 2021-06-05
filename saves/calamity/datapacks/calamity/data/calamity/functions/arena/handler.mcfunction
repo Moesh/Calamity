@@ -23,7 +23,6 @@
 
 # NOTE TO ARENA MAKERS: Each action requires an entry for your level to be accepted.
 
-
 #> 1 - Calamity: Modern by Moesh
     # 0 Load a new arena
     execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 1 run function #calamity:load_arena_1_modern
@@ -56,7 +55,8 @@
     execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 2 as @a run function calamity:arena/shattering/send_welcome_message
     # 5 - Start match
     # Remove the lectern
-    execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 as @a run setblock 138 17 118 minecraft:air
+    execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 as @a run setblock 106 13 117 minecraft:air
+    execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 positioned 106.5 13.75 117.5 run kill @e[type=area_effect_cloud,distance=..1]
     # 6, 7 Give effects    
     execute if score #arenaAction gameVariable matches 6 if score #currentArena gameVariable matches 2 as @a run effect give @s minecraft:night_vision 999999 0 true
     execute if score #arenaAction gameVariable matches 7 if score #currentArena gameVariable matches 2 as @a run effect give @s minecraft:night_vision 999999 0 true
