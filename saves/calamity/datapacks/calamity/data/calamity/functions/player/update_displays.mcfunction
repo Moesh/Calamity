@@ -39,7 +39,6 @@ scoreboard players operation #tempVar gameVariable -= RedPoints gameVariable
 # Always reset the #tempVar
 scoreboard players reset #tempVar gameVariable
 
-
 # REGULAR TIMER
 # Always update the bossbar name with new information
 # Display this actionbar when the seconds are in the single-digits (0 to 9 seconds)

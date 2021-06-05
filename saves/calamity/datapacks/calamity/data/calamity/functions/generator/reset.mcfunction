@@ -15,7 +15,7 @@ title @a[tag=GiveMessage] actionbar {"translate":"calamity.ready","color":"green
 tag @a[tag=GiveMessage] remove GiveMessage
 
 # Update the sign
-execute as @s[tag=FacingWest] run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}"}
+execute as @s[tag=FacingWest] run data merge block ^ ^ ^3 {Text3: "{\"translate\":\"calamity.generator.sign.ready\"}"}
 
 # Tag which caused the handler to call this function
 tag @s remove ReadyToStart
