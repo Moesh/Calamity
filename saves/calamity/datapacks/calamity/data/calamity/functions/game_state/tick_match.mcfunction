@@ -13,9 +13,8 @@ scoreboard players set #arenaAction gameVariable 6
 function calamity:arena/handler
 
 # Give spawn items
-scoreboard players set #arenaAction gameVariable 8
-execute as @a[tag=Playing,scores={timeSinceDeath=0}] run function calamity:arena/handler
-
+scoreboard players set #arenaAction gameVariable 9
+function calamity:arena/handler
 
 # Kill players who are out of bounds
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] store result score @s playerHeight run data get entity @s Pos[1]

@@ -66,13 +66,13 @@ execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run spawnpo
 # Reset the match timer
 scoreboard players set MatchTimeInTicks gameVariable 0
 
-# Arena-specific actions (like removing blocks or entities)
-scoreboard players set #arenaAction gameVariable 5
-function calamity:arena/handler
-
 # Give starting items
 scoreboard players set #arenaAction gameVariable 8
 execute as @a[tag=Playing] run function calamity:arena/handler
+
+# Arena-specific actions (like removing blocks or entities)
+scoreboard players set #arenaAction gameVariable 5
+function calamity:arena/handler
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.seekGlory"}]}
