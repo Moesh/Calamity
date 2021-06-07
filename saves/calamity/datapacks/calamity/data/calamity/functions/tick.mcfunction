@@ -13,6 +13,12 @@ function calamity:player/handle_joining_players
 effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
 effect clear @a[scores={food=20}] minecraft:saturation
 
+# Void looping protection must be run frequently.
+execute as @a[tag=Spawnpoint] unless block ~ ~ ~ minecraft:air run setblock ~ ~ ~ minecraft:air
+execute as @a[tag=Spawnpoint] unless block ~ ~1 ~ minecraft:air run setblock ~ ~1 ~ minecraft:air
+execute if score GameState gameVariable matches 0 as @a[scores={timeSinceDeath=0}] unless entity @e[type=minecraft:area_effect_cloud,tag=Spawnpoint,distance=..2] at @s run function calamity:player/set_to_lobby_mode
+execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=0},team=blue] unless entity @e[type=minecraft:area_effect_cloud,tag=Spawnpoint,distance=..2] at @s run function calamity:player/set_match_spawnpoint
+
 # Some arenas may have special effects or other easter egg cases. Always tick these.
 scoreboard players set #arenaAction gameVariable 2
 function calamity:arena/handler
