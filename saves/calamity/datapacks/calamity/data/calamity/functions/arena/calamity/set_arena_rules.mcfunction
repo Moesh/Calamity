@@ -6,14 +6,14 @@
 # Removing and readding objectives complete wipes the set data and sets these values.
 scoreboard objectives remove mapRules
 scoreboard objectives add mapRules dummy
-    # PointChargeTime: Point refers to generators, a physical location on the map where players
+    # GeneratorChargeTime: Point refers to generators, a physical location on the map where players
     #   can gain  resources or status effects for their team. ChargeTime refers to how much time
     #   must pass before resources or status effects are given. ResetTime refers to how much time
     #   must passes before the the generator can be used again. 
     # 20 redstone ticks = 1 second
     # 400/20 = 20 seconds
-	scoreboard players set PointChargeTime mapRules 400
-	scoreboard players set PointResetTime mapRules 400
+	scoreboard players set GeneratorChargeTime mapRules 400
+	scoreboard players set GeneratorResetTime mapRules 400
 
     # Let's control the points distribution at a central location, so we can alter them quickly
     #   instead of hunting through several files.

@@ -5,6 +5,6 @@
 #>--------------------------------------------------------------------------------------------------
 
 # Each arena could have a special time set for the generator
-scoreboard players operation @s GeneratorTimer = PointChargeTime mapRules
+scoreboard players operation @s GeneratorTimer = GeneratorChargeTime mapRules
 tag @s add Charging
 tag @s remove Start

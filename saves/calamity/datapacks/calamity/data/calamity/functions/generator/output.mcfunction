@@ -8,7 +8,7 @@
 # Update generator state to resetting
 tag @s add Resetting
 tag @s remove Charging
-scoreboard players operation @s GeneratorTimer = PointResetTime mapRules
+scoreboard players operation @s GeneratorTimer = GeneratorResetTime mapRules
 
 #---------------------------------------------------------------------------------------------------
 # Detect players who are standing on a generator

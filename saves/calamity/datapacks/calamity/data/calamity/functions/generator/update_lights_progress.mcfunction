@@ -8,6 +8,6 @@
 # multiple points. This makes it absurdly easy to iterate while game balancing. I like this a lot.
 scoreboard players operation @s progressLights = @s GeneratorTimer
 scoreboard players operation @s progressLights *= -100 CONST
-scoreboard players operation @s[tag=Charging] progressLights /= PointChargeTime mapRules
-scoreboard players operation @s[tag=Resetting] progressLights /= PointResetTime mapRules
+scoreboard players operation @s[tag=Charging] progressLights /= GeneratorChargeTime mapRules
+scoreboard players operation @s[tag=Resetting] progressLights /= GeneratorResetTime mapRules
 scoreboard players operation @s progressLights += 100 CONST

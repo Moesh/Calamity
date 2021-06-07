@@ -15,7 +15,7 @@ scoreboard players operation @s[scores={progressSecond=0}] displaySecond /= 20 C
 # Calculate percentage to be totally obtuse and awesome.
 scoreboard players operation @s displayPercent = @s GeneratorTimer
 scoreboard players operation @s displayPercent *= -100 CONST
-scoreboard players operation @s displayPercent /= PointChargeTime mapRules
+scoreboard players operation @s displayPercent /= GeneratorChargeTime mapRules
 scoreboard players operation @s displayPercent += 100 CONST
 
 # Update sign with charging percentage
