@@ -1,4 +1,4 @@
-# Called from: 
+# Called from: So many places.
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Reset the map and player states to neutral
@@ -15,7 +15,6 @@
 #   #arenaAction gameVariable 7 = Additioanl match effects
 #   #arenaAction gameVariable 8 = Give starting items
 #   #arenaAction gameVariable 9 = Give items to any respawning player
-
 
 # Index for arenas
 #   1 = Calamity Modern
