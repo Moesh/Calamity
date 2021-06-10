@@ -57,7 +57,7 @@ scoreboard players enable @a[tag=Playing] gg
 effect give @a minecraft:slow_falling 1 0 true
 effect clear @a minecraft:slow_falling
 
-function calamity:player/set_match_spawnpoint
+execute as @a[tag=Playing] run function calamity:player/set_match_spawnpoint
 
 # Reset the match timer
 scoreboard players set MatchTimeInTicks gameVariable 0

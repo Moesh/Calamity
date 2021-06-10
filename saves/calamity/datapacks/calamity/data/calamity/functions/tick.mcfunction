@@ -17,7 +17,7 @@ effect clear @a[scores={food=20}] minecraft:saturation
 execute as @a[tag=Spawnpoint] unless block ~ ~ ~ minecraft:air run setblock ~ ~ ~ minecraft:air
 execute as @a[tag=Spawnpoint] unless block ~ ~1 ~ minecraft:air run setblock ~ ~1 ~ minecraft:air
 execute if score GameState gameVariable matches 0 as @a[scores={timeSinceDeath=0}] unless entity @e[type=minecraft:area_effect_cloud,tag=Spawnpoint,distance=..2] at @s run function calamity:player/set_to_lobby_mode
-execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=0},team=blue] unless entity @e[type=minecraft:area_effect_cloud,tag=Spawnpoint,distance=..2] at @s run function calamity:player/set_match_spawnpoint
+execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=0}] unless entity @e[type=minecraft:area_effect_cloud,tag=Spawnpoint,distance=..2] at @s run function calamity:player/set_match_spawnpoint
 
 # Some arenas may have special effects or other easter egg cases. Always tick these.
 scoreboard players set #arenaAction gameVariable 2
