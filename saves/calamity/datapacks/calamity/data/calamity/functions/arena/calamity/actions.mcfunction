@@ -16,8 +16,9 @@ execute if score #tableCandleSmoke gameVariable matches 45.. run scoreboard play
 
 # Play particles for the game table
 # Highlight players who fell in this location.
-execute as @a[gamemode=adventure,x=135,y=54,z=59,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
+execute as @a[gamemode=adventure,x=135,y=54,z=38,dx=2,dz=2,tag=!HowEmbarassing] run tag @s add HowEmbarassing
 execute as @a[tag=HowEmbarassing,tag=!MessageSent] run tellraw @a {"translate":"calamity.troll","color": "gray","italic": true,"with": [{"selector":"@s"}]}
+execute as @a[tag=HowEmbarassing,tag=!MessageSent] run playsound calamity:calamity.laugh master @s 135 54 38 255
 tag @a[tag=HowEmbarassing,tag=!MessageSent] add MessageSent
-execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=59,dx=2,dz=2] run tag @s remove HowEmbarassing
+execute as @a[tag=MessageSent] unless entity @s[gamemode=!spectator,x=135,y=54,z=38,dx=2,dz=2] run tag @s remove HowEmbarassing
 tag @a[tag=!HowEmbarassing,tag=MessageSent] remove MessageSent

@@ -144,5 +144,6 @@
     "calamity.generator.enchantedItem.announced.invalid": "%s %s attempted to enchant an item and failed!",
     "calamity.arena.error.sameArena": "This arena is already selected",
     "calamity.arena.error.cooldown": "Arena selection is on cooldown",
-    "calamity.arena.loading":"Switching a new arena, please stand-by. This may take some flippa-watts, confulkiesses, and prokies to load..."
+    "calamity.arena.loading":"Switching a new arena, please stand-by. This may take some flippa-watts, confulkiesses, and prokies to load...",
+    "calamity.subtitle.laugh":"8-bit laughter"
 }

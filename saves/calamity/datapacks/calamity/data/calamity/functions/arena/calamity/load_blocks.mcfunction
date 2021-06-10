@@ -140,14 +140,14 @@ setblock 116 44 109 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"
 setblock 110 44 109 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 107 45 109 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 103 46 109 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
-setblock 113 45 106 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 106 46 100 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 103 44 100 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 116 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 104 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 100 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
-setblock 100 49 94 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
-setblock 116 49 94 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
+setblock 113 46 109 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
+
+setblock 113 45 106 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 
 # Spawn entrance
 fill 117 47 99 98 47 99 minecraft:red_glazed_terracotta[facing=west]

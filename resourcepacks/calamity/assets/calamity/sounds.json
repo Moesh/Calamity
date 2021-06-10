@@ -76,5 +76,11 @@
       "calamity:announcer_test/you-have-taken-the-lead"
     ],
     "subtitle": "calamity.subtitle.announcer"
+  },
+  "calamity.laugh": {
+    "sounds": [
+      "calamity:laugh"
+    ],
+    "subtitle": "calamity.subtitle.laugh"
   }
 }
