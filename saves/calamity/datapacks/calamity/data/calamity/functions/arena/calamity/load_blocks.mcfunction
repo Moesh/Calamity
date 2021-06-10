@@ -128,9 +128,9 @@ fill 95 251 87 95 252 87 minecraft:air
 #>--------------------------------------------------------------------------------------------------
 
 # Replace team sign
-setblock 104 56 89 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:red_hearts_sign",sizeY:11,sizeZ:3,showboundingbox:1b}
-setblock 104 56 88 minecraft:redstone_block
-fill 104 56 88 104 56 89 minecraft:air
+setblock 101 56 89 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Moesh",rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:13,posZ:1,integrity:1.0f,showair:0b,name:"calamity:red_hearts_sign",sizeY:11,sizeZ:3,showboundingbox:1b}
+setblock 101 56 88 minecraft:redstone_block
+fill 101 56 88 101 56 89 minecraft:air
 
 # Replace banners
 setblock 115 45 115 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
@@ -147,7 +147,6 @@ setblock 116 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"b
 setblock 104 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 100 50 98 minecraft:red_wall_banner[facing=south]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 100 49 94 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
-setblock 104 49 94 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 setblock 116 49 94 minecraft:red_wall_banner[facing=north]{Patterns:[{Pattern:"bri",Color:15},{Pattern:"moj",Color:0}]}
 
 # Spawn entrance
