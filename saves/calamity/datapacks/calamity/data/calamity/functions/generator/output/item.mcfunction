@@ -5,7 +5,7 @@
 # Give the player a score
 scoreboard players operation @a[tag=GiveItem] captureScore += ScoreForCaptureResource mapRules
 title @a[tag=GiveItem] times 5 30 10
-execute as @a[tag=GiveItem] run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 0.5
+execute as @a[tag=GiveItem,limit=1] run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 0.5
 
 # Give items and send message
 execute as @s[tag=Arrow] run give @a[distance=..4,tag=GiveItem] minecraft:arrow 32
