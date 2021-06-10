@@ -52,15 +52,14 @@
     # Additional actions
     execute if score #arenaAction gameVariable matches 2 if score #currentArena gameVariable matches 2 run function calamity:arena/shattering/actions
     # Count the ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 134 4 112 140 14 120 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 134 4 112 140 14 120 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run execute store result score OreLeft gameVariable run fill 134 4 112 140 15 120 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 2 run fill 134 4 112 140 15 120 minecraft:iron_ore replace minecraft:petrified_oak_slab
     # Send welcome message
     execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 2 as @a run function calamity:arena/shattering/send_welcome_message
     # 5 - Start match
     # Remove the lectern
     execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 run setblock 106 13 117 minecraft:air
     execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 run kill @e[type=area_effect_cloud,tag=menuInstructions]
-    execute if score #arenaAction gameVariable matches 5 if score #currentArena gameVariable matches 2 run say I swear, I ran.
     # 6, 7 Give effects    
     execute if score #arenaAction gameVariable matches 6 if score #currentArena gameVariable matches 2 as @a run effect give @s minecraft:night_vision 999999 0 true
     execute if score #arenaAction gameVariable matches 7 if score #currentArena gameVariable matches 2 as @a run effect give @s minecraft:night_vision 999999 0 true
