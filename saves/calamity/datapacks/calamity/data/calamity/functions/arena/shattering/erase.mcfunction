@@ -33,7 +33,7 @@ fill 89 0 142 89 0 143 minecraft:air
 fill 89 0 94 89 0 95 minecraft:air
 
 # Erase data
-fill 72 255 143 203 255 89 minecraft:barrier
+fill 72 252 143 203 255 89 minecraft:air
 
 #> Purpose: Kill all entities and ensure items are left over
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.
