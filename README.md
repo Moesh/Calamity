@@ -2,9 +2,12 @@
 
 *This repository houses the Minecraft: Java Edition custom profile for Calamity.*
 
-Calamity is a resource management team race. The first team to get to the point limit wins. Gaining points isn't the only way to win. You can lower the point limit by removing iron ore from the mines. I'm sure there's a few ways that could be done...
+Calamity is a point race with a large focus on resource management. Be the first team to reach the point limit to win! The point limit can be lowered by mining Iron Ore from the central mine.
 
-Points are awarded when players successfully use generators, kill enemy players, or by crafting items which use iron ingots. Crafting items with iron ingots one of the quickest ways to win!
+**There are three ways to get points:**
+- Using generators successfully
+- Killing enemy players
+- Crafting items which use Iron Ingots in their recipe
 
 Generators give resources, status effects, or enchantments after charging for a short while. After giving resources, they'll need to cooldown before they can be activated again.
 
@@ -67,7 +70,7 @@ Calamity is a game mode, and arenas sometimes have special features!
   - Players are awarded 1 point for capturing resource or status effect generators
   - Players are awarded 13 points for enchanting an item
   - Players are awarded 1 point for killing other players
-### Shattering (official v5+ map recolor)
+### Shattering (Shattered 'Two Towers' by Paguino, edited by Moesh)
 - Glass will break when shot by an arrow
 - Stained glass will reduce in durability (and change colors) when shot by an arrow
 - Difficulty is set to normal
