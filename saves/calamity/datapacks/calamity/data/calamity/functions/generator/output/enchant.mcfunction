@@ -199,7 +199,7 @@ tellraw @a[tag=Enchant,tag=!CheckForValidItem] {"translate":"calamity.generator.
 execute if entity @a[tag=Enchant,tag=!CheckForValidItem,team=blue] run tellraw @a {"translate":"calamity.generator.enchantedItem.announced","color":"blue","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.blue"},{"translate":"b","color":"blue","font": "calamity:icons"}]}
 execute if entity @a[tag=Enchant,tag=!CheckForValidItem,team=red] run tellraw @a {"translate":"calamity.generator.enchantedItem.announced","color":"red","with":[{"translate":"calamity.enchanted.item","color":"white"},{"translate":"team.red"},{"translate":"r","color": "red","font": "calamity:icons"}]}
 
-execute as @a[tag=Enchant] run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 0.5
+execute as @a[tag=Enchant] run playsound calamity:generator.enchantment master @a ~ ~ ~ 0.5 0.5
 execute as @a[tag=Enchant,team=blue] run playsound calamity:calamity.announcer.enchanted.item master @a[team=red] ~ ~ ~ 500
 execute as @a[tag=Enchant,team=red] run playsound calamity:calamity.announcer.enchanted.item master @a[team=blue] ~ ~ ~ 500
 

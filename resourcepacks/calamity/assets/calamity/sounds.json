@@ -82,5 +82,47 @@
       "calamity:laugh"
     ],
     "subtitle": "calamity.subtitle.laugh"
+  },
+  "generator.start": {
+    "sounds": [
+      "calamity:generator/start"
+    ],
+    "subtitle": "calamity.generator.start"
+  },
+  "generator.tick": {
+    "sounds": [
+      "calamity:generator/tick"
+    ],
+    "subtitle": "calamity.generator.tick"
+  },
+  "generator.output": {
+    "sounds": [
+      "calamity:generator/output"
+    ],
+    "subtitle": "calamity.generator.output"
+  },
+  "generator.ready": {
+    "sounds": [
+      "calamity:generator/ready"
+    ],
+    "subtitle": "calamity.generator.ready"
+  },
+  "generator.effect.team": {
+    "sounds": [
+      "calamity:generator/effect_team"
+    ],
+    "subtitle": "calamity.generator.effect.team"
+  },
+  "generator.effect.attack": {
+    "sounds": [
+      "calamity:generator/effect_attack"
+    ],
+    "subtitle": "calamity.generator.effect.attack"
+  },
+  "generator.enchantment": {
+    "sounds": [
+      "calamity:generator/enchantment"
+    ],
+    "subtitle": "calamity.generator.enchantment"
   }
 }

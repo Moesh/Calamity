@@ -28,7 +28,7 @@ execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=CheckStatus,
 execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=CheckStatus] run function calamity:generator/status_message
 
 # Is the point idle? Start charging.
-execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=CheckStatus,tag=!Charging,tag=!Resetting] run function calamity:generator/start
+execute as @e[type=minecraft:area_effect_cloud,name="Generator",tag=CheckStatus,tag=!Charging,tag=!Resetting] at @s run function calamity:generator/start
  
 # If a player has already stepped here in the last tick, make it so the pressure plate is not triggered again until they leave.
 tag @e[type=minecraft:area_effect_cloud,name="Generator",tag=CheckStatus] add PlayerAlreadyChecked

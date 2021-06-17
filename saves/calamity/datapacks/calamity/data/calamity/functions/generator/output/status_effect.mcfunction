@@ -18,7 +18,8 @@ execute if entity @a[team=red,tag=Debuff] run tag @a[team=blue] add GiveDebuff
 execute if entity @a[team=red,tag=Debuff] run tag @a[team=red] remove GiveDebuff
 
 # Play success sounds
-execute as @a[tag=Buff] run playsound minecraft:entity.generic.drink player @s
+execute as @a[tag=Buff] run playsound calamity:generator.effect.team player @s
+execute as @a[tag=Debuff] run playsound calamity:generator.effect.attack player @s
 
 # Buff
 execute as @s[tag=Regeneration] run effect give @a[tag=Buff] minecraft:regeneration 45
