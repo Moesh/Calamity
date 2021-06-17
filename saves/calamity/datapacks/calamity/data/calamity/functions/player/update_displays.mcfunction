@@ -42,9 +42,9 @@ scoreboard players reset #tempVar gameVariable
 # REGULAR TIMER
 # Always update the bossbar name with new information
 # Display this actionbar when the seconds are in the single-digits (0 to 9 seconds)
-execute if score #Every20Ticks gameVariable matches 0 if score displaySecond gameVariable matches 0..9 run bossbar set calamity:iron_ore name {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"translate":"%s:0%s","with":[{"score":{"name":"displayMinute", "objective":"gameVariable"} },{"score":{"name":"displaySecond", "objective":"gameVariable"} }]},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
+execute if score displaySecond gameVariable matches 0..9 run bossbar set calamity:iron_ore name {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"translate":"%s:0%s","with":[{"score":{"name":"displayMinute", "objective":"gameVariable"} },{"score":{"name":"displaySecond", "objective":"gameVariable"} }]},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
 # Display this actionbar when the seconds are in the double-digits (10 to 59 seconds)
-execute if score #Every20Ticks gameVariable matches 0 if score displaySecond gameVariable matches 10.. run bossbar set calamity:iron_ore name {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"translate":"%s:%s","with":[{"score":{"name":"displayMinute", "objective":"gameVariable"} },{"score":{"name":"displaySecond", "objective":"gameVariable"} } ]},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
+execute if score displaySecond gameVariable matches 10.. run bossbar set calamity:iron_ore name {"translate":"%s %s  %s %s","with":[{"translate":"3","font":"calamity:icons"},{"translate":"%s:%s","with":[{"score":{"name":"displayMinute", "objective":"gameVariable"} },{"score":{"name":"displaySecond", "objective":"gameVariable"} } ]},{"translate":"i","font":"calamity:icons","color":"white"},{"score":{"name": "OreLeft","objective": "gameVariable"}}]}
 
 # Update the sidebar
 scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable
