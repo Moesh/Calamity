@@ -17,6 +17,9 @@ execute if entity @a[team=blue,tag=Debuff] run tag @a[team=blue] remove GiveDebu
 execute if entity @a[team=red,tag=Debuff] run tag @a[team=blue] add GiveDebuff
 execute if entity @a[team=red,tag=Debuff] run tag @a[team=red] remove GiveDebuff
 
+# Play success sounds
+execute as @a[tag=Buff] run playsound minecraft:entity.generic.drink player @s
+
 # Buff
 execute as @s[tag=Regeneration] run effect give @a[tag=Buff] minecraft:regeneration 45
 execute as @s[tag=Resistance] run effect give @a[tag=Buff] minecraft:resistance 45
@@ -34,9 +37,6 @@ tag @a[tag=Debuff] add GiveMessageAttack
 tag @a[tag=Debuff] remove Debuff
 tag @a[tag=GiveDebuff] add GiveMessageDebuffed
 tag @a[tag=GiveDebuff] remove GiveDebuff
-
-# Play success sounds
-execute as @a[tag=Buff] run playsound minecraft:entity.generic.drink player @s
 
 # Buff messages
 execute as @s[tag=Haste] run tellraw @a[tag=GiveMessage] {"translate":"system.message","color": "green","with":[{"translate":"calamity.generator.output.effect.given.level","with":[{"translate":"effect.minecraft.haste","color": "white"},{"translate":"potion.potency.3","color": "white"},{"text":"45","color": "white"}]}]}
