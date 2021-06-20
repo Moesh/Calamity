@@ -21,24 +21,24 @@ execute if score GameState gameVariable matches 0 if score #tableCandleSmoke gam
 # Make arrows break glass until it shatters
 #---------------------------------------------------------------------------------------------------
 # Detect that arrow is in a block
-tag @e[type=minecraft:arrow,tag=!inBlock,nbt={inGround: 1b}] add inBlock
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:glass"}}] add inGlass
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:black_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:blue_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:brown_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:cyan_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:gray_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:green_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:light_blue_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:light_gray_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:lime_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:magenta_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:orange_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:pink_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:purple_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:red_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:white_stained_glass"}}] add inStained
-tag @e[type=minecraft:arrow,tag=inBlock,nbt={inBlockState: {Name: "minecraft:yellow_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=!inBlock,nbt={inGround: 1b}] add inBlock
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:glass"}}] add inGlass
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:black_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:blue_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:brown_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:cyan_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:gray_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:green_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:light_blue_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:light_gray_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:lime_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:magenta_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:orange_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:pink_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:purple_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:red_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:white_stained_glass"}}] add inStained
+tag @e[type=#minecraft:arrows,tag=inBlock,nbt={inBlockState: {Name: "minecraft:yellow_stained_glass"}}] add inStained
 
 # Check the arrow rotation (appare)
 execute as @e[tag=inBlock,y_rotation=-90..90] at @s run tp @e[tag=inBlock,limit=1] ~ ~ ~0.05
