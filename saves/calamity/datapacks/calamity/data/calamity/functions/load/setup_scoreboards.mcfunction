@@ -30,7 +30,7 @@ scoreboard objectives add CONST dummy
 #	are called directly from calamity:load
 
 # This section removes and recreates read-only scoreboards. You can assume the game will never
-# call these.
+# alter these.
 scoreboard objectives remove AffectedItems
 scoreboard objectives add AffectedItems dummy
 scoreboard objectives remove health
