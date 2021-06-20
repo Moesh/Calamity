@@ -78,6 +78,10 @@ scoreboard objectives remove captureScore
 scoreboard objectives add captureScore dummy
 scoreboard objectives remove killScore
 scoreboard objectives add killScore minecraft.custom:minecraft.player_kills
+scoreboard objectives remove streakPoints
+scoreboard objectives add streakPoints dummy
+scoreboard objectives remove streakLevel
+scoreboard objectives add streakLevel dummy
 
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
 scoreboard objectives remove sessionID

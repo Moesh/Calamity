@@ -33,6 +33,9 @@ execute as @a[tag=Playing] run function calamity:player/give_match_effects
 gamemode survival @a[tag=Playing]
 gamemode spectator @a[tag=!Playing]
 
+scoreboard players set @a[tag=Playing] streakPoints 0
+scoreboard players set @a[tag=Playing] streakLevel 0
+
 # Set the correct scoreboard
 scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable
 scoreboard players set Blue displayPoints 0

@@ -3,7 +3,6 @@
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Tick these functions during the match
 #>--------------------------------------------------------------------------------------------------
-
 # If no one is playing the match, stop the match
 execute store result score #OnlinePlayers gameVariable if entity @a[tag=Playing]
 execute if score #OnlinePlayers gameVariable matches 0 run function calamity:game_state/no_players_online
