@@ -24,20 +24,20 @@ tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:crossbow", tag: 
 
 # All axes
 tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] add ItemAlreadyEnchanted
-enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:wooden_axe"}}] minecraft:sharpness 2
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] remove CheckForValidItem
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] add ItemAlreadyEnchanted
-enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:stone_axe"}}] minecraft:sharpness 2
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] remove CheckForValidItem
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] add ItemAlreadyEnchanted
-enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:golden_axe"}}] minecraft:sharpness 2
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] remove CheckForValidItem
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] add ItemAlreadyEnchanted
-enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:iron_axe"}}] minecraft:sharpness 2
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] remove CheckForValidItem
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] add ItemAlreadyEnchanted
-enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:diamond_axe"}}] minecraft:sharpness 2
-tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe", tag: {Enchantments: [{id: "minecraft:sharpness"}]}}}] remove CheckForValidItem
+enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:wooden_axe"}}] minecraft:efficiency 2
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] remove CheckForValidItem
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] add ItemAlreadyEnchanted
+enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:stone_axe"}}] minecraft:efficiency 2
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:stone_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] remove CheckForValidItem
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] add ItemAlreadyEnchanted
+enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:golden_axe"}}] minecraft:efficiency 2
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:golden_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] remove CheckForValidItem
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] add ItemAlreadyEnchanted
+enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:iron_axe"}}] minecraft:efficiency 2
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:iron_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] remove CheckForValidItem
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] add ItemAlreadyEnchanted
+enchant @a[tag=CheckForValidItem,tag=!ItemAlreadyEnchanted,nbt={SelectedItem: {id: "minecraft:diamond_axe"}}] minecraft:efficiency 2
+tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:diamond_axe", tag: {Enchantments: [{id: "minecraft:efficiency"}]}}}] remove CheckForValidItem
 
 # All hoes
 tag @a[tag=CheckForValidItem,nbt={SelectedItem: {id: "minecraft:wooden_hoe", tag: {Enchantments: [{id: "minecraft:fortune"}]}}}] add ItemAlreadyEnchanted
