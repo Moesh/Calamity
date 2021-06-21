@@ -18,5 +18,5 @@ execute unless block ~-1 255 ~-1 minecraft:barrier unless block ~1 255 ~-1 minec
 
 # If a player somehow did the impossible and placed a block out of bounds, let's send them the most
 #   ridiculous message we can think of.
-tellraw @s[tag=Playing,gamemode=!spectator,gamemode=!creative,nbt={OnGround:1b}] {"translate":"calamity.cheated.yourself","color": "gray","italic": true}
-kill @s[tag=Playing,gamemode=!spectator,gamemode=!creative,nbt={OnGround:1b}]
+execute unless block ~-1 254 ~-1 minecraft:barrier unless block ~1 254 ~-1 minecraft:barrier unless block ~1 254 ~1 minecraft:barrier unless block ~-1 254 ~1 minecraft:barrier unless block ~-1 254 ~ minecraft:barrier unless block ~1 254 ~ minecraft:barrier unless block ~ 254 ~1 minecraft:barrier unless block ~ 254 ~-1 minecraft:barrier run tellraw @s[tag=Playing,gamemode=!spectator,gamemode=!creative,nbt={OnGround:1b}] {"translate":"calamity.cheated.yourself","color": "gray","italic": true}
+execute unless block ~-1 254 ~-1 minecraft:barrier unless block ~1 254 ~-1 minecraft:barrier unless block ~1 254 ~1 minecraft:barrier unless block ~-1 254 ~1 minecraft:barrier unless block ~-1 254 ~ minecraft:barrier unless block ~1 254 ~ minecraft:barrier unless block ~ 254 ~1 minecraft:barrier unless block ~ 254 ~-1 minecraft:barrier run kill @s[tag=Playing,gamemode=!spectator,gamemode=!creative,nbt={OnGround:1b}]
