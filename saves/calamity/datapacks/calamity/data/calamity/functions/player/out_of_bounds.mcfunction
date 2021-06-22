@@ -7,7 +7,7 @@
 # Players not in bounds need a show and tell session.
 # Also make sure they can not commit any actions.
 effect give @s minecraft:weakness 1 7
-effect give @s minecraft:slowness 1 7
+effect give @s minecraft:slowness 1 2
 title @s times 0 2 1
 title @s subtitle {"translate": "calamity.out.of.bounds","color":"red"} 
 title @s title {"text": ""} 
