@@ -49,19 +49,19 @@ setblock 107 56 89 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE
 
 # In bounds data blocks
 # data1
-setblock 141 251 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data1",sizeY:5,sizeZ:14,showboundingbox:1b}
+setblock 141 250 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data1",sizeY:6,sizeZ:14,showboundingbox:1b}
 # data2
-setblock 141 251 101 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data2",sizeY:5,sizeZ:48,showboundingbox:1b}
+setblock 141 250 101 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data2",sizeY:6,sizeZ:48,showboundingbox:1b}
 # data3
-setblock 141 251 149 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data3",sizeY:5,sizeZ:48,showboundingbox:1b}
+setblock 141 250 149 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data3",sizeY:6,sizeZ:48,showboundingbox:1b}
 # data4 (crosslane)
-setblock 131 251 179 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:1b,seed:0L,author:"?",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:11,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity/data4",sizeY:5,sizeZ:17,showboundingbox:1b}
+setblock 131 250 179 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:1b,seed:0L,author:"?",rotation:"NONE",posX:0,mode:"SAVE",posY:0,sizeX:11,posZ:1,integrity:1.0f,showair:0b,name:"calamity:calamity/data4",sizeY:6,sizeZ:17,showboundingbox:1b}
 # data3 mirrored
-setblock 131 251 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data3",sizeY:5,sizeZ:48,showboundingbox:1b}
+setblock 131 250 149 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data3",sizeY:6,sizeZ:48,showboundingbox:1b}
 # data2 mirrored
-setblock 131 251 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data2",sizeY:5,sizeZ:48,showboundingbox:1b}
+setblock 131 250 101 minecraft:structure_block[mode=load]{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:1b,powered:0b,seed:0L,author:"",rotation:"CLOCKWISE_180",posX:-1,mode:"LOAD",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data2",sizeY:6,sizeZ:48,showboundingbox:1b}
 # data5 (red spawn)
-setblock 95 251 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data5",sizeY:5,sizeZ:14,showboundingbox:1b}
+setblock 95 250 87 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:1,mode:"SAVE",posY:0,sizeX:35,posZ:0,integrity:1.0f,showair:0b,name:"calamity:calamity/data5",sizeY:6,sizeZ:14,showboundingbox:1b}
 
 # Lobby
 # Save structure blocks
