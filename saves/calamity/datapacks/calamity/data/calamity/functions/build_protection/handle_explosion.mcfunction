@@ -36,6 +36,7 @@ execute if score #tempHeight gameVariable > 8 CONST run function calamity:build_
 
 # Reset our temp variables
 scoreboard players reset #tempVar gameVariable
+scoreboard players reset #tempVar2 gameVariable
 scoreboard players reset #tempHeight gameVariable
 scoreboard players reset #tempYLocation gameVariable
 
