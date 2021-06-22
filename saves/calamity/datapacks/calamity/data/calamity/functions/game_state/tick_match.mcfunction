@@ -19,7 +19,7 @@ function calamity:arena/handler
 # Kill players who are out of bounds
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] store result score @s playerHeight run data get entity @s Pos[1]
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] run scoreboard players operation @s playerHeight -= 2 CONST
-execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s unless block ~ 255 ~0.31 minecraft:barrier unless block ~ 255 ~-0.31 minecraft:barrier unless block ~0.31 255 ~ minecraft:barrier unless block ~-0.31 255 ~ minecraft:barrier run function calamity:player/out_of_bounds
+execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] at @s unless block ~-0.3 255 ~-0.3 minecraft:barrier unless block ~0.3 255 ~0.3 minecraft:barrier unless block ~-0.3 255 ~0.3 minecraft:barrier unless block ~0.3 255 ~-0.3 minecraft:barrier unless block ~ 255 ~0.3 minecraft:barrier unless block ~ 255 ~-0.3 minecraft:barrier unless block ~0.3 255 ~ minecraft:barrier unless block ~-0.3 255 ~ minecraft:barrier run function calamity:player/out_of_bounds
 execute as @a[tag=Playing,gamemode=!spectator,gamemode=!creative] unless score @s playerHeight < #arenaHeight gameVariable run function calamity:player/out_of_bounds
 execute as @a[tag=Playing,gamemode=adventure] at @s if block ~ 255 ~ minecraft:barrier run gamemode survival @s
 
