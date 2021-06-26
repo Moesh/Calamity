@@ -9,7 +9,6 @@ recipe take @s *
 
 # Give some recipes back
 recipe give @s minecraft:anvil
-recipe give @s minecraft:shield
 recipe give @s calamity:chainmail_boots
 recipe give @s calamity:chainmail_chestplate
 recipe give @s calamity:chainmail_helmet

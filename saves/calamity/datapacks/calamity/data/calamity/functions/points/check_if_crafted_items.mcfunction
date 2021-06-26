@@ -169,12 +169,6 @@ scoreboard players operation @s[scores={craftedObjItem28=1..}] craftedScore /= s
 scoreboard players operation @s[scores={craftedObjItem28=1..}] prepScore += @s craftedScore
 scoreboard players set @s[scores={craftedObjItem28=1..}] craftedObjItem28 0
 
-scoreboard players operation @s[scores={craftedObjItem29=1..}] craftedScore = @s craftedObjItem29
-scoreboard players operation @s[scores={craftedObjItem29=1..}] craftedScore *= shield itemValues
-scoreboard players operation @s[scores={craftedObjItem29=1..}] craftedScore /= shield itemCounts
-scoreboard players operation @s[scores={craftedObjItem29=1..}] prepScore += @s craftedScore
-scoreboard players set @s[scores={craftedObjItem29=1..}] craftedObjItem29 0
-
 scoreboard players operation @s[scores={craftedObjItem30=1..}] craftedScore = @s craftedObjItem30
 scoreboard players operation @s[scores={craftedObjItem30=1..}] craftedScore *= smithing_table itemValues
 scoreboard players operation @s[scores={craftedObjItem30=1..}] craftedScore /= smithing_table itemCounts

@@ -206,8 +206,6 @@ scoreboard objectives add itemCounts dummy
     scoreboard players set rail itemCounts 16
     scoreboard players set shears itemValues 2
     scoreboard players set shears itemCounts 1
-    scoreboard players set shield itemValues 1
-    scoreboard players set shield itemCounts 1
     scoreboard players set smithing_table itemValues 2
     scoreboard players set smithing_table itemCounts 1
     scoreboard players set stonecutter itemValues 1
@@ -271,8 +269,6 @@ scoreboard objectives add craftedObjItem27 minecraft.crafted:minecraft.rail
 scoreboard objectives remove craftedObjItem28
 scoreboard objectives add craftedObjItem28 minecraft.crafted:minecraft.shears
 scoreboard objectives remove craftedObjItem29
-scoreboard objectives add craftedObjItem29 minecraft.crafted:minecraft.shield
-scoreboard objectives remove craftedObjItem30
 scoreboard objectives add craftedObjItem30 minecraft.crafted:minecraft.smithing_table
 scoreboard objectives remove craftedObjItem31
 scoreboard objectives add craftedObjItem31 minecraft.crafted:minecraft.stonecutter
