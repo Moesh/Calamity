@@ -1,7 +1,7 @@
 {
         "values": [
                 "calamity:generator/handler",
-                "calamity:points/handler",
+                "calamity:points/sequencer",
                 "calamity:build_protection/handler"
 	]
 }

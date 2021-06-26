@@ -35,6 +35,7 @@ gamemode spectator @a[tag=!Playing]
 
 scoreboard players set @a[tag=Playing] streakPoints 0
 scoreboard players set @a[tag=Playing] streakLevel 0
+scoreboard players set @a[tag=Playing] nextStreakLevel 0
 
 # Set the correct scoreboard
 scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable

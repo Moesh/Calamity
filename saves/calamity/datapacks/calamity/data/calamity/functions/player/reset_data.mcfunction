@@ -16,6 +16,7 @@ xp set @s 0 points
 scoreboard players set @s kills 0
 scoreboard players set @s streakPoints 0
 scoreboard players set @s streakLevel 0
+scoreboard players set @s nextStreakLevel 0
 team leave @s
 
 effect clear @s

@@ -82,6 +82,8 @@ scoreboard objectives remove streakPoints
 scoreboard objectives add streakPoints dummy
 scoreboard objectives remove streakLevel
 scoreboard objectives add streakLevel dummy
+scoreboard objectives remove nextStreakLevel
+scoreboard objectives add nextStreakLevel dummy
 
 # Players may disconnect and reconnect during matches, let's ensure they're in the right match.
 scoreboard objectives remove sessionID

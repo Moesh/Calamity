@@ -1,5 +1,5 @@
 # Called from: calamity:game_state/timer, calamity:game_state/toast/blue_wins,
-#   calamity:game_state/toast/red_wins, calamity:load/setup_scoreboards, calamity:points/handler,
+#   calamity:game_state/toast/red_wins, calamity:load/setup_scoreboards, calamity:points/sequencer,
 #   #calamity:load_arena_<all>
 
 #>--------------------------------------------------------------------------------------------------
