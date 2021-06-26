@@ -25,7 +25,7 @@ execute as @s[tag=Log] run title @a[distance=..4,tag=GiveItem] actionbar {"trans
 execute as @s[tag=Scaffolding] run give @a[distance=..4,tag=GiveItem] minecraft:scaffolding 16
 execute as @s[tag=Scaffolding] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.scaffolding"},{"text":"16"}]}
 execute as @s[tag=SpectralArrow] run give @a[distance=..4,tag=GiveItem] minecraft:spectral_arrow 32
-execute as @s[tag=SpectralArrow] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"item.minecraft.spectral_arrow"},{"text":"16"}]}
+execute as @s[tag=SpectralArrow] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"item.minecraft.spectral_arrow"},{"text":"32"}]}
 execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 3
 execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
 
