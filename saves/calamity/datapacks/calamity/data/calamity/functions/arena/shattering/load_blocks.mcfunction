@@ -16,6 +16,9 @@ setblock 89 0 95 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",
 
 # Set world data
 fill 72 255 143 203 255 89 minecraft:barrier
+# Spawn protection
+fill 72 252 89 81 252 143 minecraft:barrier
+fill 194 253 89 203 253 143 minecraft:barrier
 
 # Place the redstone block
 setblock 138 0 88 minecraft:redstone_block

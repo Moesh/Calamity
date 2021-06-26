@@ -34,6 +34,9 @@ fill 89 0 94 89 0 95 minecraft:air
 
 # Erase data
 fill 72 252 143 203 255 89 minecraft:air
+# Spawn protection
+fill 72 252 89 81 252 143 minecraft:air
+fill 194 253 89 203 253 143 minecraft:air
 
 #> Purpose: Kill all entities and ensure items are left over
 #IMPORTANT: This will kill any entity markers. Run before new markers are made.
