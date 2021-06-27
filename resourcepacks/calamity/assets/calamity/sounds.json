@@ -124,5 +124,10 @@
       "calamity:generator/enchantment"
     ],
     "subtitle": "calamity.generator.enchantment"
+  },
+  "out.of.bounds": {
+    "sounds": [
+      "calamity:out-of-bounds"
+    ]
   }
 }

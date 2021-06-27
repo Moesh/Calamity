@@ -54,9 +54,9 @@ execute if score RedPoints gameVariable >= OreLeft gameVariable run function cal
 execute at @e[type=minecraft:area_effect_cloud,name="BlueSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
 execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air destroy
 
-# Kill players in enemy spawn (But only if their full body is inside and they are standing on a block)
-execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 252 ~0.3 minecraft:barrier if block ~ 252 ~-0.3 minecraft:barrier if block ~0.3 252 ~ minecraft:barrier if block ~-0.3 252 ~ minecraft:barrier if entity @s[nbt={OnGround: 1b}] run kill @s
-execute as @a[team=red,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s if block ~ 253 ~0.3 minecraft:barrier if block ~ 253 ~-0.3 minecraft:barrier if block ~0.3 253 ~ minecraft:barrier if block ~-0.3 253 ~ minecraft:barrier if entity @s[nbt={OnGround: 1b}] run kill @s
+# Curse players in enemy spawn (But only if their full body is inside and they are standing on a block)
+execute as @a[team=blue,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s unless entity @s[nbt={ActiveEffects: [{Id: 20b}]}] if block ~ 252 ~0.3 minecraft:barrier if block ~ 252 ~-0.3 minecraft:barrier if block ~0.3 252 ~ minecraft:barrier if block ~-0.3 252 ~ minecraft:barrier if entity @s[nbt={OnGround: 1b}] run function calamity:player/curse_for_entering_enemy_spawn
+execute as @a[team=red,tag=Playing,gamemode=!creative,gamemode=!spectator] at @s unless entity @s[nbt={ActiveEffects: [{Id: 20b}]}] if block ~ 253 ~0.3 minecraft:barrier if block ~ 253 ~-0.3 minecraft:barrier if block ~0.3 253 ~ minecraft:barrier if block ~-0.3 253 ~ minecraft:barrier if entity @s[nbt={OnGround: 1b}] run function calamity:player/curse_for_entering_enemy_spawn
 
 # Tick the game timer
 execute run function calamity:game_state/timer
