@@ -65,16 +65,16 @@
         },
         {
             "type": "bitmap",
-            "file": "calamity:font/arena_calamityv5.png",
+            "file": "calamity:font/arena_01_modern.png",
             "ascent": 0,
-            "height": 92,
+            "height": 100,
             "chars": ["z"]
         },
         {
             "type": "bitmap",
-            "file": "calamity:font/arena_shattered.png",
+            "file": "calamity:font/arena_02_shattering.png",
             "ascent": 0,
-            "height": 92,
+            "height": 100,
             "chars": ["x"]
         },
         {
