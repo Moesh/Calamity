@@ -2,7 +2,7 @@
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Calamity's entry point. This function ticks every second, and handles top-level logic
-#>   for the game. Sometimes functions which have no home also find their way to this function.
+#>   for the game. Sometimes commands which have no home also find their way to this function.
 #>--------------------------------------------------------------------------------------------------
 
 # We know a player has just joined the game. If they're cool, let them pass. If they're not cool,
