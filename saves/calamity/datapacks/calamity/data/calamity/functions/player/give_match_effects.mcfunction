@@ -6,7 +6,6 @@
 #>--------------------------------------------------------------------------------------------------
 
 effect clear @s
-effect give @s minecraft:speed 10 1
 effect give @s minecraft:strength 10 1
 effect give @s minecraft:absorption 10 1
 effect give @s minecraft:fire_resistance 10 1
