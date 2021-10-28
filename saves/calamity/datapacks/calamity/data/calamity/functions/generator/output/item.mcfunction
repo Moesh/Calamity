@@ -28,6 +28,8 @@ execute as @s[tag=SpectralArrow] run give @a[distance=..4,tag=GiveItem] minecraf
 execute as @s[tag=SpectralArrow] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"item.minecraft.spectral_arrow"},{"text":"32"}]}
 execute as @s[tag=TNT] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 3
 execute as @s[tag=TNT] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"3"}]}
+execute as @s[tag=TNT5] run give @a[distance=..4,tag=GiveItem] minecraft:tnt 5
+execute as @s[tag=TNT5] run title @a[distance=..4,tag=GiveItem] actionbar {"translate":"calamity.generator.output.item","with":[{"translate":"block.minecraft.tnt"},{"text":"5"}]}
 
 # Remove GiveItem tag
 tag @a[tag=GiveItem] remove GiveItem
