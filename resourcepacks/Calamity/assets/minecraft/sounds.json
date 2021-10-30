@@ -1,0 +1,98 @@
+{
+  "ambient.basalt_deltas.additions": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.basalt_deltas.loop": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.basalt_deltas.mood": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.crimson_forest.additions": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.crimson_forest.loop": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.crimson_forest.mood": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.nether_wastes.additions": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.nether_wastes.loop": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.nether_wastes.mood": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.soul_sand_valley.additions": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.soul_sand_valley.loop": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  },
+  "ambient.soul_sand_valley.mood": {
+    "sounds": [
+      {
+        "name":""
+      }
+    ],
+    "replace":"true"
+  }
+}
