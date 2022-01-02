@@ -21,7 +21,7 @@ scoreboard players operation RedPoints gameVariable += @a[team=red] prepScore
 execute as @a[tag=Playing] run scoreboard players operation @s nextStreakLevel += @s prepScore
 execute as @a[tag=Playing] run scoreboard players operation @s streakPoints += @s prepScore
 execute as @a[scores={timeSinceDeath=0,streakPoints=1..}] at @s run function calamity:points/end_streak_on_death
-execute as @a[scores={prepScore=1..}] run function calamity:points/send_points_gained_message
 execute as @a[scores={nextStreakLevel=15..}] run function calamity:points/award_new_streak_level
+execute as @a[scores={prepScore=1..}] run function calamity:points/send_points_gained_message
 
 function calamity:player/update_displays
