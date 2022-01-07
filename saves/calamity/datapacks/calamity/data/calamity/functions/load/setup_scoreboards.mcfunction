@@ -89,10 +89,6 @@ scoreboard objectives add nextStreakLevel dummy
 scoreboard objectives remove sessionID
 scoreboard objectives add sessionID dummy
 
-# Minecraft will tick this up when a player disconnects from the game.
-scoreboard objectives remove leftGame
-scoreboard objectives add leftGame minecraft.custom:minecraft.leave_game
-
 # Player scores
 scoreboard objectives remove selectedItem
 scoreboard objectives add selectedItem dummy

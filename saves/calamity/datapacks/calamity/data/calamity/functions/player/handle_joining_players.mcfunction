@@ -20,5 +20,5 @@ execute as @a unless score @s sessionID = SessionID gameVariable run tellraw @s 
 execute as @a[tag=!Registered] at @s run function #calamity:register_player
 execute as @a[tag=!Registered] if score GameState gameVariable matches 0 run function calamity:player/set_to_lobby_mode
 execute as @a[tag=!Registered] if score GameState gameVariable matches 1 run gamemode spectator @s
-scoreboard players set @a[scores={leftGame=1..}] leftGame 0
+# We processed all non-registered players this tick, mark them all with Registered tag.
 tag @a[tag=!Registered] add Registered
