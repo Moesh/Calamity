@@ -4,7 +4,7 @@
 #> Purpose: Tick these functions during the lobby stage
 #>--------------------------------------------------------------------------------------------------
 
-# Give recently respawned players respawn status effects
+# Give respawned players status effects
 execute as @a[scores={timeSinceDeath=0}] run function calamity:player/give_lobby_effects
 
 # Check if any player has used "/trigger readyTeam" and update the team state
@@ -14,7 +14,6 @@ execute if score ReadyRed gameVariable matches 1 unless entity @a[team=red] run 
 
 # Shuffle the players if someone has made a request to!
 function calamity:player/trigger/shuffle
-execute if score #ShufflePlayers gameVariable matches 1 run function calamity:game_state/shuffle_rest
 
 # This line below is for players who want to be cheeky. If they ever set a score for startMatch,
 # go ahead and assume they want to start the match.

@@ -5,8 +5,9 @@
 #>   for the game. Sometimes commands which have no home also find their way to this function.
 #>--------------------------------------------------------------------------------------------------
 
-# We know a player has just joined the game. If they're cool, let them pass. If they're not cool,
-#   then let them know they're gonna be cool and process them until they are cool. Cool? Cool.
+# We know a player has just joined the game. Only cool players can play Calamity. If they're cool,
+#   let them pass. If they're not cool, then let them know they're gonna be cool after this function
+#   is run. Cool? Cool.
 function calamity:player/handle_joining_players
 
 # Feed hungry players, this game isn't about fighting hunger.

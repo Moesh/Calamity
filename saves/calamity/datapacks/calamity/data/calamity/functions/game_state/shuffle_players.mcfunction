@@ -1,4 +1,4 @@
-# Called from: moesh:game_state/handler
+# Called from: self, moesh:player/trigger/shuffle
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: A player has requested to shuffle players, and there are players to be shuffled. This is

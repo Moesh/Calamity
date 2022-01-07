@@ -9,7 +9,7 @@
 tag @s remove Playing
 tag @s remove VotedForfeit
 
-# Clear player of their blessings.
+# Clear player of their blessings
 clear @s
 xp set @s 0 levels
 xp set @s 0 points

@@ -11,7 +11,7 @@ execute as @a[scores={startMatch=1..},team=red] run tellraw @a {"translate":"sys
 execute if score #PlayersPlaying gameVariable matches 0 run tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.match.cancelled.noPlayers","color":"red","with":[{"translate":"⏹"}]}]}
 execute if score #PlayersPlaying gameVariable matches 0 run function calamity:player/trigger/cancel_start
 
-# This variable tracks whether or not game is beginning.
+# This variable tracks whether or not game is beginning
 execute if score #PlayersPlaying gameVariable matches 1.. run scoreboard players set StartingMatch gameVariable 1
 
 # Start the timer from the beginning
