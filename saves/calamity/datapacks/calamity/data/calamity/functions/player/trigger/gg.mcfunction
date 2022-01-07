@@ -67,9 +67,7 @@ execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfei
 execute if score #tempBlueForfeit gameVariable matches 0 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/toast/red_forfeits
 
 # End the game if a team has forfeited
-execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/end_match
-execute if score #tempBlueForfeit gameVariable matches 0 if score #tempRedForfeit gameVariable matches 1 run function calamity:game_state/end_match
-execute if score #tempBlueForfeit gameVariable matches 1 if score #tempRedForfeit gameVariable matches 0 run function calamity:game_state/end_match
+execute if score #tempBlueForfeit gameVariable matches 0..1 if score #tempRedForfeit gameVariable matches 0..1 run function calamity:game_state/end_match
 
 # Reset scores and tags
 tag @a[tag=ForfeitTriggered] remove ForfeitTriggered
