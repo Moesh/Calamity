@@ -30,6 +30,6 @@ execute if score GameState gameVariable matches 1 run scoreboard players enable 
 #       the game didn't end.
 execute if score GameState gameVariable matches 1 run function calamity:player/trigger/gg
 
-# Enable if post-game
+# Enable if post-match
 execute if score GameState gameVariable matches 2 run scoreboard players reset @s reset
 execute if score GameState gameVariable matches 2 run scoreboard players enable @s reset

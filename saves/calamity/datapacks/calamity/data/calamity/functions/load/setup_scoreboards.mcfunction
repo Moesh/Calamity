@@ -308,8 +308,8 @@ scoreboard players operation @a sessionID = SessionID gameVariable
 scoreboard players set GameState gameVariable 0
     # Index:
     # 0 = Lobby
-    # 1 = In-progress
-    # 2 = Post game
+    # 1 = Match
+    # 2 = Post-match
 
 # Used to determine whether or not the game has started.
 # This variable is accessed from calamity:tick, calamity:game_state/start_match,

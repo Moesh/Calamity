@@ -1,7 +1,7 @@
 # Called from: calamity:tick
 
 #>--------------------------------------------------------------------------------------------------
-#> Purpose: Tick these functions during the post-game
+#> Purpose: Tick these functions during the post-match
 #>--------------------------------------------------------------------------------------------------
 
 # Players used trigger reset, let's process what they did.

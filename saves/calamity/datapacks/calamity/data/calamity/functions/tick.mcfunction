@@ -24,7 +24,10 @@ execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=0
 scoreboard players set #arenaAction gameVariable 2
 function calamity:arena/handler
 
-# Determine game state, if necessary
+# Run the commands needed for the current game state.
+    # 0 Lobby: Players are setting-up, organizing, and starting a match
+    # 1 Match: Players are playing the match
+    # 3 Post-match: Players have finished the match and have not yet reset the game
 execute if score GameState gameVariable matches 0 run function calamity:game_state/tick_lobby
 execute if score GameState gameVariable matches 1 run function calamity:game_state/tick_match
-execute if score GameState gameVariable matches 2 run function calamity:game_state/tick_post_game
+execute if score GameState gameVariable matches 2 run function calamity:game_state/tick_post_match
