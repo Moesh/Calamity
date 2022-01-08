@@ -19,6 +19,7 @@
   "generator": {
     "type": "minecraft:flat",
     "settings": {
+      "biome": "minecraft:basalt_deltas",
       "lakes": false,
       "features": false,
       "layers": [
