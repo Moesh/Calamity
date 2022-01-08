@@ -44,10 +44,8 @@ scoreboard players set Red displayPoints 0
 scoreboard objectives setdisplay sidebar displayPoints
 scoreboard players set ReadyBlue gameVariable 0
 scoreboard players set ReadyRed gameVariable 0
-team join blue Blue
-team join red Red
-team modify fakeRed prefix {"translate":"spacer.right","with":[{"translate":"☒","color":"dark_red"}]}
-team modify fakeBlue prefix {"translate":"spacer.right","with":[{"translate":"☒","color":"dark_red"}]}
+team modify fakeRed prefix {"text":""}
+team modify fakeBlue prefix {"text":""}
 # Update player triggers
 scoreboard players reset * cancelStart
 scoreboard players reset * selectTeam

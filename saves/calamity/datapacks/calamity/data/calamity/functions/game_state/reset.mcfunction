@@ -14,10 +14,6 @@ scoreboard players set Blue displayPoints 0
 scoreboard players set RedPoints gameVariable 0
 scoreboard players set Red displayPoints 0
 
-# Fake players need to join a new team to get rid of their prefixes
-team join fakeBlue Blue
-team join fakeRed Red
-
 # Reload entire arena. We should not need to erase, as the build should be entirely reset, and no
 #   player should have built outside the arena. This is the default action for arena handler.
 function calamity:arena/handler
