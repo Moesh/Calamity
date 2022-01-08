@@ -1,8 +1,8 @@
 # Called from: calamity:points/sequencer
 
 #>--------------------------------------------------------------------------------------------------
-# Purpose: Determine if this player has crafted an item and transfer the correlating point value to
-#   prepScore for further processing.
+#> Purpose: Determine if this player has crafted an item and transfer the correlating point value to
+#>  prepScore for further processing.
 #>--------------------------------------------------------------------------------------------------
 
 # Apply appropriate point multiplier to crafted item and then add to prepScore

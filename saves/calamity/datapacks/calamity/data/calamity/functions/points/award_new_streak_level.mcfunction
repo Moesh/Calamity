@@ -1,4 +1,8 @@
-# Called from calamity:points/sequencer
+# Called from: calamity:points/sequencer
+
+#>--------------------------------------------------------------------------------------------------
+#> Purpose: Announce and give the award for new streak levels
+#>--------------------------------------------------------------------------------------------------
 
 execute if score @s streakLevel matches 0 run function calamity:points/award_streak/award_level_1
 execute if score @s streakLevel matches 1 run function calamity:points/award_streak/award_level_2

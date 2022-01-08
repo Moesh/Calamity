@@ -1,4 +1,4 @@
-# Called from: So many places.
+# Called from: This takes psuedo-API calls, and is called from nearly everywhere.
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Reset the map and player states to neutral
@@ -12,7 +12,7 @@
 #   #arenaAction gameVariable 4 = Send welcome message
 #   #arenaAction gameVariable 5 = Start match
 #   #arenaAction gameVariable 6 = Additional lobby effects
-#   #arenaAction gameVariable 7 = Additioanl match effects
+#   #arenaAction gameVariable 7 = Additional match effects
 #   #arenaAction gameVariable 8 = Give starting items
 #   #arenaAction gameVariable 9 = Give items to any respawning player
 

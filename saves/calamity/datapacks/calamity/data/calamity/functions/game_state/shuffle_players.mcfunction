@@ -2,7 +2,7 @@
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: A player has requested to shuffle players, and there are players to be shuffled. This is
-#   a recursive function. It will run itself as long as there is a player who is not on a team.
+#>s   a recursive function. It will run itself as long as there is a player who is not on a team.
 #>--------------------------------------------------------------------------------------------------
 
 # Count players who are on a team

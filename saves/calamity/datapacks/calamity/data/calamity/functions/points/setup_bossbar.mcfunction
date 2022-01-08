@@ -1,4 +1,5 @@
-# Called from: calamity:game_state/start_match
+# Called from: #calamity:load, #calamity:load_arena_1_modern, #calamity:load_arena_2_shattering
+#   calamity:game_state/start_match
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Creates and makes the iron ore boss bar visible to all players. It polls the current

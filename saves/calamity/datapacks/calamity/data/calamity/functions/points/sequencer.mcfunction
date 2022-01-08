@@ -1,4 +1,4 @@
-# Called from: calamity:tick
+# Called from: calamity:tick_match
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Add up points when a player gains them, send messages, and update displays
