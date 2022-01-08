@@ -12,7 +12,13 @@ scoreboard players set GameState gameVariable 0
 scoreboard players set BluePoints gameVariable 0
 scoreboard players set Blue displayPoints 0
 scoreboard players set RedPoints gameVariable 0
-scoreboard players set Red displayPoints 0
+
+scoreboard players set #BlueStreak gameVariable 0
+scoreboard players set #BlueStreakTimer gameVariable 0
+scoreboard players set #RedStreak gameVariable 0
+scoreboard players set #RedStreakTimer gameVariable 0
+team modify fakeBlue suffix {"translate":"spacer.left","color":"blue","with": [{"translate":"b","font":"calamity:icons"}]}
+team modify fakeRed suffix {"translate":"spacer.left","color":"red","with": [{"translate":"r","font":"calamity:icons"}]}
 
 # Reload entire arena. We should not need to erase, as the build should be entirely reset, and no
 #   player should have built outside the arena. This is the default action for arena handler.

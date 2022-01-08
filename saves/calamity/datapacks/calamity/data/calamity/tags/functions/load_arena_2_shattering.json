@@ -1,8 +1,8 @@
 {
     "values": [
         "calamity:arena/shattering/load_blocks",
-        "calamity:player/update_displays",
         "calamity:points/setup_bossbar",
+        "calamity:player/update_displays",
         "calamity:arena/shattering/set_arena_rules"
     ]
 }

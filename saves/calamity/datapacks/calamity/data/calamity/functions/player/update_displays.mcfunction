@@ -50,3 +50,23 @@ execute if score displaySecond gameVariable matches 10.. run bossbar set calamit
 scoreboard players operation ░░░░░ displayPoints = OreLeft gameVariable
 scoreboard players operation Blue displayPoints = BluePoints gameVariable
 scoreboard players operation Red displayPoints = RedPoints gameVariable
+
+# Update team-wide streak in sidebar
+# Blue
+execute if score #BlueStreakTimer gameVariable matches ..0 if score #BlueStreak gameVariable matches ..0 run team modify fakeBlue suffix {"translate":"spacer.left","color":"blue","with": [{"translate":"b","font":"calamity:icons"}]}
+execute if score #BlueStreakTimer gameVariable matches ..0 if score #BlueStreak gameVariable matches 1.. run scoreboard players set #BlueStreak gameVariable 0
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #BlueStreak gameVariable matches 1..100 run function calamity:player/update_displays/blue_sidebar_streak/1_100_points
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #BlueStreak gameVariable matches 101..200 run function calamity:player/update_displays/blue_sidebar_streak/101_200_points
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #BlueStreak gameVariable matches 201..300 run function calamity:player/update_displays/blue_sidebar_streak/201_300_points
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #BlueStreak gameVariable matches 301.. run team modify fakeBlue suffix {"translate":" %s %s","color":"blue","with": [{"translate":"b","font":"calamity:icons"},{"text":"∞","color":"gray","italic":true}]}
+execute if score #BlueStreakTimer gameVariable matches 1.. run scoreboard players remove #BlueStreakTimer gameVariable 1
+# Red
+execute if score #RedStreakTimer gameVariable matches ..0 if score #RedStreak gameVariable matches ..0 run team modify fakeRed suffix {"translate":"spacer.left","color":"red","with": [{"translate":"r","font":"calamity:icons"}]}
+execute if score #RedStreakTimer gameVariable matches ..0 if score #RedStreak gameVariable matches 1.. run scoreboard players set #RedStreak gameVariable 0
+execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 1..100 run function calamity:player/update_displays/red_sidebar_streak/1_100_points
+execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 101..200 run function calamity:player/update_displays/red_sidebar_streak/101_200_points
+execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 201..300 run function calamity:player/update_displays/red_sidebar_streak/201_300_points
+execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 301.. run team modify fakeRed suffix {"translate":" %s %s","color":"red","with": [{"translate":"r","font":"calamity:icons"},{"text":"∞","color":"gray","italic":true}]}
+execute if score #RedStreakTimer gameVariable matches 1.. run scoreboard players remove #RedStreakTimer gameVariable 1
+
+say hi

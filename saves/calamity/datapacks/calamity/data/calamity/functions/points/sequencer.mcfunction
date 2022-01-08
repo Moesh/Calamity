@@ -17,6 +17,26 @@ scoreboard players set @a killScore 0
 scoreboard players operation BluePoints gameVariable += @a[team=blue] prepScore
 scoreboard players operation RedPoints gameVariable += @a[team=red] prepScore
 
+# Add to the streak for the last 10 seconds
+# Blue
+scoreboard players set #tempVar gameVariable 0
+scoreboard players operation #tempVar gameVariable += @a[team=blue] prepScore
+execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 200
+execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players operation #BlueStreak gameVariable = #tempVar gameVariable
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 200
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players operation #BlueStreak gameVariable += #tempVar gameVariable
+execute if score #BlueStreakTimer gameVariable matches 1.. run scoreboard players remove #BlueStreakTimer gameVariable 1
+execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 0 run scoreboard players set #BlueStreak gameVariable 0
+# Red
+scoreboard players set #tempVar gameVariable 0
+scoreboard players operation #tempVar gameVariable += @a[team=red] prepScore
+execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 200
+execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players operation #RedStreak gameVariable = #tempVar gameVariable
+execute if score #RedStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 200
+execute if score #RedStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players operation #RedStreak gameVariable += #tempVar gameVariable
+execute if score #RedStreakTimer gameVariable matches 1.. run scoreboard players remove #RedStreakTimer gameVariable 1
+execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 0 run scoreboard players set #RedStreak gameVariable 0
+
 # Update streak
 execute as @a[tag=Playing] run scoreboard players operation @s nextStreakLevel += @s prepScore
 execute as @a[tag=Playing] run scoreboard players operation @s streakPoints += @s prepScore

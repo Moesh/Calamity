@@ -297,6 +297,10 @@ scoreboard objectives add gameVariable dummy
     scoreboard players set #tableCandle gameVariable 0
     scoreboard players set #tableCandleSmoke gameVariable 0
     scoreboard players set #OnlinePlayers gameVariable 0
+    scoreboard players set #BlueStreak gameVariable 0
+    scoreboard players set #BlueStreakTimer gameVariable 0
+    scoreboard players set #RedStreak gameVariable 0
+    scoreboard players set #RedStreakTimer gameVariable 0
 
 # Establish a SessionID by using game time. We wouldn't normally act on all players in a
 #   function like this, but it's important the players are registered so an error message won't
