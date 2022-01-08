@@ -164,6 +164,7 @@
     "spacer.or": "%s or %s",
     "spacer.right": "%s ",
     "system.message": ">>> %s",
+    "system.timestamped.message": "[%s] %s",
     "team.blue": "Blue",
     "team.red": "Red",
     "team.spectator": "Spectator",
