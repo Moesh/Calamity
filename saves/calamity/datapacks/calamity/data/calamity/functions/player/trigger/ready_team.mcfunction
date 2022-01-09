@@ -14,14 +14,14 @@
     # Check ready state and then toggle state
     execute if entity @a[scores={readyTeam=1..},team=blue] run scoreboard players set #tempVar gameVariable 0
     execute if score ReadyBlue gameVariable matches 0 if entity @a[scores={readyTeam=1..},team=blue] run scoreboard players set #tempVar gameVariable 1
-    execute if score #tempVar gameVariable matches 1 if entity @a[scores={readyTeam=1..},team=blue] run function calamity:game_state/ready_team/blue_ready
-    execute if score #tempVar gameVariable matches 0 if entity @a[scores={readyTeam=1..},team=blue] run function calamity:game_state/ready_team/blue_not_ready
+    execute if score #tempVar gameVariable matches 1 as @a[scores={readyTeam=1..},team=blue] at @s run function calamity:game_state/ready_team/blue_ready
+    execute if score #tempVar gameVariable matches 0 as @a[scores={readyTeam=1..},team=blue] at @s run function calamity:game_state/ready_team/blue_not_ready
 # Player used readyTeam, and is on the red team
     # Check ready state and then toggle state
     execute if entity @a[scores={readyTeam=1..},team=red] run scoreboard players set #tempVar gameVariable 0
     execute if score ReadyRed gameVariable matches 0 if entity @a[scores={readyTeam=1..},team=red] run scoreboard players set #tempVar gameVariable 1
-    execute if score #tempVar gameVariable matches 1 if entity @a[scores={readyTeam=1..},team=red] run function calamity:game_state/ready_team/red_ready
-    execute if score #tempVar gameVariable matches 0 if entity @a[scores={readyTeam=1..},team=red] run function calamity:game_state/ready_team/red_not_ready
+    execute if score #tempVar gameVariable matches 1 as @a[scores={readyTeam=1..},team=red] at @s run function calamity:game_state/ready_team/red_ready
+    execute if score #tempVar gameVariable matches 0 as @a[scores={readyTeam=1..},team=red] at @s run function calamity:game_state/ready_team/red_not_ready
 
 # Always reset trigger if the score is not zero
 # You'll see this formation a lot when using triggers. These next two lines are a safeguard for any
