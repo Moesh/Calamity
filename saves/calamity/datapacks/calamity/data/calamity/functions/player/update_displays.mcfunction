@@ -68,5 +68,3 @@ execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak ga
 execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 201..300 run function calamity:player/update_displays/red_sidebar_streak/201_300_points
 execute if score #RedStreakTimer gameVariable matches 1.. if score #RedStreak gameVariable matches 301.. run team modify fakeRed suffix {"translate":" %s %s","color":"red","with": [{"translate":"r","font":"calamity:icons"},{"text":"∞","color":"gray","italic":true}]}
 execute if score #RedStreakTimer gameVariable matches 1.. run scoreboard players remove #RedStreakTimer gameVariable 1
-
-say hi
