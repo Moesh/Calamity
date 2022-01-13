@@ -19,22 +19,22 @@ scoreboard players operation RedPoints gameVariable += @a[team=red] prepScore
 
 # Add to the streak for the last 10 seconds
 # Blue
+execute if score #BlueStreakTimer gameVariable matches 1.. run scoreboard players remove #BlueStreakTimer gameVariable 1
 scoreboard players set #tempVar gameVariable 0
 scoreboard players operation #tempVar gameVariable += @a[team=blue] prepScore
-execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 200
+execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 120
 execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players operation #BlueStreak gameVariable = #tempVar gameVariable
-execute if score #BlueStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 200
+execute if score #BlueStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #BlueStreakTimer gameVariable 120
 execute if score #BlueStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players operation #BlueStreak gameVariable += #tempVar gameVariable
-execute if score #BlueStreakTimer gameVariable matches 1.. run scoreboard players remove #BlueStreakTimer gameVariable 1
 execute if score #BlueStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 0 run scoreboard players set #BlueStreak gameVariable 0
 # Red
+execute if score #RedStreakTimer gameVariable matches 1.. run scoreboard players remove #RedStreakTimer gameVariable 1
 scoreboard players set #tempVar gameVariable 0
 scoreboard players operation #tempVar gameVariable += @a[team=red] prepScore
-execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 200
+execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 120
 execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 1.. run scoreboard players operation #RedStreak gameVariable = #tempVar gameVariable
-execute if score #RedStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 200
+execute if score #RedStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players set #RedStreakTimer gameVariable 120
 execute if score #RedStreakTimer gameVariable matches 1.. if score #tempVar gameVariable matches 1.. run scoreboard players operation #RedStreak gameVariable += #tempVar gameVariable
-execute if score #RedStreakTimer gameVariable matches 1.. run scoreboard players remove #RedStreakTimer gameVariable 1
 execute if score #RedStreakTimer gameVariable matches 0 if score #tempVar gameVariable matches 0 run scoreboard players set #RedStreak gameVariable 0
 
 # Update streak
