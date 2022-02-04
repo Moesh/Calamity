@@ -24,3 +24,6 @@ usercache\.json
 /saves/whitelist.json
 /saves/banned-ips.json
 /saves/banned-players.json
+saves/libraries/
+saves/start.bat
+saves/versions/1.18.1/server-1.18.1.jar
