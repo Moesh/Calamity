@@ -24,3 +24,5 @@ usercache\.json
 /saves/whitelist.json
 /saves/banned-ips.json
 /saves/banned-players.json
+saves/libraries/*
+saves/versions/*
