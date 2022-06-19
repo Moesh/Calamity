@@ -135,6 +135,9 @@ scoreboard objectives add reset trigger
     # Select arena
     scoreboard objectives remove arena
     scoreboard objectives add arena trigger
+    # Match stats
+    scoreboard objectives remove matchStats
+    scoreboard objectives add matchStats trigger
 
 # Craft items are worth points. This scoreboard tracks those points.
 # iron_nugget and iron_block have been intentionally left out.
@@ -289,6 +292,7 @@ scoreboard objectives add gameVariable dummy
 	scoreboard players set ReadyRed gameVariable 0
 	scoreboard players set RedPoints gameVariable 0
 	scoreboard players set TimeToStartMatch gameVariable 300
+    scoreboard players set MatchTimeInTicks gameVariable 0
     # Setup hidden variables
     scoreboard players set #arenaAction gameVariable 0
     scoreboard players set #currentArena gameVariable 1
@@ -301,12 +305,15 @@ scoreboard objectives add gameVariable dummy
     scoreboard players set #BlueStreakTimer gameVariable 0
     scoreboard players set #RedStreak gameVariable 0
     scoreboard players set #RedStreakTimer gameVariable 0
+    scoreboard players set #LM_OreLeft gameVariable 0
 
 # Establish a SessionID by using game time. We wouldn't normally act on all players in a
 #   function like this, but it's important the players are registered so an error message won't
 #   play when we reload the game.
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a sessionID = SessionID gameVariable
+scoreboard players set #LastMatchID gameVariable -1
+scoreboard players operation #CurrentMatchID gameVariable = SessionID gameVariable
 
 # Game starts in lobby mode by default.
 scoreboard players set GameState gameVariable 0

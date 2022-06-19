@@ -11,6 +11,8 @@ playsound minecraft:event.raid.horn master @a 136 150 89 999999 0.75
 gamemode spectator @a
 
 # The match has ended, let's update the SessionID so players are properly handled
+scoreboard players operation #LastMatchID gameVariable = #CurrentMatchID gameVariable
+scoreboard players set #CurrentMatchID gameVariable -1
 execute store result score SessionID gameVariable run time query gametime
 scoreboard players operation @a sessionID = SessionID gameVariable
 
@@ -29,3 +31,7 @@ tellraw @a {"translate":"system.message","with": [{"translate":"calamity.reset.m
 
 # Update game state
 scoreboard players set GameState gameVariable 2
+
+# Let the players know
+scoreboard players operation #LM_OreLeft gameVariable = OreLeft gameVariable
+execute as @a at @s run trigger matchStats

@@ -24,6 +24,13 @@ execute if score GameState gameVariable matches 1 as @a[scores={timeSinceDeath=0
 scoreboard players set #arenaAction gameVariable 2
 function calamity:arena/handler
 
+# Always allow players to access their stats
+execute as @a[scores={matchStats=1..}] run function calamity:player/trigger/match_stats
+# Always reset trigger if the score is not zero.
+scoreboard players set @s[scores={matchStats=..-1}] matchStats 0
+scoreboard players set @s matchStats 0
+scoreboard players enable @s matchStats
+
 # Run the commands needed for the current game state.
     # 0 Lobby: Players are setting-up, organizing, and starting a match
     # 1 Match: Players are playing the match
