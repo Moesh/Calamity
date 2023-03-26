@@ -37,7 +37,7 @@ execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] run team mod
 execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] run team modify blue suffix {"translate":"spacer.left","color":"blue","with": [{"translate":"b","font":"calamity:icons"}]}
 execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] run team modify red suffix {"translate":"spacer.left","color":"red","with": [{"translate":"r","font":"calamity:icons"}]}
 # We're done here, forget about players who were shuffled.
-execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] if entity @a[tag=ShuffleToRed] run tag @a remove ShuffleToBlue
+execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] if entity @a[tag=ShuffleToBlue] run tag @a remove ShuffleToBlue
 execute unless entity @a[team=] if entity @a[scores={shuffle=1..2}] if entity @a[tag=ShuffleToRed] run tag @a remove ShuffleToRed
 
 # If players still need to be shuffled, run this command again.
