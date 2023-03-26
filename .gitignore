@@ -26,3 +26,4 @@ usercache\.json
 /saves/banned-players.json
 saves/libraries/*
 saves/versions/*
+.vscode/settings.json
