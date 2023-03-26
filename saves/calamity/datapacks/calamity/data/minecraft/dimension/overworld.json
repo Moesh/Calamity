@@ -1,21 +1,5 @@
 {
-  "type": {
-  "ultrawarm": false,
-  "natural": true,
-  "piglin_safe": true,
-  "respawn_anchor_works": true,
-  "bed_works": false,
-  "has_raids": true,
-  "has_skylight": false,
-  "has_ceiling": true,
-  "coordinate_scale": 1,
-  "ambient_light": 0.1,
-  "logical_height": 255,
-  "effects": "minecraft:the_nether",
-  "infiniburn": "minecraft:infiniburn_nether",
-  "min_y": 0,
-  "height": 256
-  },
+  "type": "minecraft:the_nether",
   "generator": {
     "type": "minecraft:flat",
     "settings": {
@@ -28,9 +12,7 @@
           "height": 1
         }
       ],
-      "structures": {
-        "structures": {}
-      }
+      "structure_overrides": []
     }
   }
 }
